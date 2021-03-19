@@ -1,0 +1,82 @@
+NDS Database:  version K.31
+
+NDS_INFO | xc9500xl | 9572XL44PC | XC9572XL-5-PC44
+
+DEVICE | 9572XL | 9572XL44PC | 
+
+NETWORK | Tp_1 | 0 | 0 | 16391
+
+INPUT_INSTANCE | 0 | 0 | NULL | sel_IBUF | Tp_1_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | sel | 66 | PI | 0 | 0 | Tp_1_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | sel_IBUF | 61 | ? | 0 | 0 | Tp_1_COPY_0_COPY_0 | NULL | NULL | sel_IBUF | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | b_IBUF | Tp_1_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | b | 67 | PI | 0 | 0 | Tp_1_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | b_IBUF | 62 | ? | 0 | 0 | Tp_1_COPY_0_COPY_0 | NULL | NULL | b_IBUF | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | a_IBUF | Tp_1_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | a | 68 | PI | 0 | 0 | Tp_1_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | a_IBUF | 63 | ? | 0 | 0 | Tp_1_COPY_0_COPY_0 | NULL | NULL | a_IBUF | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | OptxMapped | salida_OBUF | Tp_1_COPY_0_COPY_0 | 2155872256 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | sel_IBUF | 61 | ? | 0 | 0 | Tp_1_COPY_0_COPY_0 | NULL | NULL | sel_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | a_IBUF | 63 | ? | 0 | 0 | Tp_1_COPY_0_COPY_0 | NULL | NULL | a_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | b_IBUF | 62 | ? | 0 | 0 | Tp_1_COPY_0_COPY_0 | NULL | NULL | b_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | salida_OBUF | 64 | ? | 0 | 0 | Tp_1_COPY_0_COPY_0 | NULL | salida_OBUF.Q | salida_OBUF | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | salida_OBUF.SI | salida_OBUF | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | sel_IBUF | 61 | ? | 0 | 0 | Tp_1_COPY_0_COPY_0 | NULL | NULL | sel_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | a_IBUF | 63 | ? | 0 | 0 | Tp_1_COPY_0_COPY_0 | NULL | NULL | a_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | b_IBUF | 62 | ? | 0 | 0 | Tp_1_COPY_0_COPY_0 | NULL | NULL | b_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | salida_OBUF.D1 | 70 | ? | 0 | 4096 | salida_OBUF | NULL | NULL | salida_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | salida_OBUF.D2 | 71 | ? | 0 | 4096 | salida_OBUF | NULL | NULL | salida_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | sel_IBUF | IV_TRUE | b_IBUF
+SPPTERM | 2 | IV_FALSE | sel_IBUF | IV_TRUE | a_IBUF
+
+SRFF_INSTANCE | salida_OBUF.REG | salida_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | salida_OBUF.D | 69 | ? | 0 | 0 | salida_OBUF | NULL | NULL | salida_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | salida_OBUF.Q | 72 | ? | 0 | 0 | salida_OBUF | NULL | NULL | salida_OBUF.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | salida | Tp_1_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | salida_OBUF | 64 | ? | 0 | 0 | Tp_1_COPY_0_COPY_0 | NULL | salida_OBUF.Q | salida_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | salida | 65 | PO | 0 | 0 | Tp_1_COPY_0_COPY_0 | NULL | NULL | salida | 0 | 6 | OI_OUT
+
+FB_INSTANCE | FOOBAR1_ | Tp_1_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 5 | salida_OBUF | 1 | NULL | 0 | salida | 1 | 2 | 49152
+
+FB_INSTANCE | FOOBAR2_ | Tp_1_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 2 | NULL | 0 | b_IBUF | 1 | NULL | 0 | 35 | 49152
+FBPIN | 5 | NULL | 0 | sel_IBUF | 1 | NULL | 0 | 36 | 49152
+
+FB_INSTANCE | FOOBAR3_ | Tp_1_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR4_ | Tp_1_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 17 | NULL | 0 | a_IBUF | 1 | NULL | 0 | 34 | 49152
+
+FB_INSTANCE | INPUTPINS_FOOBAR5_ | Tp_1_COPY_0_COPY_0 | 0 | 0 | 0
+
+
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 1 | a | 34 | 23 | sel | 36 | 33 | b | 35
+
+FB_IMUX_INDEX | FOOBAR1_ | -1 | 73 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 80 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 78 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+

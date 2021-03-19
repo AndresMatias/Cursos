@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+  
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="IP Webcam"/>
+    <link rel="shortcut icon" href="ico/favicon.png"/>
+
+    <title>IP Webcam</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+
+    <link href="ipwebcam.css" rel="stylesheet"/>
+
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="lang.js"></script>
+    <script src="swfobject.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/ipwebcam.js"></script>
+    <script src="js/ipwebcam_override.js"></script>
+    <script src="js/ipwebcam_plugins.js"></script>
+
+
+  
+    
+  </head><body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="greet.html">IP Webcam</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav"> 
+            <li ><a href="greet.html">Главная страница</a></li>
+            <li ><a href="videomgr.html">Видеоархив</a></li>
+            <li class="active" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Драйверы для чатов <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">Драйверы для Windows (только видео)</li>
+                <li><a class="hash-change" href="videochat.html#ipca">IP Camera Adapter</a></li>
+                
+                
+                <li class="divider"></li>
+                <li class="dropdown-header">Драйвер для Linux</li>
+                <li><a class="hash-change" href="videochat.html#linux">Драйвер для Ubuntu GNU/Linux (внешняя ссылка)</a></li>
+              </ul>
+            </li>
+
+            <li  class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Другие методы просмотра <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">Просмотрщики для Android</li>
+                <li><a class="hash-change" href="viewers.html#tinycam">tinyCam Monitor</a></li>
+                <li><a href="http://hit-mob.com/ipwebcam/ipwebcam_howto.html">IP Cam Viewer для Android и iOS (внешняя ссылка)</a></li>
+                <li class="dropdown-header">Кросс-платформенные просмотрщики</li>
+                <li><a class="hash-change" href="viewers.html#vlc">VLC Media Player</a></li>
+                <li><a class="hash-change" href="viewers.html#zoneminder">ZoneMinder</a></li>
+                <li class="dropdown-header">Windows viewers</li>
+                <li><a class="hash-change" href="viewers.html#blueiris">Blue Iris</a></li>
+                <li><a class="hash-change" href="viewers.html#webcamxp">webcamXP</a></li>
+                <li class="dropdown-header">Другие методы</li>
+                <li><a class="hash-change" href="viewers.html#view_outside">Доступ к IP Webcam вне Wi-Fi (например, через интернет)</a></li>
+                <li><a class="hash-change" href="viewers.html#mac_bind">Почему мой IP-адрес меняется?</a></li>
+                <li><a class="hash-change" href="viewers.html#advanced">Дополнительная информация</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+    
+    
+
+
+
+    <div class="container" id="main_container">
+      <div id="init_alert" class="alert alert-danger" style="display: none;">
+        <strong>Невозможно получить статус камеры!</strong> Некоторая функциональность может быть недоступна из-за <span id="init_error"></span>.
+      </div>
+    <p></p>
+<p><b>Важно:</b> Эти драйверы эмулируют видео, не звук.</p>
+<p><b>Важно:</b> Для максимальной совместимости установите разрешение 320x240.</p>
+
+
+<div class="panel-group" id="accordion">
+
+  
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#ipca">
+          IP Camera Adapter
+        </a>
+      </h4>
+    </div>
+    <div id="ipca" class="panel-collapse collapse">
+      <div class="panel-body">
+
+        <p>Мой драйвер не имеет баннера для бесплатной версии и свободен для любого использования.</p>
+ <a href="http://ip-webcam.appspot.com">Скачайте его отсюда.</a>
+<p/>
+ <p>После установки драйвера откройте окно конфигурации, введите <b><span class="repl">$URL$</span><span style="color: red;">/video</span></b> в поле для URL, заполните имя пользователя и пароль (если они установлены) и нажмите <b>Autodetect</b> для автоматического определения разрешения.</p>
+ <p>Теперь можно запускать приложение для видеочата и пользоваться эмулируемой камерой!</p>
+ <img src="collage.png"/>
+<p/>
+ 
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#linux">
+          Драйвер для Linux
+        </a>
+      </h4>
+    </div>
+    <div id="linux" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p>Драйвер для Linux позволяет использовать и аудио, и видео на Ubuntu Linux и совместимых операционных системах. Он бесплатен и имеет открытый исходный код.</p>
+ <p><a href="https://github.com/bluezio/ipwebcam-gst/">Скачать можно здесь</a>.</p>
+ <p/>
+ 
+      </div>
+    </div>
+  </div>
+</div>
+
+      <hr/>
+
+      <footer>
+        <p>&copy; Pavel Khlebovich 2013</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    
+
+
+    
+
+<script type="text/javascript">
+  //<!--
+  $(initVideoChat)
+  //-->
+</script>
+
+
+
+    
+  </body>
+</html>

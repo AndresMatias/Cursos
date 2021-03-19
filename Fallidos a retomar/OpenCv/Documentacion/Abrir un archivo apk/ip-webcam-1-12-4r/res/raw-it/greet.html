@@ -1,0 +1,638 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+  
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="IP Webcam"/>
+    <link rel="shortcut icon" href="ico/favicon.png"/>
+
+    <title>IP Webcam</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+
+    <link href="ipwebcam.css" rel="stylesheet"/>
+
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="lang.js"></script>
+    <script src="swfobject.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/ipwebcam.js"></script>
+    <script src="js/ipwebcam_override.js"></script>
+    <script src="js/ipwebcam_plugins.js"></script>
+
+
+  
+    
+  </head><body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="greet.html">IP Webcam</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav"> 
+            <li class="active"><a href="greet.html">Home</a></li>
+            <li ><a href="videomgr.html">Archivio Video</a></li>
+            <li  class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Driver Videochat <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">Driver di Windows (solo video)</li>
+                <li><a class="hash-change" href="videochat.html#ipca">Adattatore IP Camera</a></li>
+                
+                
+                <li class="divider"></li>
+                <li class="dropdown-header">Driver Linux</li>
+                <li><a class="hash-change" href="videochat.html#linux">Driver per Ubuntu GNU / Linux (link esterno)</a></li>
+              </ul>
+            </li>
+
+            <li  class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Altri metodi di visualizzazione <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">Visualizzatori Android</li>
+                <li><a class="hash-change" href="viewers.html#tinycam">TinyCam Monitor</a></li>
+                <li><a href="http://hit-mob.com/ipwebcam/ipwebcam_howto.html">IP Cam Viewer per Android e iOS (link esterno)</a></li>
+                <li class="dropdown-header">Visualizzatori Cross-platform</li>
+                <li><a class="hash-change" href="viewers.html#vlc">VLC Media Player</a></li>
+                <li><a class="hash-change" href="viewers.html#zoneminder">ZoneMinder</a></li>
+                <li class="dropdown-header">Visualizzatori di Windows</li>
+                <li><a class="hash-change" href="viewers.html#blueiris">Blue Iris</a></li>
+                <li><a class="hash-change" href="viewers.html#webcamxp">webcamXP</a></li>
+                <li class="dropdown-header">Altro</li>
+                <li><a class="hash-change" href="viewers.html#view_outside">Accesso IP Webcam fuori WiFi locale (ad esempio via Internet)</a></li>
+                <li><a class="hash-change" href="viewers.html#mac_bind">Perché l’indirizzo IP continua a cambiare?</a></li>
+                <li><a class="hash-change" href="viewers.html#advanced">Avanzata</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+    
+
+<div id="explain_audio" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+        <h4>Perché sento l’audio 4 secondi in ritardo?</h4>
+      </div>
+      <div class="modal-body">
+        <p>Questo accade a causa del browser buffering e dipende dal browser utilizzato.</p>
+ <p>Prova le seguenti soluzioni:</p>
+ <ul>
+  <li>Usa renderer Flash. È progettato per un ritardo ridotto.</li>
+  <li>Utilizzare Firefox e Opus audio. Opus è il next-gen a bassa latenza bassa larghezza di banda con codec audio streaming e Firefox fa poco buffer di esso. </li>
+  <li>Usare VLC Media Player. Nel menù, aprire Media ⇨ Open Network Stream, immettere http://tuo-ip:tuo-port/audio.wav come URL, fare clic su "Mostra più opzioni" e impostare il buffering a 1 ms.</li>
+</ul>
+<p></p>
+ 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Chiuso</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="explain_tasker" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+        <h4>Tasker controllo eventi</h4>
+      </div>
+      <div class="modal-body">
+        <p><a href="https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm">Tasker</a> è una soluzione di automazione per gli smartphone Android. Egli può, per esempio, inviare un SMS o variare il volume della suoneria in base alla tua esigenza o alla preventiva pianificazione.</p>
+ <p>IP Webcam Pro può generare eventi Tasker, sia con interfaccia web o con interfaccia utente personalizzabile.</p>
+ <p>Per configurare Tasker per l'utilizzo di eventi IP Webcam, creare un nuovo profilo utilizzando il pulsante &quot;+&quot; e selezionare Stato ⇨ Plugin ⇨ IP Webcam come trigger.</p>
+ <p>Eventi generati da interfaccia web hanno lo stesso nome di evento come il testo del pulsante. Ad esempio, il tasto centrale genera l'evento denominato &quot;5&quot;.</p>
+ <p/>
+ 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Chiuso</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+  <div class="container">
+    
+    <div class="row">
+      <form class="form-horizontal" role="form">
+        <div class="form-group switch">
+          <label class="col-lg-offset-3 col-lg-2" for="video_mode">Video renderer</label>
+          <div id="video_mode" class="btn-group" data-toggle="buttons">
+            <label id="video_radio_none" class="btn btn-default btn-sm active">
+              <input type="radio" name="video_mode_sel" value="off"/> Nessun video
+            </label>
+            <label class="btn btn-default btn-sm">
+              <input type="radio" name="video_mode_sel" value="flash"/> Flash
+            </label>
+            <label class="btn btn-default btn-sm">
+              <input type="radio" name="video_mode_sel" value="browser"/> Browser
+            </label>
+            <label class="btn btn-default btn-sm">
+              <input type="radio" name="video_mode_sel" value="java"/> Java
+            </label>
+            <label class="btn btn-default btn-sm">
+              <input type="radio" name="video_mode_sel" value="js"/> Javascript
+            </label>
+          </div>
+          <button id="btn_fullscreen" class="btn btn-default btn-sm has-tooltip" title="Suggerimento: premere F11 per massimizzare" type="button">Fullscreen</button>
+        </div>
+
+        <div class="form-group">
+          <label class="col-lg-offset-3 col-lg-2 " for="audio_mode">Lettore audio</label>
+
+          <div class="btn-group" id="audio_mode" data-toggle="buttons">
+            <label class="btn btn-default btn-sm active">
+              <input type="radio" name="audio_mode_sel" value="off"/> No audio
+            </label>
+            <label class="btn btn-default btn-sm">
+              <input type="radio" name="audio_mode_sel" value="flash"/> Flash
+            </label>
+            <label class="btn btn-default btn-sm">
+              <input type="radio" name="audio_mode_sel" value="html5_wav"/> HTML5 Wav
+            </label>
+            <label class="btn btn-default btn-sm">
+              <input type="radio" name="audio_mode_sel" value="html5_opus"/> HTML5 Opus
+            </label>
+          </div>
+          
+          <button id="btn_why_lag" class="btn btn-default btn-sm" type="button">Perchè il lag?</button>
+        </div>
+        
+
+
+      </form>
+
+    </div>
+  </div>
+  <div class="row">
+      <!-- <span style="border: 1px solid black; "> -->
+        <div id="video_pane" style="margin: auto; border: 1px solid black; display: none;">
+          
+        </div>
+  </div>
+  <div class="row">
+      <!-- <span style="border: 1px solid black; "> -->
+        <div id="audio_pane" style="margin: auto; display: table;">
+          
+        </div>
+  </div>
+</div>
+
+
+
+
+    <div class="container" id="main_container">
+      <div id="init_alert" class="alert alert-danger" style="display: none;">
+        <strong>Impossibile ottenere lo stato macchina fotografica!</strong> Alcune delle funzionalità potrebbero non essere operative  perchè in off <span id="init_error"></span>.
+      </div>
+    
+
+  <div id="warn_div" class="alert alert-warning" style="display: none;">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+    <strong><span id="warn_cause">Warning cause</span></strong> <span id="warn_desc">Warning desc</span>
+  </div>
+
+  
+  <div class="row">
+    <div class="col-lg-5">
+      <form role="form">
+        <div id="video_host1" class="form-group">
+          <label>Controllo della registrazione</label>
+          <div class="row">
+          <div class="input-group col-xs-12">
+            <span class="input-group-addon glyphicon glyphicon-tag"></span>
+            <input id="video_tag" type="text" class="form-control" placeholder="Immettere un'etichetta per questa registrazione" />
+            <span class="input-group-btn">
+              <button id="rec_circular" style="margin-right: -2px;" class="btn btn-default has-tooltip" title="Registrazione ciclica" type="button">
+                <img src="roundabout.png" width="20" height="20"/><span class="sr-only">Registrazione ciclica</span>
+              </button>
+              <button id="rec_button" class="btn btn-default has-tooltip" title="Registrazione Manuale" type="button">
+                <img src="recordbtn.png" width="20" height="20"/><span class="sr-only">Registrazione</span>
+              </button>
+            </span>
+          </div>
+          </div>
+        </div>
+
+        <div id="video_rec" style="display: none" class="form-group">
+          
+          <div class="row">
+            <div class="col-xs-1" style="padding-right: 0;"><p class="text-right"><img src="rec_blink8.gif" class="rec"/></p></div>
+            <div class="col-xs-8 col-sm-9 col-lg-8" style="padding-left: 0;">
+              Registra su<br/>
+              <span id="rec_location"></span>
+            </div>
+            <div class="col-xs-3 col-sm-2 col-lg-3">
+              <button id="rec_stop" class="btn btn-default col-xs-12" type="button">
+                <i class="glyphicon glyphicon-stop"></i> <span class="visible-lg">Stop</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+        <div style="clear: both; height: 15px;"></div>
+
+
+        <div id="video_host2" class="form-group">
+          <label>Registrazione ciclica lunghezza Parte registrata</label>
+          <div class="col-xs-12">
+          
+            Registrazione ciclica dei video in parti registrate 
+          <div class="input-group" style="display: inline-block">
+              <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
+                <span id="circular_length">30 minuti</span> <b class="caret"></b>
+              </button>
+              <ul class="dropdown-menu">
+                <li id="circular_2h"><a href="#">2 ore</a></li>
+                <li id="circular_1h"><a href="#">1 ora</a></li>
+                <li id="circular_30m"><a href="#">30 minuti</a></li>
+                <li id="circular_10m"><a href="#">10 minuti</a></li>
+                <li id="circular_5m"><a href="#">5 minuti</a></li>
+              </ul>
+          </div>
+          , sovrascriversi su quelli meno recenti quando lo spazio si sta esaurendo.
+
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label>Foto</label>
+          <div class="container">
+            <div class="row" id="photo_options">
+              <a href="photo.jpg" class="col-xs-6 btn btn-default btn-sm has-tooltip" title="Right click to save">
+                Scatta foto
+              </a>
+              <a href="photoaf.jpg" class="col-xs-6 btn btn-default btn-sm has-tooltip" title="Right click to save">
+                Scatta foto mettendo a fuoco
+              </a>
+            </div>
+            <div class="row">
+              <button type="button" id="btn_photo_storage" class="col-xs-6 btn btn-default btn-sm">
+                Salvare foto nell’archivio
+              </button>
+              <button type="button" id="btn_photoaf_storage" class="col-xs-6 btn btn-default btn-sm">
+                Salva foto selezionate nell’archivio
+              </button>
+              <img src="loader.gif" id="photo_spinner" style="display: none;" />
+              <img src="ok.png" id="photo_ok" style="display: none;" />
+            </div>
+          </div>
+        </div>
+
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#tasker_events">
+              Tasker controllo eventi <b class="caret"></b>
+            </a>
+            <button id="btn_explain_tasker" class="btn btn-default btn-sm" type="button">Che cosa è questo?</button>
+          </h4>
+        </div>
+
+        <div id="tasker_events" class="form-group collapse">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="row">
+                  <button type="button" data-num="7" class="col-xs-4 btn btn-default btn-xs tbtn">7</button>
+                  <button type="button" data-num="8" class="col-xs-4 btn btn-default btn-xs tbtn">8</button>
+                  <button type="button" data-num="9" class="col-xs-4 btn btn-default btn-xs tbtn">9</button>
+                </div>
+                <div class="row">
+                  <button type="button" data-num="4" class="col-xs-4 btn btn-default btn-xs tbtn">4</button>
+                  <button type="button" data-num="5" class="col-xs-4 btn btn-default btn-xs tbtn">5</button>
+                  <button type="button" data-num="6" class="col-xs-4 btn btn-default btn-xs tbtn">6</button>
+                </div>
+                <div class="row">
+                  <button type="button" data-num="1" class="col-xs-4 btn btn-default btn-xs tbtn">1</button>
+                  <button type="button" data-num="2" class="col-xs-4 btn btn-default btn-xs tbtn">2</button>
+                  <button type="button" data-num="3" class="col-xs-4 btn btn-default btn-xs tbtn">3</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+      </form>
+
+
+    </div> <!-- lg-5 -->
+
+
+    <div class="col-lg-offset-2 col-lg-5">
+      <!--<label>Zoom</label>
+      <form role="form" class="form-horizontal">
+        <div class="form-group">
+          <label for="range_zoom" class="control-label">Zoom: </label>
+          <div class="col-sm-8">
+           <input id="range_zoom" type="range" min="0" max="0"/>
+          </div>
+          <label id="range_zoom_label" for="range_zoom">1 X</label>
+        </div>
+      </form>-->
+
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label for="range_zoom" class="col-xs-3 control-label">Zoom</label>
+          <div class="col-xs-7">
+            <input id="range_zoom" class="col-xs-12" type="range" min="0" max="0"/>
+          </div>
+          <label for="range_zoom" id="range_zoom_label" class="control-label col-xs-2">1 X</label>
+        </div>
+
+        <div class="form-group">
+          <label for="range_quality" class="col-xs-3 control-label">Qualità del flusso</label>
+          <div class="col-xs-7">
+            <input id="range_quality" class="col-xs-12" type="range" min="1" max="100"/>
+          </div>
+          <label for="range_quality" id="range_quality_label" class="control-label col-xs-2">50%</label>
+        </div>
+
+        <div class="form-group" id="exposure_host">
+          <label for="range_exposure" class="col-xs-3 control-label">Compensazione dell'esposizione</label>
+          <div class="col-xs-7">
+            <input id="range_exposure" class="col-xs-12" type="range" min="1" max="100"/>
+          </div>
+          <label for="range_exposure" id="range_exposure_label" class="control-label col-xs-2">0</label>
+        </div>
+
+        <div class="form-group">
+          <label for="flashbtn" class="col-xs-3 control-label">Varie</label>
+          <div class="col-xs-9">
+            <div class="btn-group" data-toggle="buttons">
+              <label id="focusbtn" class="btn btn-sm btn-default">
+                <input id="focuscb" type="checkbox"/> <span class="glyphicon glyphicon-screenshot"></span> Autofocus vecchio
+              </label>
+              <label id="flashbtn" class="btn btn-sm btn-default">
+                <input id="flashcb" type="checkbox"/> <span class="glyphicon glyphicon-adjust"></span> LED Flashlight
+              </label>
+              <label id="overlaybtn" class="btn btn-sm btn-default">
+                <input id="overlaycb" type="checkbox"/> <span class="glyphicon glyphicon-info-sign"></span> Overlay
+              </label>
+              <label id="nvbtn" class="btn btn-sm btn-default">
+                <input id="nvcb" type="checkbox"/> <span class="glyphicon glyphicon-eye-open"></span> Visione notturna
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div id="ffc_form" class="form-group">
+          <label for="ffcbtn" class="col-xs-3 control-label">Fotocamera frontale</label>
+          <div class="col-xs-9">
+            <div id="ffc_res_unsupported" style="display: none;">Fronte hotswitch fotocamera non disponibile per questa risoluzione</div>
+
+            <div id="ffcbtn" class="btn btn-sm btn-default" style="display: none;">
+              <img id="img_ffc_current" style="width: 3em; height: 3em;" src="ic_switch_camera_back_normal.png" alt="Back camera"> <span class="glyphicon glyphicon-arrow-right"></span> <img id="img_ffc_alt" style="width: 3em; height: 3em;" src="ic_switch_camera_front_normal.png" alt="Front-facing camera">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+        <p><a class="btn btn-default" href="sensors.html" target="_blank">Apri grafico dei sensori &raquo;</a></p>
+        </div>
+
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#advSettings">
+              Impostazioni avanzate <b class="caret"></b>
+            </a>
+          </h4>
+        </div>
+
+        <div id="advSettings" class="collapse">
+
+          <div class="form-group">
+            <label for="range_nightvision_gain" class="col-xs-3 control-label">Miglioramento visione notturna</label>
+              <div class="col-xs-7">
+                <input id="range_nightvision_gain" class="col-xs-11" type="range" min="1" max="240" value="1"/>
+                <div class="col-xs-1 btn btn-sm btn-default" style="padding: 0;" id="set_nvg_1">1X</div>
+              </div>
+            <label for="range_nightvision_gain" id="range_nightvision_gain_label" class="control-label col-xs-2">0</label>
+          </div>
+
+          <div class="form-group">
+            <label for="range_nightvision_average" class="col-xs-3 control-label">Esposizione visione notturna</label>
+              <div class="col-xs-7">
+                <input id="range_nightvision_average" class="col-xs-11" type="range" min="1" max="20" value="1" />
+                <div class="col-xs-1 btn btn-sm btn-default" style="padding: 0;" id="set_avg_2">2</div>
+              </div>
+            <label for="range_nightvision_average" id="range_nightvision_average_label" class="control-label col-xs-2">0</label>
+          </div>
+
+
+          
+          <div id="video_size_holder" class="form-group">
+            <label for="video_size_btn" class="col-xs-3 control-label">Risoluzione video</label>
+            <div class="col-xs-9">
+              <div class="input-group">
+                <button id="video_size_btn" class="btn btn-default btn-sm dropdown-toggle disabled" type="button" data-toggle="dropdown">
+                  Caricamento... <b class="caret"></b>
+                </button>
+                <ul class="dropdown-menu" data-container="body" id="video_size">
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div id="orientation_holder" class="form-group">
+            <label for="orientation_btn" class="col-xs-3 control-label">Orientamento</label>
+            <div class="col-xs-9">
+              <div class="input-group">
+                <button id="orientation_btn" class="btn btn-default btn-sm dropdown-toggle disabled" type="button" data-toggle="dropdown">
+                  Caricamento... <b class="caret"></b>
+                </button>
+                <ul class="dropdown-menu" data-container="body" id="orientation">
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div id="mirror_flip_holder" class="form-group">
+            <label for="mirror_flip_btn" class="col-xs-3 control-label">Specchia e ruota</label>
+            <div class="col-xs-9">
+              <div class="input-group">
+                <button id="mirror_flip_btn" class="btn btn-default btn-sm dropdown-toggle disabled" type="button" data-toggle="dropdown">
+                  Caricamento... <b class="caret"></b>
+                </button>
+                <ul class="dropdown-menu" data-container="body" id="mirror_flip">
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div id="photo_size_holder" class="form-group">
+            <label for="photo_size_btn" class="col-xs-3 control-label">Risoluzione Foto</label>
+            <div class="col-xs-9">
+              <div class="input-group">
+                <button id="photo_size_btn" class="btn btn-default btn-sm dropdown-toggle disabled" type="button" data-toggle="dropdown">
+                  Caricamento... <b class="caret"></b>
+                </button>
+                <ul class="dropdown-menu" data-container="body" id="photo_size">
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div id="flashmode_holder" class="form-group">
+            <label for="flashmode_btn" class="col-xs-3 control-label">Modo flash</label>
+            <div class="col-xs-9">
+              <div class="input-group">
+                <button id="flashmode_btn" class="btn btn-default btn-sm dropdown-toggle disabled" type="button" data-toggle="dropdown">
+                  Caricamento... <b class="caret"></b>
+                </button>
+                <ul class="dropdown-menu" data-container="body" id="flashmode">
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div id="focusmode_holder" class="form-group">
+            <label for="focusmode_btn" class="col-xs-3 control-label">Modalità fuoco</label>
+            <div class="col-xs-9">
+              <div class="input-group">
+                <button id="focusmode_btn" class="btn btn-default btn-sm dropdown-toggle disabled" type="button" data-toggle="dropdown">
+                  Caricamento... <b class="caret"></b>
+                </button>
+                <ul class="dropdown-menu" data-container="body" id="focusmode">
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div id="scenemode_holder" class="form-group">
+            <label for="scenemode_btn" class="col-xs-3 control-label">Modo scena</label>
+            <div class="col-xs-9">
+              <div class="input-group">
+                <button id="scenemode_btn" class="btn btn-default btn-sm dropdown-toggle disabled" type="button" data-toggle="dropdown">
+                  Caricamento... <b class="caret"></b>
+                </button>
+                <ul class="dropdown-menu" data-container="body" id="scenemode">
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div id="antibanding_holder" class="form-group">
+            <label for="antibanding_btn" class="col-xs-3 control-label">Antibanding</label>
+            <div class="col-xs-9">
+              <div class="input-group">
+                <button id="antibanding_btn" class="btn btn-default btn-sm dropdown-toggle disabled" type="button" data-toggle="dropdown">
+                  Caricamento... <b class="caret"></b>
+                </button>
+                <ul class="dropdown-menu" data-container="body" id="antibanding">
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div id="whitebalance_holder" class="form-group">
+            <label for="whitebalance_btn" class="col-xs-3 control-label">Bilanciamento del bianco</label>
+            <div class="col-xs-9">
+              <div class="input-group">
+                <button id="whitebalance_btn" class="btn btn-default btn-sm dropdown-toggle disabled" type="button" data-toggle="dropdown">
+                  Caricamento... <b class="caret"></b>
+                </button>
+                <ul class="dropdown-menu" data-container="body" id="whitebalance">
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div id="coloreffect_holder" class="form-group">
+            <label for="coloreffect_btn" class="col-xs-3 control-label">Effetti colore</label>
+            <div class="col-xs-9">
+              <div class="input-group">
+                <button id="coloreffect_btn" class="btn btn-default btn-sm dropdown-toggle disabled" type="button" data-toggle="dropdown">
+                  Caricamento... <b class="caret"></b>
+                </button>
+                <ul class="dropdown-menu" data-container="body" id="coloreffect">
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div id="exposure_lock_holder" class="form-group">
+            <label for="exposure_lock_btn" class="col-xs-3 control-label">Blocca esposizione</label>
+            <div class="col-xs-9">
+              <div class="input-group">
+                <button id="exposure_lock_btn" class="btn btn-default btn-sm dropdown-toggle disabled" type="button" data-toggle="dropdown">
+                  Caricamento... <b class="caret"></b>
+                </button>
+                <ul class="dropdown-menu" data-container="body" id="exposure_lock">
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div id="whitebalance_lock_holder" class="form-group">
+            <label for="whitebalance_lock_btn" class="col-xs-3 control-label">Blocca bilanciamento bianco</label>
+            <div class="col-xs-9">
+              <div class="input-group">
+                <button id="whitebalance_lock_btn" class="btn btn-default btn-sm dropdown-toggle disabled" type="button" data-toggle="dropdown">
+                  Caricamento... <b class="caret"></b>
+                </button>
+                <ul class="dropdown-menu" data-container="body" id="whitebalance_lock">
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+
+        </div>
+
+
+      </form>
+      
+    </div>
+    
+
+  </div> <!-- row -->
+
+  
+      <hr/>
+
+      <footer>
+        <p>&copy; Pavel Khlebovich 2013</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    
+
+
+    
+<script type="text/javascript">
+  //<!--
+  $(greetInit)
+  //-->
+</script>
+
+
+
+    
+  </body>
+</html>

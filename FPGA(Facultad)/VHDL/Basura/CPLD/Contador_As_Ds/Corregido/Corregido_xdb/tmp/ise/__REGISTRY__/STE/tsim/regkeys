@@ -1,0 +1,6 @@
+CommandLine
+C:\Xilinx\10.1\ISE\bin\nt\unwrapped\tsim.exe -ise C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise -intstyle ise Top Top.nga
+s
+FormatString
+tsim <design[.vm6]> [--intstyle ise|xflow|silent] [<outfile>] 
+s

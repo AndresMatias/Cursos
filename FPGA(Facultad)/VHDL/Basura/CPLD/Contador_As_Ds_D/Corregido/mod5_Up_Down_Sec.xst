@@ -1,0 +1,30 @@
+set -tmpdir "C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/xst/projnav.tmp"
+set -xsthdpdir "C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/xst"
+run
+-ifn mod5_Up_Down_Sec.prj
+-ifmt mixed
+-ofn mod5_Up_Down_Sec
+-ofmt NGC
+-p xc9500xl
+-top mod5_Up_Down_Sec
+-opt_mode Speed
+-opt_level 1
+-iuc NO
+-lso mod5_Up_Down_Sec.lso
+-keep_hierarchy YES
+-netlist_hierarchy as_optimized
+-rtlview Yes
+-hierarchy_separator /
+-bus_delimiter <>
+-case maintain
+-verilog2001 YES
+-fsm_extract YES -fsm_encoding Auto
+-safe_implementation No
+-mux_extract YES
+-resource_sharing YES
+-iobuf YES
+-pld_mp YES
+-pld_xp YES
+-pld_ce YES
+-wysiwyg NO
+-equivalent_register_removal YES

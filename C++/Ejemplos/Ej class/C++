@@ -1,0 +1,6 @@
+C++:C con clases "tipo de dato" class:permite definir rutina de datos
+                  		      utiliza tipo de dato
+¿Que es una clase?
+	Es una struct basicamente per no se puede acceder a travez del programa principal y 		cambia el struct por el nomrbe class y en vez de public cambia por private
+	tambien se a una class se le agregaron funciones detr de ellas, el programa no puede 		acceder a las variables sino las funciones dentro de las clases manejas las 		variables
+Codigo de funciones (Memvers, Necthod)	

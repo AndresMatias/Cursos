@@ -1,0 +1,22 @@
+V3 10
+FL C:/Xilinx/Tp/Contador_As_Ds_D/Contador_FF_D/clk_1Hz.vhd 2017/11/08.15:28:24 K.31
+EN work/clk_1Hz 1510243140 \
+      FL C:/Xilinx/Tp/Contador_As_Ds_D/Contador_FF_D/clk_1Hz.vhd \
+      PB ieee/std_logic_1164 1200023565 PH ieee/NUMERIC_STD 1200023568
+AR work/clk_1Hz/arch 1510243141 \
+      FL C:/Xilinx/Tp/Contador_As_Ds_D/Contador_FF_D/clk_1Hz.vhd EN work/clk_1Hz 1510243140
+FL C:/Xilinx/Tp/Contador_As_Ds_D/Contador_FF_D/Flip_Flop_D.vhd 2017/10/26.12:40:53 K.31
+EN work/Flip_Flop_D 1510243142 \
+      FL C:/Xilinx/Tp/Contador_As_Ds_D/Contador_FF_D/Flip_Flop_D.vhd \
+      PB ieee/std_logic_1164 1200023565 PB ieee/std_logic_arith 1200023566 \
+      PB ieee/STD_LOGIC_UNSIGNED 1200023567
+AR work/Flip_Flop_D/Behavioral 1510243143 \
+      FL C:/Xilinx/Tp/Contador_As_Ds_D/Contador_FF_D/Flip_Flop_D.vhd \
+      EN work/Flip_Flop_D 1510243142
+FL C:/Xilinx/Tp/Contador_As_Ds_D/Contador_FF_D/Main.vhd 2017/11/09.12:58:58 K.31
+EN work/Main 1510243144 FL C:/Xilinx/Tp/Contador_As_Ds_D/Contador_FF_D/Main.vhd \
+      PB ieee/std_logic_1164 1200023565 PB ieee/std_logic_arith 1200023566 \
+      PB ieee/STD_LOGIC_UNSIGNED 1200023567
+AR work/Main/Behavioral 1510243145 \
+      FL C:/Xilinx/Tp/Contador_As_Ds_D/Contador_FF_D/Main.vhd EN work/Main 1510243144 \
+      AR work/clk_1Hz/arch 1510243141 CP Flip_Flop_D

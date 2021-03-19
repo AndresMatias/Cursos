@@ -1,0 +1,6 @@
+CommandLine
+C:\Xilinx\10.1\ISE\bin\nt\unwrapped\XSLTProcess.exe -ise D:/CPLD/Tp_1/Tp_1/Tp_1.ise Tp_1_build.xml
+s
+FormatString
+xsltprocess [--intstyle ise|xflow|silent] <xmlfile> [-a] [-w] [--libxslt <limit:-1,10>] 
+s

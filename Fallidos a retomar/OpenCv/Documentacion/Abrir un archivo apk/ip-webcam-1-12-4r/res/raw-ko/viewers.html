@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+  
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="IP Webcam"/>
+    <link rel="shortcut icon" href="ico/favicon.png"/>
+
+    <title>IP Webcam</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+
+    <link href="ipwebcam.css" rel="stylesheet"/>
+
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="lang.js"></script>
+    <script src="swfobject.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/ipwebcam.js"></script>
+    <script src="js/ipwebcam_override.js"></script>
+    <script src="js/ipwebcam_plugins.js"></script>
+
+
+  
+    
+  </head><body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="greet.html">IP Webcam</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav"> 
+            <li ><a href="greet.html">Home</a></li>
+            <li ><a href="videomgr.html">영상보관</a></li>
+            <li  class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">영상채팅 드라이버 <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">윈도우 드라이버 (영상만 지원)</li>
+                <li><a class="hash-change" href="videochat.html#ipca">IP 카메라 어답터</a></li>
+                
+                
+                <li class="divider"></li>
+                <li class="dropdown-header">리눅스 드라이버</li>
+                <li><a class="hash-change" href="videochat.html#linux">Ubuntu GNU/Linux 드라이버(외부 링크)</a></li>
+              </ul>
+            </li>
+
+            <li class="active" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">볼수 있는 다른 방법 <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">안드로이드 뷰어</li>
+                <li><a class="hash-change" href="viewers.html#tinycam">tinyCam Monitor</a></li>
+                <li><a href="http://hit-mob.com/ipwebcam/ipwebcam_howto.html">안드로이드와 iOS를 위한 IP Cam Viewer(외부 링크)</a></li>
+                <li class="dropdown-header">Cross-platform 뷰어</li>
+                <li><a class="hash-change" href="viewers.html#vlc">VLC 미디어 플레이어</a></li>
+                <li><a class="hash-change" href="viewers.html#zoneminder">ZoneMinder</a></li>
+                <li class="dropdown-header">윈도우 뷰어</li>
+                <li><a class="hash-change" href="viewers.html#blueiris">Blue Iris</a></li>
+                <li><a class="hash-change" href="viewers.html#webcamxp">webcamXP</a></li>
+                <li class="dropdown-header">기타</li>
+                <li><a class="hash-change" href="viewers.html#view_outside">인터넷과 같은 외부의 로컬 와이파이를 통한 IP Webcam 접근</a></li>
+                <li><a class="hash-change" href="viewers.html#mac_bind">왜 IP 주소가 바뀌는가?</a></li>
+                <li><a class="hash-change" href="viewers.html#advanced">고급</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+    
+    
+
+
+
+    <div class="container" id="main_container">
+      <div id="init_alert" class="alert alert-danger" style="display: none;">
+        <strong>카메라 상태를 읽어올 수 없음!</strong> 몇가지 기능이 동작하지 않음 <span id="init_error"></span>.
+      </div>
+    <div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#tinycam">
+          안드로이드를 위한 tinyCam Monitor
+        </a>
+      </h4>
+    </div>
+    <div id="tinycam" class="panel-collapse collapse">
+      <div class="panel-body">
+        <h2>타이니캠 모니터 설치</h2>
+<p><a href="mailto:alexey.vasilyev@gmail.com">Alexey Vasilyev</a> 가 만든 <a href="http://www.tinycammonitor.com/">타이니캠 모니터</a> 는 IP Webcam을 포함하는 대부분의 카메라를 지원하는 안드로이드용 원격감시 앱입니다.</p>
+ <p>IP Webcam에서 음성 전달하기(Pro 버젼)와 LED 제어, 오토포커스 같은 기능을 제공합니다.</p>
+ <p><a href="http://www.youtube.com/watch?v=fhUoKjRPV1w">이 동영상은 IP Webcam 과 타이니캠 모니터가 동작하는 것을 보여줍니다</a> (인터넷 연결 필요).</p>
+ <p><a href="https://market.android.com/details?id=com.alexvas.dvr">여기에서 얻기</a>나 <a href="https://market.android.com/details?id=com.alexvas.dvr">Barcode scanner</a>의 QR코드를 스캔하세요.</p>
+ <center><img src="tinycamqr.png"/></center>
+<p>앱의 &quot;카메라 관리&quot; 에서 새 카메라 추가를 하고 &quot;IP Webcam for Android&quot; 를 선택하세요.</p>
+ <p>호스트이름 <b><span class="repl">$IP$</span></b> 과 설정한 포트 <b><span class="repl">$PORT$</span></b> 를 입력하면 사용할 수 있습니다.</p>
+ <img src="tinycam1.png"/> <img src="tinycam2.png"/>
+<p/>
+ 
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#vlc">
+          VLC 미디어 플레이어
+        </a>
+      </h4>
+    </div>
+    <div id="vlc" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p>VLC 미디어 플레이어는 하나의 패키지에서 스트리밍 서버와 변환방법을 제공하는 크로스 플랫폼 비디오 플레이어입니다. <a href="http://www.videolan.org/">여기서 얻기</a>.</p>
+ <p>IP Webcam 에서 VLC 미디어 플레이어를 사용하려면 메뉴에서 <b>미디어 ⇨ 네트워크 스트림 열기</b> 을 선택 후 비디오 스트리밍은 <b><span class="repl">$URL$</span><span style="color: red;">/video</span></b>, 오디오 스트리밍은 <b><span class="repl">$URL$</span><span style="color: red;">/audio.wav</span></b> 을 입력하세요.</p>
+ <p>VLC 미디어 플레이어로 녹화를 할 수도 있습니다.</p>
+ <nl>
+  <li><b>미디어 -&gt; 변환/저장.</b> 선택</li>
+  <li>네트워크 탭 선택</li>
+  <li><b><span class="repl">$URL$</span><span style="color: red;">/video</span></b> URL 입력</li>
+  <li>변환/저장 클릭</li>
+  <li>저장포맷을 선택 후 만들고자 하는 파일을 선택하면 사용할 준비가 완료됩니다.</li>
+</nl>
+<p/>
+ 
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#zoneminder">
+          ZoneMinder
+        </a>
+      </h4>
+    </div>
+    <div id="zoneminder" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p>아래 설정을 사용하세요:</p>
+ <p>일반:<br/>소스 타입: 원격<br/>기능: 모니터</p>
+ <p>소스: <br/> 프로토콜: HTTP <br/> 방법: 간단 <br/> 호스트이름: <b><span class="repl">$IP$</span></b> <br/> 포트: <b><span class="repl">$PORT$</span></b> <br/> 원격호스트 경로: /video (영상이 보이지 않을 때).<br/></p>
+ <p><b>주의:</b> 필요하다면 사용자이름:암호@<b><span class="repl">$IP$</span></b> 처럼 사용자이름과 암호를 지정하세요.</p>
+ <p/>
+ 
+
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#blueiris">
+          Blue Iris
+        </a>
+      </h4>
+    </div>
+    <div id="blueiris" class="panel-collapse collapse">
+      <div class="panel-body">
+
+        <p>&quot;카메라 추가&quot; 상자를 열고 </p>
+ <p>IP Webcam을 사용하려면 반드시 &quot;MJPEG Stream&quot; 을 선택하세요.</p>
+ <p>
+  <b>비디오 경로:</b> /video <br/>
+  <b>오디오 경로:</b> /audio.wav <br/>
+  <b>호스트 이름:</b> <b><span class="repl">$IP$</span></b> <br/>
+  <b>포트:</b> <b><span class="repl">$PORT$</span></b> <br/>
+</p>
+<p>&quot;RTSP/video port&quot; 박스에 입력을 해도 문제가 되지 않습니다.</p>
+ <p/>
+ 
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#webcamxp">
+        	webcamXP
+        </a>
+      </h4>
+    </div>
+    <div id="webcamxp" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p>webcamXP 메인 인터페이스에서 비디오소스에 오른쪽 클릭을 하고 <b>네트워크 카메라 ⇨ 연결...</b> 을 선택하세요.</p>
+ <p><b>카메라 브랜드</b>를 <b>안드로이드</b>로 하고 <b>카메라 모델</b>을 <b>IP Webcam</b> 으로 설정하세요. 원하는 프리셋(MJPEG 추천)을 선택하고 <b>다음</b>을 누르세요.</p>
+ <p><b>호스트이름</b>은 <b><span class="repl">$IP$</span></b>로, <b>포트</b>는 <b><span class="repl">$PORT$</span></b>로 설정하세요.</p>
+ <p>OK를 누르면 새로운 카메라를 사용할 준비가 됩니다.</p>
+ <p/>
+ 
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#advanced">
+          고급
+        </a>
+      </h4>
+    </div>
+    <div id="advanced" class="panel-collapse collapse">
+      <div class="panel-body"><p>아래는 IP Webcam 서비스 URL 입니다:</p>
+ <ul>
+  <li><b><span class="repl">$URL$</span>/video</b> 는 MJPEG URL입니다.</li>
+  <li><b><span class="repl">$URL$</span>/shot.jpg</b> 마지막 장면에서 가져왔습니다.</li>
+  <li><b><span class="repl">$URL$</span>/audio.wav</b> Wav 포맷의 오디오 스트림입니다.</li>
+  <li><b><span class="repl">$URL$</span>/audio.aac</b> AAC 포맷의 오디오 스트림입니다.(하드웨어가 지원하는)</li>
+  <li><b><span class="repl">$URL$</span>/audio.opus</b> Opus 포맷의 오디오 스트림입니다.</li>
+  <li><b><span class="repl">$URL$</span>/focus</b> 포커싱을 합니다.</li>
+  <li><b><span class="repl">$URL$</span>/nofocus</b> 포커스를 해제합니다.</li>
+</ul>
+<p/>
+ 
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#view_outside">
+          인터넷과 같은 외부의 로컬 와이파이를 통한 IP Webcam 접근
+        </a>
+      </h4>
+    </div>
+    <div id="view_outside" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p>당신의 폰이 외부IP를 가지는 와이파이 공유기에 연결되어 있다면 인터넷을 통해 당신의 폰에 접속할 수가 있습니다. 이렇게 하려면 설정을 해 주어야 하는데 그리 어렵지 않습니다.</p>
+ <p/>
+ <p><b>중요:</b> 내부IP가 바뀌는 것을 방지하기 위해 <a class="hash-change" href="#mac_bind">MAC 바인딩 안내</a> 를 읽어보세요.</p>
+ <p/>
+ <p>공유기의 웹인터페이스를 통해 서버포트를 인터넷에 포워딩 해주고 공유기의 외부IP를 이용해서 접속을 해야 합니다. 이것을 포트포워딩과 가상서버라고 부릅니다. 사용방법은 공유기 매뉴얼을 참조하기 바랍니다. 또한 포트포워딩에 대한 무료 데이타베이스는 <a href="http://portforward.com">http://portforward.com/</a>를 참조하세요. 무료정보만으로 충분합니다.</p>
+ <p/>
+ <p>설정은 아래와 비슷할 것입니다:</p>
+ <p/>
+ <pre>폰 (192.168.3.198, server at 8080) ---&gt; 공유기 (포워딩 192.168.3.198:8080, 외부IP는 66.77.88.99) &lt;--- 어떤 클라이언트에서든 (<u>http://66.77.88.99:8080</u>) 로 접속</pre>
+<p/>
+ <p>외부IP 결정과 IP Webcam의 동작을 확인해 볼 수 있는 방법이 있습니다. 공유기설정에서 외부IP를 찾지 못한다면 <a href="http://whatismyip.org">http://whatismyip.org</a> 에서 찾을 수 있습니다. 공유기 설정이 제대로 되었는지 확인하려면 <a href="http://www.t1shopper.com/tools/port-scan/">이것</a> 같은 온라인 포트 스캐너를 사용하세요. IP 필드에 외부IP와 (예를 들면 66.77.88.99 같은), 포트 리스트에 있는 외부 포트포워딩값을 (예를 들면 8080 같은) 입력하세요.</p>
+ <p/>
+ <p/>
+ <p><b>주의</b> 공유기의 같은 네트워크상에서 공유기의 외부인터페이스를 통해 당신의 폰에 접근할 수가 없을 수도 있습니다. 이것은 공유기 펌웨어의 잦은 버그입니다. 이럴 경우 다른 와이파이 네트워크나 3G를 사용해야 합니다.</p>
+ <p/>
+ 
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#mac_bind">
+          왜 IP 주소가 바뀌는가?
+        </a>
+      </h4>
+    </div>
+    <div id="mac_bind" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p>IP를 할당하는 것은 와이파이 공유기입니다. 할당된 IP는 어떤 시간이나 사용후에는 바뀔 수가 있습니다. 이것이 바로 전의 주소로 IP Webcam을 접속할 수 없는 이유입니다.</p>
+ <p/>
+ <p>이런 증상을 방지하려면 공유기의 웹인터페이스로 들어가서 당신의 장치를 정적IP로 만들어 주어야 합니다. 메뉴에서 &quot;DHCP clients&quot; , &quot;Static 대여&quot; 나 &quot;IP/MAC 바인딩&quot; 같은 것을 찾아서 현재나 원하는 IP를 MAC 바인딩에 추가해 주어야 합니다.</p>
+ <p/>
+ <p>당신 폰의 MAC 주소는 스마트폰의 <b>설정-&gt;폰정보-&gt;상태-&gt;WiFi MAC 주소</b> 에서 확인할 수 있습니다.</p>
+ <p/>
+ 
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+      <hr/>
+
+      <footer>
+        <p>&copy; Pavel Khlebovich 2013</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    
+
+
+    
+
+<script type="text/javascript">
+  //<!--
+  $(initVideoChat)
+  //-->
+</script>
+
+
+
+    
+  </body>
+</html>

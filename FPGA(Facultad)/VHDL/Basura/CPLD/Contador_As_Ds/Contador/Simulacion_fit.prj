@@ -1,0 +1,2 @@
+vhdl work "netgen/fit/Contador_timesim.vhd"
+vhdl work "Simulacion.vhw"

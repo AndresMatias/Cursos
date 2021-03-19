@@ -1,0 +1,4 @@
+vhdl work "clk_1Hz.vhd"
+vhdl work "sseg_mux.vhd"
+vhdl work "Counter.vhd"
+vhdl work "Counter_Top.vhd"

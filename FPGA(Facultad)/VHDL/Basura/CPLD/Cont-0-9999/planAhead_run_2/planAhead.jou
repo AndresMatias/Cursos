@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Thu Nov 24 18:04:26 2016
+# Process ID: 1472
+# Log file: C:/Users/facun/Desktop/Lab 5/Cont-0-9999/planAhead_run_2/planAhead.log
+# Journal file: C:/Users/facun/Desktop/Lab 5/Cont-0-9999/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source {C:/Users/facun/Desktop/Lab 5/Cont-0-9999/pa.fromNetlist.tcl}

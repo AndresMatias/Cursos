@@ -1,0 +1,51 @@
+<!-- Indica formato htmls -->
+<html> 
+	<!-- En head va la cabezera o titulo de la pagina de la pestaño -->
+	<head> 
+		<meta charset="utf-8">
+		<title>Documento</title>
+	</head>
+	<!-- En body va todo lo que va a aparecer en la pagina es el cuerpo -->
+
+	<body>
+		<!--En header va logotipo y un menu-->
+		<header>
+			<!--div casi no se usa solo para imagenes, videos etc, contenido sin valor-->
+			<div>
+				<img src="Imagenes/logo.png" width="70" height="80">
+			</div>
+
+			<!--nav indica que aca hay un menu de navegacion-->
+			<nav>
+				<ul>
+					<li><a href="#">Inicio</a></li>
+					<li><a href="#">Categoria 1</a></li>
+					<li><a href="#">Categoria 2</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!--wrapper: contenedor que va a contener mas secciones-->
+		<section class="wrapper">
+			<section class="main">
+				<!--El contenido de articule es el contenido que google va a buscar primero y que tiene mas importancia-->
+				<article>
+					<!--usar h2 para que no penalice google con h1-->
+					<h2>Titulo de la pagina</h2>
+					<p>Contenido de parrafo agregar mas contenido</p>
+				</article>
+				<!--Otro articulo-->
+				<article>
+					<p>Contenido de parrafo agregar mas contenido</p>
+				</article>
+			</section><!--Contenido principal-->
+			<aside>
+				<h3>Sidebar</h3>
+				<p>Contenido aleatorio de parrafo</p>
+			</aside><!--Contenido secundario que no interesa al navegador pero si al usuario-->
+		</section>
+		<!--footer: pie de pagina-->
+		<footer>
+			<p>Carlos altura derechos reservados</p>
+		</footer>
+	</body>
+</html>

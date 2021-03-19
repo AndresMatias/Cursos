@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+  
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="IP Webcam"/>
+    <link rel="shortcut icon" href="ico/favicon.png"/>
+
+    <title>IP Webcam</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+
+    <link href="ipwebcam.css" rel="stylesheet"/>
+
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="lang.js"></script>
+    <script src="swfobject.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/ipwebcam.js"></script>
+    <script src="js/ipwebcam_override.js"></script>
+    <script src="js/ipwebcam_plugins.js"></script>
+
+
+  
+    
+  </head><body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="greet.html">IP Webcam</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav"> 
+            <li ><a href="greet.html">Home</a></li>
+            <li ><a href="videomgr.html">영상보관</a></li>
+            <li  class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">영상채팅 드라이버 <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">윈도우 드라이버 (영상만 지원)</li>
+                <li><a class="hash-change" href="videochat.html#ipca">IP 카메라 어답터</a></li>
+                
+                
+                <li class="divider"></li>
+                <li class="dropdown-header">리눅스 드라이버</li>
+                <li><a class="hash-change" href="videochat.html#linux">Ubuntu GNU/Linux 드라이버(외부 링크)</a></li>
+              </ul>
+            </li>
+
+            <li  class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">볼수 있는 다른 방법 <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">안드로이드 뷰어</li>
+                <li><a class="hash-change" href="viewers.html#tinycam">tinyCam Monitor</a></li>
+                <li><a href="http://hit-mob.com/ipwebcam/ipwebcam_howto.html">안드로이드와 iOS를 위한 IP Cam Viewer(외부 링크)</a></li>
+                <li class="dropdown-header">Cross-platform 뷰어</li>
+                <li><a class="hash-change" href="viewers.html#vlc">VLC 미디어 플레이어</a></li>
+                <li><a class="hash-change" href="viewers.html#zoneminder">ZoneMinder</a></li>
+                <li class="dropdown-header">윈도우 뷰어</li>
+                <li><a class="hash-change" href="viewers.html#blueiris">Blue Iris</a></li>
+                <li><a class="hash-change" href="viewers.html#webcamxp">webcamXP</a></li>
+                <li class="dropdown-header">기타</li>
+                <li><a class="hash-change" href="viewers.html#view_outside">인터넷과 같은 외부의 로컬 와이파이를 통한 IP Webcam 접근</a></li>
+                <li><a class="hash-change" href="viewers.html#mac_bind">왜 IP 주소가 바뀌는가?</a></li>
+                <li><a class="hash-change" href="viewers.html#advanced">고급</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+    
+    
+
+
+
+    <div class="container" id="main_container">
+      <div id="init_alert" class="alert alert-danger" style="display: none;">
+        <strong>카메라 상태를 읽어올 수 없음!</strong> 몇가지 기능이 동작하지 않음 <span id="init_error"></span>.
+      </div>
+    
+
+    
+      <hr/>
+
+      <footer>
+        <p>&copy; Pavel Khlebovich 2013</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    
+
+
+    
+    
+    
+
+    
+  </body>
+</html>

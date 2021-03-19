@@ -1,0 +1,6 @@
+EN clk_1hz NULL C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/clk_1Hz.vhd sub00/vhpl00 1510243432
+EN ffd NULL C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/FFD.vhd sub00/vhpl02 1510243434
+AR clk_1hz arch C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/clk_1Hz.vhd sub00/vhpl01 1510243433
+EN mod5_up_down_sec NULL C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/mod5_Up_Down_Sec.vhd sub00/vhpl04 1510243436
+AR ffd arch C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/FFD.vhd sub00/vhpl03 1510243435
+AR mod5_up_down_sec arch C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/mod5_Up_Down_Sec.vhd sub00/vhpl05 1510243437

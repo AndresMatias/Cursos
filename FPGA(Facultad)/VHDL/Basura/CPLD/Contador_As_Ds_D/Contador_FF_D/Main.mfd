@@ -1,0 +1,567 @@
+MDF Database:  version 1.0
+MDF_INFO | Main | XC9572XL-5-PC44
+MACROCELL | 1 | 9 | clk_1Hz_unit/s_reg<0>
+ATTRIBUTES | 4358976 | 0
+OUTPUTMC | 29 | 1 | 9 | 3 | 17 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 3 | 15 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 3 | 14 | 3 | 13 | 3 | 12 | 3 | 11 | 1 | 12 | 3 | 10 | 1 | 11 | 1 | 10 | 1 | 0 | 0 | 1 | 2 | 1 | 2 | 13
+INPUTS | 27 | clk_enable  | clk_1Hz_unit/s_reg<0>  | clk_1Hz_unit/s_reg<10>  | clk_1Hz_unit/s_reg<11>  | clk_1Hz_unit/s_reg<12>  | clk_1Hz_unit/s_reg<13>  | clk_1Hz_unit/s_reg<14>  | clk_1Hz_unit/s_reg<15>  | clk_1Hz_unit/s_reg<16>  | clk_1Hz_unit/s_reg<17>  | clk_1Hz_unit/s_reg<18>  | clk_1Hz_unit/s_reg<19>  | clk_1Hz_unit/s_reg<1>  | clk_1Hz_unit/s_reg<20>  | clk_1Hz_unit/s_reg<21>  | clk_1Hz_unit/s_reg<22>  | clk_1Hz_unit/s_reg<23>  | clk_1Hz_unit/s_reg<24>  | clk_1Hz_unit/s_reg<2>  | clk_1Hz_unit/s_reg<3>  | clk_1Hz_unit/s_reg<4>  | clk_1Hz_unit/s_reg<5>  | clk_1Hz_unit/s_reg<6>  | clk_1Hz_unit/s_reg<7>  | clk_1Hz_unit/s_reg<8>  | clk_1Hz_unit/s_reg<9>  | clk_1Hz_unit/s_reg<25>
+INPUTMC | 26 | 1 | 9 | 3 | 17 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 3 | 15 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 3 | 14 | 3 | 13 | 3 | 12 | 3 | 11 | 1 | 12 | 3 | 10 | 1 | 11 | 1 | 10 | 1 | 0
+INPUTP | 1 | 26
+EQ | 12 | 
+   !clk_1Hz_unit/s_reg<0>.T = clk_enable & !clk_1Hz_unit/s_reg<0> & 
+	!clk_1Hz_unit/s_reg<10> & clk_1Hz_unit/s_reg<11> & !clk_1Hz_unit/s_reg<12> & 
+	!clk_1Hz_unit/s_reg<13> & clk_1Hz_unit/s_reg<14> & !clk_1Hz_unit/s_reg<15> & 
+	!clk_1Hz_unit/s_reg<16> & !clk_1Hz_unit/s_reg<17> & clk_1Hz_unit/s_reg<18> & 
+	clk_1Hz_unit/s_reg<19> & !clk_1Hz_unit/s_reg<1> & !clk_1Hz_unit/s_reg<20> & 
+	!clk_1Hz_unit/s_reg<21> & clk_1Hz_unit/s_reg<22> & !clk_1Hz_unit/s_reg<23> & 
+	!clk_1Hz_unit/s_reg<24> & !clk_1Hz_unit/s_reg<2> & !clk_1Hz_unit/s_reg<3> & 
+	!clk_1Hz_unit/s_reg<4> & !clk_1Hz_unit/s_reg<5> & clk_1Hz_unit/s_reg<6> & 
+	!clk_1Hz_unit/s_reg<7> & clk_1Hz_unit/s_reg<8> & clk_1Hz_unit/s_reg<9> & 
+	!clk_1Hz_unit/s_reg<25>;
+   clk_1Hz_unit/s_reg<0>.CLK = clk50Mhz;	// GCK
+   clk_1Hz_unit/s_reg<0>.CE = clk_enable;
+GLOBALS | 1 | 2 | clk50Mhz
+
+MACROCELL | 3 | 17 | clk_1Hz_unit/s_reg<10>
+ATTRIBUTES | 4358976 | 0
+OUTPUTMC | 22 | 1 | 9 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 0 | 0 | 1 | 2 | 1 | 2 | 13
+INPUTS | 11 | clk_1Hz_unit/s_reg<0>  | clk_1Hz_unit/s_reg<1>  | clk_1Hz_unit/s_reg<2>  | clk_1Hz_unit/s_reg<3>  | clk_1Hz_unit/s_reg<4>  | clk_1Hz_unit/s_reg<5>  | clk_1Hz_unit/s_reg<6>  | clk_1Hz_unit/s_reg<7>  | clk_1Hz_unit/s_reg<8>  | clk_1Hz_unit/s_reg<9>  | clk_enable
+INPUTMC | 10 | 1 | 9 | 3 | 15 | 3 | 14 | 3 | 13 | 3 | 12 | 3 | 11 | 1 | 12 | 3 | 10 | 1 | 11 | 1 | 10
+INPUTP | 1 | 26
+EQ | 6 | 
+   clk_1Hz_unit/s_reg<10>.T = clk_1Hz_unit/s_reg<0> & clk_1Hz_unit/s_reg<1> & 
+	clk_1Hz_unit/s_reg<2> & clk_1Hz_unit/s_reg<3> & clk_1Hz_unit/s_reg<4> & 
+	clk_1Hz_unit/s_reg<5> & clk_1Hz_unit/s_reg<6> & clk_1Hz_unit/s_reg<7> & 
+	clk_1Hz_unit/s_reg<8> & clk_1Hz_unit/s_reg<9>;
+   clk_1Hz_unit/s_reg<10>.CLK = clk50Mhz;	// GCK
+   clk_1Hz_unit/s_reg<10>.CE = clk_enable;
+GLOBALS | 1 | 2 | clk50Mhz
+
+MACROCELL | 1 | 17 | clk_1Hz_unit/s_reg<11>
+ATTRIBUTES | 4358976 | 0
+OUTPUTMC | 22 | 1 | 9 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 0 | 0 | 1 | 2 | 1 | 2 | 13
+INPUTS | 27 | clk_1Hz_unit/s_reg<0>  | clk_1Hz_unit/s_reg<10>  | clk_1Hz_unit/s_reg<1>  | clk_1Hz_unit/s_reg<2>  | clk_1Hz_unit/s_reg<3>  | clk_1Hz_unit/s_reg<4>  | clk_1Hz_unit/s_reg<5>  | clk_1Hz_unit/s_reg<6>  | clk_1Hz_unit/s_reg<7>  | clk_1Hz_unit/s_reg<8>  | clk_1Hz_unit/s_reg<9>  | clk_enable  | clk_1Hz_unit/s_reg<11>  | clk_1Hz_unit/s_reg<12>  | clk_1Hz_unit/s_reg<13>  | clk_1Hz_unit/s_reg<14>  | clk_1Hz_unit/s_reg<15>  | clk_1Hz_unit/s_reg<16>  | clk_1Hz_unit/s_reg<17>  | clk_1Hz_unit/s_reg<18>  | clk_1Hz_unit/s_reg<19>  | clk_1Hz_unit/s_reg<20>  | clk_1Hz_unit/s_reg<21>  | clk_1Hz_unit/s_reg<22>  | clk_1Hz_unit/s_reg<23>  | clk_1Hz_unit/s_reg<24>  | clk_1Hz_unit/s_reg<25>
+INPUTMC | 26 | 1 | 9 | 3 | 17 | 3 | 15 | 3 | 14 | 3 | 13 | 3 | 12 | 3 | 11 | 1 | 12 | 3 | 10 | 1 | 11 | 1 | 10 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 1 | 0
+INPUTP | 1 | 26
+EQ | 16 | 
+   clk_1Hz_unit/s_reg<11>.T = clk_1Hz_unit/s_reg<0> & clk_1Hz_unit/s_reg<10> & 
+	clk_1Hz_unit/s_reg<1> & clk_1Hz_unit/s_reg<2> & clk_1Hz_unit/s_reg<3> & 
+	clk_1Hz_unit/s_reg<4> & clk_1Hz_unit/s_reg<5> & clk_1Hz_unit/s_reg<6> & 
+	clk_1Hz_unit/s_reg<7> & clk_1Hz_unit/s_reg<8> & clk_1Hz_unit/s_reg<9>
+	# clk_enable & !clk_1Hz_unit/s_reg<0> & 
+	!clk_1Hz_unit/s_reg<10> & clk_1Hz_unit/s_reg<11> & !clk_1Hz_unit/s_reg<12> & 
+	!clk_1Hz_unit/s_reg<13> & clk_1Hz_unit/s_reg<14> & !clk_1Hz_unit/s_reg<15> & 
+	!clk_1Hz_unit/s_reg<16> & !clk_1Hz_unit/s_reg<17> & clk_1Hz_unit/s_reg<18> & 
+	clk_1Hz_unit/s_reg<19> & !clk_1Hz_unit/s_reg<1> & !clk_1Hz_unit/s_reg<20> & 
+	!clk_1Hz_unit/s_reg<21> & clk_1Hz_unit/s_reg<22> & !clk_1Hz_unit/s_reg<23> & 
+	!clk_1Hz_unit/s_reg<24> & !clk_1Hz_unit/s_reg<2> & !clk_1Hz_unit/s_reg<3> & 
+	!clk_1Hz_unit/s_reg<4> & !clk_1Hz_unit/s_reg<5> & clk_1Hz_unit/s_reg<6> & 
+	!clk_1Hz_unit/s_reg<7> & clk_1Hz_unit/s_reg<8> & clk_1Hz_unit/s_reg<9> & 
+	!clk_1Hz_unit/s_reg<25>;
+   clk_1Hz_unit/s_reg<11>.CLK = clk50Mhz;	// GCK
+   clk_1Hz_unit/s_reg<11>.CE = clk_enable;
+GLOBALS | 1 | 2 | clk50Mhz
+
+MACROCELL | 3 | 16 | clk_1Hz_unit/s_reg<12>
+ATTRIBUTES | 4358976 | 0
+OUTPUTMC | 21 | 1 | 9 | 1 | 17 | 1 | 8 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 0 | 0 | 1 | 2 | 1 | 2 | 13
+INPUTS | 13 | clk_1Hz_unit/s_reg<0>  | clk_1Hz_unit/s_reg<10>  | clk_1Hz_unit/s_reg<11>  | clk_1Hz_unit/s_reg<1>  | clk_1Hz_unit/s_reg<2>  | clk_1Hz_unit/s_reg<3>  | clk_1Hz_unit/s_reg<4>  | clk_1Hz_unit/s_reg<5>  | clk_1Hz_unit/s_reg<6>  | clk_1Hz_unit/s_reg<7>  | clk_1Hz_unit/s_reg<8>  | clk_1Hz_unit/s_reg<9>  | clk_enable
+INPUTMC | 12 | 1 | 9 | 3 | 17 | 1 | 17 | 3 | 15 | 3 | 14 | 3 | 13 | 3 | 12 | 3 | 11 | 1 | 12 | 3 | 10 | 1 | 11 | 1 | 10
+INPUTP | 1 | 26
+EQ | 7 | 
+   clk_1Hz_unit/s_reg<12>.T = clk_1Hz_unit/s_reg<0> & clk_1Hz_unit/s_reg<10> & 
+	clk_1Hz_unit/s_reg<11> & clk_1Hz_unit/s_reg<1> & clk_1Hz_unit/s_reg<2> & 
+	clk_1Hz_unit/s_reg<3> & clk_1Hz_unit/s_reg<4> & clk_1Hz_unit/s_reg<5> & 
+	clk_1Hz_unit/s_reg<6> & clk_1Hz_unit/s_reg<7> & clk_1Hz_unit/s_reg<8> & 
+	clk_1Hz_unit/s_reg<9>;
+   clk_1Hz_unit/s_reg<12>.CLK = clk50Mhz;	// GCK
+   clk_1Hz_unit/s_reg<12>.CE = clk_enable;
+GLOBALS | 1 | 2 | clk50Mhz
+
+MACROCELL | 1 | 8 | clk_1Hz_unit/s_reg<13>
+ATTRIBUTES | 4358976 | 0
+OUTPUTMC | 20 | 1 | 9 | 1 | 17 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 0 | 0 | 1 | 2 | 1 | 2 | 13
+INPUTS | 14 | clk_1Hz_unit/s_reg<0>  | clk_1Hz_unit/s_reg<10>  | clk_1Hz_unit/s_reg<11>  | clk_1Hz_unit/s_reg<12>  | clk_1Hz_unit/s_reg<1>  | clk_1Hz_unit/s_reg<2>  | clk_1Hz_unit/s_reg<3>  | clk_1Hz_unit/s_reg<4>  | clk_1Hz_unit/s_reg<5>  | clk_1Hz_unit/s_reg<6>  | clk_1Hz_unit/s_reg<7>  | clk_1Hz_unit/s_reg<8>  | clk_1Hz_unit/s_reg<9>  | clk_enable
+INPUTMC | 13 | 1 | 9 | 3 | 17 | 1 | 17 | 3 | 16 | 3 | 15 | 3 | 14 | 3 | 13 | 3 | 12 | 3 | 11 | 1 | 12 | 3 | 10 | 1 | 11 | 1 | 10
+INPUTP | 1 | 26
+EQ | 7 | 
+   clk_1Hz_unit/s_reg<13>.T = clk_1Hz_unit/s_reg<0> & clk_1Hz_unit/s_reg<10> & 
+	clk_1Hz_unit/s_reg<11> & clk_1Hz_unit/s_reg<12> & clk_1Hz_unit/s_reg<1> & 
+	clk_1Hz_unit/s_reg<2> & clk_1Hz_unit/s_reg<3> & clk_1Hz_unit/s_reg<4> & 
+	clk_1Hz_unit/s_reg<5> & clk_1Hz_unit/s_reg<6> & clk_1Hz_unit/s_reg<7> & 
+	clk_1Hz_unit/s_reg<8> & clk_1Hz_unit/s_reg<9>;
+   clk_1Hz_unit/s_reg<13>.CLK = clk50Mhz;	// GCK
+   clk_1Hz_unit/s_reg<13>.CE = clk_enable;
+GLOBALS | 1 | 2 | clk50Mhz
+
+MACROCELL | 1 | 16 | clk_1Hz_unit/s_reg<14>
+ATTRIBUTES | 4358976 | 0
+OUTPUTMC | 20 | 1 | 9 | 1 | 17 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 0 | 0 | 1 | 2 | 1 | 2 | 13
+INPUTS | 27 | clk_1Hz_unit/s_reg<0>  | clk_1Hz_unit/s_reg<10>  | clk_1Hz_unit/s_reg<11>  | clk_1Hz_unit/s_reg<12>  | clk_1Hz_unit/s_reg<13>  | clk_1Hz_unit/s_reg<1>  | clk_1Hz_unit/s_reg<2>  | clk_1Hz_unit/s_reg<3>  | clk_1Hz_unit/s_reg<4>  | clk_1Hz_unit/s_reg<5>  | clk_1Hz_unit/s_reg<6>  | clk_1Hz_unit/s_reg<7>  | clk_1Hz_unit/s_reg<8>  | clk_1Hz_unit/s_reg<9>  | clk_enable  | clk_1Hz_unit/s_reg<14>  | clk_1Hz_unit/s_reg<15>  | clk_1Hz_unit/s_reg<16>  | clk_1Hz_unit/s_reg<17>  | clk_1Hz_unit/s_reg<18>  | clk_1Hz_unit/s_reg<19>  | clk_1Hz_unit/s_reg<20>  | clk_1Hz_unit/s_reg<21>  | clk_1Hz_unit/s_reg<22>  | clk_1Hz_unit/s_reg<23>  | clk_1Hz_unit/s_reg<24>  | clk_1Hz_unit/s_reg<25>
+INPUTMC | 26 | 1 | 9 | 3 | 17 | 1 | 17 | 3 | 16 | 1 | 8 | 3 | 15 | 3 | 14 | 3 | 13 | 3 | 12 | 3 | 11 | 1 | 12 | 3 | 10 | 1 | 11 | 1 | 10 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 1 | 0
+INPUTP | 1 | 26
+EQ | 17 | 
+   clk_1Hz_unit/s_reg<14>.T = clk_1Hz_unit/s_reg<0> & clk_1Hz_unit/s_reg<10> & 
+	clk_1Hz_unit/s_reg<11> & clk_1Hz_unit/s_reg<12> & clk_1Hz_unit/s_reg<13> & 
+	clk_1Hz_unit/s_reg<1> & clk_1Hz_unit/s_reg<2> & clk_1Hz_unit/s_reg<3> & 
+	clk_1Hz_unit/s_reg<4> & clk_1Hz_unit/s_reg<5> & clk_1Hz_unit/s_reg<6> & 
+	clk_1Hz_unit/s_reg<7> & clk_1Hz_unit/s_reg<8> & clk_1Hz_unit/s_reg<9>
+	# clk_enable & !clk_1Hz_unit/s_reg<0> & 
+	!clk_1Hz_unit/s_reg<10> & clk_1Hz_unit/s_reg<11> & !clk_1Hz_unit/s_reg<12> & 
+	!clk_1Hz_unit/s_reg<13> & clk_1Hz_unit/s_reg<14> & !clk_1Hz_unit/s_reg<15> & 
+	!clk_1Hz_unit/s_reg<16> & !clk_1Hz_unit/s_reg<17> & clk_1Hz_unit/s_reg<18> & 
+	clk_1Hz_unit/s_reg<19> & !clk_1Hz_unit/s_reg<1> & !clk_1Hz_unit/s_reg<20> & 
+	!clk_1Hz_unit/s_reg<21> & clk_1Hz_unit/s_reg<22> & !clk_1Hz_unit/s_reg<23> & 
+	!clk_1Hz_unit/s_reg<24> & !clk_1Hz_unit/s_reg<2> & !clk_1Hz_unit/s_reg<3> & 
+	!clk_1Hz_unit/s_reg<4> & !clk_1Hz_unit/s_reg<5> & clk_1Hz_unit/s_reg<6> & 
+	!clk_1Hz_unit/s_reg<7> & clk_1Hz_unit/s_reg<8> & clk_1Hz_unit/s_reg<9> & 
+	!clk_1Hz_unit/s_reg<25>;
+   clk_1Hz_unit/s_reg<14>.CLK = clk50Mhz;	// GCK
+   clk_1Hz_unit/s_reg<14>.CE = clk_enable;
+GLOBALS | 1 | 2 | clk50Mhz
+
+MACROCELL | 1 | 7 | clk_1Hz_unit/s_reg<15>
+ATTRIBUTES | 4358976 | 0
+OUTPUTMC | 19 | 1 | 9 | 1 | 17 | 1 | 16 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 0 | 0 | 1 | 2 | 1 | 2 | 13
+INPUTS | 16 | clk_1Hz_unit/s_reg<0>  | clk_1Hz_unit/s_reg<10>  | clk_1Hz_unit/s_reg<11>  | clk_1Hz_unit/s_reg<12>  | clk_1Hz_unit/s_reg<13>  | clk_1Hz_unit/s_reg<14>  | clk_1Hz_unit/s_reg<1>  | clk_1Hz_unit/s_reg<2>  | clk_1Hz_unit/s_reg<3>  | clk_1Hz_unit/s_reg<4>  | clk_1Hz_unit/s_reg<5>  | clk_1Hz_unit/s_reg<6>  | clk_1Hz_unit/s_reg<7>  | clk_1Hz_unit/s_reg<8>  | clk_1Hz_unit/s_reg<9>  | clk_enable
+INPUTMC | 15 | 1 | 9 | 3 | 17 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 3 | 15 | 3 | 14 | 3 | 13 | 3 | 12 | 3 | 11 | 1 | 12 | 3 | 10 | 1 | 11 | 1 | 10
+INPUTP | 1 | 26
+EQ | 8 | 
+   clk_1Hz_unit/s_reg<15>.T = clk_1Hz_unit/s_reg<0> & clk_1Hz_unit/s_reg<10> & 
+	clk_1Hz_unit/s_reg<11> & clk_1Hz_unit/s_reg<12> & clk_1Hz_unit/s_reg<13> & 
+	clk_1Hz_unit/s_reg<14> & clk_1Hz_unit/s_reg<1> & clk_1Hz_unit/s_reg<2> & 
+	clk_1Hz_unit/s_reg<3> & clk_1Hz_unit/s_reg<4> & clk_1Hz_unit/s_reg<5> & 
+	clk_1Hz_unit/s_reg<6> & clk_1Hz_unit/s_reg<7> & clk_1Hz_unit/s_reg<8> & 
+	clk_1Hz_unit/s_reg<9>;
+   clk_1Hz_unit/s_reg<15>.CLK = clk50Mhz;	// GCK
+   clk_1Hz_unit/s_reg<15>.CE = clk_enable;
+GLOBALS | 1 | 2 | clk50Mhz
+
+MACROCELL | 1 | 6 | clk_1Hz_unit/s_reg<16>
+ATTRIBUTES | 4358976 | 0
+OUTPUTMC | 18 | 1 | 9 | 1 | 17 | 1 | 16 | 1 | 5 | 1 | 15 | 1 | 14 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 0 | 0 | 1 | 2 | 1 | 2 | 13
+INPUTS | 17 | clk_1Hz_unit/s_reg<0>  | clk_1Hz_unit/s_reg<10>  | clk_1Hz_unit/s_reg<11>  | clk_1Hz_unit/s_reg<12>  | clk_1Hz_unit/s_reg<13>  | clk_1Hz_unit/s_reg<14>  | clk_1Hz_unit/s_reg<15>  | clk_1Hz_unit/s_reg<1>  | clk_1Hz_unit/s_reg<2>  | clk_1Hz_unit/s_reg<3>  | clk_1Hz_unit/s_reg<4>  | clk_1Hz_unit/s_reg<5>  | clk_1Hz_unit/s_reg<6>  | clk_1Hz_unit/s_reg<7>  | clk_1Hz_unit/s_reg<8>  | clk_1Hz_unit/s_reg<9>  | clk_enable
+INPUTMC | 16 | 1 | 9 | 3 | 17 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 1 | 7 | 3 | 15 | 3 | 14 | 3 | 13 | 3 | 12 | 3 | 11 | 1 | 12 | 3 | 10 | 1 | 11 | 1 | 10
+INPUTP | 1 | 26
+EQ | 8 | 
+   clk_1Hz_unit/s_reg<16>.T = clk_1Hz_unit/s_reg<0> & clk_1Hz_unit/s_reg<10> & 
+	clk_1Hz_unit/s_reg<11> & clk_1Hz_unit/s_reg<12> & clk_1Hz_unit/s_reg<13> & 
+	clk_1Hz_unit/s_reg<14> & clk_1Hz_unit/s_reg<15> & clk_1Hz_unit/s_reg<1> & 
+	clk_1Hz_unit/s_reg<2> & clk_1Hz_unit/s_reg<3> & clk_1Hz_unit/s_reg<4> & 
+	clk_1Hz_unit/s_reg<5> & clk_1Hz_unit/s_reg<6> & clk_1Hz_unit/s_reg<7> & 
+	clk_1Hz_unit/s_reg<8> & clk_1Hz_unit/s_reg<9>;
+   clk_1Hz_unit/s_reg<16>.CLK = clk50Mhz;	// GCK
+   clk_1Hz_unit/s_reg<16>.CE = clk_enable;
+GLOBALS | 1 | 2 | clk50Mhz
+
+MACROCELL | 1 | 5 | clk_1Hz_unit/s_reg<17>
+ATTRIBUTES | 4358976 | 0
+OUTPUTMC | 17 | 1 | 9 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 0 | 0 | 1 | 2 | 1 | 2 | 13
+INPUTS | 18 | clk_1Hz_unit/s_reg<0>  | clk_1Hz_unit/s_reg<10>  | clk_1Hz_unit/s_reg<11>  | clk_1Hz_unit/s_reg<12>  | clk_1Hz_unit/s_reg<13>  | clk_1Hz_unit/s_reg<14>  | clk_1Hz_unit/s_reg<15>  | clk_1Hz_unit/s_reg<16>  | clk_1Hz_unit/s_reg<1>  | clk_1Hz_unit/s_reg<2>  | clk_1Hz_unit/s_reg<3>  | clk_1Hz_unit/s_reg<4>  | clk_1Hz_unit/s_reg<5>  | clk_1Hz_unit/s_reg<6>  | clk_1Hz_unit/s_reg<7>  | clk_1Hz_unit/s_reg<8>  | clk_1Hz_unit/s_reg<9>  | clk_enable
+INPUTMC | 17 | 1 | 9 | 3 | 17 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 1 | 7 | 1 | 6 | 3 | 15 | 3 | 14 | 3 | 13 | 3 | 12 | 3 | 11 | 1 | 12 | 3 | 10 | 1 | 11 | 1 | 10
+INPUTP | 1 | 26
+EQ | 8 | 
+   clk_1Hz_unit/s_reg<17>.T = clk_1Hz_unit/s_reg<0> & clk_1Hz_unit/s_reg<10> & 
+	clk_1Hz_unit/s_reg<11> & clk_1Hz_unit/s_reg<12> & clk_1Hz_unit/s_reg<13> & 
+	clk_1Hz_unit/s_reg<14> & clk_1Hz_unit/s_reg<15> & clk_1Hz_unit/s_reg<16> & 
+	clk_1Hz_unit/s_reg<1> & clk_1Hz_unit/s_reg<2> & clk_1Hz_unit/s_reg<3> & 
+	clk_1Hz_unit/s_reg<4> & clk_1Hz_unit/s_reg<5> & clk_1Hz_unit/s_reg<6> & 
+	clk_1Hz_unit/s_reg<7> & clk_1Hz_unit/s_reg<8> & clk_1Hz_unit/s_reg<9>;
+   clk_1Hz_unit/s_reg<17>.CLK = clk50Mhz;	// GCK
+   clk_1Hz_unit/s_reg<17>.CE = clk_enable;
+GLOBALS | 1 | 2 | clk50Mhz
+
+MACROCELL | 1 | 15 | clk_1Hz_unit/s_reg<18>
+ATTRIBUTES | 4358976 | 0
+OUTPUTMC | 17 | 1 | 9 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 0 | 0 | 1 | 2 | 1 | 2 | 13
+INPUTS | 27 | clk_1Hz_unit/s_reg<0>  | clk_1Hz_unit/s_reg<10>  | clk_1Hz_unit/s_reg<11>  | clk_1Hz_unit/s_reg<12>  | clk_1Hz_unit/s_reg<13>  | clk_1Hz_unit/s_reg<14>  | clk_1Hz_unit/s_reg<15>  | clk_1Hz_unit/s_reg<16>  | clk_1Hz_unit/s_reg<17>  | clk_1Hz_unit/s_reg<1>  | clk_1Hz_unit/s_reg<2>  | clk_1Hz_unit/s_reg<3>  | clk_1Hz_unit/s_reg<4>  | clk_1Hz_unit/s_reg<5>  | clk_1Hz_unit/s_reg<6>  | clk_1Hz_unit/s_reg<7>  | clk_1Hz_unit/s_reg<8>  | clk_1Hz_unit/s_reg<9>  | clk_enable  | clk_1Hz_unit/s_reg<18>  | clk_1Hz_unit/s_reg<19>  | clk_1Hz_unit/s_reg<20>  | clk_1Hz_unit/s_reg<21>  | clk_1Hz_unit/s_reg<22>  | clk_1Hz_unit/s_reg<23>  | clk_1Hz_unit/s_reg<24>  | clk_1Hz_unit/s_reg<25>
+INPUTMC | 26 | 1 | 9 | 3 | 17 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 3 | 15 | 3 | 14 | 3 | 13 | 3 | 12 | 3 | 11 | 1 | 12 | 3 | 10 | 1 | 11 | 1 | 10 | 1 | 15 | 1 | 14 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 1 | 0
+INPUTP | 1 | 26
+EQ | 19 | 
+   clk_1Hz_unit/s_reg<18>.T = clk_1Hz_unit/s_reg<0> & clk_1Hz_unit/s_reg<10> & 
+	clk_1Hz_unit/s_reg<11> & clk_1Hz_unit/s_reg<12> & clk_1Hz_unit/s_reg<13> & 
+	clk_1Hz_unit/s_reg<14> & clk_1Hz_unit/s_reg<15> & clk_1Hz_unit/s_reg<16> & 
+	clk_1Hz_unit/s_reg<17> & clk_1Hz_unit/s_reg<1> & clk_1Hz_unit/s_reg<2> & 
+	clk_1Hz_unit/s_reg<3> & clk_1Hz_unit/s_reg<4> & clk_1Hz_unit/s_reg<5> & 
+	clk_1Hz_unit/s_reg<6> & clk_1Hz_unit/s_reg<7> & clk_1Hz_unit/s_reg<8> & 
+	clk_1Hz_unit/s_reg<9>
+	# clk_enable & !clk_1Hz_unit/s_reg<0> & 
+	!clk_1Hz_unit/s_reg<10> & clk_1Hz_unit/s_reg<11> & !clk_1Hz_unit/s_reg<12> & 
+	!clk_1Hz_unit/s_reg<13> & clk_1Hz_unit/s_reg<14> & !clk_1Hz_unit/s_reg<15> & 
+	!clk_1Hz_unit/s_reg<16> & !clk_1Hz_unit/s_reg<17> & clk_1Hz_unit/s_reg<18> & 
+	clk_1Hz_unit/s_reg<19> & !clk_1Hz_unit/s_reg<1> & !clk_1Hz_unit/s_reg<20> & 
+	!clk_1Hz_unit/s_reg<21> & clk_1Hz_unit/s_reg<22> & !clk_1Hz_unit/s_reg<23> & 
+	!clk_1Hz_unit/s_reg<24> & !clk_1Hz_unit/s_reg<2> & !clk_1Hz_unit/s_reg<3> & 
+	!clk_1Hz_unit/s_reg<4> & !clk_1Hz_unit/s_reg<5> & clk_1Hz_unit/s_reg<6> & 
+	!clk_1Hz_unit/s_reg<7> & clk_1Hz_unit/s_reg<8> & clk_1Hz_unit/s_reg<9> & 
+	!clk_1Hz_unit/s_reg<25>;
+   clk_1Hz_unit/s_reg<18>.CLK = clk50Mhz;	// GCK
+   clk_1Hz_unit/s_reg<18>.CE = clk_enable;
+GLOBALS | 1 | 2 | clk50Mhz
+
+MACROCELL | 1 | 14 | clk_1Hz_unit/s_reg<19>
+ATTRIBUTES | 4358976 | 0
+OUTPUTMC | 17 | 1 | 9 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 0 | 0 | 1 | 2 | 1 | 2 | 13
+INPUTS | 27 | clk_1Hz_unit/s_reg<0>  | clk_1Hz_unit/s_reg<10>  | clk_1Hz_unit/s_reg<11>  | clk_1Hz_unit/s_reg<12>  | clk_1Hz_unit/s_reg<13>  | clk_1Hz_unit/s_reg<14>  | clk_1Hz_unit/s_reg<15>  | clk_1Hz_unit/s_reg<16>  | clk_1Hz_unit/s_reg<17>  | clk_1Hz_unit/s_reg<18>  | clk_1Hz_unit/s_reg<1>  | clk_1Hz_unit/s_reg<2>  | clk_1Hz_unit/s_reg<3>  | clk_1Hz_unit/s_reg<4>  | clk_1Hz_unit/s_reg<5>  | clk_1Hz_unit/s_reg<6>  | clk_1Hz_unit/s_reg<7>  | clk_1Hz_unit/s_reg<8>  | clk_1Hz_unit/s_reg<9>  | clk_enable  | clk_1Hz_unit/s_reg<19>  | clk_1Hz_unit/s_reg<20>  | clk_1Hz_unit/s_reg<21>  | clk_1Hz_unit/s_reg<22>  | clk_1Hz_unit/s_reg<23>  | clk_1Hz_unit/s_reg<24>  | clk_1Hz_unit/s_reg<25>
+INPUTMC | 26 | 1 | 9 | 3 | 17 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 3 | 15 | 3 | 14 | 3 | 13 | 3 | 12 | 3 | 11 | 1 | 12 | 3 | 10 | 1 | 11 | 1 | 10 | 1 | 14 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 1 | 0
+INPUTP | 1 | 26
+EQ | 19 | 
+   clk_1Hz_unit/s_reg<19>.T = clk_1Hz_unit/s_reg<0> & clk_1Hz_unit/s_reg<10> & 
+	clk_1Hz_unit/s_reg<11> & clk_1Hz_unit/s_reg<12> & clk_1Hz_unit/s_reg<13> & 
+	clk_1Hz_unit/s_reg<14> & clk_1Hz_unit/s_reg<15> & clk_1Hz_unit/s_reg<16> & 
+	clk_1Hz_unit/s_reg<17> & clk_1Hz_unit/s_reg<18> & clk_1Hz_unit/s_reg<1> & 
+	clk_1Hz_unit/s_reg<2> & clk_1Hz_unit/s_reg<3> & clk_1Hz_unit/s_reg<4> & 
+	clk_1Hz_unit/s_reg<5> & clk_1Hz_unit/s_reg<6> & clk_1Hz_unit/s_reg<7> & 
+	clk_1Hz_unit/s_reg<8> & clk_1Hz_unit/s_reg<9>
+	# clk_enable & !clk_1Hz_unit/s_reg<0> & 
+	!clk_1Hz_unit/s_reg<10> & clk_1Hz_unit/s_reg<11> & !clk_1Hz_unit/s_reg<12> & 
+	!clk_1Hz_unit/s_reg<13> & clk_1Hz_unit/s_reg<14> & !clk_1Hz_unit/s_reg<15> & 
+	!clk_1Hz_unit/s_reg<16> & !clk_1Hz_unit/s_reg<17> & clk_1Hz_unit/s_reg<18> & 
+	clk_1Hz_unit/s_reg<19> & !clk_1Hz_unit/s_reg<1> & !clk_1Hz_unit/s_reg<20> & 
+	!clk_1Hz_unit/s_reg<21> & clk_1Hz_unit/s_reg<22> & !clk_1Hz_unit/s_reg<23> & 
+	!clk_1Hz_unit/s_reg<24> & !clk_1Hz_unit/s_reg<2> & !clk_1Hz_unit/s_reg<3> & 
+	!clk_1Hz_unit/s_reg<4> & !clk_1Hz_unit/s_reg<5> & clk_1Hz_unit/s_reg<6> & 
+	!clk_1Hz_unit/s_reg<7> & clk_1Hz_unit/s_reg<8> & clk_1Hz_unit/s_reg<9> & 
+	!clk_1Hz_unit/s_reg<25>;
+   clk_1Hz_unit/s_reg<19>.CLK = clk50Mhz;	// GCK
+   clk_1Hz_unit/s_reg<19>.CE = clk_enable;
+GLOBALS | 1 | 2 | clk50Mhz
+
+MACROCELL | 3 | 15 | clk_1Hz_unit/s_reg<1>
+ATTRIBUTES | 4358976 | 0
+OUTPUTMC | 28 | 1 | 9 | 3 | 17 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 3 | 14 | 3 | 13 | 3 | 12 | 3 | 11 | 1 | 12 | 3 | 10 | 1 | 11 | 1 | 10 | 1 | 0 | 0 | 1 | 2 | 1 | 2 | 13
+INPUTS | 2 | clk_1Hz_unit/s_reg<0>  | clk_enable
+INPUTMC | 1 | 1 | 9
+INPUTP | 1 | 26
+EQ | 3 | 
+   clk_1Hz_unit/s_reg<1>.T = clk_1Hz_unit/s_reg<0>;
+   clk_1Hz_unit/s_reg<1>.CLK = clk50Mhz;	// GCK
+   clk_1Hz_unit/s_reg<1>.CE = clk_enable;
+GLOBALS | 1 | 2 | clk50Mhz
+
+MACROCELL | 1 | 4 | clk_1Hz_unit/s_reg<20>
+ATTRIBUTES | 4358976 | 0
+OUTPUTMC | 16 | 1 | 9 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 0 | 0 | 1 | 2 | 1 | 2 | 13
+INPUTS | 21 | clk_1Hz_unit/s_reg<0>  | clk_1Hz_unit/s_reg<10>  | clk_1Hz_unit/s_reg<11>  | clk_1Hz_unit/s_reg<12>  | clk_1Hz_unit/s_reg<13>  | clk_1Hz_unit/s_reg<14>  | clk_1Hz_unit/s_reg<15>  | clk_1Hz_unit/s_reg<16>  | clk_1Hz_unit/s_reg<17>  | clk_1Hz_unit/s_reg<18>  | clk_1Hz_unit/s_reg<19>  | clk_1Hz_unit/s_reg<1>  | clk_1Hz_unit/s_reg<2>  | clk_1Hz_unit/s_reg<3>  | clk_1Hz_unit/s_reg<4>  | clk_1Hz_unit/s_reg<5>  | clk_1Hz_unit/s_reg<6>  | clk_1Hz_unit/s_reg<7>  | clk_1Hz_unit/s_reg<8>  | clk_1Hz_unit/s_reg<9>  | clk_enable
+INPUTMC | 20 | 1 | 9 | 3 | 17 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 3 | 15 | 3 | 14 | 3 | 13 | 3 | 12 | 3 | 11 | 1 | 12 | 3 | 10 | 1 | 11 | 1 | 10
+INPUTP | 1 | 26
+EQ | 9 | 
+   clk_1Hz_unit/s_reg<20>.T = clk_1Hz_unit/s_reg<0> & clk_1Hz_unit/s_reg<10> & 
+	clk_1Hz_unit/s_reg<11> & clk_1Hz_unit/s_reg<12> & clk_1Hz_unit/s_reg<13> & 
+	clk_1Hz_unit/s_reg<14> & clk_1Hz_unit/s_reg<15> & clk_1Hz_unit/s_reg<16> & 
+	clk_1Hz_unit/s_reg<17> & clk_1Hz_unit/s_reg<18> & clk_1Hz_unit/s_reg<19> & 
+	clk_1Hz_unit/s_reg<1> & clk_1Hz_unit/s_reg<2> & clk_1Hz_unit/s_reg<3> & 
+	clk_1Hz_unit/s_reg<4> & clk_1Hz_unit/s_reg<5> & clk_1Hz_unit/s_reg<6> & 
+	clk_1Hz_unit/s_reg<7> & clk_1Hz_unit/s_reg<8> & clk_1Hz_unit/s_reg<9>;
+   clk_1Hz_unit/s_reg<20>.CLK = clk50Mhz;	// GCK
+   clk_1Hz_unit/s_reg<20>.CE = clk_enable;
+GLOBALS | 1 | 2 | clk50Mhz
+
+MACROCELL | 1 | 3 | clk_1Hz_unit/s_reg<21>
+ATTRIBUTES | 4358976 | 0
+OUTPUTMC | 15 | 1 | 9 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 2 | 1 | 1 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 0 | 0 | 1 | 2 | 1 | 2 | 13
+INPUTS | 22 | clk_1Hz_unit/s_reg<0>  | clk_1Hz_unit/s_reg<10>  | clk_1Hz_unit/s_reg<11>  | clk_1Hz_unit/s_reg<12>  | clk_1Hz_unit/s_reg<13>  | clk_1Hz_unit/s_reg<14>  | clk_1Hz_unit/s_reg<15>  | clk_1Hz_unit/s_reg<16>  | clk_1Hz_unit/s_reg<17>  | clk_1Hz_unit/s_reg<18>  | clk_1Hz_unit/s_reg<19>  | clk_1Hz_unit/s_reg<1>  | clk_1Hz_unit/s_reg<20>  | clk_1Hz_unit/s_reg<2>  | clk_1Hz_unit/s_reg<3>  | clk_1Hz_unit/s_reg<4>  | clk_1Hz_unit/s_reg<5>  | clk_1Hz_unit/s_reg<6>  | clk_1Hz_unit/s_reg<7>  | clk_1Hz_unit/s_reg<8>  | clk_1Hz_unit/s_reg<9>  | clk_enable
+INPUTMC | 21 | 1 | 9 | 3 | 17 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 3 | 15 | 1 | 4 | 3 | 14 | 3 | 13 | 3 | 12 | 3 | 11 | 1 | 12 | 3 | 10 | 1 | 11 | 1 | 10
+INPUTP | 1 | 26
+EQ | 10 | 
+   clk_1Hz_unit/s_reg<21>.T = clk_1Hz_unit/s_reg<0> & clk_1Hz_unit/s_reg<10> & 
+	clk_1Hz_unit/s_reg<11> & clk_1Hz_unit/s_reg<12> & clk_1Hz_unit/s_reg<13> & 
+	clk_1Hz_unit/s_reg<14> & clk_1Hz_unit/s_reg<15> & clk_1Hz_unit/s_reg<16> & 
+	clk_1Hz_unit/s_reg<17> & clk_1Hz_unit/s_reg<18> & clk_1Hz_unit/s_reg<19> & 
+	clk_1Hz_unit/s_reg<1> & clk_1Hz_unit/s_reg<20> & clk_1Hz_unit/s_reg<2> & 
+	clk_1Hz_unit/s_reg<3> & clk_1Hz_unit/s_reg<4> & clk_1Hz_unit/s_reg<5> & 
+	clk_1Hz_unit/s_reg<6> & clk_1Hz_unit/s_reg<7> & clk_1Hz_unit/s_reg<8> & 
+	clk_1Hz_unit/s_reg<9>;
+   clk_1Hz_unit/s_reg<21>.CLK = clk50Mhz;	// GCK
+   clk_1Hz_unit/s_reg<21>.CE = clk_enable;
+GLOBALS | 1 | 2 | clk50Mhz
+
+MACROCELL | 1 | 13 | clk_1Hz_unit/s_reg<22>
+ATTRIBUTES | 4358976 | 0
+OUTPUTMC | 15 | 1 | 9 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 2 | 1 | 1 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 0 | 0 | 1 | 2 | 1 | 2 | 13
+INPUTS | 27 | clk_1Hz_unit/s_reg<0>  | clk_1Hz_unit/s_reg<10>  | clk_1Hz_unit/s_reg<11>  | clk_1Hz_unit/s_reg<12>  | clk_1Hz_unit/s_reg<13>  | clk_1Hz_unit/s_reg<14>  | clk_1Hz_unit/s_reg<15>  | clk_1Hz_unit/s_reg<16>  | clk_1Hz_unit/s_reg<17>  | clk_1Hz_unit/s_reg<18>  | clk_1Hz_unit/s_reg<19>  | clk_1Hz_unit/s_reg<1>  | clk_1Hz_unit/s_reg<20>  | clk_1Hz_unit/s_reg<21>  | clk_1Hz_unit/s_reg<2>  | clk_1Hz_unit/s_reg<3>  | clk_1Hz_unit/s_reg<4>  | clk_1Hz_unit/s_reg<5>  | clk_1Hz_unit/s_reg<6>  | clk_1Hz_unit/s_reg<7>  | clk_1Hz_unit/s_reg<8>  | clk_1Hz_unit/s_reg<9>  | clk_enable  | clk_1Hz_unit/s_reg<22>  | clk_1Hz_unit/s_reg<23>  | clk_1Hz_unit/s_reg<24>  | clk_1Hz_unit/s_reg<25>
+INPUTMC | 26 | 1 | 9 | 3 | 17 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 3 | 15 | 1 | 4 | 1 | 3 | 3 | 14 | 3 | 13 | 3 | 12 | 3 | 11 | 1 | 12 | 3 | 10 | 1 | 11 | 1 | 10 | 1 | 13 | 1 | 2 | 1 | 1 | 1 | 0
+INPUTP | 1 | 26
+EQ | 20 | 
+   clk_1Hz_unit/s_reg<22>.T = clk_1Hz_unit/s_reg<0> & clk_1Hz_unit/s_reg<10> & 
+	clk_1Hz_unit/s_reg<11> & clk_1Hz_unit/s_reg<12> & clk_1Hz_unit/s_reg<13> & 
+	clk_1Hz_unit/s_reg<14> & clk_1Hz_unit/s_reg<15> & clk_1Hz_unit/s_reg<16> & 
+	clk_1Hz_unit/s_reg<17> & clk_1Hz_unit/s_reg<18> & clk_1Hz_unit/s_reg<19> & 
+	clk_1Hz_unit/s_reg<1> & clk_1Hz_unit/s_reg<20> & clk_1Hz_unit/s_reg<21> & 
+	clk_1Hz_unit/s_reg<2> & clk_1Hz_unit/s_reg<3> & clk_1Hz_unit/s_reg<4> & 
+	clk_1Hz_unit/s_reg<5> & clk_1Hz_unit/s_reg<6> & clk_1Hz_unit/s_reg<7> & 
+	clk_1Hz_unit/s_reg<8> & clk_1Hz_unit/s_reg<9>
+	# clk_enable & !clk_1Hz_unit/s_reg<0> & 
+	!clk_1Hz_unit/s_reg<10> & clk_1Hz_unit/s_reg<11> & !clk_1Hz_unit/s_reg<12> & 
+	!clk_1Hz_unit/s_reg<13> & clk_1Hz_unit/s_reg<14> & !clk_1Hz_unit/s_reg<15> & 
+	!clk_1Hz_unit/s_reg<16> & !clk_1Hz_unit/s_reg<17> & clk_1Hz_unit/s_reg<18> & 
+	clk_1Hz_unit/s_reg<19> & !clk_1Hz_unit/s_reg<1> & !clk_1Hz_unit/s_reg<20> & 
+	!clk_1Hz_unit/s_reg<21> & clk_1Hz_unit/s_reg<22> & !clk_1Hz_unit/s_reg<23> & 
+	!clk_1Hz_unit/s_reg<24> & !clk_1Hz_unit/s_reg<2> & !clk_1Hz_unit/s_reg<3> & 
+	!clk_1Hz_unit/s_reg<4> & !clk_1Hz_unit/s_reg<5> & clk_1Hz_unit/s_reg<6> & 
+	!clk_1Hz_unit/s_reg<7> & clk_1Hz_unit/s_reg<8> & clk_1Hz_unit/s_reg<9> & 
+	!clk_1Hz_unit/s_reg<25>;
+   clk_1Hz_unit/s_reg<22>.CLK = clk50Mhz;	// GCK
+   clk_1Hz_unit/s_reg<22>.CE = clk_enable;
+GLOBALS | 1 | 2 | clk50Mhz
+
+MACROCELL | 1 | 2 | clk_1Hz_unit/s_reg<23>
+ATTRIBUTES | 4358976 | 0
+OUTPUTMC | 14 | 1 | 9 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 1 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 0 | 0 | 1 | 2 | 1 | 2 | 13
+INPUTS | 24 | clk_1Hz_unit/s_reg<0>  | clk_1Hz_unit/s_reg<10>  | clk_1Hz_unit/s_reg<11>  | clk_1Hz_unit/s_reg<12>  | clk_1Hz_unit/s_reg<13>  | clk_1Hz_unit/s_reg<14>  | clk_1Hz_unit/s_reg<15>  | clk_1Hz_unit/s_reg<16>  | clk_1Hz_unit/s_reg<17>  | clk_1Hz_unit/s_reg<18>  | clk_1Hz_unit/s_reg<19>  | clk_1Hz_unit/s_reg<1>  | clk_1Hz_unit/s_reg<20>  | clk_1Hz_unit/s_reg<21>  | clk_1Hz_unit/s_reg<22>  | clk_1Hz_unit/s_reg<2>  | clk_1Hz_unit/s_reg<3>  | clk_1Hz_unit/s_reg<4>  | clk_1Hz_unit/s_reg<5>  | clk_1Hz_unit/s_reg<6>  | clk_1Hz_unit/s_reg<7>  | clk_1Hz_unit/s_reg<8>  | clk_1Hz_unit/s_reg<9>  | clk_enable
+INPUTMC | 23 | 1 | 9 | 3 | 17 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 3 | 15 | 1 | 4 | 1 | 3 | 1 | 13 | 3 | 14 | 3 | 13 | 3 | 12 | 3 | 11 | 1 | 12 | 3 | 10 | 1 | 11 | 1 | 10
+INPUTP | 1 | 26
+EQ | 10 | 
+   clk_1Hz_unit/s_reg<23>.T = clk_1Hz_unit/s_reg<0> & clk_1Hz_unit/s_reg<10> & 
+	clk_1Hz_unit/s_reg<11> & clk_1Hz_unit/s_reg<12> & clk_1Hz_unit/s_reg<13> & 
+	clk_1Hz_unit/s_reg<14> & clk_1Hz_unit/s_reg<15> & clk_1Hz_unit/s_reg<16> & 
+	clk_1Hz_unit/s_reg<17> & clk_1Hz_unit/s_reg<18> & clk_1Hz_unit/s_reg<19> & 
+	clk_1Hz_unit/s_reg<1> & clk_1Hz_unit/s_reg<20> & clk_1Hz_unit/s_reg<21> & 
+	clk_1Hz_unit/s_reg<22> & clk_1Hz_unit/s_reg<2> & clk_1Hz_unit/s_reg<3> & 
+	clk_1Hz_unit/s_reg<4> & clk_1Hz_unit/s_reg<5> & clk_1Hz_unit/s_reg<6> & 
+	clk_1Hz_unit/s_reg<7> & clk_1Hz_unit/s_reg<8> & clk_1Hz_unit/s_reg<9>;
+   clk_1Hz_unit/s_reg<23>.CLK = clk50Mhz;	// GCK
+   clk_1Hz_unit/s_reg<23>.CE = clk_enable;
+GLOBALS | 1 | 2 | clk50Mhz
+
+MACROCELL | 1 | 1 | clk_1Hz_unit/s_reg<24>
+ATTRIBUTES | 4358976 | 0
+OUTPUTMC | 13 | 1 | 9 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 0 | 0 | 1 | 2 | 1 | 2 | 13
+INPUTS | 25 | clk_1Hz_unit/s_reg<0>  | clk_1Hz_unit/s_reg<10>  | clk_1Hz_unit/s_reg<11>  | clk_1Hz_unit/s_reg<12>  | clk_1Hz_unit/s_reg<13>  | clk_1Hz_unit/s_reg<14>  | clk_1Hz_unit/s_reg<15>  | clk_1Hz_unit/s_reg<16>  | clk_1Hz_unit/s_reg<17>  | clk_1Hz_unit/s_reg<18>  | clk_1Hz_unit/s_reg<19>  | clk_1Hz_unit/s_reg<1>  | clk_1Hz_unit/s_reg<20>  | clk_1Hz_unit/s_reg<21>  | clk_1Hz_unit/s_reg<22>  | clk_1Hz_unit/s_reg<23>  | clk_1Hz_unit/s_reg<2>  | clk_1Hz_unit/s_reg<3>  | clk_1Hz_unit/s_reg<4>  | clk_1Hz_unit/s_reg<5>  | clk_1Hz_unit/s_reg<6>  | clk_1Hz_unit/s_reg<7>  | clk_1Hz_unit/s_reg<8>  | clk_1Hz_unit/s_reg<9>  | clk_enable
+INPUTMC | 24 | 1 | 9 | 3 | 17 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 3 | 15 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 3 | 14 | 3 | 13 | 3 | 12 | 3 | 11 | 1 | 12 | 3 | 10 | 1 | 11 | 1 | 10
+INPUTP | 1 | 26
+EQ | 11 | 
+   clk_1Hz_unit/s_reg<24>.T = clk_1Hz_unit/s_reg<0> & clk_1Hz_unit/s_reg<10> & 
+	clk_1Hz_unit/s_reg<11> & clk_1Hz_unit/s_reg<12> & clk_1Hz_unit/s_reg<13> & 
+	clk_1Hz_unit/s_reg<14> & clk_1Hz_unit/s_reg<15> & clk_1Hz_unit/s_reg<16> & 
+	clk_1Hz_unit/s_reg<17> & clk_1Hz_unit/s_reg<18> & clk_1Hz_unit/s_reg<19> & 
+	clk_1Hz_unit/s_reg<1> & clk_1Hz_unit/s_reg<20> & clk_1Hz_unit/s_reg<21> & 
+	clk_1Hz_unit/s_reg<22> & clk_1Hz_unit/s_reg<23> & clk_1Hz_unit/s_reg<2> & 
+	clk_1Hz_unit/s_reg<3> & clk_1Hz_unit/s_reg<4> & clk_1Hz_unit/s_reg<5> & 
+	clk_1Hz_unit/s_reg<6> & clk_1Hz_unit/s_reg<7> & clk_1Hz_unit/s_reg<8> & 
+	clk_1Hz_unit/s_reg<9>;
+   clk_1Hz_unit/s_reg<24>.CLK = clk50Mhz;	// GCK
+   clk_1Hz_unit/s_reg<24>.CE = clk_enable;
+GLOBALS | 1 | 2 | clk50Mhz
+
+MACROCELL | 3 | 14 | clk_1Hz_unit/s_reg<2>
+ATTRIBUTES | 4358976 | 0
+OUTPUTMC | 27 | 1 | 9 | 3 | 17 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 3 | 13 | 3 | 12 | 3 | 11 | 1 | 12 | 3 | 10 | 1 | 11 | 1 | 10 | 1 | 0 | 0 | 1 | 2 | 1 | 2 | 13
+INPUTS | 3 | clk_1Hz_unit/s_reg<0>  | clk_1Hz_unit/s_reg<1>  | clk_enable
+INPUTMC | 2 | 1 | 9 | 3 | 15
+INPUTP | 1 | 26
+EQ | 3 | 
+   clk_1Hz_unit/s_reg<2>.T = clk_1Hz_unit/s_reg<0> & clk_1Hz_unit/s_reg<1>;
+   clk_1Hz_unit/s_reg<2>.CLK = clk50Mhz;	// GCK
+   clk_1Hz_unit/s_reg<2>.CE = clk_enable;
+GLOBALS | 1 | 2 | clk50Mhz
+
+MACROCELL | 3 | 13 | clk_1Hz_unit/s_reg<3>
+ATTRIBUTES | 4358976 | 0
+OUTPUTMC | 26 | 1 | 9 | 3 | 17 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 3 | 12 | 3 | 11 | 1 | 12 | 3 | 10 | 1 | 11 | 1 | 10 | 1 | 0 | 0 | 1 | 2 | 1 | 2 | 13
+INPUTS | 4 | clk_1Hz_unit/s_reg<0>  | clk_1Hz_unit/s_reg<1>  | clk_1Hz_unit/s_reg<2>  | clk_enable
+INPUTMC | 3 | 1 | 9 | 3 | 15 | 3 | 14
+INPUTP | 1 | 26
+EQ | 4 | 
+   clk_1Hz_unit/s_reg<3>.T = clk_1Hz_unit/s_reg<0> & clk_1Hz_unit/s_reg<1> & 
+	clk_1Hz_unit/s_reg<2>;
+   clk_1Hz_unit/s_reg<3>.CLK = clk50Mhz;	// GCK
+   clk_1Hz_unit/s_reg<3>.CE = clk_enable;
+GLOBALS | 1 | 2 | clk50Mhz
+
+MACROCELL | 3 | 12 | clk_1Hz_unit/s_reg<4>
+ATTRIBUTES | 4358976 | 0
+OUTPUTMC | 25 | 1 | 9 | 3 | 17 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 3 | 11 | 1 | 12 | 3 | 10 | 1 | 11 | 1 | 10 | 1 | 0 | 0 | 1 | 2 | 1 | 2 | 13
+INPUTS | 5 | clk_1Hz_unit/s_reg<0>  | clk_1Hz_unit/s_reg<1>  | clk_1Hz_unit/s_reg<2>  | clk_1Hz_unit/s_reg<3>  | clk_enable
+INPUTMC | 4 | 1 | 9 | 3 | 15 | 3 | 14 | 3 | 13
+INPUTP | 1 | 26
+EQ | 4 | 
+   clk_1Hz_unit/s_reg<4>.T = clk_1Hz_unit/s_reg<0> & clk_1Hz_unit/s_reg<1> & 
+	clk_1Hz_unit/s_reg<2> & clk_1Hz_unit/s_reg<3>;
+   clk_1Hz_unit/s_reg<4>.CLK = clk50Mhz;	// GCK
+   clk_1Hz_unit/s_reg<4>.CE = clk_enable;
+GLOBALS | 1 | 2 | clk50Mhz
+
+MACROCELL | 3 | 11 | clk_1Hz_unit/s_reg<5>
+ATTRIBUTES | 4358976 | 0
+OUTPUTMC | 24 | 1 | 9 | 3 | 17 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 1 | 12 | 3 | 10 | 1 | 11 | 1 | 10 | 1 | 0 | 0 | 1 | 2 | 1 | 2 | 13
+INPUTS | 6 | clk_1Hz_unit/s_reg<0>  | clk_1Hz_unit/s_reg<1>  | clk_1Hz_unit/s_reg<2>  | clk_1Hz_unit/s_reg<3>  | clk_1Hz_unit/s_reg<4>  | clk_enable
+INPUTMC | 5 | 1 | 9 | 3 | 15 | 3 | 14 | 3 | 13 | 3 | 12
+INPUTP | 1 | 26
+EQ | 4 | 
+   clk_1Hz_unit/s_reg<5>.T = clk_1Hz_unit/s_reg<0> & clk_1Hz_unit/s_reg<1> & 
+	clk_1Hz_unit/s_reg<2> & clk_1Hz_unit/s_reg<3> & clk_1Hz_unit/s_reg<4>;
+   clk_1Hz_unit/s_reg<5>.CLK = clk50Mhz;	// GCK
+   clk_1Hz_unit/s_reg<5>.CE = clk_enable;
+GLOBALS | 1 | 2 | clk50Mhz
+
+MACROCELL | 1 | 12 | clk_1Hz_unit/s_reg<6>
+ATTRIBUTES | 4358976 | 0
+OUTPUTMC | 24 | 1 | 9 | 3 | 17 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 1 | 12 | 3 | 10 | 1 | 11 | 1 | 10 | 1 | 0 | 0 | 1 | 2 | 1 | 2 | 13
+INPUTS | 27 | clk_1Hz_unit/s_reg<0>  | clk_1Hz_unit/s_reg<1>  | clk_1Hz_unit/s_reg<2>  | clk_1Hz_unit/s_reg<3>  | clk_1Hz_unit/s_reg<4>  | clk_1Hz_unit/s_reg<5>  | clk_enable  | clk_1Hz_unit/s_reg<10>  | clk_1Hz_unit/s_reg<11>  | clk_1Hz_unit/s_reg<12>  | clk_1Hz_unit/s_reg<13>  | clk_1Hz_unit/s_reg<14>  | clk_1Hz_unit/s_reg<15>  | clk_1Hz_unit/s_reg<16>  | clk_1Hz_unit/s_reg<17>  | clk_1Hz_unit/s_reg<18>  | clk_1Hz_unit/s_reg<19>  | clk_1Hz_unit/s_reg<20>  | clk_1Hz_unit/s_reg<21>  | clk_1Hz_unit/s_reg<22>  | clk_1Hz_unit/s_reg<23>  | clk_1Hz_unit/s_reg<24>  | clk_1Hz_unit/s_reg<6>  | clk_1Hz_unit/s_reg<7>  | clk_1Hz_unit/s_reg<8>  | clk_1Hz_unit/s_reg<9>  | clk_1Hz_unit/s_reg<25>
+INPUTMC | 26 | 1 | 9 | 3 | 15 | 3 | 14 | 3 | 13 | 3 | 12 | 3 | 11 | 3 | 17 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 1 | 12 | 3 | 10 | 1 | 11 | 1 | 10 | 1 | 0
+INPUTP | 1 | 26
+EQ | 15 | 
+   clk_1Hz_unit/s_reg<6>.T = clk_1Hz_unit/s_reg<0> & clk_1Hz_unit/s_reg<1> & 
+	clk_1Hz_unit/s_reg<2> & clk_1Hz_unit/s_reg<3> & clk_1Hz_unit/s_reg<4> & 
+	clk_1Hz_unit/s_reg<5>
+	# clk_enable & !clk_1Hz_unit/s_reg<0> & 
+	!clk_1Hz_unit/s_reg<10> & clk_1Hz_unit/s_reg<11> & !clk_1Hz_unit/s_reg<12> & 
+	!clk_1Hz_unit/s_reg<13> & clk_1Hz_unit/s_reg<14> & !clk_1Hz_unit/s_reg<15> & 
+	!clk_1Hz_unit/s_reg<16> & !clk_1Hz_unit/s_reg<17> & clk_1Hz_unit/s_reg<18> & 
+	clk_1Hz_unit/s_reg<19> & !clk_1Hz_unit/s_reg<1> & !clk_1Hz_unit/s_reg<20> & 
+	!clk_1Hz_unit/s_reg<21> & clk_1Hz_unit/s_reg<22> & !clk_1Hz_unit/s_reg<23> & 
+	!clk_1Hz_unit/s_reg<24> & !clk_1Hz_unit/s_reg<2> & !clk_1Hz_unit/s_reg<3> & 
+	!clk_1Hz_unit/s_reg<4> & !clk_1Hz_unit/s_reg<5> & clk_1Hz_unit/s_reg<6> & 
+	!clk_1Hz_unit/s_reg<7> & clk_1Hz_unit/s_reg<8> & clk_1Hz_unit/s_reg<9> & 
+	!clk_1Hz_unit/s_reg<25>;
+   clk_1Hz_unit/s_reg<6>.CLK = clk50Mhz;	// GCK
+   clk_1Hz_unit/s_reg<6>.CE = clk_enable;
+GLOBALS | 1 | 2 | clk50Mhz
+
+MACROCELL | 3 | 10 | clk_1Hz_unit/s_reg<7>
+ATTRIBUTES | 4358976 | 0
+OUTPUTMC | 23 | 1 | 9 | 3 | 17 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 0 | 0 | 1 | 2 | 1 | 2 | 13
+INPUTS | 8 | clk_1Hz_unit/s_reg<0>  | clk_1Hz_unit/s_reg<1>  | clk_1Hz_unit/s_reg<2>  | clk_1Hz_unit/s_reg<3>  | clk_1Hz_unit/s_reg<4>  | clk_1Hz_unit/s_reg<5>  | clk_1Hz_unit/s_reg<6>  | clk_enable
+INPUTMC | 7 | 1 | 9 | 3 | 15 | 3 | 14 | 3 | 13 | 3 | 12 | 3 | 11 | 1 | 12
+INPUTP | 1 | 26
+EQ | 5 | 
+   clk_1Hz_unit/s_reg<7>.T = clk_1Hz_unit/s_reg<0> & clk_1Hz_unit/s_reg<1> & 
+	clk_1Hz_unit/s_reg<2> & clk_1Hz_unit/s_reg<3> & clk_1Hz_unit/s_reg<4> & 
+	clk_1Hz_unit/s_reg<5> & clk_1Hz_unit/s_reg<6>;
+   clk_1Hz_unit/s_reg<7>.CLK = clk50Mhz;	// GCK
+   clk_1Hz_unit/s_reg<7>.CE = clk_enable;
+GLOBALS | 1 | 2 | clk50Mhz
+
+MACROCELL | 1 | 11 | clk_1Hz_unit/s_reg<8>
+ATTRIBUTES | 4358976 | 0
+OUTPUTMC | 23 | 1 | 9 | 3 | 17 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 0 | 0 | 1 | 2 | 1 | 2 | 13
+INPUTS | 27 | clk_1Hz_unit/s_reg<0>  | clk_1Hz_unit/s_reg<1>  | clk_1Hz_unit/s_reg<2>  | clk_1Hz_unit/s_reg<3>  | clk_1Hz_unit/s_reg<4>  | clk_1Hz_unit/s_reg<5>  | clk_1Hz_unit/s_reg<6>  | clk_1Hz_unit/s_reg<7>  | clk_enable  | clk_1Hz_unit/s_reg<10>  | clk_1Hz_unit/s_reg<11>  | clk_1Hz_unit/s_reg<12>  | clk_1Hz_unit/s_reg<13>  | clk_1Hz_unit/s_reg<14>  | clk_1Hz_unit/s_reg<15>  | clk_1Hz_unit/s_reg<16>  | clk_1Hz_unit/s_reg<17>  | clk_1Hz_unit/s_reg<18>  | clk_1Hz_unit/s_reg<19>  | clk_1Hz_unit/s_reg<20>  | clk_1Hz_unit/s_reg<21>  | clk_1Hz_unit/s_reg<22>  | clk_1Hz_unit/s_reg<23>  | clk_1Hz_unit/s_reg<24>  | clk_1Hz_unit/s_reg<8>  | clk_1Hz_unit/s_reg<9>  | clk_1Hz_unit/s_reg<25>
+INPUTMC | 26 | 1 | 9 | 3 | 15 | 3 | 14 | 3 | 13 | 3 | 12 | 3 | 11 | 1 | 12 | 3 | 10 | 3 | 17 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 1 | 11 | 1 | 10 | 1 | 0
+INPUTP | 1 | 26
+EQ | 15 | 
+   clk_1Hz_unit/s_reg<8>.T = clk_1Hz_unit/s_reg<0> & clk_1Hz_unit/s_reg<1> & 
+	clk_1Hz_unit/s_reg<2> & clk_1Hz_unit/s_reg<3> & clk_1Hz_unit/s_reg<4> & 
+	clk_1Hz_unit/s_reg<5> & clk_1Hz_unit/s_reg<6> & clk_1Hz_unit/s_reg<7>
+	# clk_enable & !clk_1Hz_unit/s_reg<0> & 
+	!clk_1Hz_unit/s_reg<10> & clk_1Hz_unit/s_reg<11> & !clk_1Hz_unit/s_reg<12> & 
+	!clk_1Hz_unit/s_reg<13> & clk_1Hz_unit/s_reg<14> & !clk_1Hz_unit/s_reg<15> & 
+	!clk_1Hz_unit/s_reg<16> & !clk_1Hz_unit/s_reg<17> & clk_1Hz_unit/s_reg<18> & 
+	clk_1Hz_unit/s_reg<19> & !clk_1Hz_unit/s_reg<1> & !clk_1Hz_unit/s_reg<20> & 
+	!clk_1Hz_unit/s_reg<21> & clk_1Hz_unit/s_reg<22> & !clk_1Hz_unit/s_reg<23> & 
+	!clk_1Hz_unit/s_reg<24> & !clk_1Hz_unit/s_reg<2> & !clk_1Hz_unit/s_reg<3> & 
+	!clk_1Hz_unit/s_reg<4> & !clk_1Hz_unit/s_reg<5> & clk_1Hz_unit/s_reg<6> & 
+	!clk_1Hz_unit/s_reg<7> & clk_1Hz_unit/s_reg<8> & clk_1Hz_unit/s_reg<9> & 
+	!clk_1Hz_unit/s_reg<25>;
+   clk_1Hz_unit/s_reg<8>.CLK = clk50Mhz;	// GCK
+   clk_1Hz_unit/s_reg<8>.CE = clk_enable;
+GLOBALS | 1 | 2 | clk50Mhz
+
+MACROCELL | 1 | 10 | clk_1Hz_unit/s_reg<9>
+ATTRIBUTES | 4358976 | 0
+OUTPUTMC | 23 | 1 | 9 | 3 | 17 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 0 | 0 | 1 | 2 | 1 | 2 | 13
+INPUTS | 27 | clk_1Hz_unit/s_reg<0>  | clk_1Hz_unit/s_reg<1>  | clk_1Hz_unit/s_reg<2>  | clk_1Hz_unit/s_reg<3>  | clk_1Hz_unit/s_reg<4>  | clk_1Hz_unit/s_reg<5>  | clk_1Hz_unit/s_reg<6>  | clk_1Hz_unit/s_reg<7>  | clk_1Hz_unit/s_reg<8>  | clk_enable  | clk_1Hz_unit/s_reg<10>  | clk_1Hz_unit/s_reg<11>  | clk_1Hz_unit/s_reg<12>  | clk_1Hz_unit/s_reg<13>  | clk_1Hz_unit/s_reg<14>  | clk_1Hz_unit/s_reg<15>  | clk_1Hz_unit/s_reg<16>  | clk_1Hz_unit/s_reg<17>  | clk_1Hz_unit/s_reg<18>  | clk_1Hz_unit/s_reg<19>  | clk_1Hz_unit/s_reg<20>  | clk_1Hz_unit/s_reg<21>  | clk_1Hz_unit/s_reg<22>  | clk_1Hz_unit/s_reg<23>  | clk_1Hz_unit/s_reg<24>  | clk_1Hz_unit/s_reg<9>  | clk_1Hz_unit/s_reg<25>
+INPUTMC | 26 | 1 | 9 | 3 | 15 | 3 | 14 | 3 | 13 | 3 | 12 | 3 | 11 | 1 | 12 | 3 | 10 | 1 | 11 | 3 | 17 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 1 | 10 | 1 | 0
+INPUTP | 1 | 26
+EQ | 16 | 
+   clk_1Hz_unit/s_reg<9>.T = clk_1Hz_unit/s_reg<0> & clk_1Hz_unit/s_reg<1> & 
+	clk_1Hz_unit/s_reg<2> & clk_1Hz_unit/s_reg<3> & clk_1Hz_unit/s_reg<4> & 
+	clk_1Hz_unit/s_reg<5> & clk_1Hz_unit/s_reg<6> & clk_1Hz_unit/s_reg<7> & 
+	clk_1Hz_unit/s_reg<8>
+	# clk_enable & !clk_1Hz_unit/s_reg<0> & 
+	!clk_1Hz_unit/s_reg<10> & clk_1Hz_unit/s_reg<11> & !clk_1Hz_unit/s_reg<12> & 
+	!clk_1Hz_unit/s_reg<13> & clk_1Hz_unit/s_reg<14> & !clk_1Hz_unit/s_reg<15> & 
+	!clk_1Hz_unit/s_reg<16> & !clk_1Hz_unit/s_reg<17> & clk_1Hz_unit/s_reg<18> & 
+	clk_1Hz_unit/s_reg<19> & !clk_1Hz_unit/s_reg<1> & !clk_1Hz_unit/s_reg<20> & 
+	!clk_1Hz_unit/s_reg<21> & clk_1Hz_unit/s_reg<22> & !clk_1Hz_unit/s_reg<23> & 
+	!clk_1Hz_unit/s_reg<24> & !clk_1Hz_unit/s_reg<2> & !clk_1Hz_unit/s_reg<3> & 
+	!clk_1Hz_unit/s_reg<4> & !clk_1Hz_unit/s_reg<5> & clk_1Hz_unit/s_reg<6> & 
+	!clk_1Hz_unit/s_reg<7> & clk_1Hz_unit/s_reg<8> & clk_1Hz_unit/s_reg<9> & 
+	!clk_1Hz_unit/s_reg<25>;
+   clk_1Hz_unit/s_reg<9>.CLK = clk50Mhz;	// GCK
+   clk_1Hz_unit/s_reg<9>.CE = clk_enable;
+GLOBALS | 1 | 2 | clk50Mhz
+
+MACROCELL | 1 | 0 | clk_1Hz_unit/s_reg<25>
+ATTRIBUTES | 4358976 | 0
+OUTPUTMC | 12 | 1 | 9 | 1 | 17 | 1 | 16 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 12 | 1 | 11 | 1 | 10 | 0 | 1 | 2 | 1 | 2 | 13
+INPUTS | 26 | clk_1Hz_unit/s_reg<0>  | clk_1Hz_unit/s_reg<10>  | clk_1Hz_unit/s_reg<11>  | clk_1Hz_unit/s_reg<12>  | clk_1Hz_unit/s_reg<13>  | clk_1Hz_unit/s_reg<14>  | clk_1Hz_unit/s_reg<15>  | clk_1Hz_unit/s_reg<16>  | clk_1Hz_unit/s_reg<17>  | clk_1Hz_unit/s_reg<18>  | clk_1Hz_unit/s_reg<19>  | clk_1Hz_unit/s_reg<1>  | clk_1Hz_unit/s_reg<20>  | clk_1Hz_unit/s_reg<21>  | clk_1Hz_unit/s_reg<22>  | clk_1Hz_unit/s_reg<23>  | clk_1Hz_unit/s_reg<24>  | clk_1Hz_unit/s_reg<2>  | clk_1Hz_unit/s_reg<3>  | clk_1Hz_unit/s_reg<4>  | clk_1Hz_unit/s_reg<5>  | clk_1Hz_unit/s_reg<6>  | clk_1Hz_unit/s_reg<7>  | clk_1Hz_unit/s_reg<8>  | clk_1Hz_unit/s_reg<9>  | clk_enable
+INPUTMC | 25 | 1 | 9 | 3 | 17 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 3 | 15 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 3 | 14 | 3 | 13 | 3 | 12 | 3 | 11 | 1 | 12 | 3 | 10 | 1 | 11 | 1 | 10
+INPUTP | 1 | 26
+EQ | 11 | 
+   clk_1Hz_unit/s_reg<25>.T = clk_1Hz_unit/s_reg<0> & clk_1Hz_unit/s_reg<10> & 
+	clk_1Hz_unit/s_reg<11> & clk_1Hz_unit/s_reg<12> & clk_1Hz_unit/s_reg<13> & 
+	clk_1Hz_unit/s_reg<14> & clk_1Hz_unit/s_reg<15> & clk_1Hz_unit/s_reg<16> & 
+	clk_1Hz_unit/s_reg<17> & clk_1Hz_unit/s_reg<18> & clk_1Hz_unit/s_reg<19> & 
+	clk_1Hz_unit/s_reg<1> & clk_1Hz_unit/s_reg<20> & clk_1Hz_unit/s_reg<21> & 
+	clk_1Hz_unit/s_reg<22> & clk_1Hz_unit/s_reg<23> & clk_1Hz_unit/s_reg<24> & 
+	clk_1Hz_unit/s_reg<2> & clk_1Hz_unit/s_reg<3> & clk_1Hz_unit/s_reg<4> & 
+	clk_1Hz_unit/s_reg<5> & clk_1Hz_unit/s_reg<6> & clk_1Hz_unit/s_reg<7> & 
+	clk_1Hz_unit/s_reg<8> & clk_1Hz_unit/s_reg<9>;
+   clk_1Hz_unit/s_reg<25>.CLK = clk50Mhz;	// GCK
+   clk_1Hz_unit/s_reg<25>.CE = clk_enable;
+GLOBALS | 1 | 2 | clk50Mhz
+
+MACROCELL | 0 | 1 | Salida_2_OBUF
+ATTRIBUTES | 8782626 | 0
+OUTPUTMC | 3 | 0 | 1 | 2 | 1 | 2 | 13
+INPUTS | 29 | E  | Salida<2>  | Salida<1>  | clk_1Hz_unit/s_reg<0>  | clk_1Hz_unit/s_reg<10>  | clk_1Hz_unit/s_reg<11>  | clk_1Hz_unit/s_reg<12>  | clk_1Hz_unit/s_reg<13>  | clk_1Hz_unit/s_reg<14>  | clk_1Hz_unit/s_reg<15>  | clk_1Hz_unit/s_reg<16>  | clk_1Hz_unit/s_reg<17>  | clk_1Hz_unit/s_reg<18>  | clk_1Hz_unit/s_reg<19>  | clk_1Hz_unit/s_reg<1>  | clk_1Hz_unit/s_reg<20>  | clk_1Hz_unit/s_reg<21>  | clk_1Hz_unit/s_reg<22>  | clk_1Hz_unit/s_reg<23>  | clk_1Hz_unit/s_reg<24>  | clk_1Hz_unit/s_reg<2>  | clk_1Hz_unit/s_reg<3>  | clk_1Hz_unit/s_reg<4>  | clk_1Hz_unit/s_reg<5>  | clk_1Hz_unit/s_reg<6>  | clk_1Hz_unit/s_reg<7>  | clk_1Hz_unit/s_reg<8>  | clk_1Hz_unit/s_reg<9>  | clk_1Hz_unit/s_reg<25>
+INPUTMC | 28 | 0 | 1 | 2 | 1 | 1 | 9 | 3 | 17 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 3 | 15 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 3 | 14 | 3 | 13 | 3 | 12 | 3 | 11 | 1 | 12 | 3 | 10 | 1 | 11 | 1 | 10 | 1 | 0
+INPUTP | 1 | 92
+EQ | 11 | 
+   !Salida<2>.D = E & Salida<2>
+	# !E & !Salida<1>;
+   Salida<2>.CLK = !clk_1Hz_unit/s_reg<0> & !clk_1Hz_unit/s_reg<10> & 
+	clk_1Hz_unit/s_reg<11> & !clk_1Hz_unit/s_reg<12> & !clk_1Hz_unit/s_reg<13> & 
+	clk_1Hz_unit/s_reg<14> & !clk_1Hz_unit/s_reg<15> & !clk_1Hz_unit/s_reg<16> & 
+	!clk_1Hz_unit/s_reg<17> & clk_1Hz_unit/s_reg<18> & clk_1Hz_unit/s_reg<19> & 
+	!clk_1Hz_unit/s_reg<1> & !clk_1Hz_unit/s_reg<20> & !clk_1Hz_unit/s_reg<21> & 
+	clk_1Hz_unit/s_reg<22> & !clk_1Hz_unit/s_reg<23> & !clk_1Hz_unit/s_reg<24> & 
+	!clk_1Hz_unit/s_reg<2> & !clk_1Hz_unit/s_reg<3> & !clk_1Hz_unit/s_reg<4> & 
+	!clk_1Hz_unit/s_reg<5> & clk_1Hz_unit/s_reg<6> & !clk_1Hz_unit/s_reg<7> & 
+	clk_1Hz_unit/s_reg<8> & clk_1Hz_unit/s_reg<9> & !clk_1Hz_unit/s_reg<25>;
+
+MACROCELL | 2 | 1 | Salida_1_OBUF
+ATTRIBUTES | 4588322 | 0
+OUTPUTMC | 3 | 0 | 1 | 2 | 1 | 2 | 13
+INPUTS | 30 | E  | Salida<1>  | Salida<0>  | Salida<2>  | clk_1Hz_unit/s_reg<0>  | clk_1Hz_unit/s_reg<10>  | clk_1Hz_unit/s_reg<11>  | clk_1Hz_unit/s_reg<12>  | clk_1Hz_unit/s_reg<13>  | clk_1Hz_unit/s_reg<14>  | clk_1Hz_unit/s_reg<15>  | clk_1Hz_unit/s_reg<16>  | clk_1Hz_unit/s_reg<17>  | clk_1Hz_unit/s_reg<18>  | clk_1Hz_unit/s_reg<19>  | clk_1Hz_unit/s_reg<1>  | clk_1Hz_unit/s_reg<20>  | clk_1Hz_unit/s_reg<21>  | clk_1Hz_unit/s_reg<22>  | clk_1Hz_unit/s_reg<23>  | clk_1Hz_unit/s_reg<24>  | clk_1Hz_unit/s_reg<2>  | clk_1Hz_unit/s_reg<3>  | clk_1Hz_unit/s_reg<4>  | clk_1Hz_unit/s_reg<5>  | clk_1Hz_unit/s_reg<6>  | clk_1Hz_unit/s_reg<7>  | clk_1Hz_unit/s_reg<8>  | clk_1Hz_unit/s_reg<9>  | clk_1Hz_unit/s_reg<25>
+INPUTMC | 29 | 2 | 1 | 2 | 13 | 0 | 1 | 1 | 9 | 3 | 17 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 3 | 15 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 3 | 14 | 3 | 13 | 3 | 12 | 3 | 11 | 1 | 12 | 3 | 10 | 1 | 11 | 1 | 10 | 1 | 0
+INPUTP | 1 | 92
+EQ | 12 | 
+   !Salida<1>.T = E & !Salida<2>
+	# !E & Salida<2> & Salida<1>
+	# !E & !Salida<1> & !Salida<0>;
+   Salida<1>.CLK = !clk_1Hz_unit/s_reg<0> & !clk_1Hz_unit/s_reg<10> & 
+	clk_1Hz_unit/s_reg<11> & !clk_1Hz_unit/s_reg<12> & !clk_1Hz_unit/s_reg<13> & 
+	clk_1Hz_unit/s_reg<14> & !clk_1Hz_unit/s_reg<15> & !clk_1Hz_unit/s_reg<16> & 
+	!clk_1Hz_unit/s_reg<17> & clk_1Hz_unit/s_reg<18> & clk_1Hz_unit/s_reg<19> & 
+	!clk_1Hz_unit/s_reg<1> & !clk_1Hz_unit/s_reg<20> & !clk_1Hz_unit/s_reg<21> & 
+	clk_1Hz_unit/s_reg<22> & !clk_1Hz_unit/s_reg<23> & !clk_1Hz_unit/s_reg<24> & 
+	!clk_1Hz_unit/s_reg<2> & !clk_1Hz_unit/s_reg<3> & !clk_1Hz_unit/s_reg<4> & 
+	!clk_1Hz_unit/s_reg<5> & clk_1Hz_unit/s_reg<6> & !clk_1Hz_unit/s_reg<7> & 
+	clk_1Hz_unit/s_reg<8> & clk_1Hz_unit/s_reg<9> & !clk_1Hz_unit/s_reg<25>;
+
+MACROCELL | 2 | 13 | Salida_0_OBUF
+ATTRIBUTES | 8782626 | 0
+OUTPUTMC | 2 | 2 | 1 | 2 | 13
+INPUTS | 30 | E  | Salida<2>  | Salida<1>  | Salida<0>  | clk_1Hz_unit/s_reg<0>  | clk_1Hz_unit/s_reg<10>  | clk_1Hz_unit/s_reg<11>  | clk_1Hz_unit/s_reg<12>  | clk_1Hz_unit/s_reg<13>  | clk_1Hz_unit/s_reg<14>  | clk_1Hz_unit/s_reg<15>  | clk_1Hz_unit/s_reg<16>  | clk_1Hz_unit/s_reg<17>  | clk_1Hz_unit/s_reg<18>  | clk_1Hz_unit/s_reg<19>  | clk_1Hz_unit/s_reg<1>  | clk_1Hz_unit/s_reg<20>  | clk_1Hz_unit/s_reg<21>  | clk_1Hz_unit/s_reg<22>  | clk_1Hz_unit/s_reg<23>  | clk_1Hz_unit/s_reg<24>  | clk_1Hz_unit/s_reg<2>  | clk_1Hz_unit/s_reg<3>  | clk_1Hz_unit/s_reg<4>  | clk_1Hz_unit/s_reg<5>  | clk_1Hz_unit/s_reg<6>  | clk_1Hz_unit/s_reg<7>  | clk_1Hz_unit/s_reg<8>  | clk_1Hz_unit/s_reg<9>  | clk_1Hz_unit/s_reg<25>
+INPUTMC | 29 | 0 | 1 | 2 | 1 | 2 | 13 | 1 | 9 | 3 | 17 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 3 | 15 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 3 | 14 | 3 | 13 | 3 | 12 | 3 | 11 | 1 | 12 | 3 | 10 | 1 | 11 | 1 | 10 | 1 | 0
+INPUTP | 1 | 92
+EQ | 11 | 
+   Salida<0>.D = E & Salida<2> & Salida<1>
+	# !E & !Salida<2> & !Salida<1> & !Salida<0>;
+   Salida<0>.CLK = !clk_1Hz_unit/s_reg<0> & !clk_1Hz_unit/s_reg<10> & 
+	clk_1Hz_unit/s_reg<11> & !clk_1Hz_unit/s_reg<12> & !clk_1Hz_unit/s_reg<13> & 
+	clk_1Hz_unit/s_reg<14> & !clk_1Hz_unit/s_reg<15> & !clk_1Hz_unit/s_reg<16> & 
+	!clk_1Hz_unit/s_reg<17> & clk_1Hz_unit/s_reg<18> & clk_1Hz_unit/s_reg<19> & 
+	!clk_1Hz_unit/s_reg<1> & !clk_1Hz_unit/s_reg<20> & !clk_1Hz_unit/s_reg<21> & 
+	clk_1Hz_unit/s_reg<22> & !clk_1Hz_unit/s_reg<23> & !clk_1Hz_unit/s_reg<24> & 
+	!clk_1Hz_unit/s_reg<2> & !clk_1Hz_unit/s_reg<3> & !clk_1Hz_unit/s_reg<4> & 
+	!clk_1Hz_unit/s_reg<5> & clk_1Hz_unit/s_reg<6> & !clk_1Hz_unit/s_reg<7> & 
+	clk_1Hz_unit/s_reg<8> & clk_1Hz_unit/s_reg<9> & !clk_1Hz_unit/s_reg<25>;
+
+PIN | E | 64 | 0 | N/A | 92 | 3 | 0 | 1 | 2 | 1 | 2 | 13
+PIN | clk_enable | 64 | 0 | N/A | 26 | 26 | 1 | 9 | 3 | 17 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 3 | 15 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 3 | 14 | 3 | 13 | 3 | 12 | 3 | 11 | 1 | 12 | 3 | 10 | 1 | 11 | 1 | 10 | 1 | 0
+PIN | clk50Mhz | 4096 | 0 | N/A | 20 | 26 | 1 | 9 | 3 | 17 | 1 | 17 | 3 | 16 | 1 | 8 | 1 | 16 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 15 | 1 | 14 | 3 | 15 | 1 | 4 | 1 | 3 | 1 | 13 | 1 | 2 | 1 | 1 | 3 | 14 | 3 | 13 | 3 | 12 | 3 | 11 | 1 | 12 | 3 | 10 | 1 | 11 | 1 | 10 | 1 | 0
+PIN | Salida<2> | 536871040 | 0 | N/A | 11
+PIN | Salida<1> | 536871040 | 0 | N/A | 29
+PIN | Salida<0> | 536871040 | 0 | N/A | 49

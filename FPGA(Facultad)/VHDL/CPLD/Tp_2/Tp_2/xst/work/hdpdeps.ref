@@ -1,0 +1,6 @@
+V3 3
+FL D:/andres/Tp_2/Tp_2/Tp_2.vhd 2017/05/18.17:58:52 K.39
+EN work/Tp_2 1495141415 FL D:/andres/Tp_2/Tp_2/Tp_2.vhd PB ieee/std_logic_1164 1217055545 \
+      PB ieee/std_logic_arith 1217055546 PB ieee/STD_LOGIC_UNSIGNED 1217055547
+AR work/Tp_2/Behavioral 1495141416 \
+      FL D:/andres/Tp_2/Tp_2/Tp_2.vhd EN work/Tp_2 1495141415

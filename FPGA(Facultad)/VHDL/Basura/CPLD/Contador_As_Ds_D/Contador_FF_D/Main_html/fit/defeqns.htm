@@ -1,0 +1,325 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+FDCPE_Salida0: FDCPE port map (Salida(0),Salida_D(0),Salida_C(0),'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Salida_D(0) <= ((E AND Salida(2) AND Salida(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT E AND NOT Salida(2) AND NOT Salida(1) AND NOT Salida(0)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Salida_C(0) <= (NOT clk_1Hz_unit/s_reg(0) AND NOT clk_1Hz_unit/s_reg(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(11) AND NOT clk_1Hz_unit/s_reg(12) AND NOT clk_1Hz_unit/s_reg(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(14) AND NOT clk_1Hz_unit/s_reg(15) AND NOT clk_1Hz_unit/s_reg(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND clk_1Hz_unit/s_reg(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(1) AND NOT clk_1Hz_unit/s_reg(20) AND NOT clk_1Hz_unit/s_reg(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(22) AND NOT clk_1Hz_unit/s_reg(23) AND NOT clk_1Hz_unit/s_reg(24) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(2) AND NOT clk_1Hz_unit/s_reg(3) AND NOT clk_1Hz_unit/s_reg(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND NOT clk_1Hz_unit/s_reg(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9) AND NOT clk_1Hz_unit/s_reg(25));
+</td></tr><tr><td>
+FTCPE_Salida1: FTCPE port map (Salida(1),Salida_T(1),Salida_C(1),'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Salida_T(1) <= ((E AND NOT Salida(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT E AND Salida(2) AND Salida(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT E AND NOT Salida(1) AND NOT Salida(0)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Salida_C(1) <= (NOT clk_1Hz_unit/s_reg(0) AND NOT clk_1Hz_unit/s_reg(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(11) AND NOT clk_1Hz_unit/s_reg(12) AND NOT clk_1Hz_unit/s_reg(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(14) AND NOT clk_1Hz_unit/s_reg(15) AND NOT clk_1Hz_unit/s_reg(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND clk_1Hz_unit/s_reg(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(1) AND NOT clk_1Hz_unit/s_reg(20) AND NOT clk_1Hz_unit/s_reg(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(22) AND NOT clk_1Hz_unit/s_reg(23) AND NOT clk_1Hz_unit/s_reg(24) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(2) AND NOT clk_1Hz_unit/s_reg(3) AND NOT clk_1Hz_unit/s_reg(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND NOT clk_1Hz_unit/s_reg(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9) AND NOT clk_1Hz_unit/s_reg(25));
+</td></tr><tr><td>
+FDCPE_Salida2: FDCPE port map (Salida(2),Salida_D(2),Salida_C(2),'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Salida_D(2) <= ((E AND Salida(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT E AND NOT Salida(1)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Salida_C(2) <= (NOT clk_1Hz_unit/s_reg(0) AND NOT clk_1Hz_unit/s_reg(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(11) AND NOT clk_1Hz_unit/s_reg(12) AND NOT clk_1Hz_unit/s_reg(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(14) AND NOT clk_1Hz_unit/s_reg(15) AND NOT clk_1Hz_unit/s_reg(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND clk_1Hz_unit/s_reg(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(1) AND NOT clk_1Hz_unit/s_reg(20) AND NOT clk_1Hz_unit/s_reg(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(22) AND NOT clk_1Hz_unit/s_reg(23) AND NOT clk_1Hz_unit/s_reg(24) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(2) AND NOT clk_1Hz_unit/s_reg(3) AND NOT clk_1Hz_unit/s_reg(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND NOT clk_1Hz_unit/s_reg(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9) AND NOT clk_1Hz_unit/s_reg(25));
+</td></tr><tr><td>
+FTCPE_clk_1Hz_unit/s_reg0: FTCPE port map (clk_1Hz_unit/s_reg(0),clk_1Hz_unit/s_reg_T(0),clk50Mhz,'0','0',clk_enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clk_1Hz_unit/s_reg_T(0) <= (clk_enable AND NOT clk_1Hz_unit/s_reg(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(10) AND clk_1Hz_unit/s_reg(11) AND NOT clk_1Hz_unit/s_reg(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(13) AND clk_1Hz_unit/s_reg(14) AND NOT clk_1Hz_unit/s_reg(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(16) AND NOT clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(19) AND NOT clk_1Hz_unit/s_reg(1) AND NOT clk_1Hz_unit/s_reg(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(21) AND clk_1Hz_unit/s_reg(22) AND NOT clk_1Hz_unit/s_reg(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(24) AND NOT clk_1Hz_unit/s_reg(2) AND NOT clk_1Hz_unit/s_reg(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(4) AND NOT clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(25));
+</td></tr><tr><td>
+FTCPE_clk_1Hz_unit/s_reg1: FTCPE port map (clk_1Hz_unit/s_reg(1),clk_1Hz_unit/s_reg(0),clk50Mhz,'0','0',clk_enable);
+</td></tr><tr><td>
+FTCPE_clk_1Hz_unit/s_reg2: FTCPE port map (clk_1Hz_unit/s_reg(2),clk_1Hz_unit/s_reg_T(2),clk50Mhz,'0','0',clk_enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clk_1Hz_unit/s_reg_T(2) <= (clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(1));
+</td></tr><tr><td>
+FTCPE_clk_1Hz_unit/s_reg3: FTCPE port map (clk_1Hz_unit/s_reg(3),clk_1Hz_unit/s_reg_T(3),clk50Mhz,'0','0',clk_enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clk_1Hz_unit/s_reg_T(3) <= (clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(2));
+</td></tr><tr><td>
+FTCPE_clk_1Hz_unit/s_reg4: FTCPE port map (clk_1Hz_unit/s_reg(4),clk_1Hz_unit/s_reg_T(4),clk50Mhz,'0','0',clk_enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clk_1Hz_unit/s_reg_T(4) <= (clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3));
+</td></tr><tr><td>
+FTCPE_clk_1Hz_unit/s_reg5: FTCPE port map (clk_1Hz_unit/s_reg(5),clk_1Hz_unit/s_reg_T(5),clk50Mhz,'0','0',clk_enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clk_1Hz_unit/s_reg_T(5) <= (clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3) AND clk_1Hz_unit/s_reg(4));
+</td></tr><tr><td>
+FTCPE_clk_1Hz_unit/s_reg6: FTCPE port map (clk_1Hz_unit/s_reg(6),clk_1Hz_unit/s_reg_T(6),clk50Mhz,'0','0',clk_enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clk_1Hz_unit/s_reg_T(6) <= ((clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3) AND clk_1Hz_unit/s_reg(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (clk_enable AND NOT clk_1Hz_unit/s_reg(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(10) AND clk_1Hz_unit/s_reg(11) AND NOT clk_1Hz_unit/s_reg(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(13) AND clk_1Hz_unit/s_reg(14) AND NOT clk_1Hz_unit/s_reg(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(16) AND NOT clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(19) AND NOT clk_1Hz_unit/s_reg(1) AND NOT clk_1Hz_unit/s_reg(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(21) AND clk_1Hz_unit/s_reg(22) AND NOT clk_1Hz_unit/s_reg(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(24) AND NOT clk_1Hz_unit/s_reg(2) AND NOT clk_1Hz_unit/s_reg(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(4) AND NOT clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(25)));
+</td></tr><tr><td>
+FTCPE_clk_1Hz_unit/s_reg7: FTCPE port map (clk_1Hz_unit/s_reg(7),clk_1Hz_unit/s_reg_T(7),clk50Mhz,'0','0',clk_enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clk_1Hz_unit/s_reg_T(7) <= (clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3) AND clk_1Hz_unit/s_reg(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6));
+</td></tr><tr><td>
+FTCPE_clk_1Hz_unit/s_reg8: FTCPE port map (clk_1Hz_unit/s_reg(8),clk_1Hz_unit/s_reg_T(8),clk50Mhz,'0','0',clk_enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clk_1Hz_unit/s_reg_T(8) <= ((clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3) AND clk_1Hz_unit/s_reg(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND clk_1Hz_unit/s_reg(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (clk_enable AND NOT clk_1Hz_unit/s_reg(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(10) AND clk_1Hz_unit/s_reg(11) AND NOT clk_1Hz_unit/s_reg(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(13) AND clk_1Hz_unit/s_reg(14) AND NOT clk_1Hz_unit/s_reg(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(16) AND NOT clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(19) AND NOT clk_1Hz_unit/s_reg(1) AND NOT clk_1Hz_unit/s_reg(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(21) AND clk_1Hz_unit/s_reg(22) AND NOT clk_1Hz_unit/s_reg(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(24) AND NOT clk_1Hz_unit/s_reg(2) AND NOT clk_1Hz_unit/s_reg(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(4) AND NOT clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(25)));
+</td></tr><tr><td>
+FTCPE_clk_1Hz_unit/s_reg9: FTCPE port map (clk_1Hz_unit/s_reg(9),clk_1Hz_unit/s_reg_T(9),clk50Mhz,'0','0',clk_enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clk_1Hz_unit/s_reg_T(9) <= ((clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3) AND clk_1Hz_unit/s_reg(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND clk_1Hz_unit/s_reg(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (clk_enable AND NOT clk_1Hz_unit/s_reg(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(10) AND clk_1Hz_unit/s_reg(11) AND NOT clk_1Hz_unit/s_reg(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(13) AND clk_1Hz_unit/s_reg(14) AND NOT clk_1Hz_unit/s_reg(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(16) AND NOT clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(19) AND NOT clk_1Hz_unit/s_reg(1) AND NOT clk_1Hz_unit/s_reg(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(21) AND clk_1Hz_unit/s_reg(22) AND NOT clk_1Hz_unit/s_reg(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(24) AND NOT clk_1Hz_unit/s_reg(2) AND NOT clk_1Hz_unit/s_reg(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(4) AND NOT clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(25)));
+</td></tr><tr><td>
+FTCPE_clk_1Hz_unit/s_reg10: FTCPE port map (clk_1Hz_unit/s_reg(10),clk_1Hz_unit/s_reg_T(10),clk50Mhz,'0','0',clk_enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clk_1Hz_unit/s_reg_T(10) <= (clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3) AND clk_1Hz_unit/s_reg(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND clk_1Hz_unit/s_reg(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9));
+</td></tr><tr><td>
+FTCPE_clk_1Hz_unit/s_reg11: FTCPE port map (clk_1Hz_unit/s_reg(11),clk_1Hz_unit/s_reg_T(11),clk50Mhz,'0','0',clk_enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clk_1Hz_unit/s_reg_T(11) <= ((clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(1) AND clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(4) AND clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (clk_enable AND NOT clk_1Hz_unit/s_reg(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(10) AND clk_1Hz_unit/s_reg(11) AND NOT clk_1Hz_unit/s_reg(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(13) AND clk_1Hz_unit/s_reg(14) AND NOT clk_1Hz_unit/s_reg(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(16) AND NOT clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(19) AND NOT clk_1Hz_unit/s_reg(1) AND NOT clk_1Hz_unit/s_reg(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(21) AND clk_1Hz_unit/s_reg(22) AND NOT clk_1Hz_unit/s_reg(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(24) AND NOT clk_1Hz_unit/s_reg(2) AND NOT clk_1Hz_unit/s_reg(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(4) AND NOT clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(25)));
+</td></tr><tr><td>
+FTCPE_clk_1Hz_unit/s_reg12: FTCPE port map (clk_1Hz_unit/s_reg(12),clk_1Hz_unit/s_reg_T(12),clk50Mhz,'0','0',clk_enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clk_1Hz_unit/s_reg_T(12) <= (clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(11) AND clk_1Hz_unit/s_reg(1) AND clk_1Hz_unit/s_reg(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(3) AND clk_1Hz_unit/s_reg(4) AND clk_1Hz_unit/s_reg(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(6) AND clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(9));
+</td></tr><tr><td>
+FTCPE_clk_1Hz_unit/s_reg13: FTCPE port map (clk_1Hz_unit/s_reg(13),clk_1Hz_unit/s_reg_T(13),clk50Mhz,'0','0',clk_enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clk_1Hz_unit/s_reg_T(13) <= (clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(11) AND clk_1Hz_unit/s_reg(12) AND clk_1Hz_unit/s_reg(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3) AND clk_1Hz_unit/s_reg(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND clk_1Hz_unit/s_reg(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9));
+</td></tr><tr><td>
+FTCPE_clk_1Hz_unit/s_reg14: FTCPE port map (clk_1Hz_unit/s_reg(14),clk_1Hz_unit/s_reg_T(14),clk50Mhz,'0','0',clk_enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clk_1Hz_unit/s_reg_T(14) <= ((clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(11) AND clk_1Hz_unit/s_reg(12) AND clk_1Hz_unit/s_reg(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(1) AND clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(4) AND clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (clk_enable AND NOT clk_1Hz_unit/s_reg(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(10) AND clk_1Hz_unit/s_reg(11) AND NOT clk_1Hz_unit/s_reg(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(13) AND clk_1Hz_unit/s_reg(14) AND NOT clk_1Hz_unit/s_reg(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(16) AND NOT clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(19) AND NOT clk_1Hz_unit/s_reg(1) AND NOT clk_1Hz_unit/s_reg(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(21) AND clk_1Hz_unit/s_reg(22) AND NOT clk_1Hz_unit/s_reg(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(24) AND NOT clk_1Hz_unit/s_reg(2) AND NOT clk_1Hz_unit/s_reg(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(4) AND NOT clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(25)));
+</td></tr><tr><td>
+FTCPE_clk_1Hz_unit/s_reg15: FTCPE port map (clk_1Hz_unit/s_reg(15),clk_1Hz_unit/s_reg_T(15),clk50Mhz,'0','0',clk_enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clk_1Hz_unit/s_reg_T(15) <= (clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(11) AND clk_1Hz_unit/s_reg(12) AND clk_1Hz_unit/s_reg(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(14) AND clk_1Hz_unit/s_reg(1) AND clk_1Hz_unit/s_reg(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(3) AND clk_1Hz_unit/s_reg(4) AND clk_1Hz_unit/s_reg(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(6) AND clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(9));
+</td></tr><tr><td>
+FTCPE_clk_1Hz_unit/s_reg16: FTCPE port map (clk_1Hz_unit/s_reg(16),clk_1Hz_unit/s_reg_T(16),clk50Mhz,'0','0',clk_enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clk_1Hz_unit/s_reg_T(16) <= (clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(11) AND clk_1Hz_unit/s_reg(12) AND clk_1Hz_unit/s_reg(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(14) AND clk_1Hz_unit/s_reg(15) AND clk_1Hz_unit/s_reg(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3) AND clk_1Hz_unit/s_reg(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND clk_1Hz_unit/s_reg(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9));
+</td></tr><tr><td>
+FTCPE_clk_1Hz_unit/s_reg17: FTCPE port map (clk_1Hz_unit/s_reg(17),clk_1Hz_unit/s_reg_T(17),clk50Mhz,'0','0',clk_enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clk_1Hz_unit/s_reg_T(17) <= (clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(11) AND clk_1Hz_unit/s_reg(12) AND clk_1Hz_unit/s_reg(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(14) AND clk_1Hz_unit/s_reg(15) AND clk_1Hz_unit/s_reg(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(1) AND clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(4) AND clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9));
+</td></tr><tr><td>
+FTCPE_clk_1Hz_unit/s_reg18: FTCPE port map (clk_1Hz_unit/s_reg(18),clk_1Hz_unit/s_reg_T(18),clk50Mhz,'0','0',clk_enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clk_1Hz_unit/s_reg_T(18) <= ((clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(11) AND clk_1Hz_unit/s_reg(12) AND clk_1Hz_unit/s_reg(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(14) AND clk_1Hz_unit/s_reg(15) AND clk_1Hz_unit/s_reg(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(1) AND clk_1Hz_unit/s_reg(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(3) AND clk_1Hz_unit/s_reg(4) AND clk_1Hz_unit/s_reg(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(6) AND clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (clk_enable AND NOT clk_1Hz_unit/s_reg(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(10) AND clk_1Hz_unit/s_reg(11) AND NOT clk_1Hz_unit/s_reg(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(13) AND clk_1Hz_unit/s_reg(14) AND NOT clk_1Hz_unit/s_reg(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(16) AND NOT clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(19) AND NOT clk_1Hz_unit/s_reg(1) AND NOT clk_1Hz_unit/s_reg(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(21) AND clk_1Hz_unit/s_reg(22) AND NOT clk_1Hz_unit/s_reg(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(24) AND NOT clk_1Hz_unit/s_reg(2) AND NOT clk_1Hz_unit/s_reg(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(4) AND NOT clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(25)));
+</td></tr><tr><td>
+FTCPE_clk_1Hz_unit/s_reg19: FTCPE port map (clk_1Hz_unit/s_reg(19),clk_1Hz_unit/s_reg_T(19),clk50Mhz,'0','0',clk_enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clk_1Hz_unit/s_reg_T(19) <= ((clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(11) AND clk_1Hz_unit/s_reg(12) AND clk_1Hz_unit/s_reg(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(14) AND clk_1Hz_unit/s_reg(15) AND clk_1Hz_unit/s_reg(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND clk_1Hz_unit/s_reg(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3) AND clk_1Hz_unit/s_reg(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND clk_1Hz_unit/s_reg(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (clk_enable AND NOT clk_1Hz_unit/s_reg(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(10) AND clk_1Hz_unit/s_reg(11) AND NOT clk_1Hz_unit/s_reg(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(13) AND clk_1Hz_unit/s_reg(14) AND NOT clk_1Hz_unit/s_reg(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(16) AND NOT clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(19) AND NOT clk_1Hz_unit/s_reg(1) AND NOT clk_1Hz_unit/s_reg(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(21) AND clk_1Hz_unit/s_reg(22) AND NOT clk_1Hz_unit/s_reg(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(24) AND NOT clk_1Hz_unit/s_reg(2) AND NOT clk_1Hz_unit/s_reg(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(4) AND NOT clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(25)));
+</td></tr><tr><td>
+FTCPE_clk_1Hz_unit/s_reg20: FTCPE port map (clk_1Hz_unit/s_reg(20),clk_1Hz_unit/s_reg_T(20),clk50Mhz,'0','0',clk_enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clk_1Hz_unit/s_reg_T(20) <= (clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(11) AND clk_1Hz_unit/s_reg(12) AND clk_1Hz_unit/s_reg(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(14) AND clk_1Hz_unit/s_reg(15) AND clk_1Hz_unit/s_reg(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND clk_1Hz_unit/s_reg(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(1) AND clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(4) AND clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9));
+</td></tr><tr><td>
+FTCPE_clk_1Hz_unit/s_reg21: FTCPE port map (clk_1Hz_unit/s_reg(21),clk_1Hz_unit/s_reg_T(21),clk50Mhz,'0','0',clk_enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clk_1Hz_unit/s_reg_T(21) <= (clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(11) AND clk_1Hz_unit/s_reg(12) AND clk_1Hz_unit/s_reg(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(14) AND clk_1Hz_unit/s_reg(15) AND clk_1Hz_unit/s_reg(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND clk_1Hz_unit/s_reg(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(1) AND clk_1Hz_unit/s_reg(20) AND clk_1Hz_unit/s_reg(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(3) AND clk_1Hz_unit/s_reg(4) AND clk_1Hz_unit/s_reg(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(6) AND clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(9));
+</td></tr><tr><td>
+FTCPE_clk_1Hz_unit/s_reg22: FTCPE port map (clk_1Hz_unit/s_reg(22),clk_1Hz_unit/s_reg_T(22),clk50Mhz,'0','0',clk_enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clk_1Hz_unit/s_reg_T(22) <= ((clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(11) AND clk_1Hz_unit/s_reg(12) AND clk_1Hz_unit/s_reg(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(14) AND clk_1Hz_unit/s_reg(15) AND clk_1Hz_unit/s_reg(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND clk_1Hz_unit/s_reg(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(1) AND clk_1Hz_unit/s_reg(20) AND clk_1Hz_unit/s_reg(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3) AND clk_1Hz_unit/s_reg(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND clk_1Hz_unit/s_reg(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (clk_enable AND NOT clk_1Hz_unit/s_reg(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(10) AND clk_1Hz_unit/s_reg(11) AND NOT clk_1Hz_unit/s_reg(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(13) AND clk_1Hz_unit/s_reg(14) AND NOT clk_1Hz_unit/s_reg(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(16) AND NOT clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(19) AND NOT clk_1Hz_unit/s_reg(1) AND NOT clk_1Hz_unit/s_reg(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(21) AND clk_1Hz_unit/s_reg(22) AND NOT clk_1Hz_unit/s_reg(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(24) AND NOT clk_1Hz_unit/s_reg(2) AND NOT clk_1Hz_unit/s_reg(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(4) AND NOT clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT clk_1Hz_unit/s_reg(25)));
+</td></tr><tr><td>
+FTCPE_clk_1Hz_unit/s_reg23: FTCPE port map (clk_1Hz_unit/s_reg(23),clk_1Hz_unit/s_reg_T(23),clk50Mhz,'0','0',clk_enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clk_1Hz_unit/s_reg_T(23) <= (clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(11) AND clk_1Hz_unit/s_reg(12) AND clk_1Hz_unit/s_reg(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(14) AND clk_1Hz_unit/s_reg(15) AND clk_1Hz_unit/s_reg(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND clk_1Hz_unit/s_reg(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(1) AND clk_1Hz_unit/s_reg(20) AND clk_1Hz_unit/s_reg(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(22) AND clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(4) AND clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9));
+</td></tr><tr><td>
+FTCPE_clk_1Hz_unit/s_reg24: FTCPE port map (clk_1Hz_unit/s_reg(24),clk_1Hz_unit/s_reg_T(24),clk50Mhz,'0','0',clk_enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clk_1Hz_unit/s_reg_T(24) <= (clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(11) AND clk_1Hz_unit/s_reg(12) AND clk_1Hz_unit/s_reg(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(14) AND clk_1Hz_unit/s_reg(15) AND clk_1Hz_unit/s_reg(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND clk_1Hz_unit/s_reg(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(1) AND clk_1Hz_unit/s_reg(20) AND clk_1Hz_unit/s_reg(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(22) AND clk_1Hz_unit/s_reg(23) AND clk_1Hz_unit/s_reg(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(3) AND clk_1Hz_unit/s_reg(4) AND clk_1Hz_unit/s_reg(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(6) AND clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(9));
+</td></tr><tr><td>
+FTCPE_clk_1Hz_unit/s_reg25: FTCPE port map (clk_1Hz_unit/s_reg(25),clk_1Hz_unit/s_reg_T(25),clk50Mhz,'0','0',clk_enable);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clk_1Hz_unit/s_reg_T(25) <= (clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(11) AND clk_1Hz_unit/s_reg(12) AND clk_1Hz_unit/s_reg(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(14) AND clk_1Hz_unit/s_reg(15) AND clk_1Hz_unit/s_reg(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND clk_1Hz_unit/s_reg(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(1) AND clk_1Hz_unit/s_reg(20) AND clk_1Hz_unit/s_reg(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(22) AND clk_1Hz_unit/s_reg(23) AND clk_1Hz_unit/s_reg(24) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3) AND clk_1Hz_unit/s_reg(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND clk_1Hz_unit/s_reg(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9));
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

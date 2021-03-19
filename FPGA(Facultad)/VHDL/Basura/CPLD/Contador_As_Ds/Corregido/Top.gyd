@@ -1,0 +1,42 @@
+Pin Freeze File:  version K.31
+
+9572XL44PC XC9572XL-5-PC44
+clk50Mhz S:PIN5
+clk_enable S:PIN39
+x S:PIN28
+sseg<5> S:PIN13
+an<0> S:PIN18
+an<3> S:PIN20
+an<2> S:PIN22
+an<1> S:PIN12
+bcd<0> S:PIN36
+bcd<1> S:PIN38
+bcd<2> S:PIN43
+sseg<0> S:PIN11
+sseg<1> S:PIN35
+sseg<2> S:PIN25
+sseg<6> S:PIN27
+sseg<3> S:PIN29
+sseg<4> S:PIN44
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+
+PARTITION FB2_1 q1/q1_RSTF sseg_1_OBUF q2 q1
+		 s0 q0 not_q2 s1
+		 not_q1 not_q0 clk_1Hz_unit/s_reg<6> clk_1Hz_unit/s_reg<22>
+		 clk_1Hz_unit/s_reg<19> clk_1Hz_unit/s_reg<18> s2 clk_1Hz_unit/s_reg<14>
+		 sseg_4_OBUF clk_1Hz_unit/s_reg<11>
+PARTITION FB3_1 clk_1Hz_unit/s_reg<25> sseg_0_OBUF clk_1Hz_unit/s_reg<24> clk_1Hz_unit/s_reg<23>
+		 N1$BUF1 clk_1Hz_unit/s_reg<21> clk_1Hz_unit/s_reg<20> N0
+		 clk_1Hz_unit/s_reg<17> clk_1Hz_unit/s_reg<16> N0$BUF0 clk_1Hz_unit/s_reg<15>
+		 clk_1Hz_unit/s_reg<13> clk_1Hz_unit/s_reg<0> N1 clk_1Hz_unit/s_reg<9>
+		 N1$BUF0 clk_1Hz_unit/s_reg<8>
+PARTITION FB4_2 sseg_2_OBUF
+PARTITION FB4_8 sseg_3_OBUF
+PARTITION FB4_10 clk_1Hz_unit/s_reg<7> clk_1Hz_unit/s_reg<5> clk_1Hz_unit/s_reg<4> clk_1Hz_unit/s_reg<3>
+		 sseg_3_OBUF$BUF0 clk_1Hz_unit/s_reg<2> clk_1Hz_unit/s_reg<1> clk_1Hz_unit/s_reg<12>
+		 clk_1Hz_unit/s_reg<10>
+

@@ -1,0 +1,7 @@
+Se desea desarrollar un programa que permita declarar una tabla de N xN 
+de números reales de simple precisión. 
+Se desea desarrollar métodos para:
+a)	Seleccionar el tamaño NxN
+b)	Cargar la tabla desde el teclado
+c)	Mostrar por pantalla los elementos de la tabla
+d)	Detectar  el menor valor y generar un arreglo con los elementos que estén sobre su columna.

@@ -1,0 +1,25 @@
+/* 
+Position
+
+Flujo HTML -> Es el orden en el que aparecen los elementos en el documento
+Espacio -> Es el espacio que ocupa un elemento en el documento
+
+    Valores de posicion(Explicados en las lecciones 10 al 13):      Static(sin asignar posición)   
+                                                                    Relative
+                                                                    Absolute
+                                                                    Fixed
+                                                                    Sticky
+
+*/
+
+.title{
+    text-align: center;
+    font-size: 3em;
+}
+p{
+    font-size: 2em;
+}
+.parrafo-1{
+    /*visibility: hidden;/* /*Desaparece parrafo 1 consevando espacio*/
+    display: none; /*Desaparece parrafo 1 sin conservar espacio*/
+}

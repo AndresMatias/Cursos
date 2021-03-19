@@ -1,0 +1,4 @@
+AR flip_flop_jk behavioral C:/Xilinx/Tp/Contador_As_Ds/Contador/Flip_Flop_JK.vhd sub00/vhpl01 1508950970
+EN flip_flop_jk NULL C:/Xilinx/Tp/Contador_As_Ds/Contador/Flip_Flop_JK.vhd sub00/vhpl00 1508950969
+EN contador NULL C:/Xilinx/Tp/Contador_As_Ds/Contador/Contador.vhd sub00/vhpl02 1508950971
+AR contador behavioral C:/Xilinx/Tp/Contador_As_Ds/Contador/Contador.vhd sub00/vhpl03 1508950972

@@ -1,0 +1,638 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+  
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="IP Webcam"/>
+    <link rel="shortcut icon" href="ico/favicon.png"/>
+
+    <title>IP Webcam</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+
+    <link href="ipwebcam.css" rel="stylesheet"/>
+
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="lang.js"></script>
+    <script src="swfobject.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/ipwebcam.js"></script>
+    <script src="js/ipwebcam_override.js"></script>
+    <script src="js/ipwebcam_plugins.js"></script>
+
+
+  
+    
+  </head><body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="greet.html">IP Webcam</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav"> 
+            <li class="active"><a href="greet.html">Главная страница</a></li>
+            <li ><a href="videomgr.html">Видеоархив</a></li>
+            <li  class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Драйверы для чатов <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">Драйверы для Windows (только видео)</li>
+                <li><a class="hash-change" href="videochat.html#ipca">IP Camera Adapter</a></li>
+                
+                
+                <li class="divider"></li>
+                <li class="dropdown-header">Драйвер для Linux</li>
+                <li><a class="hash-change" href="videochat.html#linux">Драйвер для Ubuntu GNU/Linux (внешняя ссылка)</a></li>
+              </ul>
+            </li>
+
+            <li  class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Другие методы просмотра <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">Просмотрщики для Android</li>
+                <li><a class="hash-change" href="viewers.html#tinycam">tinyCam Monitor</a></li>
+                <li><a href="http://hit-mob.com/ipwebcam/ipwebcam_howto.html">IP Cam Viewer для Android и iOS (внешняя ссылка)</a></li>
+                <li class="dropdown-header">Кросс-платформенные просмотрщики</li>
+                <li><a class="hash-change" href="viewers.html#vlc">VLC Media Player</a></li>
+                <li><a class="hash-change" href="viewers.html#zoneminder">ZoneMinder</a></li>
+                <li class="dropdown-header">Windows viewers</li>
+                <li><a class="hash-change" href="viewers.html#blueiris">Blue Iris</a></li>
+                <li><a class="hash-change" href="viewers.html#webcamxp">webcamXP</a></li>
+                <li class="dropdown-header">Другие методы</li>
+                <li><a class="hash-change" href="viewers.html#view_outside">Доступ к IP Webcam вне Wi-Fi (например, через интернет)</a></li>
+                <li><a class="hash-change" href="viewers.html#mac_bind">Почему мой IP-адрес меняется?</a></li>
+                <li><a class="hash-change" href="viewers.html#advanced">Дополнительная информация</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+    
+
+<div id="explain_audio" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+        <h4>Звук запаздывает на 4 секунды?</h4>
+      </div>
+      <div class="modal-body">
+        <p>Это происходит из-за внутренней буфферизации браузера.</p>
+ <p>Попробуйте эти решения:</p>
+ <ul>
+  <li>Используйте встроенный проигрыватель Flash. Он сделан для уменьшения запоздания.</li>
+  <li>Используйте браузер Firefox и проигрыватель Opus. Opus — высококачественный кодек следующего поколения, разработанный для низкой латентности и маленького размера. Firefox почти не буфферизирует его.</li>
+  <li>Прослушивайте аудио через VLC Media Player. В его меню выберите Медиа ⇨ Открыть сетевой поток, выберите http://ваш-ip:ваш-порт/audio.wav как URL, выберите "Показывать больше настроек" и установите буферизацию в 1 мс.</li>
+</ul>
+<p></p>
+ 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="explain_tasker" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+        <h4>События Tasker</h4>
+      </div>
+      <div class="modal-body">
+        <p><a href="https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm">Tasker</a> — система автоматизации смартфонов на Android. Она может автоматизировать, скажем, отправку SMS или менять громкость звонка по расписанию или по местоположению.</p>
+ <p>IP Webcam Pro может генерировать события для Tasker, либо через веб-интерфейс или через редактируемый интерфейс.</p>
+ <p>Чтобы настроить Tasker для работы с событиями и состояниями IP Webcam, создайте в Tasker профиль, нажав кнопку &quot;+&quot; и выбрав State ⇨ Plugin ⇨ IP Webcam как условие.</p>
+ <p>События, сгенерированные из веб-интерфейса, имеют то же имя, что написано на кнопке. Скажем, центральная генерирует событие с именем &quot;5&quot;.</p>
+ <p/>
+ 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+  <div class="container">
+    
+    <div class="row">
+      <form class="form-horizontal" role="form">
+        <div class="form-group switch">
+          <label class="col-lg-offset-3 col-lg-2" for="video_mode">Режим просмотра</label>
+          <div id="video_mode" class="btn-group" data-toggle="buttons">
+            <label id="video_radio_none" class="btn btn-default btn-sm active">
+              <input type="radio" name="video_mode_sel" value="off"/> Нет видео
+            </label>
+            <label class="btn btn-default btn-sm">
+              <input type="radio" name="video_mode_sel" value="flash"/> Flash
+            </label>
+            <label class="btn btn-default btn-sm">
+              <input type="radio" name="video_mode_sel" value="browser"/> Встроенный в браузер
+            </label>
+            <label class="btn btn-default btn-sm">
+              <input type="radio" name="video_mode_sel" value="java"/> Java
+            </label>
+            <label class="btn btn-default btn-sm">
+              <input type="radio" name="video_mode_sel" value="js"/> Javascript
+            </label>
+          </div>
+          <button id="btn_fullscreen" class="btn btn-default btn-sm has-tooltip" title="Подсказка: нажмите F11 для полного экрана" type="button">Полноэкранный режим</button>
+        </div>
+
+        <div class="form-group">
+          <label class="col-lg-offset-3 col-lg-2 " for="audio_mode">Режим прослушивания</label>
+
+          <div class="btn-group" id="audio_mode" data-toggle="buttons">
+            <label class="btn btn-default btn-sm active">
+              <input type="radio" name="audio_mode_sel" value="off"/> Нет аудио
+            </label>
+            <label class="btn btn-default btn-sm">
+              <input type="radio" name="audio_mode_sel" value="flash"/> Flash
+            </label>
+            <label class="btn btn-default btn-sm">
+              <input type="radio" name="audio_mode_sel" value="html5_wav"/> HTML5 Wav
+            </label>
+            <label class="btn btn-default btn-sm">
+              <input type="radio" name="audio_mode_sel" value="html5_opus"/> HTML5 Opus
+            </label>
+          </div>
+          
+          <button id="btn_why_lag" class="btn btn-default btn-sm" type="button">Откуда запоздание?</button>
+        </div>
+        
+
+
+      </form>
+
+    </div>
+  </div>
+  <div class="row">
+      <!-- <span style="border: 1px solid black; "> -->
+        <div id="video_pane" style="margin: auto; border: 1px solid black; display: none;">
+          
+        </div>
+  </div>
+  <div class="row">
+      <!-- <span style="border: 1px solid black; "> -->
+        <div id="audio_pane" style="margin: auto; display: table;">
+          
+        </div>
+  </div>
+</div>
+
+
+
+
+    <div class="container" id="main_container">
+      <div id="init_alert" class="alert alert-danger" style="display: none;">
+        <strong>Невозможно получить статус камеры!</strong> Некоторая функциональность может быть недоступна из-за <span id="init_error"></span>.
+      </div>
+    
+
+  <div id="warn_div" class="alert alert-warning" style="display: none;">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+    <strong><span id="warn_cause">Warning cause</span></strong> <span id="warn_desc">Warning desc</span>
+  </div>
+
+  
+  <div class="row">
+    <div class="col-lg-5">
+      <form role="form">
+        <div id="video_host1" class="form-group">
+          <label>Управление записью видео</label>
+          <div class="row">
+          <div class="input-group col-xs-12">
+            <span class="input-group-addon glyphicon glyphicon-tag"></span>
+            <input id="video_tag" type="text" class="form-control" placeholder="Введите метку для записи" />
+            <span class="input-group-btn">
+              <button id="rec_circular" style="margin-right: -2px;" class="btn btn-default has-tooltip" title="Запись по кругу" type="button">
+                <img src="roundabout.png" width="20" height="20"/><span class="sr-only">Запись по кругу</span>
+              </button>
+              <button id="rec_button" class="btn btn-default has-tooltip" title="Запись" type="button">
+                <img src="recordbtn.png" width="20" height="20"/><span class="sr-only">Ручная запись</span>
+              </button>
+            </span>
+          </div>
+          </div>
+        </div>
+
+        <div id="video_rec" style="display: none" class="form-group">
+          
+          <div class="row">
+            <div class="col-xs-1" style="padding-right: 0;"><p class="text-right"><img src="rec_blink8.gif" class="rec"/></p></div>
+            <div class="col-xs-8 col-sm-9 col-lg-8" style="padding-left: 0;">
+              Записывается в<br/>
+              <span id="rec_location"></span>
+            </div>
+            <div class="col-xs-3 col-sm-2 col-lg-3">
+              <button id="rec_stop" class="btn btn-default col-xs-12" type="button">
+                <i class="glyphicon glyphicon-stop"></i> <span class="visible-lg">Стоп</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+        <div style="clear: both; height: 15px;"></div>
+
+
+        <div id="video_host2" class="form-group">
+          <label>Размер файла в записи по кругу</label>
+          <div class="col-xs-12">
+          
+            Запись по кругу записывает видео фрагментами по 
+          <div class="input-group" style="display: inline-block">
+              <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
+                <span id="circular_length">30 минут</span> <b class="caret"></b>
+              </button>
+              <ul class="dropdown-menu">
+                <li id="circular_2h"><a href="#">2 часа</a></li>
+                <li id="circular_1h"><a href="#">1 час</a></li>
+                <li id="circular_30m"><a href="#">30 минут</a></li>
+                <li id="circular_10m"><a href="#">10 минут</a></li>
+                <li id="circular_5m"><a href="#">5 минут</a></li>
+              </ul>
+          </div>
+          , переписывая более старые фрагменты когда заканчивается место.
+
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label>Фото</label>
+          <div class="container">
+            <div class="row" id="photo_options">
+              <a href="photo.jpg" class="col-xs-6 btn btn-default btn-sm has-tooltip" title="Правый клик для сохранения">
+                Снять фото
+              </a>
+              <a href="photoaf.jpg" class="col-xs-6 btn btn-default btn-sm has-tooltip" title="Правый клик для сохранения">
+                Сфокусироваться и снять фото
+              </a>
+            </div>
+            <div class="row">
+              <button type="button" id="btn_photo_storage" class="col-xs-6 btn btn-default btn-sm">
+                Сохранить фото на телефон
+              </button>
+              <button type="button" id="btn_photoaf_storage" class="col-xs-6 btn btn-default btn-sm">
+                Сохранить сфокусированное фото
+              </button>
+              <img src="loader.gif" id="photo_spinner" style="display: none;" />
+              <img src="ok.png" id="photo_ok" style="display: none;" />
+            </div>
+          </div>
+        </div>
+
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#tasker_events">
+              События Tasker <b class="caret"></b>
+            </a>
+            <button id="btn_explain_tasker" class="btn btn-default btn-sm" type="button">Что это?</button>
+          </h4>
+        </div>
+
+        <div id="tasker_events" class="form-group collapse">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="row">
+                  <button type="button" data-num="7" class="col-xs-4 btn btn-default btn-xs tbtn">7</button>
+                  <button type="button" data-num="8" class="col-xs-4 btn btn-default btn-xs tbtn">8</button>
+                  <button type="button" data-num="9" class="col-xs-4 btn btn-default btn-xs tbtn">9</button>
+                </div>
+                <div class="row">
+                  <button type="button" data-num="4" class="col-xs-4 btn btn-default btn-xs tbtn">4</button>
+                  <button type="button" data-num="5" class="col-xs-4 btn btn-default btn-xs tbtn">5</button>
+                  <button type="button" data-num="6" class="col-xs-4 btn btn-default btn-xs tbtn">6</button>
+                </div>
+                <div class="row">
+                  <button type="button" data-num="1" class="col-xs-4 btn btn-default btn-xs tbtn">1</button>
+                  <button type="button" data-num="2" class="col-xs-4 btn btn-default btn-xs tbtn">2</button>
+                  <button type="button" data-num="3" class="col-xs-4 btn btn-default btn-xs tbtn">3</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+      </form>
+
+
+    </div> <!-- lg-5 -->
+
+
+    <div class="col-lg-offset-2 col-lg-5">
+      <!--<label>Zoom</label>
+      <form role="form" class="form-horizontal">
+        <div class="form-group">
+          <label for="range_zoom" class="control-label">Zoom: </label>
+          <div class="col-sm-8">
+           <input id="range_zoom" type="range" min="0" max="0"/>
+          </div>
+          <label id="range_zoom_label" for="range_zoom">1 X</label>
+        </div>
+      </form>-->
+
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label for="range_zoom" class="col-xs-3 control-label">Увеличение</label>
+          <div class="col-xs-7">
+            <input id="range_zoom" class="col-xs-12" type="range" min="0" max="0"/>
+          </div>
+          <label for="range_zoom" id="range_zoom_label" class="control-label col-xs-2">1 X</label>
+        </div>
+
+        <div class="form-group">
+          <label for="range_quality" class="col-xs-3 control-label">Качество видео</label>
+          <div class="col-xs-7">
+            <input id="range_quality" class="col-xs-12" type="range" min="1" max="100"/>
+          </div>
+          <label for="range_quality" id="range_quality_label" class="control-label col-xs-2">50%</label>
+        </div>
+
+        <div class="form-group" id="exposure_host">
+          <label for="range_exposure" class="col-xs-3 control-label">Компенсация выдержки</label>
+          <div class="col-xs-7">
+            <input id="range_exposure" class="col-xs-12" type="range" min="1" max="100"/>
+          </div>
+          <label for="range_exposure" id="range_exposure_label" class="control-label col-xs-2">0</label>
+        </div>
+
+        <div class="form-group">
+          <label for="flashbtn" class="col-xs-3 control-label">Прочее</label>
+          <div class="col-xs-9">
+            <div class="btn-group" data-toggle="buttons">
+              <label id="focusbtn" class="btn btn-sm btn-default">
+                <input id="focuscb" type="checkbox"/> <span class="glyphicon glyphicon-screenshot"></span> Удержание фокуса
+              </label>
+              <label id="flashbtn" class="btn btn-sm btn-default">
+                <input id="flashcb" type="checkbox"/> <span class="glyphicon glyphicon-adjust"></span> Включить вспышку
+              </label>
+              <label id="overlaybtn" class="btn btn-sm btn-default">
+                <input id="overlaycb" type="checkbox"/> <span class="glyphicon glyphicon-info-sign"></span> Наложение даты
+              </label>
+              <label id="nvbtn" class="btn btn-sm btn-default">
+                <input id="nvcb" type="checkbox"/> <span class="glyphicon glyphicon-eye-open"></span> Ночное видение
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div id="ffc_form" class="form-group">
+          <label for="ffcbtn" class="col-xs-3 control-label">Передняя камера</label>
+          <div class="col-xs-9">
+            <div id="ffc_res_unsupported" style="display: none;">Переключение на фронтальную камеру недоступно</div>
+
+            <div id="ffcbtn" class="btn btn-sm btn-default" style="display: none;">
+              <img id="img_ffc_current" style="width: 3em; height: 3em;" src="ic_switch_camera_back_normal.png" alt="Back camera"> <span class="glyphicon glyphicon-arrow-right"></span> <img id="img_ffc_alt" style="width: 3em; height: 3em;" src="ic_switch_camera_front_normal.png" alt="Front-facing camera">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+        <p><a class="btn btn-default" href="sensors.html" target="_blank">Открыть сенсоры &raquo;</a></p>
+        </div>
+
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#advSettings">
+              Дополнительные настройки <b class="caret"></b>
+            </a>
+          </h4>
+        </div>
+
+        <div id="advSettings" class="collapse">
+
+          <div class="form-group">
+            <label for="range_nightvision_gain" class="col-xs-3 control-label">Усиление ночного видения</label>
+              <div class="col-xs-7">
+                <input id="range_nightvision_gain" class="col-xs-11" type="range" min="1" max="240" value="1"/>
+                <div class="col-xs-1 btn btn-sm btn-default" style="padding: 0;" id="set_nvg_1">1X</div>
+              </div>
+            <label for="range_nightvision_gain" id="range_nightvision_gain_label" class="control-label col-xs-2">0</label>
+          </div>
+
+          <div class="form-group">
+            <label for="range_nightvision_average" class="col-xs-3 control-label">Выдержка ночного видения</label>
+              <div class="col-xs-7">
+                <input id="range_nightvision_average" class="col-xs-11" type="range" min="1" max="20" value="1" />
+                <div class="col-xs-1 btn btn-sm btn-default" style="padding: 0;" id="set_avg_2">2</div>
+              </div>
+            <label for="range_nightvision_average" id="range_nightvision_average_label" class="control-label col-xs-2">0</label>
+          </div>
+
+
+          
+          <div id="video_size_holder" class="form-group">
+            <label for="video_size_btn" class="col-xs-3 control-label">Разрешение видео</label>
+            <div class="col-xs-9">
+              <div class="input-group">
+                <button id="video_size_btn" class="btn btn-default btn-sm dropdown-toggle disabled" type="button" data-toggle="dropdown">
+                  Загрузка... <b class="caret"></b>
+                </button>
+                <ul class="dropdown-menu" data-container="body" id="video_size">
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div id="orientation_holder" class="form-group">
+            <label for="orientation_btn" class="col-xs-3 control-label">Ориентация</label>
+            <div class="col-xs-9">
+              <div class="input-group">
+                <button id="orientation_btn" class="btn btn-default btn-sm dropdown-toggle disabled" type="button" data-toggle="dropdown">
+                  Загрузка... <b class="caret"></b>
+                </button>
+                <ul class="dropdown-menu" data-container="body" id="orientation">
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div id="mirror_flip_holder" class="form-group">
+            <label for="mirror_flip_btn" class="col-xs-3 control-label">Отражение и переворот</label>
+            <div class="col-xs-9">
+              <div class="input-group">
+                <button id="mirror_flip_btn" class="btn btn-default btn-sm dropdown-toggle disabled" type="button" data-toggle="dropdown">
+                  Загрузка... <b class="caret"></b>
+                </button>
+                <ul class="dropdown-menu" data-container="body" id="mirror_flip">
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div id="photo_size_holder" class="form-group">
+            <label for="photo_size_btn" class="col-xs-3 control-label">Разрешение фото</label>
+            <div class="col-xs-9">
+              <div class="input-group">
+                <button id="photo_size_btn" class="btn btn-default btn-sm dropdown-toggle disabled" type="button" data-toggle="dropdown">
+                  Загрузка... <b class="caret"></b>
+                </button>
+                <ul class="dropdown-menu" data-container="body" id="photo_size">
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div id="flashmode_holder" class="form-group">
+            <label for="flashmode_btn" class="col-xs-3 control-label">Режим вспышки</label>
+            <div class="col-xs-9">
+              <div class="input-group">
+                <button id="flashmode_btn" class="btn btn-default btn-sm dropdown-toggle disabled" type="button" data-toggle="dropdown">
+                  Загрузка... <b class="caret"></b>
+                </button>
+                <ul class="dropdown-menu" data-container="body" id="flashmode">
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div id="focusmode_holder" class="form-group">
+            <label for="focusmode_btn" class="col-xs-3 control-label">Режим фокуса</label>
+            <div class="col-xs-9">
+              <div class="input-group">
+                <button id="focusmode_btn" class="btn btn-default btn-sm dropdown-toggle disabled" type="button" data-toggle="dropdown">
+                  Загрузка... <b class="caret"></b>
+                </button>
+                <ul class="dropdown-menu" data-container="body" id="focusmode">
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div id="scenemode_holder" class="form-group">
+            <label for="scenemode_btn" class="col-xs-3 control-label">Режим сцены</label>
+            <div class="col-xs-9">
+              <div class="input-group">
+                <button id="scenemode_btn" class="btn btn-default btn-sm dropdown-toggle disabled" type="button" data-toggle="dropdown">
+                  Загрузка... <b class="caret"></b>
+                </button>
+                <ul class="dropdown-menu" data-container="body" id="scenemode">
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div id="antibanding_holder" class="form-group">
+            <label for="antibanding_btn" class="col-xs-3 control-label">Борьба с полосами</label>
+            <div class="col-xs-9">
+              <div class="input-group">
+                <button id="antibanding_btn" class="btn btn-default btn-sm dropdown-toggle disabled" type="button" data-toggle="dropdown">
+                  Загрузка... <b class="caret"></b>
+                </button>
+                <ul class="dropdown-menu" data-container="body" id="antibanding">
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div id="whitebalance_holder" class="form-group">
+            <label for="whitebalance_btn" class="col-xs-3 control-label">Баланс белого</label>
+            <div class="col-xs-9">
+              <div class="input-group">
+                <button id="whitebalance_btn" class="btn btn-default btn-sm dropdown-toggle disabled" type="button" data-toggle="dropdown">
+                  Загрузка... <b class="caret"></b>
+                </button>
+                <ul class="dropdown-menu" data-container="body" id="whitebalance">
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div id="coloreffect_holder" class="form-group">
+            <label for="coloreffect_btn" class="col-xs-3 control-label">Цветовой эффект</label>
+            <div class="col-xs-9">
+              <div class="input-group">
+                <button id="coloreffect_btn" class="btn btn-default btn-sm dropdown-toggle disabled" type="button" data-toggle="dropdown">
+                  Загрузка... <b class="caret"></b>
+                </button>
+                <ul class="dropdown-menu" data-container="body" id="coloreffect">
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div id="exposure_lock_holder" class="form-group">
+            <label for="exposure_lock_btn" class="col-xs-3 control-label">Заблокировать автовыдержку</label>
+            <div class="col-xs-9">
+              <div class="input-group">
+                <button id="exposure_lock_btn" class="btn btn-default btn-sm dropdown-toggle disabled" type="button" data-toggle="dropdown">
+                  Загрузка... <b class="caret"></b>
+                </button>
+                <ul class="dropdown-menu" data-container="body" id="exposure_lock">
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div id="whitebalance_lock_holder" class="form-group">
+            <label for="whitebalance_lock_btn" class="col-xs-3 control-label">Заблокировать автобаланс белого</label>
+            <div class="col-xs-9">
+              <div class="input-group">
+                <button id="whitebalance_lock_btn" class="btn btn-default btn-sm dropdown-toggle disabled" type="button" data-toggle="dropdown">
+                  Загрузка... <b class="caret"></b>
+                </button>
+                <ul class="dropdown-menu" data-container="body" id="whitebalance_lock">
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+
+        </div>
+
+
+      </form>
+      
+    </div>
+    
+
+  </div> <!-- row -->
+
+  
+      <hr/>
+
+      <footer>
+        <p>&copy; Pavel Khlebovich 2013</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    
+
+
+    
+<script type="text/javascript">
+  //<!--
+  $(greetInit)
+  //-->
+</script>
+
+
+
+    
+  </body>
+</html>

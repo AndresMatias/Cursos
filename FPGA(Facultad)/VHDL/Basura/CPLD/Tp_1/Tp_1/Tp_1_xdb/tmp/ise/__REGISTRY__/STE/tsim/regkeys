@@ -1,0 +1,6 @@
+CommandLine
+C:\Xilinx\10.1\ISE\bin\nt\unwrapped\tsim.exe -ise D:/CPLD/Tp_1/Tp_1/Tp_1.ise -intstyle ise Tp_1 Tp_1.nga
+s
+FormatString
+tsim <design[.vm6]> [--intstyle ise|xflow|silent] [<outfile>] 
+s

@@ -1,0 +1,513 @@
+ 
+cpldfit:  version K.39                              Xilinx Inc.
+                                  Fitter Report
+Design Name: contador                            Date: 10-26-2017,  7:19PM
+Device Used: XC9572XL-5-PC44
+Fitting Status: Successful
+
+*************************  Mapped Resource Summary  **************************
+
+Macrocells     Product Terms    Function Block   Registers      Pins           
+Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
+28 /72  ( 39%) 59  /360  ( 16%) 26 /216 ( 12%)   11 /72  ( 15%) 15 /34  ( 44%)
+
+** Function Block Resources **
+
+Function    Mcells      FB Inps     Pterms      IO          
+Block       Used/Tot    Used/Tot    Used/Tot    Used/Tot    
+FB1          15/18        5/54       42/90       1/ 9
+FB2           3/18        3/54        2/90       4/ 9
+FB3           5/18       13/54       10/90       5/ 9
+FB4           5/18        5/54        5/90       5/ 7
+             -----       -----       -----      -----    
+             28/72       26/216      59/360     15/34 
+
+* - Resource is exhausted
+
+** Global Control Resources **
+
+Global clock net(s) unused.
+Global output enable net(s) unused.
+Signal 'reset' mapped onto global set/reset net GSR.
+
+** Pin Resources **
+
+Signal Type    Required     Mapped  |  Pin Type            Used    Total 
+------------------------------------|------------------------------------
+Input         :    3           3    |  I/O              :    12      28
+Output        :   11          11    |  GCK/IO           :     1       3
+Bidirectional :    0           0    |  GTS/IO           :     1       2
+GCK           :    0           0    |  GSR/IO           :     1       1
+GTS           :    0           0    |
+GSR           :    1           1    |
+                 ----        ----
+        Total     15          15
+
+** Power Data **
+
+There are 28 macrocells in high performance mode (MCHP).
+There are 0 macrocells in low power mode (MCLP).
+End of Mapped Resource Summary
+**************************  Errors and Warnings  ***************************
+
+INFO:Cpld - Inferring BUFG constraint for signal 'reloj' based upon the LOC
+   constraint 'P5'. It is recommended that you declare this BUFG explicitedly in
+   your design. Note that for certain device families the output of a BUFG
+   constraint can not drive a gated clock, and the BUFG constraint will be
+   ignored.
+WARNING:Cpld:1007 - Removing unused input(s) 'inicio'.  The input(s) are unused
+   after optimization. Please verify functionality via simulation.
+WARNING:Cpld:1239 - The global clock designation (BUFG) on signal 'reloj_IBUF'
+   is ignored. Most likely the signal is gated and therefore cannot be used as a
+   global control signal.
+*************************  Summary of Mapped Logic  ************************
+
+** 11 Outputs **
+
+Signal                          Total Total Loc     Pin  Pin     Pin     Pwr  Slew Reg Init
+Name                            Pts   Inps          No.  Type    Use     Mode Rate State
+transistor3                     0     0     FB2_15  43   I/O     O       STD  FAST 
+transistor2                     0     0     FB2_17  44   I/O     O       STD  FAST 
+display<0>                      2     2     FB3_11  18   I/O     O       STD  FAST RESET
+display<1>                      2     2     FB3_14  19   I/O     O       STD  FAST RESET
+display<2>                      2     4     FB3_15  20   I/O     O       STD  FAST RESET
+display<4>                      2     4     FB3_16  24   I/O     O       STD  FAST RESET
+display<3>                      2     2     FB3_17  22   I/O     O       STD  FAST RESET
+display<5>                      2     2     FB4_2   25   I/O     O       STD  FAST RESET
+display<6>                      2     2     FB4_5   26   I/O     O       STD  FAST RESET
+transistor4                     0     0     FB4_11  28   I/O     O       STD  FAST 
+transistor1                     0     0     FB4_14  29   I/O     O       STD  FAST 
+
+** 17 Buried Nodes **
+
+Signal                          Total Total Loc     Pwr  Reg Init
+Name                            Pts   Inps          Mode State
+display_6/display_6_RSTF        2     4     FB1_4   STD  
+display_2/display_2_SETF        2     4     FB1_5   STD  
+display_1/display_1_RSTF        2     4     FB1_6   STD  
+display_0/display_0_RSTF        2     4     FB1_7   STD  
+CONTADOR0<2>                    2     3     FB1_8   STD  RESET
+$OpTx$FX_DC$6                   2     3     FB1_9   STD  
+display_6/display_6_SETF        3     4     FB1_10  STD  
+display_5/display_5_RSTF        3     4     FB1_11  STD  
+display_4/display_4_SETF        3     4     FB1_12  STD  
+display_3/display_3_RSTF        3     4     FB1_13  STD  
+display_1/display_1_SETF        3     4     FB1_14  STD  
+CONTADOR0<3>                    3     5     FB1_15  STD  RESET
+CONTADOR0<1>                    3     5     FB1_16  STD  RESET
+display_0/display_0_SETF__$INT  4     4     FB1_17  STD  
+display_5/display_5_SETF__$INT  5     4     FB1_18  STD  
+CONTADOR0<2>/CONTADOR0<2>_CLKF  2     3     FB2_18  STD  
+CONTADOR0<0>                    1     1     FB4_18  STD  RESET
+
+** 4 Inputs **
+
+Signal                          Loc     Pin  Pin     Pin     
+Name                                    No.  Type    Use     
+reloj                           FB1_9   5    GCK/I/O I
+reset                           FB2_9   39   GSR/I/O GSR
+llave                           FB2_11  40   GTS/I/O I
+pulsador                        FB4_15  33   I/O     I
+
+Legend:
+Pin No. - ~ - User Assigned
+**************************  Function Block Details  ************************
+Legend:
+Total Pt     - Total product terms used by the macrocell signal
+Imp Pt       - Product terms imported from other macrocells
+Exp Pt       - Product terms exported to other macrocells
+               in direction shown
+Unused Pt    - Unused local product terms remaining in macrocell
+Loc          - Location where logic was mapped in device
+Pin Type/Use - I  - Input             GCK - Global Clock
+               O  - Output            GTS - Global Output Enable
+              (b) - Buried macrocell  GSR - Global Set/Reset
+X            - Signal used as input to the macrocell logic.
+Pin No.      - ~  - User Assigned
+*********************************** FB1  ***********************************
+Number of function block inputs used/remaining:               5/49
+Number of signals used by logic mapping into function block:  5
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0     0   5     FB1_1         (b)     
+(unused)              0       0     0   5     FB1_2   1     I/O     
+(unused)              0       0     0   5     FB1_3         (b)     
+display_6/display_6_RSTF
+                      2       0     0   3     FB1_4         (b)     (b)
+display_2/display_2_SETF
+                      2       0     0   3     FB1_5   2     I/O     (b)
+display_1/display_1_RSTF
+                      2       0     0   3     FB1_6   3     I/O     (b)
+display_0/display_0_RSTF
+                      2       0     0   3     FB1_7         (b)     (b)
+CONTADOR0<2>          2       0     0   3     FB1_8   4     I/O     (b)
+$OpTx$FX_DC$6         2       0     0   3     FB1_9   5     GCK/I/O I
+display_6/display_6_SETF
+                      3       0     0   2     FB1_10        (b)     (b)
+display_5/display_5_RSTF
+                      3       0     0   2     FB1_11  6     GCK/I/O (b)
+display_4/display_4_SETF
+                      3       0     0   2     FB1_12        (b)     (b)
+display_3/display_3_RSTF
+                      3       0     0   2     FB1_13        (b)     (b)
+display_1/display_1_SETF
+                      3       0     0   2     FB1_14  7     GCK/I/O (b)
+CONTADOR0<3>          3       0     0   2     FB1_15  8     I/O     (b)
+CONTADOR0<1>          3       0     0   2     FB1_16        (b)     (b)
+display_0/display_0_SETF__$INT
+                      4       0     0   1     FB1_17  9     I/O     (b)
+display_5/display_5_SETF__$INT
+                      5       0     0   0     FB1_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: CONTADOR0<0>       3: CONTADOR0<2>                     5: CONTADOR0<3> 
+  2: CONTADOR0<1>       4: CONTADOR0<2>/CONTADOR0<2>_CLKF 
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+display_6/display_6_RSTF 
+                     XXX.X................................... 4
+display_2/display_2_SETF 
+                     XXX.X................................... 4
+display_1/display_1_RSTF 
+                     XXX.X................................... 4
+display_0/display_0_RSTF 
+                     XXX.X................................... 4
+CONTADOR0<2>         XX.X.................................... 3
+$OpTx$FX_DC$6        .XX.X................................... 3
+display_6/display_6_SETF 
+                     XXX.X................................... 4
+display_5/display_5_RSTF 
+                     XXX.X................................... 4
+display_4/display_4_SETF 
+                     XXX.X................................... 4
+display_3/display_3_RSTF 
+                     XXX.X................................... 4
+display_1/display_1_SETF 
+                     XXX.X................................... 4
+CONTADOR0<3>         XXXXX................................... 5
+CONTADOR0<1>         XXXXX................................... 5
+display_0/display_0_SETF__$INT 
+                     XXX.X................................... 4
+display_5/display_5_SETF__$INT 
+                     XXX.X................................... 4
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB2  ***********************************
+Number of function block inputs used/remaining:               3/51
+Number of signals used by logic mapping into function block:  3
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0     0   5     FB2_1         (b)     
+(unused)              0       0     0   5     FB2_2   35    I/O     
+(unused)              0       0     0   5     FB2_3         (b)     
+(unused)              0       0     0   5     FB2_4         (b)     
+(unused)              0       0     0   5     FB2_5   36    I/O     
+(unused)              0       0     0   5     FB2_6   37    I/O     
+(unused)              0       0     0   5     FB2_7         (b)     
+(unused)              0       0     0   5     FB2_8   38    I/O     
+(unused)              0       0     0   5     FB2_9   39    GSR/I/O GSR
+(unused)              0       0     0   5     FB2_10        (b)     
+(unused)              0       0     0   5     FB2_11  40    GTS/I/O I
+(unused)              0       0     0   5     FB2_12        (b)     
+(unused)              0       0     0   5     FB2_13        (b)     
+(unused)              0       0     0   5     FB2_14  42    GTS/I/O 
+transistor3           0       0     0   5     FB2_15  43    I/O     O
+(unused)              0       0     0   5     FB2_16        (b)     
+transistor2           0       0     0   5     FB2_17  44    I/O     O
+CONTADOR0<2>/CONTADOR0<2>_CLKF
+                      2       0     0   3     FB2_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: llave              2: pulsador           3: reloj 
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+transistor3          ........................................ 0
+transistor2          ........................................ 0
+CONTADOR0<2>/CONTADOR0<2>_CLKF 
+                     XXX..................................... 3
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB3  ***********************************
+Number of function block inputs used/remaining:               13/41
+Number of signals used by logic mapping into function block:  13
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0     0   5     FB3_1         (b)     
+(unused)              0       0     0   5     FB3_2   11    I/O     
+(unused)              0       0     0   5     FB3_3         (b)     
+(unused)              0       0     0   5     FB3_4         (b)     
+(unused)              0       0     0   5     FB3_5   12    I/O     
+(unused)              0       0     0   5     FB3_6         (b)     
+(unused)              0       0     0   5     FB3_7         (b)     
+(unused)              0       0     0   5     FB3_8   13    I/O     
+(unused)              0       0     0   5     FB3_9   14    I/O     
+(unused)              0       0     0   5     FB3_10        (b)     
+display<0>            2       0     0   3     FB3_11  18    I/O     O
+(unused)              0       0     0   5     FB3_12        (b)     
+(unused)              0       0     0   5     FB3_13        (b)     
+display<1>            2       0     0   3     FB3_14  19    I/O     O
+display<2>            2       0     0   3     FB3_15  20    I/O     O
+display<4>            2       0     0   3     FB3_16  24    I/O     O
+display<3>            2       0     0   3     FB3_17  22    I/O     O
+(unused)              0       0     0   5     FB3_18        (b)     
+
+Signals Used by Logic in Function Block
+  1: $OpTx$FX_DC$6              6: display_0/display_0_SETF__$INT  10: display_3/display_3_RSTF 
+  2: CONTADOR0<0>               7: display_1/display_1_RSTF        11: display_4/display_4_SETF 
+  3: CONTADOR0<2>               8: display_1/display_1_SETF        12: display_6/display_6_RSTF 
+  4: CONTADOR0<3>               9: display_2/display_2_SETF        13: display_6/display_6_SETF 
+  5: display_0/display_0_RSTF 
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+display<0>           ....XX.................................. 2
+display<1>           ......XX................................ 2
+display<2>           XX......X..X............................ 4
+display<4>           .XXX......X............................. 4
+display<3>           .........X..X........................... 2
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB4  ***********************************
+Number of function block inputs used/remaining:               5/49
+Number of signals used by logic mapping into function block:  5
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0     0   5     FB4_1         (b)     
+display<5>            2       0     0   3     FB4_2   25    I/O     O
+(unused)              0       0     0   5     FB4_3         (b)     
+(unused)              0       0     0   5     FB4_4         (b)     
+display<6>            2       0     0   3     FB4_5   26    I/O     O
+(unused)              0       0     0   5     FB4_6         (b)     
+(unused)              0       0     0   5     FB4_7         (b)     
+(unused)              0       0     0   5     FB4_8   27    I/O     
+(unused)              0       0     0   5     FB4_9         (b)     
+(unused)              0       0     0   5     FB4_10        (b)     
+transistor4           0       0     0   5     FB4_11  28    I/O     O
+(unused)              0       0     0   5     FB4_12        (b)     
+(unused)              0       0     0   5     FB4_13        (b)     
+transistor1           0       0     0   5     FB4_14  29    I/O     O
+(unused)              0       0     0   5     FB4_15  33    I/O     I
+(unused)              0       0     0   5     FB4_16        (b)     
+(unused)              0       0     0   5     FB4_17  34    I/O     
+CONTADOR0<0>          1       0     0   4     FB4_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: CONTADOR0<2>/CONTADOR0<2>_CLKF   3: display_5/display_5_SETF__$INT   5: display_6/display_6_SETF 
+  2: display_5/display_5_RSTF         4: display_6/display_6_RSTF       
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+display<5>           .XX..................................... 2
+display<6>           ...XX................................... 2
+transistor4          ........................................ 0
+transistor1          ........................................ 0
+CONTADOR0<0>         X....................................... 1
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*******************************  Equations  ********************************
+
+********** Mapped Logic **********
+
+
+$OpTx$FX_DC$6 <= ((NOT CONTADOR0(3))
+	OR (NOT CONTADOR0(1) AND NOT CONTADOR0(2)));
+
+FTCPE_CONTADOR00: FTCPE port map (CONTADOR0(0),'1',CONTADOR0(2)/CONTADOR0(2)_CLKF,reset,'0');
+
+FTCPE_CONTADOR01: FTCPE port map (CONTADOR0(1),CONTADOR0_T(1),CONTADOR0(2)/CONTADOR0(2)_CLKF,reset,'0');
+CONTADOR0_T(1) <= ((NOT CONTADOR0(0))
+	OR (NOT CONTADOR0(1) AND NOT CONTADOR0(2) AND CONTADOR0(3)));
+
+
+CONTADOR0(2)/CONTADOR0(2)_CLKF <= ((reloj AND llave)
+	OR (NOT llave AND pulsador));
+
+FTCPE_CONTADOR02: FTCPE port map (CONTADOR0(2),CONTADOR0_T(2),CONTADOR0(2)/CONTADOR0(2)_CLKF,reset,'0');
+CONTADOR0_T(2) <= (CONTADOR0(1) AND CONTADOR0(0));
+
+FTCPE_CONTADOR03: FTCPE port map (CONTADOR0(3),CONTADOR0_T(3),CONTADOR0(2)/CONTADOR0(2)_CLKF,reset,'0');
+CONTADOR0_T(3) <= ((CONTADOR0(1) AND CONTADOR0(0) AND CONTADOR0(2))
+	OR (NOT CONTADOR0(1) AND CONTADOR0(0) AND NOT CONTADOR0(2) AND 
+	CONTADOR0(3)));
+
+FDCPE_display0: FDCPE port map (display(0),'0','0',display_0/display_0_RSTF,NOT display_0/display_0_SETF__$INT);
+
+FDCPE_display1: FDCPE port map (display(1),'0','0',display_1/display_1_RSTF,display_1/display_1_SETF);
+
+FDCPE_display2: FDCPE port map (display(2),'0','0',display_CLR(2),display_PRE(2));
+display_CLR(2) <= ($OpTx$FX_DC$6 AND NOT display_2/display_2_SETF);
+display_PRE(2) <= (NOT CONTADOR0(0) AND NOT display_6/display_6_RSTF AND 
+	$OpTx$FX_DC$6);
+
+FDCPE_display3: FDCPE port map (display(3),'0','0',display_3/display_3_RSTF,display_PRE(3));
+display_PRE(3) <= (NOT display_3/display_3_RSTF AND 
+	display_6/display_6_SETF);
+
+FDCPE_display4: FDCPE port map (display(4),'0','0',display_CLR(4),display_4/display_4_SETF);
+display_CLR(4) <= (NOT CONTADOR0(0) AND NOT CONTADOR0(2) AND NOT CONTADOR0(3));
+
+FDCPE_display5: FDCPE port map (display(5),'0','0',display_5/display_5_RSTF,NOT display_5/display_5_SETF__$INT);
+
+FDCPE_display6: FDCPE port map (display(6),'0','0',display_6/display_6_RSTF,display_6/display_6_SETF);
+
+
+display_0/display_0_RSTF <= ((NOT CONTADOR0(1) AND NOT CONTADOR0(2) AND NOT CONTADOR0(3))
+	OR (CONTADOR0(1) AND CONTADOR0(0) AND CONTADOR0(2) AND 
+	NOT CONTADOR0(3)));
+
+
+display_0/display_0_SETF__$INT <= ((CONTADOR0(1) AND CONTADOR0(3))
+	OR (CONTADOR0(2) AND CONTADOR0(3))
+	OR (CONTADOR0(1) AND CONTADOR0(0) AND CONTADOR0(2))
+	OR (NOT CONTADOR0(1) AND NOT CONTADOR0(2) AND NOT CONTADOR0(3)));
+
+
+display_1/display_1_RSTF <= ((NOT CONTADOR0(2) AND NOT CONTADOR0(3))
+	OR (CONTADOR0(1) AND CONTADOR0(0) AND NOT CONTADOR0(3)));
+
+
+display_1/display_1_SETF <= ((NOT CONTADOR0(1) AND CONTADOR0(2) AND NOT CONTADOR0(3))
+	OR (NOT CONTADOR0(1) AND NOT CONTADOR0(2) AND CONTADOR0(3))
+	OR (NOT CONTADOR0(0) AND CONTADOR0(2) AND NOT CONTADOR0(3)));
+
+
+display_2/display_2_SETF <= ((CONTADOR0(1) AND NOT CONTADOR0(0) AND NOT CONTADOR0(3))
+	OR (NOT CONTADOR0(1) AND NOT CONTADOR0(0) AND NOT CONTADOR0(2) AND 
+	CONTADOR0(3)));
+
+
+display_3/display_3_RSTF <= ((NOT CONTADOR0(1) AND NOT CONTADOR0(0) AND NOT CONTADOR0(3))
+	OR (NOT CONTADOR0(1) AND NOT CONTADOR0(2) AND NOT CONTADOR0(3))
+	OR (CONTADOR0(1) AND CONTADOR0(0) AND CONTADOR0(2) AND 
+	NOT CONTADOR0(3)));
+
+
+display_4/display_4_SETF <= ((CONTADOR0(0) AND NOT CONTADOR0(3))
+	OR (CONTADOR0(2) AND NOT CONTADOR0(3))
+	OR (NOT CONTADOR0(1) AND NOT CONTADOR0(2) AND CONTADOR0(3)));
+
+
+display_5/display_5_RSTF <= ((CONTADOR0(1) AND NOT CONTADOR0(0) AND CONTADOR0(2) AND 
+	NOT CONTADOR0(3))
+	OR (NOT CONTADOR0(1) AND CONTADOR0(0) AND CONTADOR0(2) AND 
+	NOT CONTADOR0(3))
+	OR (NOT CONTADOR0(1) AND NOT CONTADOR0(0) AND NOT CONTADOR0(2) AND 
+	NOT CONTADOR0(3)));
+
+
+display_5/display_5_SETF__$INT <= ((CONTADOR0(1) AND CONTADOR0(3))
+	OR (CONTADOR0(2) AND CONTADOR0(3))
+	OR (CONTADOR0(1) AND NOT CONTADOR0(0) AND CONTADOR0(2))
+	OR (NOT CONTADOR0(1) AND CONTADOR0(0) AND CONTADOR0(2))
+	OR (NOT CONTADOR0(1) AND NOT CONTADOR0(0) AND NOT CONTADOR0(2) AND 
+	NOT CONTADOR0(3)));
+
+
+display_6/display_6_RSTF <= ((NOT CONTADOR0(1) AND NOT CONTADOR0(0) AND NOT CONTADOR0(3))
+	OR (NOT CONTADOR0(1) AND NOT CONTADOR0(2) AND NOT CONTADOR0(3)));
+
+
+display_6/display_6_SETF <= ((CONTADOR0(1) AND NOT CONTADOR0(3))
+	OR (NOT CONTADOR0(1) AND NOT CONTADOR0(2) AND CONTADOR0(3))
+	OR (CONTADOR0(0) AND CONTADOR0(2) AND NOT CONTADOR0(3)));
+
+
+transistor1 <= '0';
+
+
+transistor2 <= '0';
+
+
+transistor3 <= '0';
+
+
+transistor4 <= '0';
+
+Register Legend:
+ FDCPE (Q,D,C,CLR,PRE,CE); 
+ FTCPE (Q,D,C,CLR,PRE,CE); 
+ LDCP  (Q,D,G,CLR,PRE); 
+
+******************************  Device Pin Out *****************************
+
+Device : XC9572XL-5-PC44
+
+
+   --------------------------------  
+  /6  5  4  3  2  1  44 43 42 41 40 \
+ | 7                             39 | 
+ | 8                             38 | 
+ | 9                             37 | 
+ | 10                            36 | 
+ | 11        XC9572XL-5-PC44     35 | 
+ | 12                            34 | 
+ | 13                            33 | 
+ | 14                            32 | 
+ | 15                            31 | 
+ | 16                            30 | 
+ | 17                            29 | 
+ \ 18 19 20 21 22 23 24 25 26 27 28 /
+   --------------------------------  
+
+
+Pin Signal                         Pin Signal                        
+No. Name                           No. Name                          
+  1 KPR                              23 GND                           
+  2 KPR                              24 display<4>                    
+  3 KPR                              25 display<5>                    
+  4 KPR                              26 display<6>                    
+  5 reloj                            27 KPR                           
+  6 KPR                              28 transistor4                   
+  7 KPR                              29 transistor1                   
+  8 KPR                              30 TDO                           
+  9 KPR                              31 GND                           
+ 10 GND                              32 VCC                           
+ 11 KPR                              33 pulsador                      
+ 12 KPR                              34 KPR                           
+ 13 KPR                              35 KPR                           
+ 14 KPR                              36 KPR                           
+ 15 TDI                              37 KPR                           
+ 16 TMS                              38 KPR                           
+ 17 TCK                              39 reset                         
+ 18 display<0>                       40 llave                         
+ 19 display<1>                       41 VCC                           
+ 20 display<2>                       42 KPR                           
+ 21 VCC                              43 transistor3                   
+ 22 display<3>                       44 transistor2                   
+
+
+Legend :  NC  = Not Connected, unbonded pin
+         PGND = Unused I/O configured as additional Ground pin
+         TIE  = Unused I/O floating -- must tie to VCC, GND or other signal
+         KPR  = Unused I/O with weak keeper (leave unconnected)
+         VCC  = Dedicated Power Pin
+         GND  = Dedicated Ground Pin
+         TDI  = Test Data In, JTAG pin
+         TDO  = Test Data Out, JTAG pin
+         TCK  = Test Clock, JTAG pin
+         TMS  = Test Mode Select, JTAG pin
+  PROHIBITED  = User reserved pin
+****************************  Compiler Options  ****************************
+
+Following is a list of all global compiler options used by the fitter run.
+
+Device(s) Specified                         : xc9572xl-5-PC44
+Optimization Method                         : SPEED
+Multi-Level Logic Optimization              : ON
+Ignore Timing Specifications                : OFF
+Default Register Power Up Value             : LOW
+Keep User Location Constraints              : ON
+What-You-See-Is-What-You-Get                : OFF
+Exhaustive Fitting                          : OFF
+Keep Unused Inputs                          : OFF
+Slew Rate                                   : FAST
+Power Mode                                  : STD
+Ground on Unused IOs                        : OFF
+Set I/O Pin Termination                     : KEEPER
+Global Clock Optimization                   : ON
+Global Set/Reset Optimization               : ON
+Global Ouput Enable Optimization            : ON
+Input Limit                                 : 54
+Pterm Limit                                 : 25

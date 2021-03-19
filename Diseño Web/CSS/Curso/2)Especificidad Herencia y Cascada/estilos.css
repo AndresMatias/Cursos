@@ -1,0 +1,27 @@
+
+/* 	Etiqueta -> 1
+	Clases y pseudoclases -> 10
+	Id -> 100
+	Estilos en Linea -> 1000
+	!important -> Gana a todo
+*/
+/*Especificidad gana a la cascada*/
+
+#parrafo{ /*Como estoy usando un ID y gana en especificidad, no va a ser de color verde cuando llegue a p*/
+	color:blueviolet;
+	font-size: 1.5em; /*en este caso como la letra esta dentro de p no hace falta hacer herencia en a*/
+}
+.parrafo{ /*Como estoy usando una clase y gana en especificidad, no va a ser de color rojo cuando llegue a p*/
+	color:green;
+	font-size: 1.5em; /*en este caso como la letra esta dentro de p no hace falta hacer herencia en a*/
+}
+a{
+	color: inherit; /* inherit: hereda de su padre que es p, es decir "a" hereda el color de "p", herencia*/
+}
+p{
+	color:red;
+	/*color:red !important;*/ /*con importando se pone todo del mismo color y gana a todo lo demas*/
+	font-size: 1.5em; /*en este caso como la letra esta dentro de p no hace falta hacer herencia en a*/
+}
+
+/*Puedo combinar el importad con peso de clase, estiquetas id*/

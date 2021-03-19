@@ -1,0 +1,7 @@
+V3 4
+FL D:/andres/Tp_1/Tp_1/Tp_1.vhd 2017/05/18.16:16:29 K.31
+FL D:/CPLD/Tp_1/Tp_1/Tp_1.vhd 2017/06/29.17:42:24 K.31
+EN work/Tp_1 1509476804 FL D:/CPLD/Tp_1/Tp_1/Tp_1.vhd PB ieee/std_logic_1164 1217055545 \
+      PB ieee/std_logic_arith 1217055546 PB ieee/STD_LOGIC_UNSIGNED 1217055547
+AR work/Tp_1/Behavioral 1509476805 \
+      FL D:/CPLD/Tp_1/Tp_1/Tp_1.vhd EN work/Tp_1 1509476804

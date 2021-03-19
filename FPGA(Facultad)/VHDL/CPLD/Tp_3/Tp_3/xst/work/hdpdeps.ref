@@ -1,0 +1,17 @@
+V3 9
+FL C:/Users/Lukin/Documents/Ise/TP3_Ejercicio_2/TP3_Ejercicio_2.vhd 2017/06/07.16:59:36 K.39
+FL C:/Users/Lukin/Documents/Ise/TP3_Ejercicio_2/TP3_Ejercicio_2.vhf 2017/06/07.17:02:55 K.39
+EN work/TP3_Ejercicio_2 1496865579 \
+      FL C:/Users/Lukin/Documents/Ise/TP3_Ejercicio_2/TP3_Ejercicio_2.vhf \
+      PB ieee/std_logic_1164 1200023565 PH ieee/NUMERIC_STD 1200023568 LB UNISIM \
+      PH unisim/VCOMPONENTS 1200023571
+AR work/TP3_Ejercicio_2/Behavioral 1496865580 \
+      FL C:/Users/Lukin/Documents/Ise/TP3_Ejercicio_2/TP3_Ejercicio_2.vhf \
+      EN work/TP3_Ejercicio_2 1496865579
+FL C:/Users/Lukin/Documents/Ise/TP3_Ejercicio_2/TP3_Ejercicio_2142.vhd 2017/06/08.09:45:11 K.39
+FL D:/andres/Tp_3/Tp_3/TP3_Ejercicio_2142.vhd 2017/06/08.09:45:12 K.39
+EN work/TP3_Ejercicio_2142 1496949399 \
+      FL D:/andres/Tp_3/Tp_3/TP3_Ejercicio_2142.vhd PB ieee/std_logic_1164 1200023565 \
+      PB ieee/std_logic_arith 1200023566 PB ieee/STD_LOGIC_UNSIGNED 1200023567
+AR work/TP3_Ejercicio_2142/Behavioral 1496949400 \
+      FL D:/andres/Tp_3/Tp_3/TP3_Ejercicio_2142.vhd EN work/TP3_Ejercicio_2142 1496949399

@@ -1,0 +1,6 @@
+CommandLine
+taengine -ise D:/CPLD/Tp_6/Contador_As_Ds_FF_JK/Contador_FF_JK/Contador.ise
+s
+FormatString
+taengine 
+s

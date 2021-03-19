@@ -1,0 +1,68 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+</td></tr><tr><td>
+Dis_7(0) <= NOT (((NOT Ctrl(1) AND Ctrl(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Bin(2) AND NOT Ctrl(2) AND NOT Bin(3) AND NOT Bin(1) AND Ctrl(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Bin(2) AND NOT Ctrl(2) AND NOT Bin(3) AND Bin(1) AND Bin(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Ctrl(0))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Dis_7(1) <= NOT (((NOT Ctrl(1) AND Ctrl(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Bin(2) AND NOT Ctrl(2) AND NOT Bin(3) AND Bin(1) AND Ctrl(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Bin(2) AND NOT Ctrl(2) AND NOT Bin(3) AND Bin(0) AND Ctrl(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Ctrl(2) AND NOT Bin(3) AND Bin(1) AND Bin(0) AND Ctrl(0))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Dis_7(2) <= NOT (((NOT Ctrl(1) AND Ctrl(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Ctrl(2) AND NOT Bin(3) AND Bin(0) AND Ctrl(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Bin(2) AND NOT Ctrl(2) AND NOT Bin(3) AND NOT Bin(1) AND Ctrl(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Bin(2) AND NOT Ctrl(2) AND NOT Bin(1) AND Bin(0) AND Ctrl(0))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Dis_7(3) <= NOT (((NOT Ctrl(1) AND Ctrl(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Bin(2) AND NOT Ctrl(2) AND NOT Bin(1) AND Bin(0) AND Ctrl(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Bin(2) AND NOT Ctrl(2) AND NOT Bin(3) AND Bin(1) AND Bin(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Ctrl(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Bin(2) AND NOT Ctrl(2) AND NOT Bin(3) AND NOT Bin(1) AND NOT Bin(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Ctrl(0))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Dis_7(4) <= ((NOT Ctrl(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Bin(2) AND Ctrl(1) AND NOT Ctrl(2) AND NOT Bin(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Bin(2) AND Ctrl(1) AND NOT Ctrl(2) AND NOT Bin(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Ctrl(1) AND NOT Ctrl(2) AND NOT Bin(3) AND Bin(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Dis_7(5) <= ((NOT Ctrl(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Bin(2) AND Ctrl(1) AND NOT Ctrl(2) AND NOT Bin(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Bin(2) AND Ctrl(1) AND NOT Ctrl(2) AND NOT Bin(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Ctrl(1) AND NOT Ctrl(2) AND NOT Bin(3) AND Bin(1) AND Bin(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Ctrl(1) AND NOT Ctrl(2) AND NOT Bin(3) AND NOT Bin(1) AND NOT Bin(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Dis_7(6) <= NOT (((NOT Ctrl(1) AND Ctrl(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Bin(2) AND NOT Ctrl(2) AND NOT Bin(3) AND NOT Bin(1) AND NOT Bin(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Ctrl(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Bin(2) AND NOT Ctrl(2) AND NOT Bin(3) AND NOT Bin(1) AND Bin(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Ctrl(0))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+T <= '0';
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>
