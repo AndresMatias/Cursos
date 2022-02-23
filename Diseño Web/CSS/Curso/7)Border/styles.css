@@ -38,31 +38,43 @@ border-left-(width | style | color)
     border-left-width: 5px;
     border-left-style: dotted;
     border-left-color: blue;
+    box-sizing: border-box;
 }
 
 .box3 {
     background: lightcoral;
     border: 5px dashed blue;
+    border-radius: 50px; /*Bordes Redondeados*/
 }
 
 .box4 {
     background: yellowgreen;
     border: 5px double blue;
+    /*Radios de bordes por separado*/
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 25px;
 }
 
 .box5 {
     background: lightseagreen;
     border: 5px groove blue;
+    /*por esquinas en una sola linea*/
+    border-radius: 50px 100px 150px 200px;
 }
 
 .box6 {
     background: lightcoral;
     border: 5px ridge blue;
+    /*Elipses*/
+    border-radius: 50px / 100px; /*border-radius: radio eje x / radio eje y*/
 }
 
 .box7 {
     background: yellowgreen;
     border: 5px inset blue;
+    border-radius: 50px 100px/ 100px 200px; /*border-radius: radio eje x1 radio x2 / radio eje y1 radio eje y2*/
 }
 
 .box8 {

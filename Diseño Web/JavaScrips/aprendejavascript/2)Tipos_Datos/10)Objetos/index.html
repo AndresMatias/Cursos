@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>2)Tipos de datos</title>
+    <link rel="stylesheet" href="normalize.css">
+  </head>
+  <body>
+      <h1>Objetos</h1>
+      <!-- Inicio de la programacion del Scrip de javascrips-->
+      <script>
+        //---------Creo Objetos-------------
+        const b={}
+        const c=new Object(); //No se recomienda
+        const jon={
+          nombre:'asi',
+          apellido:'',
+          MenorEdad:false,
+          pasatiempos:['comer','dormir'],
+          contacto:{
+            email:'asd',
+            movil:'123123'
+          },
+          saludar:function(){
+            console.log('Hola: ')
+          },
+          saludar2:function(){
+            console.log(`Me llamo: ${this.nombre}`)
+          }
+        }
+        
+        console.log(jon);
+        console.log(jon['nombre']); //accedo a nombre
+        console.log(jon.pasatiempos);
+        console.log(b);
+        jon.saludar()
+        jon.saludar2()
+
+        //Me falto un par de cosas al final del video
+
+      </script>
+  </body>
+</html>

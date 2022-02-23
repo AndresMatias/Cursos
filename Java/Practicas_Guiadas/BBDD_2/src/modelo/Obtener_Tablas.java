@@ -38,6 +38,5 @@ public class Obtener_Tablas {
             Logger.getLogger(Obtener_Tablas.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("Error Clase: Obtener_Tablas");
         }
-    }
-    
+    } 
 }

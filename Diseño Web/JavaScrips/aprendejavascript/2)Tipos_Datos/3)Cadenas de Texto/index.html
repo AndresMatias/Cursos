@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>2)Tipos de datos</title>
+    <link rel="stylesheet" href="normalize.css">
+  </head>
+  <body>
+      <h1>Cadenas de Texto</h1>
+      
+      <!-- Inicio de la programacion del Scrip de javascrips-->
+      <script>
+        /*https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String/toString*/
+        /*Cadena de Texto*/
+        let cadena1='Mi cadena 1';
+        let cadena2='Mi cadena 2';
+        let cadena3=new String('Cadena 3'); /*Cadena creada a patir del constructor de string, definicion formal casi no la usan*/
+        let lorem='        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt id veniam omnis explicabo tenetur repellendus harum laudantium necessitatibus impedit eligendi, ut soluta temporibus sapiente velit repudiandae facere ullam quam quibusdam.'
+        console.log(cadena1,cadena2,cadena3);
+        console.log(cadena1.length,cadena2.length,cadena3.length);
+        console.log(cadena3.toUpperCase()); //Mayusculas
+        console.log(cadena3.toLowerCase()); //Minusculas
+        console.log(lorem.includes('dolo')); //Busco la palabra dolo en la variable lorem, devuleve true o false
+        console.log(lorem.trim()); //Quito espacios en blanco al principio y final de la variable lorem
+        console.log(lorem.split(" ")) //por cada espacio en blanco, separa y genera un arreglo, puede ser como en vez de espacio enblanco o el caracter que le meta
+
+      </script>
+  </body>
+</html>

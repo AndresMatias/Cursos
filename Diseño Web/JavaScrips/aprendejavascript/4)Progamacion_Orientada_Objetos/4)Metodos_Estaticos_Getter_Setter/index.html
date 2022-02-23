@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>4)Programacion Orientada a Objetos</title>
+    <link rel="stylesheet" href="normalize.css">
+  </head>
+  <body>
+      <h1>Metodos Estaticos, Getter y Setter</h1>
+      <!-- Inicio de la programacion del Scrip de javascrips-->
+      <script>
+        /*No existen private en las clases pq es azucar sintactico pq luego es convertido a prototipo*/
+
+        class Animal{
+          //----Constructor de la clase----
+          constructor(nombre,genero){ //Constructor de la clase
+            this.nombre=nombre;
+            this.genero=genero;
+          }
+          //----Metodos----
+          sonar(){
+            console.log('Hago sonidos');
+          }
+          saludar(){
+            console.log(`Hola me llamo ${this.nombre}`);
+          }
+        }
+        class Perro extends Animal{ //Perro hereda de Animal y animal pasa a ser prototipo de perro
+          //----Constructor----
+          constructor(nombre,genero,tamanio){
+            super(nombre,genero); //cob super llamo el constructor de la clase Animal
+            this.tamanio=tamanio;
+            this.raza=null;
+          }
+          //----Metodos----
+          sonar(){ //Se sobreesribe el metodo de Animal
+            console.log('Soy un perro');
+          }
+          ladrar(){
+            console.log(`guau guau`);
+          }
+          /*Con metodo static puede llamar al metodo sin instanciar su clase*/
+          static queEres(){ //Metodo Statico
+            console.log(`No lo se,tu dime(inserte meme)`);
+          }
+
+          /*Metodos setter y getters para obtener y setear valores, JS convierte los metodos get y set
+          en propiedades como si fueran variables*/
+          get getRaza(){ //con get indico el tipo de metodo que es obtenedor
+            return this.raza;
+          }
+          set setRaza(raza){ //con set indico el tipo de metodo que es obtenedor
+            this.raza=raza;
+          }
+        }
+
+        const mimi=new Animal('Mimi','Hembra'),scooby=new Perro('Scooby','Macho','Grande');
+        console.log(mimi);
+        console.log(scooby);
+        mimi.sonar();
+        mimi.saludar();
+        scooby.sonar();
+        scooby.ladrar();
+        scooby.saludar();
+        console.log(scooby.getRaza);  //JS convierte el metodo get de funcion a propiedad por lo cual lo trato como una propiedad en vez de un metodo por eso no uso parentesis
+        scooby.setRaza='Gran Danez'
+        console.log(scooby.getRaza);  //JS convierte el metodo set de funcion a propiedad por lo cual lo trato como una propiedad en vez de un metodo por eso no uso parentesis
+           
+      </script>
+  </body>
+</html>
