@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7)Programacion Asincrona</title>
+</head>
+
+<body>
+  <h1>46)Callbacks</h1>
+  <script>
+    //http://callbackhell.com/
+    //Callbacks: Mecanimos por exelencia de JS para invocar funciones para trabajar con asincronismo
+    function cuadradoCallback(value,callback){
+      setTimeout(()=>{
+        callback(value,value*value);
+      },0|Math.random()*100);
+    }
+    cuadradoCallback(0,(value,result)=>{
+      console.log('Iniciando Callback')
+      console.log(`Callback: ${value}, ${result}`);
+      cuadradoCallback(1,(value,result)=>{
+        console.log(`Callback: ${value}, ${result}`);
+        cuadradoCallback(2,(value,result)=>{
+          console.log(`Callback: ${value}, ${result}`);
+          cuadradoCallback(3,(value,result)=>{
+            console.log(`Callback: ${value}, ${result}`);
+            cuadradoCallback(4,(value,result)=>{
+              console.log(`Callback: ${value}, ${result}`);
+              cuadradoCallback(5,(value,result)=>{
+                console.log(`Callback: ${value}, ${result}`);
+              });
+            });
+          });
+        });
+      });
+    });
+  </script>
+</body>

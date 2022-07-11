@@ -38,6 +38,6 @@ BEMIT
 	font-size: 1.2em;
 	color: green;
 }
-.main-menu__link--active{ /*El --active es cuando tengo un mismo menu y otra cosa en otra parte de la wev y quiero hacer leves modificaciones sin alterar el resto*/
+.main-menu__link--active{
 	background: red;
 }

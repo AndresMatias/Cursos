@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7)Nuevos Tipos de Datos</title>
+</head>
+
+<body>
+  <h1>56)Propiedades Dinámicas de los Objetos</h1>
+  <script>
+    /*
+      Creo id segun lo nececite como cuando creaabha nodos en c con punteros segun fuera el caso
+    */
+    let aleatorio = Math.round(Math.random() * 100 + 5);
+    const objUsuarios = {
+      propiedad: "Valor",
+      [`id_${aleatorio}`]: "Valor Aleatorio"
+    };
+    console.log(objUsuarios);
+    const usuarios = ["Jon", "Irma", "Miguel", "Kala", "kEnAi"];
+    usuarios.forEach((usuario, index) => objUsuarios[`id_${index}`] = usuario);
+    console.log(objUsuarios);
+  </script>
+</body>

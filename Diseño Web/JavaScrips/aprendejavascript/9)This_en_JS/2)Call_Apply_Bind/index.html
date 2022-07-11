@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9)This en JS</title>
+</head>
+
+<body>
+  <h1>58)Call, Apply y Bind</h1>
+  <script>
+    /*
+      Call, Apply y Bind metodos para conservar los scope de objetos
+      call:
+      apply:
+      bind:
+    */
+    console.log(this);
+    this.lugar = "Contexto Global";
+    function saludar(saludo, aQuien) {
+      console.log(`${saludo} ${aQuien} desde el ${this.lugar}`);
+    }
+    saludar("Hola", "kEnAi");
+    const obj = {
+      lugar: "Contexto Objeto"
+    }
+    saludar.call(obj, "Hola", "Jon"); //asigna un nuevo contexto
+    saludar.call(null, "Hola", "Jon");
+    saludar.call(this, "Hola", "Jon");
+    saludar.apply(obj, ["Adios", "MirCha"]); //asigna un nuevo contexto
+    saludar.apply(null, ["Adios", "MirCha"]);
+    saludar.apply(this, ["Adios", "MirCha"]);
+    this.nombre = "Window";
+    const persona = {
+      nombre: "Jon",
+      saludar: function () {
+        console.log(`Hola ${this.nombre}`)
+      }
+    }
+    persona.saludar();
+    const otraPersona = {
+      saludar: persona.saludar.bind(this) //bind enlaza el contexto que se le pasa en este caso se enlaza en contexto global
+    }
+    otraPersona.saludar();
+  </script>
+</body>
