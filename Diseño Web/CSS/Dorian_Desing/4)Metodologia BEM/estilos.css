@@ -38,6 +38,6 @@ BEMIT
 	font-size: 1.2em;
 	color: green;
 }
-.main-menu__link--active{
+.main-menu__link--active{/*Hereda las demas propiedades de main-menu__link*/
 	background: red;
 }

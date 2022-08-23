@@ -1,0 +1,13 @@
+TP9) Medición de objetos
+
+Imagen de fachada de casa.
+Como dato de entrada, sabemos que el tamaño del marco de la puerta es de 2,10m de alto por 0,73m de ancho.
+En base a estas medidas hacer un programa que permita medir el largo de cosas en el plano de la fachada.
+
+Capturar una imagen de una fachada con perspectiva y hacer un programa que permita:
+- Encontrar la transformacion perspectiva entre los 4 vértices del marco y un rectángulo con la misma relación
+  de aspecto que la puerta real.
+- Aplicar dicha transformación a la imagen y mostrarla en una ventana
+- Sobre esta ventana permitir que el usuario haga dos clicks y mostrar la distancia en metros entre dichos puntos.
+- Permitir que cuando se presione la tecla "r" se reinicie la medición
+- Por último medir dos objetos en la imagen (ventana, casilla del gas, etc.) y comparar los resultados con la medida real.
