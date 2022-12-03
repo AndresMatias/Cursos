@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+  
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="IP Webcam"/>
+    <link rel="shortcut icon" href="ico/favicon.png"/>
+
+    <title>IP Webcam</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+
+    <link href="ipwebcam.css" rel="stylesheet"/>
+
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="lang.js"></script>
+    <script src="swfobject.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/ipwebcam.js"></script>
+    <script src="js/ipwebcam_override.js"></script>
+    <script src="js/ipwebcam_plugins.js"></script>
+
+
+  
+    
+  </head><body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="greet.html">IP Webcam</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav"> 
+            <li ><a href="greet.html">Home</a></li>
+            <li ><a href="videomgr.html">Archiwum video</a></li>
+            <li  class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sterowniki Videochat <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">Sterowniki Windows (tylko video)</li>
+                <li><a class="hash-change" href="videochat.html#ipca">Adapter kamery IP Camera</a></li>
+                
+                
+                <li class="divider"></li>
+                <li class="dropdown-header">sterowniki dla Linux</li>
+                <li><a class="hash-change" href="videochat.html#linux">sterownik dla Ubuntu GNU/Linux (zewnętrzny odsyłacz)</a></li>
+              </ul>
+            </li>
+
+            <li class="active" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Inne sposoby podglądu <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">Podglądy Android</li>
+                <li><a class="hash-change" href="viewers.html#tinycam">tinyCam Monitor</a></li>
+                <li><a href="http://hit-mob.com/ipwebcam/ipwebcam_howto.html">IP Cam Viewer dla Android i iOS (zewnętrzny odsyłacz)</a></li>
+                <li class="dropdown-header">Podglądy wieloplatformowe</li>
+                <li><a class="hash-change" href="viewers.html#vlc">VLC Media Player</a></li>
+                <li><a class="hash-change" href="viewers.html#zoneminder">ZoneMinder</a></li>
+                <li class="dropdown-header">Podglądy Windows</li>
+                <li><a class="hash-change" href="viewers.html#blueiris">Blue Iris</a></li>
+                <li><a class="hash-change" href="viewers.html#webcamxp">webcamXP</a></li>
+                <li class="dropdown-header">Inne</li>
+                <li><a class="hash-change" href="viewers.html#view_outside">Dostęp do IP Webcam spoza lokalnego WiFi (np. przez internet)</a></li>
+                <li><a class="hash-change" href="viewers.html#mac_bind">Dlaczego adres IP się zmienia?</a></li>
+                <li><a class="hash-change" href="viewers.html#advanced">Zaawansowane</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+    
+    
+
+
+
+    <div class="container" id="main_container">
+      <div id="init_alert" class="alert alert-danger" style="display: none;">
+        <strong>Nie można odczytać statusu kamery!</strong> Niektóre funkcje mogą nie działać z powodu <span id="init_error"></span>.
+      </div>
+    <div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#tinycam">
+          tinyCam Monitor dla Android
+        </a>
+      </h4>
+    </div>
+    <div id="tinycam" class="panel-collapse collapse">
+      <div class="panel-body">
+        <h2>Ustawienie tinyCam Monitor</h2>
+<p><a href="http://www.tinycammonitor.com/">tinyCam Monitor</a> autorstwa <a href="mailto:alexey.vasilyev@gmail.com">Alexeya Vasilyeva</a> jest aplikacją dla systemu Android do zdalnego nadzoru, która wspiera większość najpopularniejszych kamer, włączając w to IP Webcam.</p>
+ <p>Wspiera również dźwięk z IP Webcam (wersja Pro) i rozszerzone funkcje dodatkowe jak kontrolowanie LED i autofocus.</p>
+ <p><a href="http://www.youtube.com/watch?v=fhUoKjRPV1w">Film pokazujący działanie IP Webcam i tinyCam Monitor w akcji</a> (wymagane połączenie z internetem).</p>
+ <p>Pobierz go <a href="https://market.android.com/details?id=com.alexvas.dvr">tutaj</a> lub poprzez zeskanowanie tego kodu QR za pomocą <a href="https://market.android.com/details?id=com.alexvas.dvr">skanera kodów</a></p>
+ <center><img src="tinycamqr.png"/></center>
+<p>W aplikacji wybierz &quot;Manage cams&quot;, dodaj nową kamerę i wybierz producenta &quot;IP Webcam for Android&quot;.</p>
+ <p>Wprowadź adres hosta <b><span class="repl">$IP$</span></b>, wybierz zdefiniowany port <b><span class="repl">$PORT$</span></b> i program jest gotowy do działania.</p>
+ <img src="tinycam1.png"/> <img src="tinycam2.png"/>
+<p/>
+ 
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#vlc">
+          VLC Media Player
+        </a>
+      </h4>
+    </div>
+    <div id="vlc" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p>VLC Media Player jest wieloplatformowym odtwarzaczem video, serwerem strumieniowania oraz konwerterem w jednym. <a href="http://www.videolan.org/">Pobierzesz go tutaj</a>.</p>
+ <p>Aby używać IP Webcam z VLC media player, w menu programu wybierz <b>Media ⇨ Open Network Stream</b> i wprowadź <b><span class="repl">$URL$</span><span style="color: red;">/video</span></b> jako &quot;streaming video&quot; lub <b><span class="repl">$URL$</span><span style="color: red;">/audio.wav</span></b> jako &quot;streaming audio&quot;.</p>
+ <p>Możesz również używać VLC Media player do nagrywania video:</p>
+ <nl>
+  <li>Wybierz <b>Media -&gt; Convert/Save</b>.</li>
+  <li>Wybierz zakładkę Network</li>
+  <li>Wprowadź <b><span class="repl">$URL$</span><span style="color: red;">/video</span></b> jako URL</li>
+  <li>Kliknij &quot;convert/save&quot;</li>
+  <li>Wybierz plik docelowy oraz format, w którym chcesz zapisywać pliki i gotowe</li>
+</nl>
+<p/>
+ 
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#zoneminder">
+          ZoneMinder
+        </a>
+      </h4>
+    </div>
+    <div id="zoneminder" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p>Użyj tej konfiguracji:</p>
+ <p>General:<br/>Source type: Remote<br/>Function: Monitor</p>
+ <p>Source: <br/> Protocol: HTTP <br/> Method: Simple <br/> Host name: <b><span class="repl">$IP$</span></b> <br/> Port: <b><span class="repl">$PORT$</span></b> <br/> Remote host path: /video (samo &quot;video&quot; nie zadziała).<br/></p>
+ <p><b>Informacja:</b> Jeśli to konieczne, wprowadź swoją nazwę użytkownika i hasło w URL w następujący sposób: username:password@<b><span class="repl">$IP$</span></b>.</p>
+ <p/>
+ 
+
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#blueiris">
+          Blue Iris
+        </a>
+      </h4>
+    </div>
+    <div id="blueiris" class="panel-collapse collapse">
+      <div class="panel-body">
+
+        <p>Otwórz okno &quot;Add camera&quot;</p>
+ <p>Jeśli używasz IP Webcam, musisz wybrać &quot;MJPEG Stream&quot; z listy zamiast określonej kamery.</p>
+ <p>
+  <b>Video path:</b> /video <br/>
+  <b>Audio path:</b> /audio.wav <br/>
+  <b>Host name:</b> <b><span class="repl">$IP$</span></b> <br/>
+  <b>Port:</b> <b><span class="repl">$PORT$</span></b> <br/>
+</p>
+<p>Nie ma znaczenia, co wprowadzisz do pola &quot;RTSP/video port&quot;.</p>
+ <p/>
+ 
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#webcamxp">
+        	webcamXP
+        </a>
+      </h4>
+    </div>
+    <div id="webcamxp" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p>W głównym oknie webcamXP, kliknij prawym klawiszem na &quot;video source&quot; i wybierz <b>Network cameras ⇨ Connect...</b></p>
+ <p>Ustaw <b>Camera Brand</b> na <b>Android</b> i <b>Camera Model</b> na <b>IP Webcam</b>. Wybierz preferowany zestaw ustawień (zalecamy MJPEG). Kliknij <b>Next</b>.</p>
+ <p>Ustaw <b>Hostname</b> na <b><span class="repl">$IP$</span></b> i <b>Port</b> na <b><span class="repl">$PORT$</span></b>.</p>
+ <p>Kliknij Ok i można już używać swojej nowej kamery!</p>
+ <p/>
+ 
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#advanced">
+          Zaawansowane
+        </a>
+      </h4>
+    </div>
+    <div id="advanced" class="panel-collapse collapse">
+      <div class="panel-body"><p>Oto lista adresów URL usług IP Webcam:</p>
+ <ul>
+  <li><b><span class="repl">$URL$</span>/video</b> to URL dla MJPEG.</li>
+  <li><b><span class="repl">$URL$</span>/shot.jpg</b> pobiera ostatnią klatkę.</li>
+  <li><b><span class="repl">$URL$</span>/audio.wav</b> to strumień audio w formacie Wav.</li>
+  <li><b><span class="repl">$URL$</span>/audio.aac</b> to strumień audio w formacie AAC (jeśli jest obsługiwany przez urządzenie).</li>
+  <li><b><span class="repl">$URL$</span>/audio.opus</b> to strumień audio w formacie Opus.</li>
+  <li><b><span class="repl">$URL$</span>/focus</b> ustawia ostrość w kamerze.</li>
+  <li><b><span class="repl">$URL$</span>/nofocus</b> zwalnia ostrość.</li>
+</ul>
+<p/>
+ 
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#view_outside">
+          Dostęp do IP Webcam spoza lokalnego WiFi (np. przez internet)
+        </a>
+      </h4>
+    </div>
+    <div id="view_outside" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p>Możesz uzyskać dostęp do swojego telefonu poprzez internet, gdy telefon jest podłączony do sieci WiFi, a router WiFi posiada zewnętrzny adres IP (raczej na pewno posiada). Konfiguracja wymaga odrobinę nakładu pracy, ale większość osób powinna sobie z tym poradzić.</p>
+ <p/>
+ <p><b>Ważne:</b> Proszę przeczytać dodatkowo przewodnik <a class="hash-change" href="#mac_bind">przypisywania MAC</a>, aby zabezpieczyć urządzenie przed zmianą numeru IP.</p>
+ <p/>
+ <p>Poprzez interfejs routera w przeglądarce, powinieneś przekierować port z serwera na sieć internet i wówczas uzyskiwać dostęp do kamery poprzez zewnętrzny adres IP routera. Ta funkcja zazwyczaj nazywa się &quot;Port forwarding&quot; czyli &quot;Przekierowanie portów&quot; lub &quot;Virtual servers&quot;. Należy sprawdzić w dokumentacji swojego routera, jak wykonać tę operację. W sieci znajduje się również bezpłatna baza danych poradników, dotyczących przekierowania portów: <a href="http://portforward.com">http://portforward.com/</a>. Po prostu <strong>pomiń płatne rzeczy</strong>, potrzebujesz tylko poradników.</p>
+ <p/>
+ <p>Ustawienie może wyglądać następująco:</p>
+ <p/>
+ <pre>Telefon (192.168.3.198, serwer na porcie 8080) ---&gt; Router (Forwarding 192.168.3.198:8080, zewnętrzny IP to 66.77.88.99) &lt;--- Dowolny klient z dostępem do internetu (poprzez otwarcie <u>http://66.77.88.99:8080</u>).</pre>
+<p/>
+ <p>Istnieje pewien skrót, pozwalający na wykrycie zewnętrznego IP i sprawdzenie widoczności IP Webcam poprzez sieć internet. Jeśli nie możesz odnaleźć swojego zewnętrznego IP w ustawieniach routera, możesz odnaleźć swój IP poprzez wizytę na stronie <a href="http://whatismyip.org">http://whatismyip.org</a>. Aby następnie sprawdzić poprawność ustawień swojego routera, użyj dowolnego skanera online otwartych portów, jak np. <a href="http://www.t1shopper.com/tools/port-scan/">tego</a>. Wprowadź swój adres zewnętrzny IP w polec przeznaczone na adres IP (w moim przykładzie to, 66.77.88.99), i zewnętrzny przekierowany port w pole &quot;list of ports&quot; (8080 w moim przykładzie).</p>
+ <p/>
+ <p><b>Zauważ</b>, że może się zdarzyć, iż nie będziesz mógł uzyskać dostępu do swojego telefonu poprzez zewnętrzny interfejs routera, gdy znajdujesz się w tej samej sieci, co router. To dość częsty błąd w oprogramowaniu routerów. Musisz znajdować się w innej sieci WiFi lub korzystać z połączenia 3g, aby to wykonać.</p>
+ <p/>
+ 
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#mac_bind">
+          Dlaczego adres IP się zmienia?
+        </a>
+      </h4>
+    </div>
+    <div id="mac_bind" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p>Urządzeniem odpowiedzialnym za przydzielanie adresów IP jest router WiFi. Przydzielanie IP (&quot;lease&quot;) odbywa się na pewien czas i po tym czasie adres IP może zostać zmieniony. To może powodować, że kamera IP Webcam stanie się niedostępna pod poprzednim adresem.</p>
+ <p/>
+ <p>Aby uchronić się przed taką sytuacją, powinieneś wejść do ustawień routera poprzez przeglądarkę web i przypisać do swojego urządzenia statyczny adres IP. Poszukaj w opcjach ustawienia o nazwie podobnej do &quot;DHCP clients&quot;, &quot;Static leases&quot; lub &quot;IP/MAC binding&quot; i dodaj przypisanie MAC do wybranego lub bieżącego adresu IP.</p>
+ <p/>
+ <p>Adres MAC telefonu można odnaleźć w ustawieniach telefonu <b>Settings-&gt;About Phone-&gt;Status-&gt;WiFi MAC address</b>.</p>
+ <p/>
+ 
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+      <hr/>
+
+      <footer>
+        <p>&copy; Pavel Khlebovich 2013</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    
+
+
+    
+
+<script type="text/javascript">
+  //<!--
+  $(initVideoChat)
+  //-->
+</script>
+
+
+
+    
+  </body>
+</html>

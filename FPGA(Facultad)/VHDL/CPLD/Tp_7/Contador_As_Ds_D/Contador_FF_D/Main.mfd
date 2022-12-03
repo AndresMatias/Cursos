@@ -1,0 +1,41 @@
+MDF Database:  version 1.0
+MDF_INFO | Main | XC9572XL-5-PC44
+MACROCELL | 0 | 5 | Salida_2_OBUF
+ATTRIBUTES | 8782626 | 0
+OUTPUTMC | 3 | 0 | 5 | 0 | 4 | 0 | 1
+INPUTS | 4 | E  | Salida<2>  | Salida<1>  | clk
+INPUTMC | 2 | 0 | 5 | 0 | 4
+INPUTP | 2 | 83 | 87
+EQ | 3 | 
+   !Salida<2>.D = E & Salida<2>
+	# !E & !Salida<1>;
+   Salida<2>.CLK = clk;
+
+MACROCELL | 0 | 4 | Salida_1_OBUF
+ATTRIBUTES | 4588322 | 0
+OUTPUTMC | 3 | 0 | 5 | 0 | 4 | 0 | 1
+INPUTS | 5 | E  | Salida<1>  | Salida<0>  | Salida<2>  | clk
+INPUTMC | 3 | 0 | 4 | 0 | 1 | 0 | 5
+INPUTP | 2 | 83 | 87
+EQ | 4 | 
+   !Salida<1>.T = E & !Salida<2>
+	# !E & Salida<2> & Salida<1>
+	# !E & !Salida<1> & !Salida<0>;
+   Salida<1>.CLK = clk;
+
+MACROCELL | 0 | 1 | Salida_0_OBUF
+ATTRIBUTES | 8782626 | 0
+OUTPUTMC | 2 | 0 | 4 | 0 | 1
+INPUTS | 5 | E  | Salida<2>  | Salida<1>  | Salida<0>  | clk
+INPUTMC | 3 | 0 | 5 | 0 | 4 | 0 | 1
+INPUTP | 2 | 83 | 87
+EQ | 3 | 
+   Salida<0>.D = E & Salida<2> & Salida<1>
+	# !E & !Salida<2> & !Salida<1> & !Salida<0>;
+   Salida<0>.CLK = clk;
+
+PIN | E | 64 | 0 | N/A | 83 | 3 | 0 | 5 | 0 | 4 | 0 | 1
+PIN | clk | 64 | 0 | N/A | 87 | 3 | 0 | 5 | 0 | 4 | 0 | 1
+PIN | Salida<2> | 536871040 | 0 | N/A | 13
+PIN | Salida<1> | 536871040 | 0 | N/A | 12
+PIN | Salida<0> | 536871040 | 0 | N/A | 11

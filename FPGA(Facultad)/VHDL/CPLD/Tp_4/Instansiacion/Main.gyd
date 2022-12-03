@@ -1,0 +1,32 @@
+Pin Freeze File:  version K.39
+
+9572XL44PC XC9572XL-5-PC44
+cin S:PIN9
+nro1<0> S:PIN37
+nro1<1> S:PIN36
+nro1<2> S:PIN35
+nro1<3> S:PIN34
+nro2<0> S:PIN42
+nro2<1> S:PIN40
+nro2<2> S:PIN39
+nro2<3> S:PIN38
+cout S:PIN14
+suma<0> S:PIN4
+suma<1> S:PIN11
+suma<2> S:PIN12
+suma<3> S:PIN13
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_1 sAux<1>/sAux<1>_D2 EXP6_
+PARTITION FB1_8 suma_0_OBUF
+PARTITION FB1_16 EXP7_ sAux<2>/sAux<2>_D2 EXP8_
+
+PARTITION FB3_1 EXP9_ suma_1_OBUF EXP10_
+PARTITION FB3_5 suma_2_OBUF
+PARTITION FB3_8 suma_3_OBUF cout_OBUF
+
+
+

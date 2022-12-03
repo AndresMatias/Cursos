@@ -1,0 +1,32 @@
+Link para los comandos de git:
+	https://git-scm.com/docs/git#_git_commands
+
+git push origin master: en caso de que a la hora de cargar el git no me salga el recuadro para loguearme
+ 
+
+init: inicia proyecto
+
+git status -s: me devuelve los archivos y directorios que tengo los signos de interrogacion rojos significan que no hay seguimiento de archivos, ademas aparece todo lo que NO ESTA EN EL REPOSITORIO
+
+git add index.html:Da seguimiento al archivo index.html y esta en el area de ensayo(testing creo)
+git add . :Agrego todos los archivos a seguimientos
+
+git commit -m "Instantanea de index.html": Pasa al area de repositorio local y saca una instantanea para guarda
+git commit -am "": Dos comandos en uno primero el add y luego el m(leer linea de arriba de este bloc para saber que hace m)
+git commit -amend: editor bien para cambiar titulos, video 3 git minuto 10(mas o menos) para editar
+
+Validacion del usuario:
+	git config --global user.email "andres.singls@gmail.com"
+	git config --global user.name "andres"
+
+git log --oneline:Muestra cantidad de respaldos hechos
+git reset --hard 90ae207: Restaura el archivo a la instantanea que le indico(en este caso 90ae207, esto codigo lo consigo con el comando git log --oneline), al hacer esto se borran las intantaneas posteriores
+
+git push: repo a gihub para guardar
+git pull: github a repo para guardar
+git pull --rebase: github a repo para guardar de forma ordenada comparando codigo creo
+
+git tag: para decir q mi proyecto esta lito sea la 1.0 o posterior version
+
+git clone enlace: clono proyecto y en enlace pongo el enlace de clonacion que obtengo de gibhub
+

@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>Android Webcam Server</title>
+<link href="style.css" type="text/css" rel="stylesheet"/> 
+<script type="text/javascript" src="js/jquerymin.js"></script>
+<style type="text/css">
+body { margin: 0 }
+</style>
+<script type="text/javascript">
+$(function () {
+	var wwidth = $(window).width();
+	var wheight = $(window).height();
+	$('#host').append($('<applet id="java_video" code="com.charliemouse.cambozola.Viewer" style="width: '+wwidth+'; height:'+wheight+';" archive="cambozola.jar"><param name="url" value="video"/></applet>'));
+});
+</script>
+</head>
+<body>
+<div id="host"></div>
+</body>
+</html>

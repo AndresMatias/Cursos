@@ -1,0 +1,25 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Nov 24 18:20:34 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "an<1>" LOCATE = SITE "P33" LEVEL 1;
+COMP "an<2>" LOCATE = SITE "P32" LEVEL 1;
+COMP "an<3>" LOCATE = SITE "P26" LEVEL 1;
+COMP "sseg<0>" LOCATE = SITE "P83" LEVEL 1;
+COMP "sseg<1>" LOCATE = SITE "P17" LEVEL 1;
+COMP "enable_clk_osc" LOCATE = SITE "P6" LEVEL 1;
+COMP "clock_50Mhz" LOCATE = SITE "P54" LEVEL 1;
+COMP "sseg<2>" LOCATE = SITE "P20" LEVEL 1;
+COMP "sseg<3>" LOCATE = SITE "P21" LEVEL 1;
+COMP "sseg<4>" LOCATE = SITE "P23" LEVEL 1;
+COMP "sseg<5>" LOCATE = SITE "P16" LEVEL 1;
+COMP "sseg<6>" LOCATE = SITE "P25" LEVEL 1;
+COMP "clock_sel" LOCATE = SITE "P38" LEVEL 1;
+COMP "reset" LOCATE = SITE "P47" LEVEL 1;
+COMP "clock_push" LOCATE = SITE "P69" LEVEL 1;
+NET "clock_50Mhz_BUFGP/IBUFG" BEL "clock_50Mhz_BUFGP/BUFG.GCLKMUX"
+        USELOCALCONNECT;
+COMP "an<0>" LOCATE = SITE "P34" LEVEL 1;
+SCHEMATIC END;
+

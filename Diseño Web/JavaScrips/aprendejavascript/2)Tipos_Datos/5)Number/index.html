@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>2)Tipos de datos</title>
+    <link rel="stylesheet" href="normalize.css">
+  </head>
+  <body>
+      <h1>Numeros</h1>
+      <!-- Inicio de la programacion del Scrip de javascrips-->
+      <script>
+        let a=2;
+        let b=new Number(3);
+        let c=7.199
+        let d='8.3'
+
+        console.log(typeof c, typeof d); //typeof: muestra que tipode dato es
+        console.log(a,b);
+        console.log(c.toFixed(1)); //1 decimal
+        console.log(c.toFixed(5)); //5 decimal
+        console.log(parseInt(c)); //Parte Entera, tambien convierte de string a numero
+        console.log(parseFloat(c)); //Parte entera y decimal, tambien convierte de string a numero
+        console.log(a+parseFloat(d)) //sumo un int y un string convertido a float
+      </script>
+  </body>
+</html>

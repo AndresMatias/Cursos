@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+  
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="IP摄像头"/>
+    <link rel="shortcut icon" href="ico/favicon.png"/>
+
+    <title>IP摄像头</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+
+    <link href="ipwebcam.css" rel="stylesheet"/>
+
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="lang.js"></script>
+    <script src="swfobject.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/ipwebcam.js"></script>
+    <script src="js/ipwebcam_override.js"></script>
+    <script src="js/ipwebcam_plugins.js"></script>
+
+
+  
+    
+  </head><body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="greet.html">IP摄像头</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav"> 
+            <li ><a href="greet.html">主页</a></li>
+            <li class="active"><a href="videomgr.html">视频存档</a></li>
+            <li  class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">视频聊天驱动 <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">Windows 驱动(仅支持视频)</li>
+                <li><a class="hash-change" href="videochat.html#ipca">IP摄像头适配器</a></li>
+                
+                
+                <li class="divider"></li>
+                <li class="dropdown-header">Linux 驱动</li>
+                <li><a class="hash-change" href="videochat.html#linux">Ubuntu GNU/Linux 驱动 (外部链接)</a></li>
+              </ul>
+            </li>
+
+            <li  class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">其他查看方法 <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">安卓查看器</li>
+                <li><a class="hash-change" href="viewers.html#tinycam">tinyCam Monitor</a></li>
+                <li><a href="http://hit-mob.com/ipwebcam/ipwebcam_howto.html">iOS版IP Cam Viewer (外部链接)</a></li>
+                <li class="dropdown-header">跨平台查看器</li>
+                <li><a class="hash-change" href="viewers.html#vlc">VLC媒体播放器</a></li>
+                <li><a class="hash-change" href="viewers.html#zoneminder">ZoneMinder</a></li>
+                <li class="dropdown-header">Windows 查看器</li>
+                <li><a class="hash-change" href="viewers.html#blueiris">Blue Iris</a></li>
+                <li><a class="hash-change" href="viewers.html#webcamxp">webcamXP</a></li>
+                <li class="dropdown-header">其他</li>
+                <li><a class="hash-change" href="viewers.html#view_outside">通过本地WiFi之外访问IP摄像头（例如通过互联网）</a></li>
+                <li><a class="hash-change" href="viewers.html#mac_bind">为什么IP地址总是在变化？</a></li>
+                <li><a class="hash-change" href="viewers.html#advanced">高级</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+    
+
+<div id="remove_modal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+        <h4>你确定吗？</h4>
+      </div>
+      <div class="modal-body">
+        <h4 class="modal-title"><p>是否删除 <a id="filename"></a>?</p>
+ </h4>
+        <p>该操作不能撤销。</p>
+      </div>
+      <div class="modal-footer">
+        <button id="cancel_remove_video_btn" type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button id="remove_video_btn" type="button" class="btn btn-danger">删除</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<div id="explain_webm" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+        <h4>WebM是什么？</h4>
+      </div>
+      <div class="modal-body">
+      <p>WebM是一个开放的互联网视频格式。</p>
+ <p>IP摄像头使用高效的<a href="http://en.wikipedia.org/wiki/VP8">VP8视频编码器</a>和<a href="http://en.wikipedia.org/wiki/Opus_(audio_codec)">新锐的Opus音频编码器</a>，以WebM为容器，提供最高的视频和音频软件编码质量。</p>
+ <p>截至目前，只有谷歌浏览器支持在WebM容器中的Opus音频编码器。不过，对VLC媒体播放器和其他浏览器的支持指日可待。<a href="https://www.google.com/intl/en/chrome/browser/">获取谷歌浏览器</a></p>
+ <p/>
+ <p>如果你的设备运行Android 4.1+并且自带已授权的H.264和AAC编码器，摄像头也可以将视频录制成普遍使用的<a href="http://en.wikipedia.org/wiki/MPEG4">MPEG4</a>格式。请注意，录制和分发该格式的视频可能有所限制。</p>
+ <p>在<b>IP摄像头设置菜单⇨视频设置⇨视频录制⇨视频格式</b>中选择你想要录制成的格式。</p>
+ <p/>
+ 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+
+
+    <div class="container" id="main_container">
+      <div id="init_alert" class="alert alert-danger" style="display: none;">
+        <strong>无法获取相机状态！</strong> 由于以下原因，一些功能可能不会正常工作： <span id="init_error"></span>.
+      </div>
+    
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Folders</h3>
+    </div>
+    <div class="panel-body" id="cat_pane">
+        <p>加载中…</p>
+    </div>
+
+</div>
+<a href="javascript:explainWebM()">WebM是什么？</a>
+
+
+      <hr/>
+
+      <footer>
+        <p>&copy; Pavel Khlebovich 2013</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    
+
+
+    
+<script type="text/javascript">
+  //<!--
+  $(videoMgrInit)
+  //-->
+</script>
+
+
+
+    
+  </body>
+</html>

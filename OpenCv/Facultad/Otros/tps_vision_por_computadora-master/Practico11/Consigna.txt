@@ -1,0 +1,8 @@
+TP11) Alineación de imágenes usando SIFT.
+
+- Capturar dos imágenes con diferentes vistas del mismo objeto.
+- Computar puntos de interés y descriptores en ambas imágenes.
+- Establecer matches entre ambos conjuntos de descriptores.
+- Eliminar matches usando criterio de Lowe.
+- Computar una homografía entre un conjunto de puntos y el otro.
+- Aplicar la homografía sobre una de las imágenes y guardarla en otra (mezclarla con un alpha de 50%).

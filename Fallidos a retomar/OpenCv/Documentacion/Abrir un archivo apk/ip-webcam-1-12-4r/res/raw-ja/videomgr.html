@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+  
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="IP Webcam"/>
+    <link rel="shortcut icon" href="ico/favicon.png"/>
+
+    <title>IP Webcam</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+
+    <link href="ipwebcam.css" rel="stylesheet"/>
+
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="lang.js"></script>
+    <script src="swfobject.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/ipwebcam.js"></script>
+    <script src="js/ipwebcam_override.js"></script>
+    <script src="js/ipwebcam_plugins.js"></script>
+
+
+  
+    
+  </head><body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="greet.html">IP Webcam</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav"> 
+            <li ><a href="greet.html">ホーム</a></li>
+            <li class="active"><a href="videomgr.html">ビデオアーカイブ</a></li>
+            <li  class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">ビデオチャットドライバー <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">Windows ドライバー (ビデオのみ対応)</li>
+                <li><a class="hash-change" href="videochat.html#ipca">IP カメラ アダプター</a></li>
+                
+                
+                <li class="divider"></li>
+                <li class="dropdown-header">Linux ドライバー</li>
+                <li><a class="hash-change" href="videochat.html#linux">Ubuntu GNU/Linux版ドライバー (外部リンク)</a></li>
+              </ul>
+            </li>
+
+            <li  class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">その他視聴方法 <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">Android ビューワー</li>
+                <li><a class="hash-change" href="viewers.html#tinycam">tinyCam モニター</a></li>
+                <li><a href="http://hit-mob.com/ipwebcam/ipwebcam_howto.html">Android、iOS版IP Cam ビューワー(外部リンク)</a></li>
+                <li class="dropdown-header">クロスプラットフォームビューワー</li>
+                <li><a class="hash-change" href="viewers.html#vlc">VLC メディアプレーヤー</a></li>
+                <li><a class="hash-change" href="viewers.html#zoneminder">ZoneMinder</a></li>
+                <li class="dropdown-header">Windows ビューワー</li>
+                <li><a class="hash-change" href="viewers.html#blueiris">Blue Iris</a></li>
+                <li><a class="hash-change" href="viewers.html#webcamxp">webcamXP</a></li>
+                <li class="dropdown-header">その他</li>
+                <li><a class="hash-change" href="viewers.html#view_outside">ローカルネットワーク外でのIP Webcamへのアクセス (インターネット経由など)</a></li>
+                <li><a class="hash-change" href="viewers.html#mac_bind">なぜIPアドレスが変更してしまうのか。</a></li>
+                <li><a class="hash-change" href="viewers.html#advanced">詳細</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+    
+
+<div id="remove_modal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+        <h4>実行しますか？</h4>
+      </div>
+      <div class="modal-body">
+        <h4 class="modal-title"><p>削除 <a id="filename"></a>?</p>
+ </h4>
+        <p>この操作は再変更できません。</p>
+      </div>
+      <div class="modal-footer">
+        <button id="cancel_remove_video_btn" type="button" class="btn btn-default" data-dismiss="modal">キャンセル</button>
+        <button id="remove_video_btn" type="button" class="btn btn-danger">削除</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<div id="explain_webm" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+        <h4>WebMとは？</h4>
+      </div>
+      <div class="modal-body">
+      <p>WebMはウェブで利用できるオープンソースのビデオ形式です。</p>
+ <p>IP Webcamは高画質ビデオを提供するために、WebM内に搭載された高速<a href="http://en.wikipedia.org/wiki/VP8">VP8ビデオコーデック</a>や<a href="http://en.wikipedia.org/wiki/Opus_(audio_codec)">最新のOpus オーディオ</a>コーデックで使用できます。</p>
+ <p>現在、 クロームブラウザのみWebM内のOpus audioに対応しおります。今後、VLC Media Playerや他のブラウザにも対応予定です。 <a href="https://www.google.com/intl/en/chrome/browser/">グーグルクロームはこちらからダウンロードできます。</a></p>
+ <p>お使いのデバイスがAndroid4.1以上で認証されたH.264やAACエンコーダーが搭載されている場合、 IP Webcamは<a href="http://en.wikipedia.org/wiki/MPEG4">MPEG4</a>形式でも録画可能です。この形式で作成された映像は、録画や配信に制限を受ける場合があります。</p>
+ <p><b>IP Webcam設定メニュー ⇨ ビデオ選択 ⇨ ビデオ録画 ⇨ ビデオ形式</b>でご希望の形式を選択してください。</p>
+ <p/>
+ 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+
+
+    <div class="container" id="main_container">
+      <div id="init_alert" class="alert alert-danger" style="display: none;">
+        <strong>カメラの状態が取得できません</strong> 以下の理由でいくつかの機能が使用できません。 <span id="init_error"></span>.
+      </div>
+    
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Folders</h3>
+    </div>
+    <div class="panel-body" id="cat_pane">
+        <p>ロード中</p>
+    </div>
+
+</div>
+<a href="javascript:explainWebM()">WebMとは？</a>
+
+
+      <hr/>
+
+      <footer>
+        <p>&copy; Pavel Khlebovich 2013</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    
+
+
+    
+<script type="text/javascript">
+  //<!--
+  $(videoMgrInit)
+  //-->
+</script>
+
+
+
+    
+  </body>
+</html>

@@ -1,0 +1,15 @@
+V3 9
+FL C:/Xilinx/ProyectosISE/Ej_4_PracticoLab_5/Ejercicio.vhd 2017/11/01.10:30:35 K.31
+FL C:/Xilinx/ProyectosISE/Ej_4_PracticoLab_5/ff.vhd 2017/11/01.10:56:01 K.31
+FL C:/Xilinx/Tp/Ej_4_PracticoLab_5/Ejercicio.vhd 2017/11/01.10:43:35 K.31
+EN work/Ejercicio 0 FL C:/Xilinx/Tp/Ej_4_PracticoLab_5/Ejercicio.vhd \
+      PB ieee/std_logic_1164 1200023565 PB ieee/std_logic_arith 1200023566 \
+      PB ieee/STD_LOGIC_UNSIGNED 1200023567
+AR work/Ejercicio/Behavioral 0 \
+      FL C:/Xilinx/Tp/Ej_4_PracticoLab_5/Ejercicio.vhd EN work/Ejercicio 0 CP ff
+FL C:/Xilinx/Tp/Ej_4_PracticoLab_5/ff.vhd 2017/11/01.10:56:14 K.31
+EN work/ff 1509629550 FL C:/Xilinx/Tp/Ej_4_PracticoLab_5/ff.vhd \
+      PB ieee/std_logic_1164 1200023565 PB ieee/std_logic_arith 1200023566 \
+      PB ieee/STD_LOGIC_UNSIGNED 1200023567
+AR work/ff/Behavioral 1509629551 \
+      FL C:/Xilinx/Tp/Ej_4_PracticoLab_5/ff.vhd EN work/ff 1509629550

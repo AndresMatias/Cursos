@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>4)Programacion Orientada a Objetos</title>
+    <link rel="stylesheet" href="normalize.css">
+  </head>
+  <body>
+      <h1>Herencia Prototipica</h1>
+      <!-- Inicio de la programacion del Scrip de javascrips-->
+      <script>
+        const animal={
+          nombre:'firulais',
+          sonar(){
+            console.log('Hago sonidos');
+          }
+        }
+
+        //Funcion Constructora
+        function Animal(nombre,genero){
+          this.nombre=nombre;
+          this.genero=genero;
+          
+        }
+        //Funcion prototipo
+        Animal.prototype.sonar=function(){ //saco la funcion fuera de Animal y la pongo en el PROTOTIPO, esto me ahorra saludos evitando que se duplique en cada declaracion de animal
+            console.log('Hago sonidos');
+        }
+        //----Herencia Prototipicas----
+        function Perro(nombre,genero,tamanio){
+          this.super=Animal; //Herencia hacia Perro
+          this.super(nombre,genero);
+          this.tamanio=tamanio;
+        }
+        //Perro esta HEREDANDO de Animal
+        Perro.prototype=new Animal();
+        Perro.prototype.constructor=Perro;
+
+        //Sobreescritura de metodos de clase padre
+        Perro.prototype.sonar=function(){
+          console.log('Soy un perro guau')
+        }
+
+        Perro.prototype.ladrar=function(){
+          console.log('guau guau guau')
+        }
+
+        const uma=new Perro('Uma','hembra','Mediano')
+        const snopy=new Animal('snopy','macho') //Utilizo funcion constructora
+        console.log(snopy)
+        console.log(uma)
+        snopy.sonar();
+        uma.sonar();
+        uma.ladrar();
+        
+      </script>
+  </body>
+</html>

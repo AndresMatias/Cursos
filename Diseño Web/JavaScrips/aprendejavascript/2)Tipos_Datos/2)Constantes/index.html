@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>2)Tipos de datos</title>
+    <link rel="stylesheet" href="normalize.css">
+  </head>
+  <body>
+      <h1>Constantes</h1>
+      <!-- Inicio de la programacion del Scrip de javascrips-->
+      <script>
+        /*En valores primitivos no puedo cambiar valores mientras que en valroes compuestos puedo hacerlo porque no cambia la referencia del objeto*/
+        /*Constantes: No puedo tener constantes vacias*/
+        const PI=3.14
+        /* const Nueve */ /*Esto no esta permitido, tengo que asignarle un valor*/
+        console.log(PI)
+
+        /*Creo un objeto: conjuntos de atributos y valores*/
+        const objeto={
+          nombre:"Juan",
+          edad:5
+        }
+
+        /*Array*/
+        const colores=["blanco","azul","rojo"];
+        
+        /*Imprimo*/
+        console.log(objeto)
+        console.log(colores)
+
+        /*Agregor propiedades al objeto y al arreglo: si arriba cambio de let a const puedo cambiar valores pq accedo a la referencia del objeto y esta referencia no cambia por eso puedo agregar*/
+        objeto.correo="nananlider@batman.com"
+        colores.push("anaranjado")
+
+        /*Imprimo*/
+        console.log(objeto)
+        console.log(colores)
+
+      </script>
+  </body>
+</html>

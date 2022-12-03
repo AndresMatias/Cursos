@@ -1,0 +1,4 @@
+eventos_10_focos.Lamina$Mi_Foco
+eventos_10_focos.Lamina
+eventos_10_focos.Eventos_10_Focos
+eventos_10_focos.Ventana

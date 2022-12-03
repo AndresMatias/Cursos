@@ -1,0 +1,294 @@
+MDF Database:  version 1.0
+MDF_INFO | contador | XC9572XL-5-PC44
+MACROCELL | 0 | 15 | CONTADOR0<1>
+ATTRIBUTES | 4334368 | 0
+OUTPUTMC | 15 | 0 | 15 | 0 | 7 | 0 | 14 | 0 | 16 | 0 | 6 | 0 | 13 | 0 | 5 | 0 | 3 | 0 | 8 | 0 | 4 | 0 | 12 | 0 | 9 | 0 | 11 | 0 | 17 | 0 | 10
+INPUTS | 5 | CONTADOR0<0>  | CONTADOR0<1>  | CONTADOR0<2>  | CONTADOR0<3>  | CONTADOR0<2>/CONTADOR0<2>_CLKF
+INPUTMC | 5 | 3 | 17 | 0 | 15 | 0 | 7 | 0 | 14 | 1 | 17
+EQ | 4 | 
+   !CONTADOR0<1>.T = !CONTADOR0<0>
+	# !CONTADOR0<1> & !CONTADOR0<2> & CONTADOR0<3>;
+   CONTADOR0<1>.CLK = CONTADOR0<2>/CONTADOR0<2>_CLKF;
+   CONTADOR0<1>.AR = reset;	// GSR
+GLOBALS | 1 | 4 | reset
+
+MACROCELL | 3 | 17 | CONTADOR0<0>
+ATTRIBUTES | 4334368 | 0
+OUTPUTMC | 16 | 0 | 15 | 0 | 7 | 0 | 14 | 2 | 14 | 2 | 15 | 0 | 16 | 0 | 6 | 0 | 13 | 0 | 5 | 0 | 3 | 0 | 4 | 0 | 12 | 0 | 9 | 0 | 11 | 0 | 17 | 0 | 10
+INPUTS | 1 | CONTADOR0<2>/CONTADOR0<2>_CLKF
+INPUTMC | 1 | 1 | 17
+EQ | 3 | 
+   CONTADOR0<0>.T = Vcc;
+   CONTADOR0<0>.CLK = CONTADOR0<2>/CONTADOR0<2>_CLKF;
+   CONTADOR0<0>.AR = reset;	// GSR
+GLOBALS | 1 | 4 | reset
+
+MACROCELL | 0 | 7 | CONTADOR0<2>
+ATTRIBUTES | 4334368 | 0
+OUTPUTMC | 15 | 0 | 15 | 0 | 14 | 2 | 15 | 0 | 16 | 0 | 6 | 0 | 13 | 0 | 5 | 0 | 3 | 0 | 8 | 0 | 4 | 0 | 12 | 0 | 9 | 0 | 11 | 0 | 17 | 0 | 10
+INPUTS | 3 | CONTADOR0<1>  | CONTADOR0<0>  | CONTADOR0<2>/CONTADOR0<2>_CLKF
+INPUTMC | 3 | 0 | 15 | 3 | 17 | 1 | 17
+EQ | 3 | 
+   CONTADOR0<2>.T = CONTADOR0<1> & CONTADOR0<0>;
+   CONTADOR0<2>.CLK = CONTADOR0<2>/CONTADOR0<2>_CLKF;
+   CONTADOR0<2>.AR = reset;	// GSR
+GLOBALS | 1 | 4 | reset
+
+MACROCELL | 0 | 14 | CONTADOR0<3>
+ATTRIBUTES | 4334368 | 0
+OUTPUTMC | 15 | 0 | 15 | 0 | 14 | 2 | 15 | 0 | 16 | 0 | 6 | 0 | 13 | 0 | 5 | 0 | 3 | 0 | 8 | 0 | 4 | 0 | 12 | 0 | 9 | 0 | 11 | 0 | 17 | 0 | 10
+INPUTS | 5 | CONTADOR0<1>  | CONTADOR0<0>  | CONTADOR0<2>  | CONTADOR0<3>  | CONTADOR0<2>/CONTADOR0<2>_CLKF
+INPUTMC | 5 | 0 | 15 | 3 | 17 | 0 | 7 | 0 | 14 | 1 | 17
+EQ | 5 | 
+   CONTADOR0<3>.T = CONTADOR0<1> & CONTADOR0<0> & CONTADOR0<2>
+	# !CONTADOR0<1> & CONTADOR0<0> & !CONTADOR0<2> & 
+	CONTADOR0<3>;
+   CONTADOR0<3>.CLK = CONTADOR0<2>/CONTADOR0<2>_CLKF;
+   CONTADOR0<3>.AR = reset;	// GSR
+GLOBALS | 1 | 4 | reset
+
+MACROCELL | 2 | 10 | display_0
+ATTRIBUTES | 8651698 | 0
+INPUTS | 2 | display_0/display_0_SETF__$INT  | display_0/display_0_RSTF
+INPUTMC | 2 | 0 | 16 | 0 | 6
+EQ | 4 | 
+   display<0>.D = Gnd;
+   display<0>.CLK = Gnd;
+   display<0>.AP = !display_0/display_0_SETF__$INT;
+   display<0>.AR = display_0/display_0_RSTF;
+
+MACROCELL | 2 | 13 | display_1
+ATTRIBUTES | 8651698 | 0
+INPUTS | 2 | display_1/display_1_SETF  | display_1/display_1_RSTF
+INPUTMC | 2 | 0 | 13 | 0 | 5
+EQ | 4 | 
+   display<1>.D = Gnd;
+   display<1>.CLK = Gnd;
+   display<1>.AP = display_1/display_1_SETF;
+   display<1>.AR = display_1/display_1_RSTF;
+
+MACROCELL | 2 | 14 | display_2
+ATTRIBUTES | 8651698 | 0
+INPUTS | 4 | CONTADOR0<0>  | display_6/display_6_RSTF  | $OpTx$FX_DC$6  | display_2/display_2_SETF
+INPUTMC | 4 | 3 | 17 | 0 | 3 | 0 | 8 | 0 | 4
+EQ | 5 | 
+   display<2>.D = Gnd;
+   display<2>.CLK = Gnd;
+   display<2>.AP = !CONTADOR0<0> & !display_6/display_6_RSTF & 
+	$OpTx$FX_DC$6;
+   display<2>.AR = $OpTx$FX_DC$6 & !display_2/display_2_SETF;
+
+MACROCELL | 2 | 16 | display_3
+ATTRIBUTES | 8651698 | 0
+INPUTS | 2 | display_3/display_3_RSTF  | display_6/display_6_SETF
+INPUTMC | 2 | 0 | 12 | 0 | 9
+EQ | 5 | 
+   display<3>.D = Gnd;
+   display<3>.CLK = Gnd;
+   display<3>.AP = !display_3/display_3_RSTF & 
+	display_6/display_6_SETF;
+   display<3>.AR = display_3/display_3_RSTF;
+
+MACROCELL | 2 | 15 | display_4
+ATTRIBUTES | 8651698 | 0
+INPUTS | 4 | display_4/display_4_SETF  | CONTADOR0<0>  | CONTADOR0<2>  | CONTADOR0<3>
+INPUTMC | 4 | 0 | 11 | 3 | 17 | 0 | 7 | 0 | 14
+EQ | 4 | 
+   display<4>.D = Gnd;
+   display<4>.CLK = Gnd;
+   display<4>.AP = display_4/display_4_SETF;
+   display<4>.AR = !CONTADOR0<0> & !CONTADOR0<2> & !CONTADOR0<3>;
+
+MACROCELL | 3 | 1 | display_5
+ATTRIBUTES | 8651698 | 0
+INPUTS | 2 | display_5/display_5_SETF__$INT  | display_5/display_5_RSTF
+INPUTMC | 2 | 0 | 17 | 0 | 10
+EQ | 4 | 
+   display<5>.D = Gnd;
+   display<5>.CLK = Gnd;
+   display<5>.AP = !display_5/display_5_SETF__$INT;
+   display<5>.AR = display_5/display_5_RSTF;
+
+MACROCELL | 3 | 4 | display_6
+ATTRIBUTES | 8651698 | 0
+INPUTS | 2 | display_6/display_6_SETF  | display_6/display_6_RSTF
+INPUTMC | 2 | 0 | 9 | 0 | 3
+EQ | 4 | 
+   display<6>.D = Gnd;
+   display<6>.CLK = Gnd;
+   display<6>.AP = display_6/display_6_SETF;
+   display<6>.AR = display_6/display_6_RSTF;
+
+MACROCELL | 3 | 10 | estado_p<0>
+ATTRIBUTES | 264962 | 0
+INPUTS | 0
+EQ | 1 | 
+   transistor4 = Gnd;
+
+MACROCELL | 1 | 14 | estado_p<0>$BUF0
+ATTRIBUTES | 264962 | 0
+INPUTS | 0
+EQ | 1 | 
+   transistor3 = Gnd;
+
+MACROCELL | 1 | 16 | estado_p<0>$BUF1
+ATTRIBUTES | 264962 | 0
+INPUTS | 0
+EQ | 1 | 
+   transistor2 = Gnd;
+
+MACROCELL | 3 | 13 | estado_p<0>$BUF2
+ATTRIBUTES | 264962 | 0
+INPUTS | 0
+EQ | 1 | 
+   transistor1 = Gnd;
+
+MACROCELL | 1 | 17 | CONTADOR0<2>/CONTADOR0<2>_CLKF
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 4 | 0 | 15 | 3 | 17 | 0 | 7 | 0 | 14
+INPUTS | 3 | llave  | pulsador  | reloj
+INPUTP | 3 | 3 | 82 | 20
+EQ | 2 | 
+   CONTADOR0<2>/CONTADOR0<2>_CLKF = reloj & llave
+	# !llave & pulsador;
+
+MACROCELL | 0 | 16 | display_0/display_0_SETF__$INT
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 2 | 10
+INPUTS | 4 | CONTADOR0<1>  | CONTADOR0<2>  | CONTADOR0<3>  | CONTADOR0<0>
+INPUTMC | 4 | 0 | 15 | 0 | 7 | 0 | 14 | 3 | 17
+EQ | 4 | 
+   display_0/display_0_SETF__$INT = CONTADOR0<1> & CONTADOR0<3>
+	# CONTADOR0<2> & CONTADOR0<3>
+	# CONTADOR0<1> & CONTADOR0<0> & CONTADOR0<2>
+	# !CONTADOR0<1> & !CONTADOR0<2> & !CONTADOR0<3>;
+
+MACROCELL | 0 | 6 | display_0/display_0_RSTF
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 2 | 10
+INPUTS | 4 | CONTADOR0<1>  | CONTADOR0<2>  | CONTADOR0<3>  | CONTADOR0<0>
+INPUTMC | 4 | 0 | 15 | 0 | 7 | 0 | 14 | 3 | 17
+EQ | 3 | 
+   display_0/display_0_RSTF = !CONTADOR0<1> & !CONTADOR0<2> & !CONTADOR0<3>
+	# CONTADOR0<1> & CONTADOR0<0> & CONTADOR0<2> & 
+	!CONTADOR0<3>;
+
+MACROCELL | 0 | 13 | display_1/display_1_SETF
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 2 | 13
+INPUTS | 4 | CONTADOR0<1>  | CONTADOR0<2>  | CONTADOR0<3>  | CONTADOR0<0>
+INPUTMC | 4 | 0 | 15 | 0 | 7 | 0 | 14 | 3 | 17
+EQ | 3 | 
+   display_1/display_1_SETF = !CONTADOR0<1> & CONTADOR0<2> & !CONTADOR0<3>
+	# !CONTADOR0<1> & !CONTADOR0<2> & CONTADOR0<3>
+	# !CONTADOR0<0> & CONTADOR0<2> & !CONTADOR0<3>;
+
+MACROCELL | 0 | 5 | display_1/display_1_RSTF
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 2 | 13
+INPUTS | 4 | CONTADOR0<2>  | CONTADOR0<3>  | CONTADOR0<1>  | CONTADOR0<0>
+INPUTMC | 4 | 0 | 7 | 0 | 14 | 0 | 15 | 3 | 17
+EQ | 2 | 
+   display_1/display_1_RSTF = !CONTADOR0<2> & !CONTADOR0<3>
+	# CONTADOR0<1> & CONTADOR0<0> & !CONTADOR0<3>;
+
+MACROCELL | 0 | 3 | display_6/display_6_RSTF
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 2 | 2 | 14 | 3 | 4
+INPUTS | 4 | CONTADOR0<1>  | CONTADOR0<0>  | CONTADOR0<3>  | CONTADOR0<2>
+INPUTMC | 4 | 0 | 15 | 3 | 17 | 0 | 14 | 0 | 7
+EQ | 2 | 
+   display_6/display_6_RSTF = !CONTADOR0<1> & !CONTADOR0<0> & !CONTADOR0<3>
+	# !CONTADOR0<1> & !CONTADOR0<2> & !CONTADOR0<3>;
+
+MACROCELL | 0 | 8 | $OpTx$FX_DC$6
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 2 | 14
+INPUTS | 3 | CONTADOR0<3>  | CONTADOR0<1>  | CONTADOR0<2>
+INPUTMC | 3 | 0 | 14 | 0 | 15 | 0 | 7
+EQ | 2 | 
+   $OpTx$FX_DC$6 = !CONTADOR0<3>
+	# !CONTADOR0<1> & !CONTADOR0<2>;
+
+MACROCELL | 0 | 4 | display_2/display_2_SETF
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 2 | 14
+INPUTS | 4 | CONTADOR0<1>  | CONTADOR0<0>  | CONTADOR0<3>  | CONTADOR0<2>
+INPUTMC | 4 | 0 | 15 | 3 | 17 | 0 | 14 | 0 | 7
+EQ | 3 | 
+   display_2/display_2_SETF = CONTADOR0<1> & !CONTADOR0<0> & !CONTADOR0<3>
+	# !CONTADOR0<1> & !CONTADOR0<0> & !CONTADOR0<2> & 
+	CONTADOR0<3>;
+
+MACROCELL | 0 | 12 | display_3/display_3_RSTF
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 2 | 16
+INPUTS | 4 | CONTADOR0<1>  | CONTADOR0<2>  | CONTADOR0<3>  | CONTADOR0<0>
+INPUTMC | 4 | 0 | 15 | 0 | 7 | 0 | 14 | 3 | 17
+EQ | 4 | 
+   display_3/display_3_RSTF = !CONTADOR0<1> & !CONTADOR0<0> & !CONTADOR0<3>
+	# !CONTADOR0<1> & !CONTADOR0<2> & !CONTADOR0<3>
+	# CONTADOR0<1> & CONTADOR0<0> & CONTADOR0<2> & 
+	!CONTADOR0<3>;
+
+MACROCELL | 0 | 9 | display_6/display_6_SETF
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 2 | 2 | 16 | 3 | 4
+INPUTS | 4 | CONTADOR0<1>  | CONTADOR0<3>  | CONTADOR0<0>  | CONTADOR0<2>
+INPUTMC | 4 | 0 | 15 | 0 | 14 | 3 | 17 | 0 | 7
+EQ | 3 | 
+   display_6/display_6_SETF = CONTADOR0<1> & !CONTADOR0<3>
+	# !CONTADOR0<1> & !CONTADOR0<2> & CONTADOR0<3>
+	# CONTADOR0<0> & CONTADOR0<2> & !CONTADOR0<3>;
+
+MACROCELL | 0 | 11 | display_4/display_4_SETF
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 2 | 15
+INPUTS | 4 | CONTADOR0<0>  | CONTADOR0<3>  | CONTADOR0<1>  | CONTADOR0<2>
+INPUTMC | 4 | 3 | 17 | 0 | 14 | 0 | 15 | 0 | 7
+EQ | 3 | 
+   display_4/display_4_SETF = CONTADOR0<0> & !CONTADOR0<3>
+	# CONTADOR0<2> & !CONTADOR0<3>
+	# !CONTADOR0<1> & !CONTADOR0<2> & CONTADOR0<3>;
+
+MACROCELL | 0 | 17 | display_5/display_5_SETF__$INT
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 3 | 1
+INPUTS | 4 | CONTADOR0<1>  | CONTADOR0<0>  | CONTADOR0<2>  | CONTADOR0<3>
+INPUTMC | 4 | 0 | 15 | 3 | 17 | 0 | 7 | 0 | 14
+EQ | 6 | 
+   display_5/display_5_SETF__$INT = CONTADOR0<1> & CONTADOR0<3>
+	# CONTADOR0<2> & CONTADOR0<3>
+	# CONTADOR0<1> & !CONTADOR0<0> & CONTADOR0<2>
+	# !CONTADOR0<1> & CONTADOR0<0> & CONTADOR0<2>
+	# !CONTADOR0<1> & !CONTADOR0<0> & !CONTADOR0<2> & 
+	!CONTADOR0<3>;
+
+MACROCELL | 0 | 10 | display_5/display_5_RSTF
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 3 | 1
+INPUTS | 4 | CONTADOR0<1>  | CONTADOR0<0>  | CONTADOR0<2>  | CONTADOR0<3>
+INPUTMC | 4 | 0 | 15 | 3 | 17 | 0 | 7 | 0 | 14
+EQ | 6 | 
+   display_5/display_5_RSTF = CONTADOR0<1> & !CONTADOR0<0> & CONTADOR0<2> & 
+	!CONTADOR0<3>
+	# !CONTADOR0<1> & CONTADOR0<0> & CONTADOR0<2> & 
+	!CONTADOR0<3>
+	# !CONTADOR0<1> & !CONTADOR0<0> & !CONTADOR0<2> & 
+	!CONTADOR0<3>;
+
+PIN | reset | 65536 | 0 | N/A | 92 | 4 | 0 | 15 | 3 | 17 | 0 | 7 | 0 | 14
+PIN | reloj | 64 | 0 | N/A | 20 | 1 | 1 | 17
+PIN | llave | 64 | 0 | N/A | 3 | 1 | 1 | 17
+PIN | pulsador | 64 | 0 | N/A | 82 | 1 | 1 | 17
+PIN | display<0> | 536871040 | 0 | N/A | 46
+PIN | display<1> | 536871040 | 0 | N/A | 49
+PIN | display<2> | 536871040 | 0 | N/A | 50
+PIN | display<3> | 536871040 | 0 | N/A | 52
+PIN | display<4> | 536871040 | 0 | N/A | 59
+PIN | display<5> | 536871040 | 0 | N/A | 62
+PIN | display<6> | 536871040 | 0 | N/A | 63
+PIN | transistor4 | 536871040 | 0 | N/A | 68
+PIN | transistor3 | 536871040 | 0 | N/A | 9
+PIN | transistor2 | 536871040 | 0 | N/A | 10
+PIN | transistor1 | 536871040 | 0 | N/A | 72

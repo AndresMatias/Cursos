@@ -1,0 +1,32 @@
+/* 
+Display nos sirve cambiar el contexto de los elementos del navegador(permite modificar comportamientos de bloques)
+Valores principales que admite:
+    none -> El elemento no se muestra pero se sigue cargando
+    block -> Hace que elemento sea de bloque
+    inline -> Hace que el elemento sea de linea
+    inline-block -> Hace que el elemento sea de linea pero admite medidas y margenes verticales
+*/
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #333;
+    color: #fff;
+}
+
+.text{
+    background-color: lightcoral;
+    /* display: none; */
+    /* display: inline; */
+}
+
+.link{
+    background-color: #fff;
+    display: inline-block;
+    width: 100px;
+    margin-top: 50px;
+    /* display: block;
+    width: 100px; */
+}

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+  
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="IP Webcam"/>
+    <link rel="shortcut icon" href="ico/favicon.png"/>
+
+    <title>IP Webcam</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+
+    <link href="ipwebcam.css" rel="stylesheet"/>
+
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="lang.js"></script>
+    <script src="swfobject.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/ipwebcam.js"></script>
+    <script src="js/ipwebcam_override.js"></script>
+    <script src="js/ipwebcam_plugins.js"></script>
+
+
+  
+    
+  </head><body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="greet.html">IP Webcam</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav"> 
+            <li ><a href="greet.html">ホーム</a></li>
+            <li ><a href="videomgr.html">ビデオアーカイブ</a></li>
+            <li  class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">ビデオチャットドライバー <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">Windows ドライバー (ビデオのみ対応)</li>
+                <li><a class="hash-change" href="videochat.html#ipca">IP カメラ アダプター</a></li>
+                
+                
+                <li class="divider"></li>
+                <li class="dropdown-header">Linux ドライバー</li>
+                <li><a class="hash-change" href="videochat.html#linux">Ubuntu GNU/Linux版ドライバー (外部リンク)</a></li>
+              </ul>
+            </li>
+
+            <li class="active" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">その他視聴方法 <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">Android ビューワー</li>
+                <li><a class="hash-change" href="viewers.html#tinycam">tinyCam モニター</a></li>
+                <li><a href="http://hit-mob.com/ipwebcam/ipwebcam_howto.html">Android、iOS版IP Cam ビューワー(外部リンク)</a></li>
+                <li class="dropdown-header">クロスプラットフォームビューワー</li>
+                <li><a class="hash-change" href="viewers.html#vlc">VLC メディアプレーヤー</a></li>
+                <li><a class="hash-change" href="viewers.html#zoneminder">ZoneMinder</a></li>
+                <li class="dropdown-header">Windows ビューワー</li>
+                <li><a class="hash-change" href="viewers.html#blueiris">Blue Iris</a></li>
+                <li><a class="hash-change" href="viewers.html#webcamxp">webcamXP</a></li>
+                <li class="dropdown-header">その他</li>
+                <li><a class="hash-change" href="viewers.html#view_outside">ローカルネットワーク外でのIP Webcamへのアクセス (インターネット経由など)</a></li>
+                <li><a class="hash-change" href="viewers.html#mac_bind">なぜIPアドレスが変更してしまうのか。</a></li>
+                <li><a class="hash-change" href="viewers.html#advanced">詳細</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+    
+    
+
+
+
+    <div class="container" id="main_container">
+      <div id="init_alert" class="alert alert-danger" style="display: none;">
+        <strong>カメラの状態が取得できません</strong> 以下の理由でいくつかの機能が使用できません。 <span id="init_error"></span>.
+      </div>
+    <div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#tinycam">
+          Android版tinyCam モニター
+        </a>
+      </h4>
+    </div>
+    <div id="tinycam" class="panel-collapse collapse">
+      <div class="panel-body">
+        <h2>tinyCam モニターの設定方法</h2>
+<p><a href="mailto:alexey.vasilyev@gmail.com">Alexey Vasilyev</a>により開発された<a href="http://www.tinycammonitor.com/">tinyCam Monitor</a>は遠隔監視システム用のAndroidアプリケーションです。IP Webcamを含むほとんどのカメラアプリをサポートしています。</p>
+ <p>このアプリはIP  Webcamの音声機能 (Pro版のみ)やLEDコントロール、オートフォーカスコントロールなどの拡張機能に対応しています。</p>
+ <p> <a href="http://www.youtube.com/watch?v=fhUoKjRPV1w">映像では起動中のIP WebcamとtinyCam Monitorを確認できます。</a> (インターネット接続が必要です)</p>
+ <p>ダウンロードは<a href="https://market.android.com/details?id=com.alexvas.dvr">こちら</a>をクリックするか、<a href="https://market.android.com/details?id=com.alexvas.dvr">バーコードリーダー</a>を使ってQRコードをスキャンして下さい。</p>
+ <p/>
+ <center><img src="tinycamqr.png"/></center>
+<p>アプリケーションでは、 &quot;Manage cams&quot;を選択し、新しいカメラを追加し、&quot;IP Webcam for Android&quot;を選択します。</p>
+ <p>ホスト名に<b><span class="repl">$IP$</span></b>を入力し、 設定したポート<b><span class="repl">$PORT$</span></b>を設定すると利用できます。</p>
+ <img src="tinycam1.png"/> <img src="tinycam2.png"/>
+<p/>
+ 
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#vlc">
+          VLC メディアプレーヤー
+        </a>
+      </h4>
+    </div>
+    <div id="vlc" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p>VLC Media Playerはクロスプラットフォームの動画プレイヤーです。このソフトは単独でストリーミングサーバーとしての機能やファイルの変換を行うことができます。ダウンロードは<a href="http://www.videolan.org/">こちら</a>。</p>
+ <p>VLC Media PlayerでIP Webcamを使用するためには、メニューから以下の設定を行って下さい。<b>Media タブからNetwork Streamを開き、ストリーミングビデオ欄に</b><b><span class="repl">$URL$</span><span style="color: red;">/video</span></b>と入力するか、ストリーミング音声欄に<b><span class="repl">$URL$</span><span style="color: red;">/audio.wav</span></b>を入力します。</p>
+ <p>ビデオ録画にもVLC Media Playerが使用できます。</p>
+ <nl>
+  <li><b>Mediaタブから 変換/保存</b>を選択します。</li>
+  <li>ネットワークタブを選択します。</li>
+  <li>URL欄に<b><span class="repl">$URL$</span><span style="color: red;">/video</span></b>を入力します。</li>
+  <li>変換/保存をクリックします。</li>
+  <li>ファイルの保存先を選択し、ファイル形式を選ぶと準備完了です。</li>
+</nl>
+<p/>
+ 
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#zoneminder">
+          ZoneMinder
+        </a>
+      </h4>
+    </div>
+    <div id="zoneminder" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p>下記の通り設定してください。</p>
+ <p>一般：<br/>ソースタイプ： 遠隔<br/>機能： モニター</p>
+ <p>ソース： <br/> プロコトル： HTTP <br/> メソッド： シンプル <br/> ホスト名： <b><span class="repl">$IP$</span></b> <br/> ポート： <b><span class="repl">$PORT$</span></b> <br/> リモートホストパス： /video (videoだけでは起動しません)。<br/></p>
+ <p><b>注意：</b> 必要であれば、username:password@<b><span class="repl">$IP$</span></b>のような形でURL欄にユーザー名とパスワードを明記してください。</p>
+ <p/>
+ 
+
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#blueiris">
+          Blue Iris
+        </a>
+      </h4>
+    </div>
+    <div id="blueiris" class="panel-collapse collapse">
+      <div class="panel-body">
+
+        <p>&quot;Add camera&quot; をクリックしてダイアログを開きます。</p>
+ <p>IP Webcamを使用する際はリストから&quot;MJPEG Stream&quot;を選択して下さい。</p>
+ <p>
+  <b>ビデオパス：</b> /video <br/>
+  <b>音声パス：</b> /audio.wav <br/>
+  <b>ホスト名：</b> <b><span class="repl">$IP$</span></b> <br/>
+  <b>ポート：</b> <b><span class="repl">$PORT$</span></b> <br/>
+</p>
+<p>「RTSP/video port」欄に入力した内容は設定に特に影響はありません。</p>
+ <p/>
+ 
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#webcamxp">
+        	webcamXP
+        </a>
+      </h4>
+    </div>
+    <div id="webcamxp" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p>webcamXPのメイン画面にあるビデオソース上で右クリックし、<b>ネットワークカメラ ⇨ 接続</b>を選択します。</p>
+ <p><b>カメラ機種</b>を<b>Android</b>に設定し、<b>カメラモデル</b>を<b>IP Webcam</b>に設定します。プリセットから映像形式を選択します。(MJPEG推奨) <b>次</b>をクリックします。</p>
+ <p><b>ホスト名</b>に<b><span class="repl">$IP$</span></b>を、<b>ポート</b>に<b><span class="repl">$PORT$</span></b>を入力します。</p>
+ <p>OKをクリックすると設定が完了し、カメラを使用することができます。</p>
+ <p/>
+ 
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#advanced">
+          詳細
+        </a>
+      </h4>
+    </div>
+    <div id="advanced" class="panel-collapse collapse">
+      <div class="panel-body"><p>IP WebcamサービスURL一覧：</p>
+ <ul>
+  <li><b><span class="repl">$URL$</span>/video</b>はMJPEGのURLです。</li>
+  <li><b><span class="repl">$URL$</span>/shot.jpg</b>は最新フレームを取得します。</li>
+  <li><b><span class="repl">$URL$</span>/audio.wav</b>はWav形式で音声をストリーミングします。</li>
+  <li><b><span class="repl">$URL$</span>/audio.aac</b>はAAC形式で音声をストリーミングします。 (ハードウェアでサポートされている場合のみ)</li>
+  <li><b><span class="repl">$URL$</span>/audio.opus</b>はOpus形式で音声をストリーミングします。</li>
+  <li><b><span class="repl">$URL$</span>/focus</b>はカメラがフォーカスします。</li>
+  <li><b><span class="repl">$URL$</span>/nofocus</b>フォーカスを解除します。</li>
+</ul>
+<p/>
+ 
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#view_outside">
+          ローカルネットワーク外でのIP Webcamへのアクセス (インターネット経由など)
+        </a>
+      </h4>
+    </div>
+    <div id="view_outside" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p>お使いの端末がWiFiに接続していて、使用中のWiFiルーターがグローバルIPに対応している場合(ほとんどのルーターはグローバルIP機能を搭載しています)、インターネット経由でAndroid搭載端末にアクセスすることができます。この機能を利用する場合、簡単な設定変更を行う必要があります。</p>
+ <p/>
+ <p><b>重要：</b>ローカルIPアドレスの変更を防ぐため、<a class="hash-change" href="#mac_bind">MACアドレス固定ガイド</a>をお読み下さい。</p>
+ <p/>
+ <p>お使いのルーターのウェブ設定ページ上で、インターネットにサーバーポートを転送させルーターのグローバルIPを利用してカメラに接続します。この機能は「ポート転送」、「仮想サーバー」と呼ばれています。詳しい設定方法はルーターの説明書をご確認下さい。</p>
+ <p/>
+ <p>設定方法は以下のように行って下さい。</p>
+ <p/>
+ <pre>電話 (ローカルIP：192.168.3.198  ポート：8080) ---&gt; ルーター (ポート転送設定：192.168.3.198:8080　ルーターグローバルIP 66.77.88.99) &lt;--- ネット接続したクライアントで次のようにアドレスを入力します。(<u>http://66.77.88.99:8080</u>)</pre>
+<p/>
+ <p>グローバルIPの設定とインターネット上でのIP Webcamの視聴確認は簡単に行うことができます。グローバルIPがわからない場合は、<a href="http://whatismyip.org">http://whatismyip.org</a>にアクセスすることでグローバルIPを確認することができます。お使いのルーターが正しく設定されているかどうか確認するには、<a href="http://www.t1shopper.com/tools/port-scan/">こちら</a>からご確認ください。（英語のみ）IPアドレス入力欄にグローバルIPを入力してください。(たとえば、66.77.88.99など) ポート入力欄にはポート番号を入力します。(たとえば、8080など)</p>
+ <p/>
+ <p/>
+ <p>ルーターのグローバルIPを利用してアクセスしようとする場合に、同一ネットワーク内のルーターに接続しようとするとAndroid端末に接続できない場合がありますので<b>ご注意</b>ください。これはルーター側の設定で頻繁に起こるバグです。グローバルIPを利用してAndroid端末にアクセスする場合は、他のWiFiネットワークを利用するか3G回線を利用してください。</p>
+ <p/>
+ 
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#mac_bind">
+          なぜIPアドレスが変更してしまうのか。
+        </a>
+      </h4>
+    </div>
+    <div id="mac_bind" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p>IPアドレスは、WiFiルーターにより各端末に割り振られています。IPアドレスの割り振り は一定期間は同一のIPアドレスが使用されますが、一定期間を過ぎると自動的にIPアドレスは別のアドレスに変更されます。これによりセキュリティ性を確保しています。（同じIPアドレスでIP Webcamにアクセスすることができなくなります）</p>
+ <p/>
+ <p>IPアドレスが常に変更されることを防ぐためには、ルーターの設定画面で端末に固定IPを割り振る必要があります。「DHCPクライアント」、「固定開放」 または 「IPアドレス/MACアドレス固定」というような名称の設定項目をメニューから探し、MACアドレスと希望のIPアドレスか現在のIPアドレスに固定する設定をします。</p>
+ <p/>
+ <p/>
+ <p>Android端末のMACアドレスは<b>設定-&gt;端末情報-&gt;ステータス-&gt;WiFi MACアドレス</b>で確認することができます。</p>
+ <p/>
+ 
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+      <hr/>
+
+      <footer>
+        <p>&copy; Pavel Khlebovich 2013</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    
+
+
+    
+
+<script type="text/javascript">
+  //<!--
+  $(initVideoChat)
+  //-->
+</script>
+
+
+
+    
+  </body>
+</html>

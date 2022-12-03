@@ -1,0 +1,9 @@
+V3 5
+FL C:/Xilinx/ProyectosISE/contador_0_9999/contador.vhd 2017/10/25.09:57:12 K.39
+FL D:/Users/LTDI/Desktop/contador_0_9999/contador.vhd 2017/10/25.09:57:14 K.39
+FL F:/contador_0_9999/contador.vhd 2017/10/25.18:20:02 K.39
+EN work/contador 1508966454 FL F:/contador_0_9999/contador.vhd \
+      PB ieee/std_logic_1164 1200023565 PB ieee/std_logic_arith 1200023566 \
+      PB ieee/STD_LOGIC_UNSIGNED 1200023567
+AR work/contador/Behavioral 1508966455 \
+      FL F:/contador_0_9999/contador.vhd EN work/contador 1508966454

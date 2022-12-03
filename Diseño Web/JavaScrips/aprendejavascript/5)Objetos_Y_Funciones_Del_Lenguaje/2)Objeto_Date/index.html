@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>5)Objetos y Funciones del Lenguaje</title>
+    <link rel="stylesheet" href="normalize.css">
+  </head>
+  <body>
+      <h1>Objeto Date</h1>
+      <!-- Inicio de la programacion del Scrip de javascrips-->
+      <script>
+        console.log(Date);
+        console.log(Date());
+
+        let fecha=new Date();
+        console.log(fecha)
+        //--Nro del dia del Mes--
+        console.log(`Nro de Dia del mes: ${fecha.getDate()}`); 
+        //--Nro Dia de la semana(Domingo=0, Lunes=1,..., etc)--
+        console.log(`Nro de Dia de la semana contando desde cero creo: ${fecha.getDay()}`);
+        //--Nro Mes del año(Enero=0, Febrero=1,..., etc)--
+        console.log(`Nro de Mes del año: ${fecha.getMonth()}`);
+        //--Nro de Año(Enero=0, Febrero=1,..., etc)--
+        console.log(`Nro de años que pasaron desde 1900: ${fecha.getYear()}`); //Cuenta cantidad de años a patir de 1900
+        console.log(`Nro de años: ${fecha.getFullYear()}`);
+        //--Hora--
+        console.log(`Hora: ${fecha.getHours()}`);
+        //--Minutos--
+        console.log(`Minutos: ${fecha.getMinutes()}`);
+        //--Segundos--
+        console.log(`Segundos: ${fecha.getSeconds()}`);
+        //--Milisegundos--
+        console.log(`Segundos: ${fecha.getMilliseconds()}`);
+        //--Formato de hora presentable--
+        console.log(fecha.toDateString()); //Presento la hora en formato prolijo por asi decirlo
+        //--Formato de hora LOCAL presentable--
+        console.log(`Fecha y Hora Local: ${fecha.toLocaleString()}`); // Fecha y hora local
+        console.log(`Fecha Local: ${fecha.toLocaleDateString()}`); // Solo fecha local
+        console.log(`Hora Local: ${fecha.toLocaleTimeString()}`); // Solo hora local
+        //--Metodo de obtencion de hora segun lugar geografico--
+        console.log(`Estas a menos ${fecha.getTimezoneOffset()} minutos`);
+        //--En base al mediriano de grenguich creo
+        console.log(`${fecha.getUTCDate()}`); 
+        console.log(`${fecha.getUTCHours()}`);  
+        //--Similar al formato timestamp(sirve para base de datos mas que nada)
+        console.log(`Formato timestamp(segundos a patir de 1 enero de 1970 creo): ${Date.now()}`);  //Fomato que cuenta a paritr de 1 e enero de 1970 creo
+        //--Creo Fecha--
+        let miFecha=new Date(1900,4,22)
+        console.log(`Fecha creada: ${miFecha}`)
+      </script>
+  </body>
+</html>

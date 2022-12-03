@@ -1,0 +1,45 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+FDCPE_Estado_FFd1: FDCPE port map (Estado_FFd1,Estado_FFd1_D,clk,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Estado_FFd1_D <= ((en AND Estado_FFd3 AND Estado_FFd2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT en AND NOT Estado_FFd3 AND Estado_FFd2));
+</td></tr><tr><td>
+FDCPE_Estado_FFd2: FDCPE port map (Estado_FFd2,Estado_FFd2_D,clk,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Estado_FFd2_D <= ((Estado_FFd1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (en AND Estado_FFd3 AND NOT Estado_FFd2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT en AND NOT Estado_FFd3 AND NOT Estado_FFd2));
+</td></tr><tr><td>
+FDCPE_Estado_FFd3: FDCPE port map (Estado_FFd3,Estado_FFd3_D,clk,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Estado_FFd3_D <= ((NOT en AND Estado_FFd1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (en AND Estado_FFd3 AND NOT Estado_FFd2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (en AND NOT Estado_FFd2 AND NOT Estado_FFd1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT en AND Estado_FFd3 AND Estado_FFd2));
+</td></tr><tr><td>
+FDCPE_s0: FDCPE port map (s(0),s_D(0),clk,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s_D(0) <= ((Estado_FFd1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Estado_FFd3 AND NOT Estado_FFd2));
+</td></tr><tr><td>
+FDCPE_s1: FDCPE port map (s(1),s_D(1),clk,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s_D(1) <= ((Estado_FFd1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Estado_FFd3 AND Estado_FFd2));
+</td></tr><tr><td>
+FDCPE_s2: FDCPE port map (s(2),s_D(2),clk,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s_D(2) <= (NOT Estado_FFd3 AND Estado_FFd2);
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

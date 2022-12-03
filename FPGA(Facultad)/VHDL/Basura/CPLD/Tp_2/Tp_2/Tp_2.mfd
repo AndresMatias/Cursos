@@ -1,0 +1,82 @@
+MDF Database:  version 1.0
+MDF_INFO | Tp_2 | XC9572XL-5-PC44
+MACROCELL | 3 | 4 | Display_7_0_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 4 | Vec_E<2>  | Vec_E<3>  | Vec_E<1>  | Vec_E<0>
+INPUTP | 4 | 87 | 83 | 88 | 89
+EQ | 2 | 
+   !Display_7<0> = !Vec_E<2> & !Vec_E<3> & !Vec_E<1>
+	# Vec_E<2> & !Vec_E<3> & Vec_E<1> & Vec_E<0>;
+
+MACROCELL | 2 | 16 | Display_7_3_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 4 | Vec_E<2>  | Vec_E<1>  | Vec_E<0>  | Vec_E<3>
+INPUTP | 4 | 87 | 88 | 89 | 83
+EQ | 3 | 
+   !Display_7<3> = !Vec_E<2> & !Vec_E<1> & Vec_E<0>
+	# Vec_E<2> & !Vec_E<3> & Vec_E<1> & Vec_E<0>
+	# Vec_E<2> & !Vec_E<3> & !Vec_E<1> & !Vec_E<0>;
+
+MACROCELL | 3 | 1 | Display_7_1_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 4 | Vec_E<2>  | Vec_E<3>  | Vec_E<1>  | Vec_E<0>
+INPUTP | 4 | 87 | 83 | 88 | 89
+EQ | 3 | 
+   !Display_7<1> = !Vec_E<2> & !Vec_E<3> & Vec_E<1>
+	# !Vec_E<2> & !Vec_E<3> & Vec_E<0>
+	# !Vec_E<3> & Vec_E<1> & Vec_E<0>;
+
+MACROCELL | 2 | 15 | Display_7_2_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 4 | Vec_E<3>  | Vec_E<0>  | Vec_E<2>  | Vec_E<1>
+INPUTP | 4 | 83 | 89 | 87 | 88
+EQ | 3 | 
+   !Display_7<2> = !Vec_E<3> & Vec_E<0>
+	# Vec_E<2> & !Vec_E<3> & !Vec_E<1>
+	# !Vec_E<2> & !Vec_E<1> & Vec_E<0>;
+
+MACROCELL | 2 | 14 | Display_7_4_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 4 | Vec_E<2>  | Vec_E<3>  | Vec_E<0>  | Vec_E<1>
+INPUTP | 4 | 87 | 83 | 89 | 88
+EQ | 3 | 
+   Display_7<4> = Vec_E<2> & !Vec_E<3>
+	# !Vec_E<2> & !Vec_E<1>
+	# !Vec_E<3> & Vec_E<0>;
+
+MACROCELL | 2 | 13 | Display_7_5_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 4 | Vec_E<2>  | Vec_E<1>  | Vec_E<3>  | Vec_E<0>
+INPUTP | 4 | 87 | 88 | 83 | 89
+EQ | 4 | 
+   Display_7<5> = !Vec_E<2> & !Vec_E<3>
+	# !Vec_E<2> & !Vec_E<1>
+	# !Vec_E<3> & Vec_E<1> & Vec_E<0>
+	# !Vec_E<3> & !Vec_E<1> & !Vec_E<0>;
+
+MACROCELL | 2 | 10 | Display_7_6_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 4 | Vec_E<2>  | Vec_E<3>  | Vec_E<1>  | Vec_E<0>
+INPUTP | 4 | 87 | 83 | 88 | 89
+EQ | 2 | 
+   !Display_7<6> = Vec_E<2> & !Vec_E<3> & !Vec_E<1> & !Vec_E<0>
+	# !Vec_E<2> & !Vec_E<3> & !Vec_E<1> & Vec_E<0>;
+
+MACROCELL | 3 | 10 | Transistor_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 0
+EQ | 1 | 
+   Transistor = Gnd;
+
+PIN | Vec_E<2> | 64 | 0 | N/A | 87 | 7 | 3 | 4 | 2 | 16 | 3 | 1 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 10
+PIN | Vec_E<3> | 64 | 0 | N/A | 83 | 7 | 3 | 4 | 2 | 16 | 3 | 1 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 10
+PIN | Vec_E<1> | 64 | 0 | N/A | 88 | 7 | 3 | 4 | 2 | 16 | 3 | 1 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 10
+PIN | Vec_E<0> | 64 | 0 | N/A | 89 | 7 | 3 | 4 | 2 | 16 | 3 | 1 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 10
+PIN | Display_7<0> | 536871040 | 0 | N/A | 63
+PIN | Display_7<3> | 536871040 | 0 | N/A | 52
+PIN | Display_7<1> | 536871040 | 0 | N/A | 62
+PIN | Display_7<2> | 536871040 | 0 | N/A | 59
+PIN | Display_7<4> | 536871040 | 0 | N/A | 50
+PIN | Display_7<5> | 536871040 | 0 | N/A | 49
+PIN | Display_7<6> | 536871040 | 0 | N/A | 46
+PIN | Transistor | 536871040 | 0 | N/A | 68

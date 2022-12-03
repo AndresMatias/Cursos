@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>4)Programacion Orientada a Objetos</title>
+    <link rel="stylesheet" href="normalize.css">
+  </head>
+  <body>
+      <h1>Prototipos</h1>
+      <!-- Inicio de la programacion del Scrip de javascrips-->
+      <script>
+        const animal={
+          nombre:'firulais',
+          sonar(){
+            console.log('Hago sonidos');
+          }
+        }
+
+        //Funcion Constructora
+        function Animal(nombre,genero){
+          this.nombre=nombre;
+          this.genero=genero;
+          
+        }
+        Animal.prototype.sonar=function(){ //saco la funcion fuera de Animal y la pongo en el PROTOTIPO, esto me ahorra saludos evitando que se duplique en cada declaracion de animal
+            console.log('Hago sonidos');
+        }
+        
+        const snopy=new Animal('snopy','macho') //Utilizo funcion constructora
+        console.log(snopy)
+      </script>
+  </body>
+</html>

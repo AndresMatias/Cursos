@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+  
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="IP Webcam"/>
+    <link rel="shortcut icon" href="ico/favicon.png"/>
+
+    <title>IP Webcam</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+
+    <link href="ipwebcam.css" rel="stylesheet"/>
+
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="lang.js"></script>
+    <script src="swfobject.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/ipwebcam.js"></script>
+    <script src="js/ipwebcam_override.js"></script>
+    <script src="js/ipwebcam_plugins.js"></script>
+
+
+  
+    
+  </head><body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="greet.html">IP Webcam</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav"> 
+            <li ><a href="greet.html">ホーム</a></li>
+            <li ><a href="videomgr.html">ビデオアーカイブ</a></li>
+            <li class="active" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">ビデオチャットドライバー <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">Windows ドライバー (ビデオのみ対応)</li>
+                <li><a class="hash-change" href="videochat.html#ipca">IP カメラ アダプター</a></li>
+                
+                
+                <li class="divider"></li>
+                <li class="dropdown-header">Linux ドライバー</li>
+                <li><a class="hash-change" href="videochat.html#linux">Ubuntu GNU/Linux版ドライバー (外部リンク)</a></li>
+              </ul>
+            </li>
+
+            <li  class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">その他視聴方法 <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">Android ビューワー</li>
+                <li><a class="hash-change" href="viewers.html#tinycam">tinyCam モニター</a></li>
+                <li><a href="http://hit-mob.com/ipwebcam/ipwebcam_howto.html">Android、iOS版IP Cam ビューワー(外部リンク)</a></li>
+                <li class="dropdown-header">クロスプラットフォームビューワー</li>
+                <li><a class="hash-change" href="viewers.html#vlc">VLC メディアプレーヤー</a></li>
+                <li><a class="hash-change" href="viewers.html#zoneminder">ZoneMinder</a></li>
+                <li class="dropdown-header">Windows ビューワー</li>
+                <li><a class="hash-change" href="viewers.html#blueiris">Blue Iris</a></li>
+                <li><a class="hash-change" href="viewers.html#webcamxp">webcamXP</a></li>
+                <li class="dropdown-header">その他</li>
+                <li><a class="hash-change" href="viewers.html#view_outside">ローカルネットワーク外でのIP Webcamへのアクセス (インターネット経由など)</a></li>
+                <li><a class="hash-change" href="viewers.html#mac_bind">なぜIPアドレスが変更してしまうのか。</a></li>
+                <li><a class="hash-change" href="viewers.html#advanced">詳細</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+    
+    
+
+
+
+    <div class="container" id="main_container">
+      <div id="init_alert" class="alert alert-danger" style="display: none;">
+        <strong>カメラの状態が取得できません</strong> 以下の理由でいくつかの機能が使用できません。 <span id="init_error"></span>.
+      </div>
+    <p></p>
+<p><b>注意:</b> 指定したドライバーはビデオのみ実行することができます。音声には対応してません。</p>
+<p><b>注意:</b> カメラ解像度の最大値は320×240です。</p>
+
+
+<div class="panel-group" id="accordion">
+
+  
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#ipca">
+          IP カメラ アダプター
+        </a>
+      </h4>
+    </div>
+    <div id="ipca" class="panel-collapse collapse">
+      <div class="panel-body">
+
+        <p>バナー広告は表示されません。無料で様々な用途に利用できます。</p>
+ <a href="http://ip-webcam.appspot.com">ダウンロードはこちらから</a>
+<p/>
+ <p>ドライバーをインストールした後、環境設定ユーティリティを起動します。<b><span class="repl">$URL$</span><span style="color: red;">/video</span></b>URL欄に情報を入力し、 アプリ内で設定したユーザー名とパスワードを入力します。 <b>Autodetect</b>をクリックし、成城に動作するかの確認と解像度が自動的に設定されます。</p>
+ <p><b>Autodetect</b>をクリックし動作確認と自動的に解決方法を発見できるかどうかをチェックします。</p>
+ <p>動作確認後、あなたのお気に入りのビデオチャットでウェブカメラを始めましょう。</p>
+ <img src="collage.png"/>
+<p/>
+ 
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#linux">
+          Linux ドライバー
+        </a>
+      </h4>
+    </div>
+    <div id="linux" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p>Linuxドライバーを使うことによってUbuntu Linuxや互換性のあるOS上で音声とビデオが使用できます。これらは無料のオープンソースです。</p>
+ <a href="https://github.com/bluezio/ipwebcam-gst/">ダウンロードはここから</a>
+<p/>
+ 
+      </div>
+    </div>
+  </div>
+</div>
+
+      <hr/>
+
+      <footer>
+        <p>&copy; Pavel Khlebovich 2013</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    
+
+
+    
+
+<script type="text/javascript">
+  //<!--
+  $(initVideoChat)
+  //-->
+</script>
+
+
+
+    
+  </body>
+</html>

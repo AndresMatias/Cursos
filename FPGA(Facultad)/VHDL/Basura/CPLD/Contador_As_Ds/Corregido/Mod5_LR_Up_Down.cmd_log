@@ -1,0 +1,3 @@
+xst -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" -intstyle ise -ifn "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Mod5_LR_Up_Down.xst" -ofn "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Mod5_LR_Up_Down.syr"
+xst -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" -intstyle ise -ifn "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Mod5_LR_Up_Down.xst" -ofn "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Mod5_LR_Up_Down.syr"
+xst -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" -intstyle ise -ifn "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Mod5_LR_Up_Down.xst" -ofn "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Mod5_LR_Up_Down.syr"

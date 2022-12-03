@@ -1,0 +1,2 @@
+Leer dos números desde el teclado, calcule  y muestre 
+por pantalla el cociente entre el mayor y el menor

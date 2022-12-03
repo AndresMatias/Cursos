@@ -1,0 +1,12 @@
+xst -intstyle ise -ifn "C:/Users/facun/Desktop/Lab 5/Counter_mod5_Sec/mod5_Up_Down_Sec.xst" -ofn "C:/Users/facun/Desktop/Lab 5/Counter_mod5_Sec/mod5_Up_Down_Sec.syr" 
+xst -intstyle ise -ifn "C:/Users/facun/Desktop/Lab 5/Counter_mod5_Sec/mod5_Up_Down_Sec.xst" -ofn "C:/Users/facun/Desktop/Lab 5/Counter_mod5_Sec/mod5_Up_Down_Sec.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-tq144-4 "mod5_Up_Down_Sec.ngc" mod5_Up_Down_Sec.ngd  
+map -intstyle ise -p xc3s100e-tq144-4 -cm area -ir off -pr off -c 100 -o mod5_Up_Down_Sec_map.ncd mod5_Up_Down_Sec.ngd mod5_Up_Down_Sec.pcf 
+par -w -intstyle ise -ol high -t 1 mod5_Up_Down_Sec_map.ncd mod5_Up_Down_Sec.ncd mod5_Up_Down_Sec.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mod5_Up_Down_Sec.twx mod5_Up_Down_Sec.ncd -o mod5_Up_Down_Sec.twr mod5_Up_Down_Sec.pcf 
+bitgen -intstyle ise -f mod5_Up_Down_Sec.ut mod5_Up_Down_Sec.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mod5_Up_Down_Sec.ucf -p xc3s100e-tq144-4 "mod5_Up_Down_Sec.ngc" mod5_Up_Down_Sec.ngd  
+map -intstyle ise -p xc3s100e-tq144-4 -cm area -ir off -pr off -c 100 -o mod5_Up_Down_Sec_map.ncd mod5_Up_Down_Sec.ngd mod5_Up_Down_Sec.pcf 
+par -w -intstyle ise -ol high -t 1 mod5_Up_Down_Sec_map.ncd mod5_Up_Down_Sec.ncd mod5_Up_Down_Sec.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mod5_Up_Down_Sec.twx mod5_Up_Down_Sec.ncd -o mod5_Up_Down_Sec.twr mod5_Up_Down_Sec.pcf -ucf mod5_Up_Down_Sec.ucf 
+bitgen -intstyle ise -f mod5_Up_Down_Sec.ut mod5_Up_Down_Sec.ncd 

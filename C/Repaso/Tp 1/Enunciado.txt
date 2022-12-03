@@ -1,0 +1,6 @@
+1) Diseñar un programa que incluya funciones punteros archivos, etc integrativa de todos los temas
+Diseñar un programa que guarde los datos de los alumnos (legajo,nota,materias cursadas,recurciones)
+Usar metodo burbuja mejorado para ordenar las notas del alumno
+Diseñar un metodo de impresion en el que se muestre del mejor al peor alumno segun cada materia
+El programa debera estar divididos segundo los ingresates de cada año
+Usar el metodo archivo para guardar todos los datos

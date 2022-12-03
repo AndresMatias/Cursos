@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+  
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="IP摄像头"/>
+    <link rel="shortcut icon" href="ico/favicon.png"/>
+
+    <title>IP摄像头</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+
+    <link href="ipwebcam.css" rel="stylesheet"/>
+
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="lang.js"></script>
+    <script src="swfobject.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/ipwebcam.js"></script>
+    <script src="js/ipwebcam_override.js"></script>
+    <script src="js/ipwebcam_plugins.js"></script>
+
+
+  
+    
+  </head><body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="greet.html">IP摄像头</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav"> 
+            <li ><a href="greet.html">主页</a></li>
+            <li ><a href="videomgr.html">视频存档</a></li>
+            <li  class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">视频聊天驱动 <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">Windows 驱动(仅支持视频)</li>
+                <li><a class="hash-change" href="videochat.html#ipca">IP摄像头适配器</a></li>
+                
+                
+                <li class="divider"></li>
+                <li class="dropdown-header">Linux 驱动</li>
+                <li><a class="hash-change" href="videochat.html#linux">Ubuntu GNU/Linux 驱动 (外部链接)</a></li>
+              </ul>
+            </li>
+
+            <li class="active" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">其他查看方法 <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">安卓查看器</li>
+                <li><a class="hash-change" href="viewers.html#tinycam">tinyCam Monitor</a></li>
+                <li><a href="http://hit-mob.com/ipwebcam/ipwebcam_howto.html">iOS版IP Cam Viewer (外部链接)</a></li>
+                <li class="dropdown-header">跨平台查看器</li>
+                <li><a class="hash-change" href="viewers.html#vlc">VLC媒体播放器</a></li>
+                <li><a class="hash-change" href="viewers.html#zoneminder">ZoneMinder</a></li>
+                <li class="dropdown-header">Windows 查看器</li>
+                <li><a class="hash-change" href="viewers.html#blueiris">Blue Iris</a></li>
+                <li><a class="hash-change" href="viewers.html#webcamxp">webcamXP</a></li>
+                <li class="dropdown-header">其他</li>
+                <li><a class="hash-change" href="viewers.html#view_outside">通过本地WiFi之外访问IP摄像头（例如通过互联网）</a></li>
+                <li><a class="hash-change" href="viewers.html#mac_bind">为什么IP地址总是在变化？</a></li>
+                <li><a class="hash-change" href="viewers.html#advanced">高级</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+    
+    
+
+
+
+    <div class="container" id="main_container">
+      <div id="init_alert" class="alert alert-danger" style="display: none;">
+        <strong>无法获取相机状态！</strong> 由于以下原因，一些功能可能不会正常工作： <span id="init_error"></span>.
+      </div>
+    <div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#tinycam">
+          Android版tinyCam Monitor
+        </a>
+      </h4>
+    </div>
+    <div id="tinycam" class="panel-collapse collapse">
+      <div class="panel-body">
+        <h2>设置tinyCam Monitor</h2>
+<p><a href="mailto:alexey.vasilyev@gmail.com">Alexey Vasilyev</a>的<a href="http://www.tinycammonitor.com/">tinyCam Monitor</a>是一款Android远程监控软件，支持所有主流摄像头厂家，包括IP摄像头。</p>
+ <p>专业版支持IP摄像头的音频和扩展功能，例如控制闪光灯和自动对焦。</p>
+ <p><a href="http://www.youtube.com/watch?v=fhUoKjRPV1w">tinyCam查看器和IP摄像头协同工作的视频</a> (需要互联网连接).</p>
+ <a href="https://market.android.com/details?id=com.alexvas.dvr">在此获取</a> 或者使用扫码软件<a href="https://market.android.com/details?id=com.alexvas.dvr">扫描该二维码</a>
+<center><img src="tinycamqr.png"/></center>
+<p>在软件中，选择“管理摄像头”，添加一个新的摄像头，在厂家列表中选择 Android IP网络摄像头（IP Webcam for Android）。</p>
+ <p>输入主机名 <b><span class="repl">$IP$</span></b>, 选择你已经配置的端口号 <b><span class="repl">$PORT$</span></b>， 然后就大功告成了。</p>
+ <img src="tinycam1.png"/> <img src="tinycam2.png"/>
+<p/>
+ 
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#vlc">
+          VLC媒体播放器
+        </a>
+      </h4>
+    </div>
+    <div id="vlc" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p>VLC媒体播放器是一个具有跨平台的视频播放器、流式媒体服务器和转换器的集成解决方案。<a href="http://www.videolan.org/">在此获取</a>.</p>
+ <p>如果想要使用VLC媒体播放器和IP摄像头协同工作，在一VLC播放器的菜单中选择<b>媒体⇨打开网络流媒体</b>。输入<b><span class="repl">$URL$</span><span style="color: red;">/video</span></b>来流式传输视频或<b><span class="repl">$URL$</span><span style="color: red;">/audio.wav</span></b>流式传输音频。</p>
+ <p>你也可以使用VLC进行视频录制：</p>
+ <nl>
+  <li>选择 <b>媒体 -&gt; 转换/保存</b>.</li>
+  <li>选择 网络 选项卡</li>
+  <li>在URL栏输入 <b><span class="repl">$URL$</span><span style="color: red;">/video</span></b> </li>
+  <li>点击 转换/保存</li>
+  <li>选择文件保存路径和格式即可</li>
+</nl>
+<p/>
+ 
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#zoneminder">
+          ZoneMinder
+        </a>
+      </h4>
+    </div>
+    <div id="zoneminder" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p>使用这个配置。</p>
+ <p>常规：<br/>源类型：远程<br/>功能：监控</p>
+ <p>来源：<br/>协议：HTTP<br/>方法：简单<br/>主机名：<b><span class="repl">$IP$</span></b> <br/> 端口：<b><span class="repl">$PORT$</span></b> <br/> 远程主机路径：/video （只输入video是不能工作的）<br/></p>
+ <b>提醒：</b>如果必要，在你的地址栏中，指定用户名和密码，就像这样：username:password@<b><span class="repl">$IP$</span></b>
+<p/>
+ 
+
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#blueiris">
+          Blue Iris
+        </a>
+      </h4>
+    </div>
+    <div id="blueiris" class="panel-collapse collapse">
+      <div class="panel-body">
+
+        <p>正常打开添加摄像头对话框。</p>
+ <p>当使用IP摄像头时，你必须选择“MJPEG流”选项，而不是选择一个具体的摄像头。</p>
+ <p>
+  <b>视频路径:</b> /video <br/>
+  <b>音频路径:</b> /audio.wav <br/>
+  <b>主机名称:</b> <b><span class="repl">$IP$</span></b> <br/>
+  <b>端口:</b> <b><span class="repl">$PORT$</span></b> <br/>
+</p>
+<p>你在“RTSP/video port”框中输入什么是无所谓的。</p>
+ <p/>
+ 
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#webcamxp">
+        	webcamXP
+        </a>
+      </h4>
+    </div>
+    <div id="webcamxp" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p>在webcamXP主页面，右键单击视频源，选择<b>网络摄像头 ⇨ 连接...</b>设置<b>摄像头品牌</b>，为<b>Android</b>。<b>摄像头型号</b>为<b>IP摄像头</b>。选择自己偏好的设定（推荐使用MJPEG），单击<b>下一步</b></p>
+ <p>将<b>主机名</b> 设为 <b><span class="repl">$IP$</span></b> ， <b>端口</b> 设为 <b><span class="repl">$PORT$</span></b>.</p>
+ <p>单击确定，就可以使用你的新摄像头了！</p>
+ <p/>
+ 
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#advanced">
+          高级
+        </a>
+      </h4>
+    </div>
+    <div id="advanced" class="panel-collapse collapse">
+      <div class="panel-body"><p>这里是IP摄像头的服务地址列表：</p>
+ <ul>
+  <li><b><span class="repl">$URL$</span>/video</b> 是 MJPEG URL.</li>
+  <li><b><span class="repl">$URL$</span>/shot.jpg</b> 获取最新一帧</li>
+  <li><b><span class="repl">$URL$</span>/audio.wav</b> 是WAV格式的音频流</li>
+  <li><b><span class="repl">$URL$</span>/audio.aac</b> 是AAC格式的音频流（如果硬件支持的话）</li>
+  <li><b><span class="repl">$URL$</span>/audio.opus</b> 是Opus格式的音频流</li>
+  <li><b><span class="repl">$URL$</span>/focus</b> 对焦摄像头</li>
+  <li><b><span class="repl">$URL$</span>/nofocus</b> 释放对焦</li>
+</ul>
+<p/>
+ 
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#view_outside">
+          通过本地WiFi之外访问IP摄像头（例如通过互联网）
+        </a>
+      </h4>
+    </div>
+    <div id="view_outside" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p>你可以在手机连接到WiFi，并且路由器拥有外网IP时（大多数情况都会有的），通过互联网访问你的手机。配置需要一些工夫，不过大多数人都能应付。</p>
+ <p> </p>
+ <p><b>重要：</b>请一并阅读 <a class="hash-change" href="#mac_bind">MAC 绑定指引</a> 以防止内网IP变化。</p>
+ <p/>
+ <p>在你的路由器的网页管理界面，你应该可以将服务器端口转发到互联网上，并通过路由器的外网IP来访问摄像头。这个功能通常叫做“端口转发”，“虚拟服务器”。你可以参考路由器的说明书来学习如何配置。这里提供给你一个免费的端口转发指南<a href="http://portforward.com">http://portforward.com/</a>。<strong>可以无视付费内容</strong>，你只需要指南。</p>
+ <p/>
+ <p>设置看起来像这样：</p>
+ <p/>
+ <pre>Phone (192.168.3.198, server at 8080) ---&gt; Router (Forwarding 192.168.3.198:8080, external IP is 66.77.88.99) &lt;--- Any client with internet access (by opening <u>http://66.77.88.99:8080</u>).</pre>
+<p/>
+ <p>这里提供一个通过互联网确定你的外网IP，检查IP摄像头可见性的快捷方法。如果你在路由器设置中找不到外部IP，你可以访问<a href="http://whatismyip.org">http://whatismyip.org</a>。如需检查你是否正确配置了你的路由器，使用任意在线端口扫描器，例如<a href="http://www.t1shopper.com/tools/port-scan/">这个</a>。将你的外网IP输入到IP栏中（例子里是66.77.88.99），并把外部转发端口填到“端口列表”框中（例子里是8080）。</p>
+ <p/>
+ <p/>
+ <p><b>提醒</b> 你可能不能通过路由器的外部界面访问你的手机，即使你和该手机处于同一网络中。这是一个常见的路由器固件错误。你可能需要进入其他WiFi网络或通过3G完成这个操作。</p>
+ <p/>
+ 
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#mac_bind">
+          为什么IP地址总是在变化？
+        </a>
+      </h4>
+    </div>
+    <div id="mac_bind" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p>你的路由器负责为你分配IP。分配的IP有一定时限，超时后就会更换。如果是这样，可能导致无法从上一个地址访问IP摄像头。</p>
+ <p/>
+ <p>要防止这个问题发生，你需要进入路由器的网页管理界面，为你的设备分配一个静态IP。寻找菜单项中类似于“DHCP服务器”，“静态路由表”或“IP/MAC绑定”，然后在那里为MAC绑定你想要的、或者当前的IP。</p>
+ <p/>
+ <p>你的MAC地址可以在这里找到：<b>设置-&gt;关于手机-&gt;状态信息-&gt;WLAN MAC 地址</b>.</p>
+ <p/>
+ 
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+      <hr/>
+
+      <footer>
+        <p>&copy; Pavel Khlebovich 2013</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    
+
+
+    
+
+<script type="text/javascript">
+  //<!--
+  $(initVideoChat)
+  //-->
+</script>
+
+
+
+    
+  </body>
+</html>

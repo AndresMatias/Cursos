@@ -1,0 +1,36 @@
+Running : C:\Xilinx\10.1\ISE\bin\nt\unwrapped\fuse.exe -ise
+D:/andres/Tp_1/Tp_1/Tp_1.ise -intstyle ise -incremental -o Test_1_isim_beh.exe
+-prj Test_1_beh.prj -top Test_1
+Determining compilation order of HDL files
+Analyzing VHDL file Tp_1.vhd
+Restoring VHDL parse-tree ieee.std_logic_1164 from
+c:/xilinx/10.1/ise/vhdl/hdp/nt/ieee/std_logic_1164.vdb
+Restoring VHDL parse-tree std.standard from
+c:/xilinx/10.1/ise/vhdl/hdp/nt/std/standard.vdb
+Restoring VHDL parse-tree ieee.std_logic_arith from
+c:/xilinx/10.1/ise/vhdl/hdp/nt/ieee/std_logic_arith.vdb
+Restoring VHDL parse-tree ieee.std_logic_unsigned from
+c:/xilinx/10.1/ise/vhdl/hdp/nt/ieee/std_logic_unsigned.vdb
+Analyzing VHDL file Test_1.vhw
+Restoring VHDL parse-tree ieee.std_logic_textio from
+c:/xilinx/10.1/ise/vhdl/hdp/nt/ieee/std_logic_textio.vdb
+Restoring VHDL parse-tree std.textio from
+c:/xilinx/10.1/ise/vhdl/hdp/nt/std/textio.vdb
+Saving VHDL parse-tree work.tp_1 into d:/andres/tp_1/tp_1/isim/work/tp_1.vdb
+Saving VHDL parse-tree work.test_1 into d:/andres/tp_1/tp_1/isim/work/test_1.vdb
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 55304 Kb
+Fuse CPU Usage: 234 ms
+Using precompiled package standard from library std
+Using precompiled package std_logic_1164 from library ieee
+Using precompiled package std_logic_arith from library ieee
+Using precompiled package std_logic_unsigned from library ieee
+Using precompiled package textio from library std
+Using precompiled package std_logic_textio from library ieee
+Compiling architecture behavioral of entity tp_1 [tp_1_default]
+Compiling architecture testbench_arch of entity test_1
+Compiled 9 VHDL Units
+Built simulation executable Test_1_isim_beh.exe
+Fuse Memory Usage: 56588 Kb
+Fuse CPU Usage: 296 ms

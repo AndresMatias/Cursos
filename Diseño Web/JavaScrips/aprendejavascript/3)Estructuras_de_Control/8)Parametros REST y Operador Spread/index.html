@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>3)Estructuras de Control</title>
+    <link rel="stylesheet" href="normalize.css">
+  </head>
+  <body>
+      <h1>Parámetros REST & Operador Spread</h1>
+      <!-- Inicio de la programacion del Scrip de javascrips-->
+      <script>
+        //Parametros rest: permite agregar valores virtualmente indefinidamente, generalmente cuando nose cuantos parametros voy a recibir
+        function sumar(a,b,...c){
+          let rta= a+b;
+          c.forEach(function(n){
+            rta+=n;
+          });
+          return rta
+        }
+        console.log(sumar(1,2));
+        console.log(sumar(1,2,3,4)); //Parametros rest en accion
+        console.log(sumar(1,2,3,4,5)); //Parametros rest en accion
+
+        //---Operador Spread: Para guardar multiples elementos en vez de hacer push a mi la lita de datos, la diferencia con el rest es
+        //                que el rest se ejecuta en parametros de funciones mientras que este en cualquier sentencia del programa
+        //---Sin Spread---
+        const arr1=[1,2,3,4,5],arr2=[3,3,3,3,3];
+        console.log('--------Sin Spread--------');
+        console.log(arr1,arr2);
+        //---Con Spread---
+        const arr3=[...arr1, ...arr2]; //Aplico spread
+        console.log('--------Con Spread--------');
+        console.log(arr3);
+      </script>
+  </body>
+</html>

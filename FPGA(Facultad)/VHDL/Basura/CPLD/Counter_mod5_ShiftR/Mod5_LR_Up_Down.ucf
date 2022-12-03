@@ -1,0 +1,22 @@
+
+
+NET "bcd[2]" LOC = P8;
+NET "bcd[1]" LOC = P14;
+NET "bcd[0]" LOC = P15;
+NET "sseg[6]" LOC = P25;
+NET "sseg[5]" LOC = P16;
+NET "sseg[4]" LOC = P23;
+NET "sseg[3]" LOC = P21;
+NET "sseg[2]" LOC = P20;
+NET "sseg[1]" LOC = P17;
+NET "sseg[0]" LOC = P83;
+
+# PlanAhead Generated physical constraints 
+
+NET "an[3]" LOC = P34;
+NET "an[2]" LOC = P26;
+NET "an[1]" LOC = P32;
+NET "an[0]" LOC = P33;
+NET "clk50Mhz" LOC = P54;
+NET "clk_enable" LOC = P6;
+NET "x" LOC = P38;

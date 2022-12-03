@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>2)Tipos de datos</title>
+    <link rel="stylesheet" href="normalize.css">
+  </head>
+  <body>
+      <h1>Variables</h1>
+      <!-- Inicio de la programacion del Scrip de javascrips-->
+      <script>
+        var hola="hola mundo"; /*Declaro variable de ambito GLOBAL(var)*/
+        let hello="hello world" /*Declaro varaible de ambito de BLOQUE(let)*/
+        /*IMPORTANTE: Evitar usar var porque es global y eso es mala ida pq puede salir por fuera del scrip creo*/
+        /*----Imprimo variables----*/
+        console.log(hola); 
+        console.log(hello);
+        //Ejemplo de como usar let
+        console.log("\n*********************************************************") //Separador
+        let musica="pop"
+        console.log("\n"+musica);
+        //BLoque
+        {
+          let musica="rock"
+          console.log(musica);
+          /*musica dentro de este bloque es igual a rock y cuando se termina el bloque musica afuera vuelve a valor pop porque let es
+          ambito de bloque lo que quiere decir que nace y muere dentro del bloque creado, es como si fueran dos variables distintas,
+          o mas bien es el mismo concepto que variables locales y globales en los demas lenguajes de programacion*/
+        }
+        console.log(musica);
+      </script>
+  </body>
+</html>

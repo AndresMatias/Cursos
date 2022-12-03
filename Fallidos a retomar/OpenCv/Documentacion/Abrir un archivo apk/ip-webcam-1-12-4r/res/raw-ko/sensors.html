@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="IP Webcam"/>
+    <link rel="shortcut icon" href="ico/favicon.png"/>
+
+    <title>IP Webcam</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+
+    <!-- Custom styles for this template -->
+    <link href="ipwebcam.css" rel="stylesheet"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="js/jquery.js"></script>
+    <script src="jquery_flot.js"></script>
+    <script src="lang.js"></script>
+    <script src="js/ipwebcam.js"></script>
+    <script src="js/ipwebcam_override.js"></script>
+    <script src="js/ipwebcam_plugins.js"></script>
+    
+    <script type="text/javascript">
+      //<!--
+      $(sensorsMain);
+      
+      //-->
+    </script>
+
+
+  </head>
+
+  <body>
+
+
+    <div class="container" id="placeholder" style="height: 600px; background-color: #eef;">
+
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5" id="checkboxes">
+          
+        </div>
+
+        <div class="col-lg-5" style="padding: 1em;">
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+              <label for="motion_limit" class="col-xs-5 control-label">움직임 감지 횟수</label>
+              <div class="col-xs-3">
+                <input id="motion_limit" class="col-xs-12" type="number" min="0" step="10"/>
+              </div>
+              <label id="motion_apply" class="col-xs-2 btn btn-sm btn-default">
+                적용
+              </label>
+              <img src="loader.gif" id="photo_spinner" style="display: none;" />
+              <img src="ok.png" id="photo_ok" style="display: none;" />
+            </div>
+            <div class="form-group">
+              <label for="adet_limit" class="col-xs-5 control-label">오디오 감지 레벨</label>
+              <div class="col-xs-3">
+                <input id="adet_limit" class="col-xs-12" type="number" min="0" step="10"/>
+              </div>
+              <label id="adet_apply" class="col-xs-2 btn btn-sm btn-default">
+                적용
+              </label>
+              <img src="loader.gif" id="photo_spinner" style="display: none;" />
+              <img src="ok.png" id="photo_ok" style="display: none;" />
+            </div>
+            <div class="form-group">
+              <div class="col-xs-5" style="text-align: right;"><input id="gpscb" type="checkbox"/> </div>
+              <label for="gpscb">위치 취득</label>
+            </div>
+            <div class="form-group loc-opt" style="display: none;">
+              <div class="col-xs-5" style="text-align: right;">폭</div>
+              <span id="lat">로딩 중...</span>
+            </div>
+            <div class="form-group loc-opt" style="display: none;">
+              <div class="col-xs-5" style="text-align: right;">길이</div>
+              <span id="long">로딩 중...</span>
+            </div>
+            <div class="form-group loc-opt" style="display: none;">
+              <div class="col-xs-5"></div>
+              <a target="_blank" id="gmaps_link" href="#" class="btn btn-sm btn-default" id="show_on_gmaps">구글맵에서 보여주기</a>
+            </div>
+          </form>
+
+          
+
+          
+        </div>
+      </div>
+
+      <div id="init_alert" class="alert alert-danger" style="display: none;"><strong>센서의 리스트를 가져올 수 없습니다!</strong> 센서의 기능을 사용할 수 없습니다 <span id="init_error"></span>.</div>
+      <div id="init_warning" class="alert alert-warning" style="display: none;"><strong>사용할 수 있는 센서가 없습니다.</strong> 이 기능을 사용하기 위해 IP Webcam 설정에서 센서를 사용가능하게 세팅하세요. <strong>움직임감지센서</strong>를 동작하시려면 움직임감지를 가능하게 해주세요.</div>
+      <hr/>
+      <footer>
+        <p>&copy; Pavel Khlebovich 2013</p>
+      </footer>
+    </div> <!-- /container -->
+
+    
+    
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7)Nuevos Tipos de Datos</title>
+</head>
+
+<body>
+  <h1>51)Maps</h1>
+  <script>
+    //maps: parecido a diccionario de python, coleccion de datos de objetos primitivos
+    const mapa = new Map(); //Inicializo
+    //--Agrego Valores--
+    mapa.set("nombre", "Jon"); //nombre => Jon
+    mapa.set("apellido", "MirCha");
+    mapa.set("edad", 35);
+    console.log(mapa);
+    console.log(mapa.size); //tamaño
+    console.log(mapa.has("correo")); //compruebo que maps tiene un objeto llamado correo
+    console.log(mapa.has("nombre")); //compruebo que maps tiene un objeto llamado nombre
+    console.log(mapa.get("nombre")); //obtengo valor de la propiedad o llave "nombre"
+    mapa.set("nombre", "Jonathan MirCha"); //Reescribo el campo nombre
+    console.log(mapa.get("nombre"));
+    mapa.delete("apellido"); //Elimino
+    mapa.set(19, "diecinueve");
+    mapa.set(false, "falso");
+    mapa.set({}, {});
+    console.log(mapa);
+    for (let [key, value] of mapa) {
+      console.log(`Llave: ${key}, Valor:${value}`);
+    }
+    const mapa2 = new Map([ //2da forma de inicializar
+      ["nombre", "kEnAi"],
+      ["edad", 7],
+      ["animal", "perro"],
+      [null, "nulo"]
+    ]);
+    console.log(mapa2);
+    const llavesMapa2 = [...mapa2.keys()]; //Guardo las llaves en una variables
+    const valoresMapa2 = [...mapa2.values()]; //Guardo los valores en otra variables
+    console.log(llavesMapa2);
+    console.log(valoresMapa2);
+  </script>
+</body>

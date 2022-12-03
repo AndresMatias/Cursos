@@ -1,0 +1,8 @@
+http://docs.opencv.org/2.4/modules/core/doc/drawing_functions.html#rectangle
+
+Sintaxis de videocapture
+http://docs.opencv.org/3.1.0/d8/dfe/classcv_1_1VideoCapture.html
+
+Funcion Canny
+http://docs.opencv.org/trunk/da/d22/tutorial_py_canny.html
+https://es.wikipedia.org/wiki/Algoritmo_de_Canny

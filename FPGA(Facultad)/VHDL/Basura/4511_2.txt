@@ -1,0 +1,38 @@
+case lamp_test is
+		when '0' =>
+			--Vec_E<="000";
+			display <=  "0000000" --Lamp_Test
+		when '1' =>
+			--Vec_E<="001";
+			case blanking is
+					when '0' =>
+						--Vec_E<="001";
+						display <=  "1111111" --Blanking
+					when '1' =>
+						Vec_E<="011";
+						case enable is
+							when '1' =>
+								--Vec_E<="111";
+								display <=  "1001111" --ERROR
+							when '0' =>
+								--Vec_E<="011"; --Funciona
+								with selector select
+									display <=  "1111110" when "0000",
+													"0110000" when "0001",
+													"1101101" when "0010",
+													"1111001" when "0011",
+													"0110011" when "0100",
+													"1011011" when "0101",
+													"0011111" when "0110",
+													"1110000" when "0111",
+													"1111111" when "1000",
+													"1110011" when "1001",
+													"1001111" when "1010",
+													"1001111" when "1011",
+													"1001111" when "1100",
+													"1001111" when "1101",
+													"1001111" when "1110",
+													"1001111" when "1111";
+						end case;
+			end case;
+end case;

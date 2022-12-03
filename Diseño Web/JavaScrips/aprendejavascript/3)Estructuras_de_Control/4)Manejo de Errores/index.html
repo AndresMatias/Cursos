@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>3)Estructuras de Control</title>
+    <link rel="stylesheet" href="normalize.css">
+  </head>
+  <body>
+      <h1>Manejo de Errores</h1>
+      <!-- Inicio de la programacion del Scrip de javascrips-->
+      <script>
+       try{
+        //Codigo a examinar
+       }catch(error){
+        //Captura el error que se cometio
+        console.log(error)
+       }
+       finally{
+        //Se ejecuta siempre al final del try catch
+       }
+
+       /*----Exepciones Propias----*/
+       try{
+        //Codigo a examinar
+        let numero='y';
+
+        if(isNaN(numero)){ //Si no es un numero
+          throw new Error('No es numero'); //Genero mi PROPIA EXCEPCION
+        }
+        
+       }catch(error){
+        //Captura el error que se cometio
+        console.log(error);
+       }
+       finally{
+        //Se ejecuta siempre al final del try catch
+       }
+      </script>
+  </body>
+</html>

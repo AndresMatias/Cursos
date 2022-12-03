@@ -1,0 +1,30 @@
+xst -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" -intstyle ise -ifn "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Top.xst" -ofn "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Top.syr"
+xst -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" -intstyle ise -ifn "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Top.xst" -ofn "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Top.syr"
+xst -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" -intstyle ise -ifn "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Top.xst" -ofn "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Top.syr"
+ngdbuild -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" -intstyle ise -dd _ngo  -i -p xc9572xl-PC44-5 "Top.ngc" Top.ngd
+cpldfit -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper Top.ngd
+XSLTProcess -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" Top_build.xml
+tsim -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" -intstyle ise Top Top.nga
+taengine -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" -intstyle ise -f Top -w --format html1 -l C:/Xilinx/Tp/Contador_As_Ds/Corregido/Top_html/tim/timing_report.htm
+hprep6 -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" -s IEEE1149 -n Top -i Top
+xst -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" -intstyle ise -ifn "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Top.xst" -ofn "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Top.syr"
+ngdbuild -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" -intstyle ise -dd _ngo  -i -p xc9572xl-PC44-5 "Top.ngc" Top.ngd
+cpldfit -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper Top.ngd
+XSLTProcess -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" Top_build.xml
+tsim -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" -intstyle ise Top Top.nga
+taengine -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" -intstyle ise -f Top -w --format html1 -l C:/Xilinx/Tp/Contador_As_Ds/Corregido/Top_html/tim/timing_report.htm
+hprep6 -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" -s IEEE1149 -n Top -i Top
+xst -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" -intstyle ise -ifn "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Top.xst" -ofn "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Top.syr"
+ngdbuild -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" -intstyle ise -dd _ngo  -i -p xc9572xl-PC44-5 "Top.ngc" Top.ngd
+cpldfit -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper Top.ngd
+XSLTProcess -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" Top_build.xml
+tsim -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" -intstyle ise Top Top.nga
+taengine -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" -intstyle ise -f Top -w --format html1 -l C:/Xilinx/Tp/Contador_As_Ds/Corregido/Top_html/tim/timing_report.htm
+hprep6 -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" -s IEEE1149 -n Top -i Top
+xst -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" -intstyle ise -ifn "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Top.xst" -ofn "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Top.syr"
+ngdbuild -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" -intstyle ise -dd _ngo  -i -p xc9572xl-PC44-5 "Top.ngc" Top.ngd
+cpldfit -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper Top.ngd
+XSLTProcess -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" Top_build.xml
+tsim -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" -intstyle ise Top Top.nga
+taengine -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" -intstyle ise -f Top -w --format html1 -l C:/Xilinx/Tp/Contador_As_Ds/Corregido/Top_html/tim/timing_report.htm
+hprep6 -ise "C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise" -s IEEE1149 -n Top -i Top
