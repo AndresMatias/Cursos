@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=C:\Users\facun\Desktop\Lab 5\Counter_mod5_Sec\mod5_Up_Down_Sec.ncd
-OUTFILE=C:\Users\facun\Desktop\Lab 5\Counter_mod5_Sec\mod5_Up_Down_Sec.bit
-FAMILY=Spartan3E
-PART=xc3s100e-4tq144
-WORKINGDIR=C:\Users\facun\Desktop\Lab 5\Counter_mod5_Sec
-LICENSE=WebPack
-USER_INFO=__0_0_0

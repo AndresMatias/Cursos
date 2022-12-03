@@ -1,3 +1,0 @@
-eventos_7_mouse.Eventos_7_Mouse
-eventos_7_mouse.Ventana
-eventos_7_mouse.Mi_Mouse

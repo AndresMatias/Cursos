@@ -1,4 +1,0 @@
-vhdl work "FFD.vhd"
-vhdl work "../Cont-0-9999/clk_1Hz.vhd"
-vhdl work "Mod5_LR_Up_Down.vhd"
-vhdl work "test.vhd"

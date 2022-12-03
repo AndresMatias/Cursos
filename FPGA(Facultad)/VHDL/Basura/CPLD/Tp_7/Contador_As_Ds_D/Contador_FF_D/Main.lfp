@@ -1,5 +1,0 @@
-# begin LFP file D:\CPLD\Tp_7\Contador_As_Ds_D\Contador_FF_D\Main.lfp
-designfile Main.vhd
-parttype xc9572xl-pc44-5
-bus_delimiter 0;
-set_busdelim_onsave 1;

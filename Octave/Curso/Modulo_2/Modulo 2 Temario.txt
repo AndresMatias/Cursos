@@ -1,4 +1,0 @@
-MATLAB y Octave 2.1: Vetores y Matrices
-MATLAB y Octave 2.2: Operaciones con Vectores y Matrices
-MATLAB y Octave 2.3: Resolución de sistemas lineales
-MATLAB y Octave 2.4: Estructuras de control de tipo condicional

@@ -1,7 +1,0 @@
-xst -ise "C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/Corregido.ise" -intstyle ise -ifn "C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/mod5_Up_Down_Sec.xst" -ofn "C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/mod5_Up_Down_Sec.syr"
-ngdbuild -ise "C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/Corregido.ise" -intstyle ise -dd _ngo  -i -p xc9572xl-PC44-5 "mod5_Up_Down_Sec.ngc" mod5_Up_Down_Sec.ngd
-cpldfit -ise "C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/Corregido.ise" -intstyle ise -p xc9572xl-5-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper mod5_Up_Down_Sec.ngd
-XSLTProcess -ise "C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/Corregido.ise" mod5_Up_Down_Sec_build.xml
-tsim -ise "C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/Corregido.ise" -intstyle ise mod5_Up_Down_Sec mod5_Up_Down_Sec.nga
-taengine -ise "C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/Corregido.ise" -intstyle ise -f mod5_Up_Down_Sec -w --format html1 -l C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/mod5_Up_Down_Sec_html/tim/timing_report.htm
-hprep6 -ise "C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/Corregido.ise" -s IEEE1149 -n mod5_Up_Down_Sec -i mod5_Up_Down_Sec

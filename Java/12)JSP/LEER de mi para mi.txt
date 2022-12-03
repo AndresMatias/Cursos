@@ -1,2 +1,0 @@
-roles="admin-gui,manager-gui" 
-me saltee del del 30 al 64(jsp-servelet-mvc)

@@ -1,4 +1,0 @@
-Cuadros_Dialogos
-Tipos_Cuadros_Dialogos
-Lamina_Cuadros_Dialogos$Accion_botones
-Lamina_Cuadros_Dialogos

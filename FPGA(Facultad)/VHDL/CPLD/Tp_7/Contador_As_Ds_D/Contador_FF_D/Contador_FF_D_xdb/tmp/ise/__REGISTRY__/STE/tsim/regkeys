@@ -1,6 +1,0 @@
-CommandLine
-C:\Xilinx\10.1\ISE\bin\nt\unwrapped\tsim.exe -ise D:/CPLD/Tp_7/Contador_As_Ds_D/Contador_FF_D/Contador_FF_D.ise -intstyle ise Main Main.nga
-s
-FormatString
-tsim <design[.vm6]> [--intstyle ise|xflow|silent] [<outfile>] 
-s

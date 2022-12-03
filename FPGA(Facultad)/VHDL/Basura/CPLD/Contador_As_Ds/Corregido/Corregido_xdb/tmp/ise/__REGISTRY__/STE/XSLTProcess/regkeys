@@ -1,6 +1,0 @@
-CommandLine
-C:\Xilinx\10.1\ISE\bin\nt\unwrapped\XSLTProcess.exe -ise C:/Xilinx/Tp/Contador_As_Ds/Corregido/Corregido.ise Top_build.xml
-s
-FormatString
-xsltprocess [--intstyle ise|xflow|silent] <xmlfile> [-a] [-w] [--libxslt <limit:-1,10>] 
-s

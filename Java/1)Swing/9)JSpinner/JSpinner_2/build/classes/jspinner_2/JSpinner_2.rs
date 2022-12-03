@@ -1,4 +1,0 @@
-jspinner_2.Ventana
-jspinner_2.Lamina$Modelo_Spinner
-jspinner_2.JSpinner_2
-jspinner_2.Lamina

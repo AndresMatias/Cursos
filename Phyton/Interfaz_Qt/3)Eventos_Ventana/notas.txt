@@ -1,2 +1,0 @@
-Link a Eventos de ventana en api de Qt
-	https://www.riverbankcomputing.com/static/Docs/PyQt4/qevent.html

@@ -1,6 +1,0 @@
-EN clk_1hz NULL C:/Xilinx/Tp/Contador_As_Ds_D/Contador_FF_D/clk_1Hz.vhd sub00/vhpl04 1510243140
-AR main behavioral C:/Xilinx/Tp/Contador_As_Ds_D/Contador_FF_D/Main.vhd sub00/vhpl03 1510243145
-AR clk_1hz arch C:/Xilinx/Tp/Contador_As_Ds_D/Contador_FF_D/clk_1Hz.vhd sub00/vhpl05 1510243141
-EN main NULL C:/Xilinx/Tp/Contador_As_Ds_D/Contador_FF_D/Main.vhd sub00/vhpl02 1510243144
-EN flip_flop_d NULL C:/Xilinx/Tp/Contador_As_Ds_D/Contador_FF_D/Flip_Flop_D.vhd sub00/vhpl00 1510243142
-AR flip_flop_d behavioral C:/Xilinx/Tp/Contador_As_Ds_D/Contador_FF_D/Flip_Flop_D.vhd sub00/vhpl01 1510243143

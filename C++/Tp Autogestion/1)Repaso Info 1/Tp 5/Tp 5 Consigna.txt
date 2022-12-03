@@ -1,3 +1,0 @@
-Desarrollar un programa que permita declarar un arreglo de 20 elementos 
-de tipo entero con repetición. Se desea generar otro sin las repeticiones 
-del arreglo origen. Mostrar ambos arreglos por pantalla.

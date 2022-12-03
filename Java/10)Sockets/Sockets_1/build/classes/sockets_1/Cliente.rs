@@ -1,3 +1,0 @@
-LaminaMarcoCliente
-MarcoCliente
-Cliente

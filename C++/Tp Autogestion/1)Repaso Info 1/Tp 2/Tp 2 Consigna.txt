@@ -1,2 +1,0 @@
-Leer tres números distintos desde el teclado y mostrar 
-por pantalla la suma del menor y el mayor.

@@ -1,3 +1,0 @@
-eventos_6_teclado.Mi_Teclado
-eventos_6_teclado.Eventos_6_Teclado
-eventos_6_teclado.Ventana

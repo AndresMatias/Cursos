@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=C:\Users\facun\Desktop\Lab 5\Counter_mod5_ShiftR\Mod5_LR_Up_Down.ncd
-OUTFILE=C:\Users\facun\Desktop\Lab 5\Counter_mod5_ShiftR\Mod5_LR_Up_Down.bit
-FAMILY=Spartan3E
-PART=xc3s100e-4tq144
-WORKINGDIR=C:\Users\facun\Desktop\Lab 5\Counter_mod5_ShiftR
-LICENSE=WebPack
-USER_INFO=__0_0_0

@@ -1,2 +1,0 @@
-1)Hacer un programa que calcule el maximo comun divisor de dos numeros
-2)Hacer un programa qen c++ integrador de todos los temas

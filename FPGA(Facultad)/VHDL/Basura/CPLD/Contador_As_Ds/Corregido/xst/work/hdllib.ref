@@ -1,6 +1,0 @@
-EN clk_1hz NULL C:/Xilinx/Tp/Contador_As_Ds/Corregido/clk_1Hz.vhd sub00/vhpl03 1510242537
-EN ffd NULL C:/Xilinx/Tp/Contador_As_Ds/Corregido/FFD.vhd sub00/vhpl00 1510242539
-AR clk_1hz arch C:/Xilinx/Tp/Contador_As_Ds/Corregido/clk_1Hz.vhd sub00/vhpl04 1510242538
-AR ffd arch C:/Xilinx/Tp/Contador_As_Ds/Corregido/FFD.vhd sub00/vhpl01 1510242540
-EN top NULL C:/Xilinx/Tp/Contador_As_Ds/Corregido/Top.vhd sub00/vhpl02 1510242541
-AR top behavioral C:/Xilinx/Tp/Contador_As_Ds/Corregido/Top.vhd sub00/vhpl05 1510242542

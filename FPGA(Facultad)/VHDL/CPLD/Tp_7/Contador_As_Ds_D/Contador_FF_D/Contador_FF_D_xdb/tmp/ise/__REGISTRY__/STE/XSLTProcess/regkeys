@@ -1,6 +1,0 @@
-CommandLine
-C:\Xilinx\10.1\ISE\bin\nt\unwrapped\XSLTProcess.exe -ise D:/CPLD/Tp_7/Contador_As_Ds_D/Contador_FF_D/Contador_FF_D.ise Main_build.xml
-s
-FormatString
-xsltprocess [--intstyle ise|xflow|silent] <xmlfile> [-a] [-w] [--libxslt <limit:-1,10>] 
-s

@@ -1,3 +1,0 @@
-http://omes-va.com/trasladar-rotar-escalar-recortar-una-imagen-opencv/
-
-imutils.resize este no lo probe pero es otra forma de escalado y evita la deformacion algo asi

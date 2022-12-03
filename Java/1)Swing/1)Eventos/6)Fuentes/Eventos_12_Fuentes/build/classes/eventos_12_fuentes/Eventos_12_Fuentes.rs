@@ -1,4 +1,0 @@
-eventos_12_fuentes.Lamina
-eventos_12_fuentes.Eventos_12_Fuentes
-eventos_12_fuentes.Ventana
-eventos_12_fuentes.Lamina$Mi_Color

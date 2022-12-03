@@ -1,2 +1,0 @@
-MATLAB y Octave 6.1: Integración numérica
-MATLAB y Octave 6.2: Sistemas de ecuaciones lineales. Métodos iterativos

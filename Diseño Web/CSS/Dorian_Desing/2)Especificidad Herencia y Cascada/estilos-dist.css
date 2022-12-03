@@ -1,1 +1,0 @@
-p{color:green}h1{color:blue}.title{color:green}.text{color:blueviolet}[href]{color:green}[href="#"]{color:red}[class~=verde]{color:green}[class|=verde]{color:blue}[class^=rojo]{color:purple}[class$=rojo]{color:steelblue}[class=rojo]{color:brown}h3+h4{color:red}h5~h6{color:green}p span{color:blue}p>span{color:blue}
