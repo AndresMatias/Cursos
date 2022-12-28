@@ -14,11 +14,12 @@ import { scrollTopBottom } from "./scroll.js";
 import scrollSpy from "./scrollSpy.js";
 import sorteo from "./sorteo.js";
 import temaOscuro from "./temaOscuro.js";
+import contactFormulario from "./validar_formulario.js";
 import smartVideo from "./videoInteligente.js";
 
 const d=document;
 
-d.addEventListener('DOMContentLoaded',(e)=>{ //Uso DOMContentLoaded para una cargar mas a rapida por q empeiza a funcionar cuando ya se cargo solo el HTML, no espera el css etc
+d.addEventListener('DOMContentLoaded',(e)=>{ //Uso DOMContentLoaded para una cargar mas a rapida por q empieza a funcionar cuando ya se cargo solo el HTML, no espera el css etc
     botonMenu(document.querySelector(".panel-btn"),document.querySelector(".panel"),document.querySelector(".menu")); //Evento boton menu para su cambio de forma
     reloj('#reloj','#activar-reloj','#detener-reloj'); //recordar poner el # pero q el mismo no esta en el id
     alarma('tonos/tictac.mp3','#activar-alarma','#detener-alarma');
@@ -37,6 +38,8 @@ d.addEventListener('DOMContentLoaded',(e)=>{ //Uso DOMContentLoaded para una car
     slider();
     scrollSpy();
     smartVideo();
+    //console.log("hola doc 1");
+    contactFormulario();
 });
 
 d.addEventListener("keydown",e=>{ //Los eventos de teclado no se asignas en DOMContentLoaded
