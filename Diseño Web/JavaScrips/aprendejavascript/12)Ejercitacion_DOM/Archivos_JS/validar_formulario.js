@@ -8,8 +8,7 @@ const d=document;
  */
 export default function contactFormulario(){
     const $form  = d.querySelector(".contact-form"),
-          $inputs = d.querySelectorAll(".contact-form [required]");
-    console.log($inputs);      
+          $inputs = d.querySelectorAll(".contact-form [required]");    
     $inputs.forEach(input =>{ //Creo agrego Span despues de cada elemento de contac form 
         const $span=d.createElement("span");
         $span.id=input.name;
@@ -21,16 +20,13 @@ export default function contactFormulario(){
         if(e.target.matches(".contact-form [required]")){
             let $input=e.target,
                 pattern=$input.pattern || $input.dataset.pattern; //operador de corto circuito clase 29 lo uso pq el text area no acepta pattern
-                console.log(pattern);    
             if(pattern){
-                console.log($input.target);
                 let regrex= new RegExp(pattern); //Expresion regular
                 return !regrex.exec($input.value) //valida texto
                     ? d.getElementById($input.name).classList.add("is-active")
                     : d.getElementById($input.name).classList.remove("is-active");
             }
             if(!pattern){ // no uso else pq puede confundir al usuario apenas aperece el cuadro si uso else daria el mensaje de error cunado el usuario ni siquiera toco los campos a ingresar datos
-                console.log("hola doc 2");
                 return $input.value==="" //valida texto
                     ? d.getElementById($input.name).classList.add("is-active")
                     : d.getElementById($input.name).classList.remove("is-active");
@@ -49,10 +45,7 @@ export default function contactFormulario(){
             $loader.classList.add("none");
             $response.classList.remove("none");
             $form.reset();
-
             setTimeout(()=>$response.classList.add("none"));
-
-
         }, 3000);
     });
 }

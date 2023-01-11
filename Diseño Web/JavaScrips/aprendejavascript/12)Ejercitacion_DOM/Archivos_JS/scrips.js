@@ -7,6 +7,7 @@ import { botonMenu } from "./eventosMenu.js";
 import { moveBall, shortcuts } from "./eventosTeclado.js";
 import { filtroBusqueda } from "./filtroBusqueda.js";
 import { getGeoLocation } from "./geolocalizacion.js";
+import speechReader from "./lectorVoz.js";
 import { responsiveMedia } from "./objetoResonsive.js";
 import { alarma, reloj } from "./relojAlarma.js";
 import { responsiveTester } from "./responsiveTester.js";
@@ -42,10 +43,12 @@ d.addEventListener('DOMContentLoaded',(e)=>{ //Uso DOMContentLoaded para una car
     contactFormulario();
 });
 
+//Ver cuando va fuera del DOMContentloaded
 d.addEventListener("keydown",e=>{ //Los eventos de teclado no se asignas en DOMContentLoaded
     shortcuts(e);
     moveBall(e,'.ball','.stage')
 });
 
-temaOscuro('.dark-theme-btn','dark-mode'); //Afuera de DOMContentLoaded pq
+temaOscuro('.dark-theme-btn','dark-mode'); //Afuera de DOMContentLoaded pq creo que como maneja el css solo tiene sentido cuando cargo la pagina
 networkStatus(); //Afuera de DOMContentLoaded pq solo me indica si hay o no conexion
+speechReader(); 
