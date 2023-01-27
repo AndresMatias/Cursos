@@ -1,0 +1,9 @@
+💛 Aprende JavaScript https://aprendejavascript.org/
+📖 Mis notas sobre JavaScript https://jonmircha.com/javascript
+📖 Mis notas sobre ECMAScript https://jonmircha.com/ecmascript
+📖 Mis notas sobre JavaScript Asíncrono https://jonmircha.com/javascript-asin...
+📖 Mis notas sobre JSON https://jonmircha.com/json
+📖 Mis notas sobre el DOM https://jonmircha.com/dom
+📖 Mis notas sobre AJAX https://jonmircha.com/ajax
+📖 Mis notas sobre API REST https://jonmircha.com/api-rest
+📦 Códigos: https://github.com/jonmircha/youtube-js

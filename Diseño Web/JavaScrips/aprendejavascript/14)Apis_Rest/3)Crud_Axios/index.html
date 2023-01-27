@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>11)Ajax</title>
+    <link rel="stylesheet" href="normalize.css">
+  </head>
+  <body>
+    <h1>112 al 115 CRUD API REST AJAX</h1>
+    <section class="crud">
+      <article>
+        <h2 class="crud-title">Agregar Santo</h2>
+        <form class="crud-form">
+          <input type="text" name="nombre" placeholder="nombre" required>
+          <br>
+          <input type="text" name="constelacion" placeholder="constelación" required>
+          <br>
+          <input type="submit" value="Enviar">
+          <input type="hidden" name="id">
+        </form>
+      </article>
+      <article>
+        <h2>Ver Santos</h2>
+        <table class="crud-table">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Constelación</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </article>
+    </section>
+    <template id="crud-template">
+      <tr>
+        <td class="name"></td>
+        <td class="constellation"></td>
+        <td>
+          <button class="edit">Editar</button>
+          <button class="delete">Eliminar</button>
+        </td>
+      </tr>
+    </template>
+      <!-- Importo Modulos Externos -->
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <!-- Importo Modulos Propios -->
+      <script src="Archivos_JS/crud.js" type="module"></script> <!-- Atributo type="module" para que reconosca que es un modulo  -->
+      <script src="Archivos_JS/no_modulos.js" nomodule></script> <!-- Atributo nomodule tipo bool: Los navegadores modernos entenderán el atributo "nomodule", por lo tanto no accederán a este script, porque sabrán que es un script pensado por y para los navegadores obsoletos.Los navegadores antiguos no entenderán el atributo "nomodule", pero tampoco le harán caso y cargarán este script alternativo.-->
+    </body>
+</html>
