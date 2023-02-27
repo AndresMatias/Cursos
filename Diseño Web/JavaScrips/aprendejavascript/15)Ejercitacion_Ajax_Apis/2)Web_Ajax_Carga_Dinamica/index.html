@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+  <link rel="stylesheet" type="text/css" href="estilos.css">
+  <!-- Importo Modulos Propios -->
+  <script src="Archivos_JS/cargaHTMLdinamica.js" type="module"></script> <!-- Atributo type="module" para que reconosca que es un modulo, incluyo scrip aca para mejorar rendimiento ya que se puede considerar una exepcion  -->
+  <title>123)Incluyo HTML con AJAX</title>
+</head>
+
+<body>  <!--Cuerpo-->
+  <div data-include="assets/header.html"></div> <!-- Esto va a ser reemplazo por el conteindo html y js va a realizar ese reemplazo -->
+  <main class="container"></main> <!-- Aca se va reemplazar el html segun el link del menu seleccionado -->
+  <div data-include="assets/footer.html"></div> <!-- Esto va a ser reemplazo por el conteindo html y js va a realizar ese reemplazo -->
+  <!-- Importo Modulos Propios -->
+  <script src="Archivos_JS/cargaHTMLitemMenu.js" type="module"></script>
+   <!-- Importo Modulos Propios -->
+   <script src="Archivos_JS/no_modulos.js" nomodule></script> <!-- Atributo nomodule tipo bool: Los navegadores modernos entenderán el atributo "nomodule", por lo tanto no accederán a este script, porque sabrán que es un script pensado por y para los navegadores obsoletos.Los navegadores antiguos no entenderán el atributo "nomodule", pero tampoco le harán caso y cargarán este script alternativo.-->
+
+</body>
+
+</html>

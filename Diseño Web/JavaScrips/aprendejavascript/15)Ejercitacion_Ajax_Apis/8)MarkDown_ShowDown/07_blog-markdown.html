@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>133)Blog con Markdown y Showdown.js</title>
+</head>
+
+<body>
+  <h1>133)Blog con Markdown y Showdown.js</h1>
+  <main></main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+  <script>
+    /*
+     * Curso JavaScript: 133. Ejercicios AJAX - APIs: Blog con Markdown y Showdown.js - #jonmircha 
+          https://www.youtube.com/watch?v=MtvjOftAsnA&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=134&ab_channel=jonmircha
+    */
+    const d=document,
+          $main=d.querySelector("main");
+    
+    fetch("assets/javascript.md")
+    .then(res => res.ok ? res.text(): Promise.reject(res)) //Si esta todo ok manda el codigo en texto plano al siguiente then si no pasa al catch
+    .then(text => {
+      $main.innerHTML=new showdown.Converter().makeHtml(text); //Cargo el archivo md(que esta en formato de texto plano) en formato html en la pagina 
+    })
+    .catch(err => {
+      console.log(err);
+      let message=err.statusText || "Ocurrio un error";
+      $main.innerHTML=`Error ${err.status}: ${message}`;
+    });
+  </script>
+</body>
+
+</html>

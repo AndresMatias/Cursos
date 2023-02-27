@@ -21,7 +21,7 @@ Usar camelCase
 			createServer()
 */
 
-'use strict' //modo estricto para programar con buenas prácticas
+'use strict' //modo estricto para programar con buenas prácticas, para mejorar en buenas practicas
 
 console.log('Hola Mundo desde Node.js, esto se verá en la terminal de comandos')
 

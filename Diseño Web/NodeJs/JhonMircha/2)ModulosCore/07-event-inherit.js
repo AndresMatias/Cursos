@@ -5,7 +5,7 @@
 var EventEmitter = require('events').EventEmitter,
 	inherits = require('util').inherits
 
-var Clock = function ()
+var Clock = function () //Clock que emite cada 1000 ms
 {
 	var self = this
 
@@ -17,7 +17,7 @@ var Clock = function ()
 
 inherits(Clock, EventEmitter)
 
-Clock.prototype.theTime = function ()
+Clock.prototype.theTime = function () //Agrego una funcion a mi prototipo de Clock...NI IDEA
 {
 	var date = new Date(),
 		hrs = date.getHours(),

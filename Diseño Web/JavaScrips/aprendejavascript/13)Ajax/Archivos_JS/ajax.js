@@ -21,7 +21,7 @@
          $xhr = document.getElementById("xhr"),
          $fragment = document.createDocumentFragment();
 
-    xhr.addEventListener("readystatechange",e=>{ //Asigno Evento
+    xhr.addEventListener("readystatechange",e=>{ //Asigno Evento, todos lso eventos de ajax residen en readystatechange por lo cual se puede detectar cualquier evento de ajax
         if(xhr.readyState!==4){
             return;
         }
@@ -46,7 +46,7 @@
         console.log("Este mensaje se mostrara de cualquier forma")
     });
     //xhr.open("GET","https://jsonplaceholder.typicode.com/users");
-    xhr.open("GET","assests/user.json"); //Obtengo Recurso
+    xhr.open("GET","assests/user.json"); //Obtengo Recurso, ABRO la conexion
     xhr.send(); //Envio y/o obtengo respuesta algo asi
 })();
 

@@ -5,16 +5,17 @@
 var EventEmitter = require('events').EventEmitter,
 	pub = new EventEmitter()
 
-pub
-	.on('myevent', function (message){
+pub //Publico eventos
+	.on('myevent', function (message){ //Publico mi propio evento, "on" se ejecuta cada vez que se llama al evento
 		console.log(message)
 	})
 
-	.once('myevent', function (message){
+	.once('myevent', function (message){ //La primera vez que se ejecute mi propio evento se va a ejectuar esta funcion
 		console.log('Se emite la primera vez:' + message)
 	})
 
-pub.emit('myevent', 'Soy un emisor de eventos')
+//--Emito eventos--
+pub.emit('myevent', 'Soy un emisor de eventos') 
 pub.emit('myevent', 'Volviendo a emitir')
 pub.removeAllListeners('myevent')
 pub.emit('myevent', 'Volviendo a emitir por tercera vez')

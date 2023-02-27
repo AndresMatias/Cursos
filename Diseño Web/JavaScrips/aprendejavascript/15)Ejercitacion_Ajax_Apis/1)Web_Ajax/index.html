@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+  <link rel="stylesheet" type="text/css" href="estilos.css">
+  <title>122)Sitio con AJAX</title>
+</head>
+
+<body>  <!--Cuerpo-->
+  <header class="header">
+    <section class="header-content container">
+      <article class="logo">
+        <img src="https://jonmircha.com/img/kEnAi.svg" alt="kEnAi">
+      </article>
+      <nav class="menu"> <!--Creo Menu-->
+        <a class="menu__item" href="assets/home.html">Home</a>
+        <a class="menu__item" href="assets/acerca.html">Acerca</a>
+        <a class="menu__item" href="assets/servicios.html">Servicios</a>
+        <a class="menu__item" href="assets/contacto.html">Contacto</a>
+      </nav>
+    </section>
+  </header>
+  <main class="container"></main>
+  <footer class="footer container">
+    <p>
+      <small>sitio diseñado por kEnAi</small>
+    </p>
+  </footer>
+   <!-- Importo Modulos Propios -->
+   <script src="Archivos_JS/modulos.js" type="module"></script> <!-- Atributo type="module" para que reconosca que es un modulo  -->
+   <script src="Archivos_JS/no_modulos.js" nomodule></script> <!-- Atributo nomodule tipo bool: Los navegadores modernos entenderán el atributo "nomodule", por lo tanto no accederán a este script, porque sabrán que es un script pensado por y para los navegadores obsoletos.Los navegadores antiguos no entenderán el atributo "nomodule", pero tampoco le harán caso y cargarán este script alternativo.-->
+
+</body>
+
+</html>

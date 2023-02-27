@@ -40,11 +40,11 @@ function saveName(name)
 
 function quiz(question, callback)
 {
-	stdin.resume()
-	stdout.write( question + ': ' )
+	stdin.resume() //Me permite leer lo que el usuario escriba
+	stdout.write( question + ': ' ) //Escribe la pregunta
 	
-	stdin.once('data', function (res){
-		callback( res.toString().trim() )
+	stdin.once('data', function (res){ //Ejecuta evento una soia vez si hay datos
+		callback( res.toString().trim()) //callback
 	})
 }
 

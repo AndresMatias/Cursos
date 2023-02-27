@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<!-- saved from url=(0025)https://jonmircha.com/git -->
+<html lang="es" class="light"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Global Metadata -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="icon" type="image/png" href="https://jonmircha.com/img/favicon.png">
+<meta name="theme-color" content="#e7562e">
+<link rel="author" type="text/plain" href="https://jonmircha.com/humans.txt">
+<link rel="manifest" href="https://jonmircha.com/manifest.json">
+<link rel="canonical" href="https://jonmircha.com/git">
+<!-- Primary Meta Tags -->
+<title>
+  Git 🦊 jonmircha
+</title>
+<meta name="title" content="Git 🦊 jonmircha">
+<meta name="description" content="En esta nota te comparto mis apuntes sobre Git y GitHub el software y la
+      plataforma de versonamiento de código más
+      populares de la industria">
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jonmircha.com/git">
+<meta property="og:title" content="Git 🦊 jonmircha">
+<meta property="og:description" content="En esta nota te comparto mis apuntes sobre Git y GitHub el software y la
+      plataforma de versonamiento de código más
+      populares de la industria">
+<meta property="og:image" content="https://jonmircha.com/img/og.png">
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://jonmircha.com/git">
+<meta property="twitter:title" content="Git 🦊 jonmircha">
+<meta property="twitter:description" content="En esta nota te comparto mis apuntes sobre Git y GitHub el software y la
+      plataforma de versonamiento de código más
+      populares de la industria">
+<meta property="twitter:image" content="https://jonmircha.com/img/og.png">
+  <link rel="stylesheet" href="./Git 🦊 jonmircha_files/prism.css">
+  <link rel="stylesheet" href="./Git 🦊 jonmircha_files/style.css">
+</head>
+
+<body>
+  <header class="header">
+  <div class="header-container">
+    <a class="logo" href="https://jonmircha.com/">
+      <img src="./Git 🦊 jonmircha_files/kEnAi.svg" alt="kEnAi">
+      <h2 class="alias">jonmircha</h2>
+    </a>
+    <nav class="menu">
+      <a href="https://jonmircha.com/cursos">Cursos</a>
+      <a href="https://jonmircha.com/blog">Blog</a>
+      <a href="https://jonmircha.com/mentoria">Mentoría</a>
+      <a href="https://jonmircha.com/hola">Hola</a>
+    </nav>
+    <nav class="icons">
+      <a href="https://youtube.com/jonmircha" target="_blank" rel="noopener">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M27.3419 10.5055C27.0752 9.52001 26.3054 8.75019 25.3199 8.48352C23.547 8 16.4115 8 16.4115 8C16.4115 8 9.27594 8.01465 7.50304 8.49817C6.51755 8.76484 5.74773 9.53466 5.48106 10.5201C4.9448 13.6703 4.73674 18.4703 5.49572 21.4945C5.76238 22.48 6.53221 23.2498 7.51769 23.5165C9.29059 24 16.4261 24 16.4261 24C16.4261 24 23.5616 24 25.3345 23.5165C26.32 23.2498 27.0899 22.48 27.3565 21.4945C27.9221 18.3399 28.0964 13.5429 27.3419 10.5055Z" fill="#FF0000"></path>
+          <path d="M14.1404 19.4286L20.0598 16L14.1404 12.5714V19.4286Z" fill="white"></path>
+        </svg>
+      </a>
+      <a href="https://discord.com/invite/gPgJMUF" target="_blank" rel="noopener">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="13" cy="17" r="3" fill="white"></circle>
+          <circle cx="20" cy="17" r="3" fill="white"></circle>
+          <path d="M24.3562 8.48579C22.877 7.7917 21.2955 7.28722 19.642 7C19.4389 7.36823 19.2017 7.8635 19.0381 8.25749C17.2805 7.99238 15.5389 7.99238 13.8136 8.25749C13.65 7.8635 13.4074 7.36823 13.2026 7C11.5473 7.28722 9.96394 7.79355 8.4848 8.48948C5.50142 13.0112 4.69267 17.4207 5.09703 21.7675C7.07578 23.2495 8.99344 24.1498 10.8787 24.739C11.3442 24.0964 11.7593 23.4135 12.117 22.6936C11.4358 22.434 10.7835 22.1136 10.167 21.7417C10.3306 21.6202 10.4905 21.4932 10.6451 21.3624C14.4049 23.1261 18.49 23.1261 22.2049 21.3624C22.3612 21.4932 22.5212 21.6202 22.6829 21.7417C22.0646 22.1155 21.4105 22.4358 20.7293 22.6954C21.087 23.4135 21.5003 24.0984 21.9676 24.7408C23.8547 24.1518 25.7741 23.2515 27.7529 21.7675C28.2273 16.7284 26.9423 12.3595 24.3562 8.48579ZM12.6292 19.0942C11.5006 19.0942 10.575 18.0374 10.575 16.7505C10.575 15.4636 11.4808 14.4049 12.6292 14.4049C13.7777 14.4049 14.7032 15.4617 14.6835 16.7505C14.6852 18.0374 13.7777 19.0942 12.6292 19.0942ZM20.2207 19.0942C19.0921 19.0942 18.1665 18.0374 18.1665 16.7505C18.1665 15.4636 19.0723 14.4049 20.2207 14.4049C21.3691 14.4049 22.2947 15.4617 22.275 16.7505C22.275 18.0374 21.3691 19.0942 20.2207 19.0942Z" fill="#5865F2"></path>
+        </svg>
+      </a>
+      <a href="https://www.paypal.com/paypalme/jonmircha" target="_blank" rel="noopener">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M29.7228 24C28.4643 14.5618 22.7565 8 15.925 8C9.09357 8 3.34076 14.5618 2.08234 24H29.7228Z" fill="#CEAB4A"></path>
+          <path d="M2.08234 24H29.7228C28.4643 14.5618 22.7565 8 15.925 8" fill="#B28E32"></path>
+          <path d="M7.70028 15.1011L6.75646 18.0224L3.79017 17.0786L3.70029 12.1348L7.70028 15.1011Z" fill="#88C600"></path>
+          <path d="M7.70028 15.1011L6.75646 18.0224L5.81265 16.0449L3.70029 12.1348L7.70028 15.1011Z" fill="#3AAD0B"></path>
+          <path d="M5.67781 17.6179L5.76769 19.6404L3.74523 19.7303L2.57669 16.6741L5.67781 17.6179Z" fill="#88C600"></path>
+          <path d="M5.67781 17.6179L5.76769 19.6404L4.73399 18.6067L2.57669 16.6741L5.67781 17.6179Z" fill="#3AAD0B"></path>
+          <path d="M17.3632 17.2584C17.3632 20 15.0711 22.2022 12.3295 22.2022H11.8351C9.09357 22.2022 7.02615 20.0449 7.02615 17.2584V15.4606C7.02615 12.7191 9.09357 10.5168 11.8351 10.5168H12.3295C15.0711 10.5168 17.3632 12.7191 17.3632 15.4606V17.2584Z" fill="#722F01"></path>
+          <path d="M11.9699 10.5168H12.3295C15.0711 10.5168 17.3632 12.7191 17.3632 15.4606V17.2584C17.3632 20 15.0711 22.2022 12.3295 22.2022H11.9699" fill="#562300"></path>
+          <path d="M8.62985 12.4133C7.97962 13.1636 7.71101 13.9959 8.02989 14.2722C8.34877 14.5486 9.13439 14.1643 9.78463 13.414C10.4349 12.6637 10.7035 11.8314 10.3846 11.5551C10.0657 11.2787 9.28008 11.663 8.62985 12.4133Z" fill="#994207"></path>
+          <path d="M20.6441 19.3708C19.161 21.7079 16.0598 22.382 13.7677 20.8989L13.3183 20.6292C10.9812 19.1461 10.307 16.0899 11.7902 13.7528L12.7789 12.2247C14.2621 9.88764 17.3183 9.21348 19.6553 10.6966L20.0598 10.9663C22.3969 12.4494 23.0711 15.5056 21.5879 17.8427L20.6441 19.3708Z" fill="#722F01"></path>
+          <path d="M19.6553 10.6966L20.0598 10.9663C22.3969 12.4494 23.0711 15.5056 21.5879 17.8427L20.5992 19.3708C19.161 21.7079 16.0598 22.382 13.7677 20.8989L13.3183 20.6292" fill="#562300"></path>
+          <path d="M15.8444 10.5982C14.8936 10.8844 14.2214 11.4439 14.343 11.848C14.4646 12.2521 15.334 12.3477 16.2848 12.0615C17.2356 11.7754 17.9078 11.2158 17.7862 10.8117C17.6646 10.4077 16.7952 10.3121 15.8444 10.5982Z" fill="#994207"></path>
+          <path d="M24.2396 13.8876C23.3857 16.4045 22.1272 18.2022 21.4081 17.9775C20.689 17.7528 20.7789 15.5056 21.6329 13.0337C22.4868 10.5168 23.1609 10.4269 23.88 10.6516C24.5991 10.8764 25.0935 11.4157 24.2396 13.8876Z" fill="#EF112C"></path>
+          <path d="M23.925 10.6516C24.6441 10.8763 25.0935 11.4157 24.2845 13.8876C23.4306 16.4044 22.1722 18.2022 21.4531 17.9774" fill="#B20026"></path>
+          <path d="M24.1556 12.437C24.203 12.2958 23.8982 12.0659 23.4746 11.9235C23.0511 11.7811 22.6692 11.7801 22.6218 11.9213C22.5743 12.0625 22.8792 12.2924 23.3027 12.4348C23.7263 12.5772 24.1081 12.5782 24.1556 12.437Z" fill="#B20026"></path>
+          <path d="M23.7935 13.5651C23.841 13.424 23.5363 13.1941 23.1128 13.0516C22.6893 12.9091 22.3075 12.908 22.26 13.0492C22.2125 13.1903 22.5173 13.4203 22.9408 13.5627C23.3643 13.7052 23.7461 13.7063 23.7935 13.5651Z" fill="#B20026"></path>
+          <path d="M23.3894 14.6801C23.4368 14.5389 23.132 14.309 22.7084 14.1666C22.2849 14.0242 21.9031 14.0232 21.8556 14.1644C21.8081 14.3055 22.113 14.5354 22.5365 14.6778C22.9601 14.8202 23.3419 14.8212 23.3894 14.6801Z" fill="#B20026"></path>
+          <path d="M23.0247 15.8078C23.0722 15.6666 22.7674 15.4367 22.3439 15.2942C21.9205 15.1517 21.5387 15.1507 21.4912 15.2918C21.4437 15.433 21.7485 15.6629 22.1719 15.8054C22.5954 15.9479 22.9772 15.949 23.0247 15.8078Z" fill="#B20026"></path>
+          <path d="M22.9952 10.8333C22.7634 10.9776 22.6393 11.1971 22.718 11.3235C22.7968 11.4499 23.0485 11.4354 23.2803 11.2911C23.5121 11.1468 23.6361 10.9273 23.5574 10.8008C23.4787 10.6744 23.227 10.6889 22.9952 10.8333Z" fill="#F97A90"></path>
+          <path d="M6.93624 20.7641C4.55422 21.8427 2.35197 22.2023 2.03736 21.4832C1.72276 20.809 3.43062 19.3708 5.81264 18.2472C8.19467 17.1685 8.77894 17.573 9.09354 18.2472C9.40815 18.9663 9.31826 19.6854 6.93624 20.7641Z" fill="#EF112C"></path>
+          <path d="M9.09352 18.2921C9.40813 18.9663 9.36318 19.6854 6.93622 20.764C4.5542 21.8427 2.35196 22.2022 2.03735 21.4831" fill="#B20026"></path>
+          <path d="M7.93984 19.7137C8.07538 19.652 8.03521 19.2724 7.85012 18.8658C7.66503 18.4592 7.4051 18.1796 7.26956 18.2413C7.13402 18.303 7.17419 18.6827 7.35928 19.0893C7.54437 19.4958 7.8043 19.7754 7.93984 19.7137Z" fill="#B20026"></path>
+          <path d="M6.857 20.2014C6.99259 20.1398 6.95266 19.7601 6.76782 19.3534C6.58298 18.9466 6.32323 18.6668 6.18764 18.7284C6.05205 18.79 6.09198 19.1697 6.27682 19.5765C6.46166 19.9833 6.72141 20.2631 6.857 20.2014Z" fill="#B20026"></path>
+          <path d="M5.77773 20.6867C5.91327 20.625 5.8731 20.2454 5.68801 19.8388C5.50292 19.4322 5.24299 19.1526 5.10745 19.2143C4.97191 19.276 5.01208 19.6556 5.19717 20.0622C5.38226 20.4688 5.64219 20.7484 5.77773 20.6867Z" fill="#B20026"></path>
+          <path d="M4.6943 21.1757C4.82987 21.114 4.78986 20.7343 4.60493 20.3276C4.42001 19.9209 4.16019 19.6412 4.02462 19.7028C3.88905 19.7645 3.92906 20.1441 4.11398 20.5508C4.29891 20.9576 4.55873 21.2373 4.6943 21.1757Z" fill="#B20026"></path>
+          <path d="M8.33269 17.76C8.06896 17.6893 7.8239 17.7486 7.78533 17.8925C7.74675 18.0363 7.92928 18.2103 8.19301 18.281C8.45674 18.3517 8.7018 18.2924 8.74037 18.1486C8.77895 18.0047 8.59642 17.8308 8.33269 17.76Z" fill="#F97A90"></path>
+          <path d="M29.6328 12.5393C27.5654 13.3932 25.7677 12.2247 24.1497 14.0674C23.2059 15.146 23.6553 16.6292 24.1047 18.2921H24.0598C25.7227 18.7415 27.1609 19.0561 28.2396 18.1123C30.0373 16.4494 28.7789 14.6067 29.6328 12.5393Z" fill="#82C60A"></path>
+          <path d="M24.1048 18.1573V18.2921H24.0598C25.7227 18.7415 27.1609 19.0562 28.2396 18.1123C30.0823 16.4494 28.8239 14.6067 29.6778 12.5393L29.7227 12.4944" fill="#5EA304"></path>
+          <path d="M27.116 15.1011L26.8014 13.618V15.4607L28.6441 15.4157L27.116 15.1011Z" fill="#74B208"></path>
+          <path d="M25.2284 17.0337L24.9138 15.5506V17.3483H26.7565L25.2284 17.0337Z" fill="#74B208"></path>
+          <path d="M26.2171 16.0449L25.8126 14.3371V16.4045H27.88L26.2171 16.0449Z" fill="#74B208"></path>
+          <path d="M16.1047 12.4044C18.5767 12.2696 20.689 13.3483 21.0935 14.7865C21.1385 14.6067 21.1385 14.4719 21.1385 14.2921C21.0486 12.5842 18.8014 11.2809 16.0598 11.4157C13.3182 11.5505 11.1609 13.0337 11.2508 14.7415C11.2508 14.9213 11.2958 15.0561 11.3407 15.2359C11.6104 13.7528 13.6328 12.4943 16.1047 12.4044Z" fill="#F4F1E6"></path>
+          <path d="M30.0373 17.7978C27.9699 18.6517 26.1722 17.4832 24.5542 19.3258C23.6104 20.4045 24.1047 21.8876 24.5542 23.5506H24.4643C26.1272 24 27.5654 24.3146 28.5991 23.3708C30.4418 21.7079 29.1834 19.8202 30.0373 17.7978Z" fill="#82C60A"></path>
+          <path d="M24.5542 23.5506H24.4643C26.1272 24 27.5654 24.3146 28.5992 23.3708C30.4418 21.7079 29.1834 19.8652 30.0374 17.7978H29.9924L30.0823 17.8427" fill="#5EA304"></path>
+          <path d="M27.5205 20.3146L27.1609 18.8314L27.2059 20.6741L29.0036 20.6292L27.5205 20.3146Z" fill="#74B208"></path>
+          <path d="M25.6328 22.2472L25.2733 20.764L25.3182 22.6067L27.116 22.5618L25.6328 22.2472Z" fill="#74B208"></path>
+          <path d="M26.6216 21.2584L26.2171 19.5955V21.6629L28.2845 21.6179L26.6216 21.2584Z" fill="#74B208"></path>
+          <path d="M29.7228 23.9999C28.4643 18.1573 22.7565 13.7528 15.925 13.7528C9.09357 13.7528 3.34076 18.1573 2.08234 23.9999H29.7228Z" fill="#FFDC6C"></path>
+          <path d="M10.1722 23.9999H29.7228C28.4643 18.1573 22.6666 13.7528 15.7902 13.7528" fill="#EABB47"></path>
+          <path d="M6.80138 19.9101C7.09924 19.9101 7.34071 19.6686 7.34071 19.3707C7.34071 19.0729 7.09924 18.8314 6.80138 18.8314C6.50352 18.8314 6.26205 19.0729 6.26205 19.3707C6.26205 19.6686 6.50352 19.9101 6.80138 19.9101Z" fill="#F4CB56"></path>
+          <path d="M16.3744 22.2472C16.6723 22.2472 16.9137 22.0057 16.9137 21.7079C16.9137 21.41 16.6723 21.1685 16.3744 21.1685C16.0765 21.1685 15.8351 21.41 15.8351 21.7079C15.8351 22.0057 16.0765 22.2472 16.3744 22.2472Z" fill="#FFDC6C"></path>
+          <path d="M24.1497 21.7528C24.4476 21.7528 24.689 21.5113 24.689 21.2135C24.689 20.9156 24.4476 20.6742 24.1497 20.6742C23.8518 20.6742 23.6104 20.9156 23.6104 21.2135C23.6104 21.5113 23.8518 21.7528 24.1497 21.7528Z" fill="#FFDC6C"></path>
+          <path d="M18.4419 20.2247C18.7397 20.2247 18.9812 19.9832 18.9812 19.6854C18.9812 19.3875 18.7397 19.1461 18.4419 19.1461C18.144 19.1461 17.9025 19.3875 17.9025 19.6854C17.9025 19.9832 18.144 20.2247 18.4419 20.2247Z" fill="#FFDC6C"></path>
+          <path d="M23.7901 19.5506C24.088 19.5506 24.3294 19.3091 24.3294 19.0112C24.3294 18.7134 24.088 18.4719 23.7901 18.4719C23.4923 18.4719 23.2508 18.7134 23.2508 19.0112C23.2508 19.3091 23.4923 19.5506 23.7901 19.5506Z" fill="#B28E32"></path>
+          <path d="M19.8351 18.2471C20.3315 18.2471 20.7339 17.8447 20.7339 17.3483C20.7339 16.8518 20.3315 16.4494 19.8351 16.4494C19.3386 16.4494 18.9362 16.8518 18.9362 17.3483C18.9362 17.8447 19.3386 18.2471 19.8351 18.2471Z" fill="#FFDC6C"></path>
+          <path d="M20.8238 20.1797C20.9728 20.1797 21.0935 20.059 21.0935 19.91C21.0935 19.7611 20.9728 19.6404 20.8238 19.6404C20.6749 19.6404 20.5542 19.7611 20.5542 19.91C20.5542 20.059 20.6749 20.1797 20.8238 20.1797Z" fill="#FFDC6C"></path>
+          <path d="M16.1946 18.337C16.3684 18.337 16.5092 18.1962 16.5092 18.0224C16.5092 17.8486 16.3684 17.7078 16.1946 17.7078C16.0209 17.7078 15.88 17.8486 15.88 18.0224C15.88 18.1962 16.0209 18.337 16.1946 18.337Z" fill="#FFDC6C"></path>
+          <path d="M11.2508 18.1123C11.5487 18.1123 11.7901 17.8709 11.7901 17.573C11.7901 17.2751 11.5487 17.0337 11.2508 17.0337C10.953 17.0337 10.7115 17.2751 10.7115 17.573C10.7115 17.8709 10.953 18.1123 11.2508 18.1123Z" fill="#F4CB56"></path>
+          <path d="M12.5093 16.3146C12.8071 16.3146 13.0486 16.0731 13.0486 15.7753C13.0486 15.4774 12.8071 15.2359 12.5093 15.2359C12.2114 15.2359 11.9699 15.4774 11.9699 15.7753C11.9699 16.0731 12.2114 16.3146 12.5093 16.3146Z" fill="#CEAB4A"></path>
+          <path d="M26.8463 22.7865C27.2187 22.7865 27.5205 22.4847 27.5205 22.1123C27.5205 21.74 27.2187 21.4382 26.8463 21.4382C26.474 21.4382 26.1722 21.74 26.1722 22.1123C26.1722 22.4847 26.474 22.7865 26.8463 22.7865Z" fill="#B28E32"></path>
+          <path d="M20.4194 22.3371C20.5683 22.3371 20.689 22.2163 20.689 22.0674C20.689 21.9185 20.5683 21.7977 20.4194 21.7977C20.2705 21.7977 20.1497 21.9185 20.1497 22.0674C20.1497 22.2163 20.2705 22.3371 20.4194 22.3371Z" fill="#B28E32"></path>
+          <path d="M13.5879 22.2921C13.7369 22.2921 13.8576 22.1714 13.8576 22.0224C13.8576 21.8735 13.7369 21.7528 13.5879 21.7528C13.439 21.7528 13.3183 21.8735 13.3183 22.0224C13.3183 22.1714 13.439 22.2921 13.5879 22.2921Z" fill="#B28E32"></path>
+          <path d="M17.0935 16.4494C17.2424 16.4494 17.3632 16.3287 17.3632 16.1797C17.3632 16.0308 17.2424 15.9101 17.0935 15.9101C16.9446 15.9101 16.8239 16.0308 16.8239 16.1797C16.8239 16.3287 16.9446 16.4494 17.0935 16.4494Z" fill="#B28E32"></path>
+          <path d="M8.05982 21.8876C8.20875 21.8876 8.32949 21.7668 8.32949 21.6179C8.32949 21.469 8.20875 21.3483 8.05982 21.3483C7.91089 21.3483 7.79016 21.469 7.79016 21.6179C7.79016 21.7668 7.91089 21.8876 8.05982 21.8876Z" fill="#F4CB56"></path>
+          <path d="M9.40812 20.3145C9.55705 20.3145 9.67778 20.1938 9.67778 20.0449C9.67778 19.896 9.55705 19.7752 9.40812 19.7752C9.25919 19.7752 9.13846 19.896 9.13846 20.0449C9.13846 20.1938 9.25919 20.3145 9.40812 20.3145Z" fill="#CEAB4A"></path>
+          <path d="M4.86878 22.9662C5.19147 22.9662 5.45305 22.7047 5.45305 22.382C5.45305 22.0593 5.19147 21.7977 4.86878 21.7977C4.5461 21.7977 4.28452 22.0593 4.28452 22.382C4.28452 22.7047 4.5461 22.9662 4.86878 22.9662Z" fill="#CEAB4A"></path>
+          <path d="M17.9924 10.4719C20.1048 11.2809 21.4082 13.0337 21.1834 14.5618C21.2733 14.4269 21.3632 14.2921 21.4082 14.1573C22.0374 12.5393 20.6441 10.5168 18.352 9.61795C16.0149 8.71908 13.6329 9.25841 13.0037 10.8764C12.9587 11.0112 12.9138 11.191 12.8688 11.3258C13.7228 10.0224 15.8801 9.61796 17.9924 10.4719Z" fill="#F4F1E6"></path>
+        </svg>
+      </a>
+      <style>
+  .theme-toggle {
+    border: 0;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--border-color);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .theme-toggle svg {
+    fill: var(--text-color);
+  }
+</style>
+<button class="theme-toggle"><svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M10 14.0001C9.99997 13.0093 10.2453 12.034 10.7141 11.1611C11.1829 10.2883 11.8605 9.54507 12.6865 8.99791C13.5125 8.45076 14.4611 8.11667 15.4477 8.02547C16.4342 7.93428 17.428 8.08881 18.3403 8.47529C19.2526 8.86176 20.055 9.46814 20.6758 10.2403C21.2967 11.0124 21.7166 11.9263 21.8982 12.9003C22.0798 13.8743 22.0174 14.8781 21.7165 15.8221C21.4156 16.766 20.8856 17.6208 20.1739 18.3101C19.9709 18.5061 19.8149 18.7101 19.7209 18.9291L18.9589 20.698C18.9202 20.7877 18.8562 20.8641 18.7746 20.9177C18.693 20.9714 18.5975 21 18.4999 21H13.5C13.4022 21.0002 13.3064 20.9717 13.2247 20.918C13.1429 20.8643 13.0787 20.7879 13.04 20.698L12.279 18.9281C12.17 18.6943 12.0161 18.4843 11.826 18.3101C11.2476 17.7512 10.7878 17.0816 10.4741 16.341C10.1604 15.6005 9.99912 14.8044 10 14.0001V14.0001ZM13 22.5C13 22.3674 13.0526 22.2402 13.1464 22.1465C13.2402 22.0527 13.3674 22 13.5 22H18.4999C18.6325 22 18.7597 22.0527 18.8535 22.1465C18.9472 22.2402 18.9999 22.3674 18.9999 22.5C18.9999 22.6326 18.9472 22.7598 18.8535 22.8536C18.7597 22.9473 18.6325 23 18.4999 23L18.2759 23.447C18.1929 23.6131 18.0653 23.7528 17.9074 23.8504C17.7495 23.9481 17.5676 23.9999 17.3819 24H14.6179C14.4323 23.9999 14.2503 23.9481 14.0924 23.8504C13.9345 23.7528 13.8069 23.6131 13.724 23.447L13.5 23C13.3674 23 13.2402 22.9473 13.1464 22.8536C13.0526 22.7598 13 22.6326 13 22.5Z"></path>
+</svg></button>
+<script>
+  (function (d, w, ls) {
+    const $btn = d.querySelector(".theme-toggle");
+    let prefersDark = w.matchMedia('(prefers-color-scheme: dark)').matches,
+      lightIcon = `<svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M10 14.0001C9.99997 13.0093 10.2453 12.034 10.7141 11.1611C11.1829 10.2883 11.8605 9.54507 12.6865 8.99791C13.5125 8.45076 14.4611 8.11667 15.4477 8.02547C16.4342 7.93428 17.428 8.08881 18.3403 8.47529C19.2526 8.86176 20.055 9.46814 20.6758 10.2403C21.2967 11.0124 21.7166 11.9263 21.8982 12.9003C22.0798 13.8743 22.0174 14.8781 21.7165 15.8221C21.4156 16.766 20.8856 17.6208 20.1739 18.3101C19.9709 18.5061 19.8149 18.7101 19.7209 18.9291L18.9589 20.698C18.9202 20.7877 18.8562 20.8641 18.7746 20.9177C18.693 20.9714 18.5975 21 18.4999 21H13.5C13.4022 21.0002 13.3064 20.9717 13.2247 20.918C13.1429 20.8643 13.0787 20.7879 13.04 20.698L12.279 18.9281C12.17 18.6943 12.0161 18.4843 11.826 18.3101C11.2476 17.7512 10.7878 17.0816 10.4741 16.341C10.1604 15.6005 9.99912 14.8044 10 14.0001V14.0001ZM13 22.5C13 22.3674 13.0526 22.2402 13.1464 22.1465C13.2402 22.0527 13.3674 22 13.5 22H18.4999C18.6325 22 18.7597 22.0527 18.8535 22.1465C18.9472 22.2402 18.9999 22.3674 18.9999 22.5C18.9999 22.6326 18.9472 22.7598 18.8535 22.8536C18.7597 22.9473 18.6325 23 18.4999 23L18.2759 23.447C18.1929 23.6131 18.0653 23.7528 17.9074 23.8504C17.7495 23.9481 17.5676 23.9999 17.3819 24H14.6179C14.4323 23.9999 14.2503 23.9481 14.0924 23.8504C13.9345 23.7528 13.8069 23.6131 13.724 23.447L13.5 23C13.3674 23 13.2402 22.9473 13.1464 22.8536C13.0526 22.7598 13 22.6326 13 22.5Z" />
+</svg>`,
+      darkIcon = `<svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M9.50103 13.992C9.50103 13.4196 9.58109 12.8661 9.73121 12.3407L18.296 20.9065C18.2116 20.9659 18.111 20.9977 18.0078 20.9976H13.0038C12.9059 20.9978 12.8101 20.9692 12.7283 20.9155C12.6465 20.8618 12.5822 20.7853 12.5435 20.6954L11.7818 18.924C11.6728 18.69 11.5187 18.4799 11.3285 18.3055C10.7496 17.7462 10.2895 17.076 9.9755 16.3349C9.66151 15.5937 9.50014 14.7969 9.50103 13.992V13.992ZM19.8122 18.1764L11.3205 9.68561C12.453 8.59179 13.9698 7.98655 15.5442 8.00023C17.1187 8.01391 18.6248 8.64542 19.7381 9.75876C20.8514 10.8721 21.4829 12.3782 21.4966 13.9526C21.5103 15.527 20.9051 17.0439 19.8112 18.1764H19.8122ZM12.5034 22.4988C12.5034 22.3661 12.5561 22.2388 12.65 22.145C12.7438 22.0511 12.8711 21.9984 13.0038 21.9984H18.0078C18.1405 21.9984 18.2678 22.0511 18.3616 22.145C18.4555 22.2388 18.5082 22.3661 18.5082 22.4988C18.5082 22.6315 18.4555 22.7588 18.3616 22.8526C18.2678 22.9465 18.1405 22.9992 18.0078 22.9992L17.7836 23.4466C17.7006 23.6128 17.5729 23.7526 17.4149 23.8503C17.2568 23.9481 17.0747 23.9999 16.8889 24H14.1227C13.9369 23.9999 13.7548 23.9481 13.5968 23.8503C13.4387 23.7526 13.3111 23.6128 13.228 23.4466L13.0038 22.9992C12.8711 22.9992 12.7438 22.9465 12.65 22.8526C12.5561 22.7588 12.5034 22.6315 12.5034 22.4988ZM9.85531 9.63457C9.80879 9.58805 9.75355 9.55114 9.69277 9.52596C9.63198 9.50078 9.56683 9.48782 9.50103 9.48782C9.43523 9.48782 9.37008 9.50078 9.30929 9.52596C9.24851 9.55114 9.19327 9.58805 9.14675 9.63457C9.10022 9.6811 9.06332 9.73633 9.03814 9.79712C9.01296 9.85791 9 9.92306 9 9.98885C9 10.0546 9.01296 10.1198 9.03814 10.1806C9.06332 10.2414 9.10022 10.2966 9.14675 10.3431L21.1563 22.3527C21.2503 22.4467 21.3777 22.4994 21.5106 22.4994C21.6435 22.4994 21.7709 22.4467 21.8649 22.3527C21.9588 22.2587 22.0116 22.1313 22.0116 21.9984C22.0116 21.8655 21.9588 21.7381 21.8649 21.6441L9.85531 9.63457V9.63457Z" />
+</svg>`;
+
+    function lightMode() {
+      ls.setItem("theme", "light");
+      d.querySelector(":root").classList.add("light");
+      d.querySelector(":root").classList.remove("dark");
+      $btn.innerHTML = lightIcon;
+    }
+
+    function darkMode() {
+      ls.setItem("theme", "dark");
+      d.querySelector(":root").classList.remove("light");
+      d.querySelector(":root").classList.add("dark");
+      $btn.innerHTML = darkIcon;
+    }
+
+    if (ls.getItem("theme") === null) {
+      if (prefersDark) {
+        ls.setItem("theme", "dark");
+      } else {
+        ls.setItem("theme", "light");
+      }
+    }
+
+    if (ls.getItem("theme") === "dark") darkMode();
+    if (ls.getItem("theme") === "light") lightMode();
+
+    $btn.addEventListener("click", (e) => (ls.getItem("theme") === "dark") ? lightMode() : darkMode());
+  })(document, window, localStorage);
+</script>
+    </nav>
+  </div>
+</header>
+  <section class="post section post-with-menu">
+  <aside id="post-blog" class="post-info text-center">
+        <h1>Git</h1>
+        <aside class="post-date">
+          <small>
+            <span>Última actualización:</span>
+            <i>
+              <time datetime="2022-08-08">
+                Ago 08 2022
+              </time>
+            </i>
+          </small>
+        </aside>
+        <img class="post-category" src="./Git 🦊 jonmircha_files/git.svg" alt="Categoría: git" title="Categoría: git" loading="lazy">
+      </aside>
+  <article class="post-content">
+    <hr>
+    <aside class="post-menu">
+
+<h2 id="temas">Temas</h2>
+<ul>
+<li><a href="https://jonmircha.com/git#introducci%C3%B3n">Introducción</a></li>
+<li><a href="https://jonmircha.com/git#configuraci%C3%B3n-inicial">Configuración inicial</a></li>
+<li><a href="https://jonmircha.com/git#flujo-b%C3%A1sico">Flujo básico</a></li>
+<li><a href="https://jonmircha.com/git#de-master-a-main">De <em>master</em> a <em>main</em></a></li>
+<li><a href="https://jonmircha.com/git#ayuda">Ayuda</a></li>
+<li><a href="https://jonmircha.com/git#ignorar-archivos">Ignorar archivos</a></li>
+<li><a href="https://jonmircha.com/git#clonar-repositorios">Clonar repositorios</a></li>
+<li><a href="https://jonmircha.com/git#ramas">Ramas</a></li>
+<li><a href="https://jonmircha.com/git#fusiones">Fusiones</a></li>
+<li><a href="https://jonmircha.com/git#cambios">Cambios</a></li>
+<li><a href="https://jonmircha.com/git#registro-del-historial">Registro del historial</a></li>
+<li><a href="https://jonmircha.com/git#reseteo-del-historial">Reseteo del historial</a></li>
+<li><a href="https://jonmircha.com/git#resetear-un-repositorio">Resetear un repositorio</a></li>
+<li><a href="https://jonmircha.com/git#remotos">Remotos</a></li>
+<li><a href="https://jonmircha.com/git#etiquetas">Etiquetas</a></li>
+<li><a href="https://jonmircha.com/git#github-pages"><em>GitHub Pages</em></a></li>
+<li><a href="https://jonmircha.com/git#colaboraci%C3%B3n-en-github">Colaboración en <em>GitHub</em></a></li>
+<li><a href="https://jonmircha.com/git#aprende-m%C3%A1s">Aprende más</a></li>
+</ul>
+<hr>
+</aside>
+
+<h2 id="introducción">Introducción</h2>
+<p><a href="https://git-scm.com/" target="_blank" rel="noopener"><em>Git</em></a> es un <em>software</em> de control de versiones distribuido y descentralizado que permite a un equipo de desarrolladores trabajar sobre el mismo código.</p>
+<p>Se denomina <strong>"distribuido"</strong> porque cada miembro del equipo dispone de una copia completa del código.</p>
+<p>Los miembros del equipo pueden enviarse código, recibirlo y desarrollar funcionalidades de forma conjunta y separada del servidor central.</p>
+<p>Algunas ventajas de usarlo:</p>
+<ul>
+<li>Es el estándar actual.</li>
+<li>Código colaborativo, versionado y distribuido.</li>
+<li>Recuperación de archivos.</li>
+<li>Mayor control.</li>
+<li><em>Shorcuts</em> y <em>plugins</em>.</li>
+<li>Mejora la productividad.</li>
+</ul>
+<p><img src="./Git 🦊 jonmircha_files/git-centr-decentr.png" alt="Git es descentralizado"></p>
+<h3 id="instalación">Instalación:</h3>
+<ul>
+<li><a href="https://git-scm.com/downloads" target="_blank" rel="noopener"><em>Git</em></a>.</li>
+<li>Interfaces gráficas:<ul>
+<li><a href="https://www.sourcetreeapp.com/" target="_blank" rel="noopener"><em>Source Tree</em></a>.</li>
+<li><a href="https://desktop.github.com/" target="_blank" rel="noopener"><em>GitHub Desktop</em></a>.</li>
+<li><a href="https://www.gitkraken.com/" target="_blank" rel="noopener"><em>GitKraken</em></a>.</li>
+<li><a href="https://code.visualstudio.com/#built-in-git" target="_blank" rel="noopener"><em>Visual Studio Code</em></a>.</li>
+<li>etc.</li>
+</ul>
+</li>
+</ul>
+<h3 id="plataformas-web-que-trabajan-con-git">Plataformas <em>web</em> que trabajan con <em>Git</em>:</h3>
+<ul>
+<li><a href="https://github.com/" target="_blank" rel="noopener"><em>GitHub</em></a>.</li>
+<li><a href="https://gitlab.com/" target="_blank" rel="noopener"><em>GitLab</em></a>.</li>
+<li><a href="https://bitbucket.org/" target="_blank" rel="noopener"><em>BitBucket</em></a>.</li>
+<li>etc.</li>
+</ul>
+<p><img src="./Git 🦊 jonmircha_files/git-github.png" alt="Git no es GitHub"></p>
+<p><a href="https://jonmircha.com/git#">🔼 Regresar</a></p>
+<hr>
+<h2 id="configuración-inicial">Configuración inicial</h2>
+<h3 id="configurando-git-por-primera-vez">Configurando <em>Git</em> por primera vez</h3>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token function">git</span> --version
+<span class="token function">git</span> config --global user.name <span class="token string">"Jonathan MirCha"</span>
+<span class="token function">git</span> config --global user.email jonmircha@gmail.com
+<span class="token function">git</span> config --global user.ui <span class="token boolean">true</span>
+<span class="token function">git</span> config --global init.defaultBranch main
+<span class="token function">git</span> config --list
+<span class="token comment"># asignando visual studio code como editor de configuración de git</span>
+<span class="token function">git</span> config --global core.editor <span class="token string">"code --wait"</span>
+<span class="token function">git</span> config --global -e
+<span class="token comment"># para estandarizar los saltos de línea en windows</span>
+<span class="token function">git</span> config --global core.autocrlf <span class="token boolean">true</span>
+<span class="token comment"># para estandarizar los saltos de línea en linux/mac</span>
+<span class="token function">git</span> config --global core.autocrlf input
+<span class="token comment"># ver todas las opciones de la configuración en la terminal</span>
+<span class="token function">git</span> config -h
+<span class="token comment"># ver todas las opciones de la configuración en el navegador</span>
+<span class="token function">git</span> <span class="token builtin class-name">help</span> config</code></pre>
+<h3 id="inicializar-git-en-un-directorio-local">Inicializar <em>Git</em> en un directorio local</h3>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token function">mkdir</span> carpeta
+<span class="token builtin class-name">cd</span> carpeta
+<span class="token function">touch</span> README.md
+<span class="token function">touch</span> .gitignore
+<span class="token function">git</span> init
+code <span class="token builtin class-name">.</span></code></pre>
+<p><a href="https://jonmircha.com/git#">🔼 Regresar</a></p>
+<hr>
+<h2 id="flujo-básico">Flujo básico</h2>
+<p>El flujo de <em>Git</em>, consta de tres estados locales, es decir en la computadora donde se esta trabajando y uno más de forma remota cuando accedemos al codigo centralizado en plataformas como <em>GitHub</em>, <em>Gitlab</em>, <em>Bitbucket</em>, etc.</p>
+<p>Dichos estados son <strong><em>modified</em></strong>, <strong><em>staged</em></strong>, <strong><em>committed</em></strong> y <strong><em>remote</em></strong>. A cada uno de ellos le corresponde un área de trabajo:</p>
+<ol>
+<li><strong><em>Working Directory</em></strong>: Es el área correspondiente al estado <strong><em>modified</em></strong> y es la carpeta local de tu computadora donde almacenas los archivos de tu proyecto.</li>
+<li><strong><em>Staging Area</em></strong>: Es el área correspondiente al estado <strong><em>staged</em></strong> también se le llama <strong><em>index</em></strong> por que es el área donde <em>git</em> indexa y agrega los cambios realizados en los archivos previos a comprometerlos en su registro.</li>
+<li><strong><em>Local Repository</em></strong>: Es el área correspondiente al estado <strong><em>committed</em></strong>, donde los cambios ya se han registrado en el repositorio de <em>git</em> también se le llama <strong><em>HEAD</em></strong> por que indica en qué cambio se encuentra el puntero del repositorio.</li>
+<li><strong><em>Remote Repository</em></strong>: Es el área correspondiente al estado <strong><em>remote</em></strong> y es el directorio remoto donde almacenamos los archivos del proyecto en alguna plataforma <em>web</em> como <em>GitHub</em>, <em>GitLab</em>, <em>BitBucket</em>. <em>Git</em> denomina <strong><em>origin</em></strong> al repositorio remoto.</li>
+</ol>
+<p><img src="./Git 🦊 jonmircha_files/git-flow.png" alt="Flujo básico de Git"></p>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># agregar los cambios de un archivo al staged</span>
+<span class="token function">git</span> <span class="token function">add</span> archivo/directorio
+<span class="token comment"># agregar todos los cambios de todos los archivos al staged</span>
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+
+
+<span class="token comment"># los cambios son comprometidos en el repositorio</span>
+<span class="token comment"># debes escribir el mensaje del cambio</span>
+<span class="token comment"># cuando se abra el archivo de configuración</span>
+<span class="token comment"># al terminar guarda y cierra el archivo</span>
+<span class="token comment"># para que los cambios tengan efecto</span>
+<span class="token function">git</span> commit
+<span class="token comment"># es un shortcut del comando anterior</span>
+<span class="token comment"># escribes y confirmas el mensaje del cambio en un sólo paso</span>
+<span class="token function">git</span> commit -m <span class="token string">"mensaje descriptivo del cambio"</span>
+
+
+<span class="token comment"># se agrega el origen remoto de tu repositorio de GitHub</span>
+<span class="token function">git</span> remote <span class="token function">add</span> origin https://github.com/usuario/repositorio.git
+<span class="token comment"># la primera vez que vinculamos el repositorio remoto con el local</span>
+<span class="token function">git</span> push -u origin master
+<span class="token comment"># para las subsecuentes actualizaciones, sino cambias de rama</span>
+<span class="token function">git</span> push
+
+
+<span class="token comment">#para descargar los cambios del repositorio remoto al local</span>
+<span class="token function">git</span> pull</code></pre>
+<p><a href="https://jonmircha.com/git#">🔼 Regresar</a></p>
+<hr>
+<h2 id="de-master-a-main">De <em>master</em> a <em>main</em></h2>
+<p>Con los desafortunados acontecimientos del 25 de mayo de 2020 en los Estados Unidos que culminaron con el asesinato del afroamericano <a href="https://es.wikipedia.org/wiki/Muerte_de_George_Floyd" target="_blank" rel="noopener"><em>George Floyd</em></a> a manos de policias de la ciudad de <em>Mineápolis</em>, se intensificó de manera global el movimiento <a href="https://es.wikipedia.org/wiki/Black_Lives_Matter" target="_blank" rel="noopener"><em>#BlackLivesMatter</em></a>.</p>
+<p>Con dicho movimiento muchas industrias y empresas comenzaron a tomar acciones para erradicar el racismo.</p>
+<p>En la industria de la tecnología por años se han empleado palabras como <em>master</em>, <em>slave</em>, <em>whitelist</em>, <em>blacklist</em> entre otras que actualmente no son bien vistas por el contexto y la semántica que implican.</p>
+<p>Al respecto <em>Microsoft</em> empresa propietaria de <em>GitHub</em> decidió comenzar una campaña para reemplazar el nombre de la rama principal de los repositorios de <em>master</em> a <em>main</em>; como lo han explicado en este <a href="https://github.com/github/renaming" target="_blank" rel="noopener">documento</a>:</p>
+<blockquote>
+<p>"El 1 de octubre de 2020, cualquier nuevo repositorio que crees utilizará '<em>main</em>' como la rama por defecto, en lugar de '<em>master</em>'. Este cambio no afecta a ninguno de tus repositorios existentes: los repositorios existentes continuarán teniendo la misma rama por defecto que tienen ahora".</p>
+</blockquote>
+<p>Este cambio implica agregar una par de líneas de comandos adicionales para crear la rama '<em>main</em>' y hacerla principal en el repositorio.</p>
+<p>Entonces el flujo básico quedaría de la siguiente manera:</p>
+<h3 id="para-repositorios-nuevos">Para repositorios nuevos</h3>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token function">git</span> init
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+<span class="token function">git</span> commit -m <span class="token string">"Primer commit"</span>
+<span class="token function">git</span> branch -M main
+<span class="token function">git</span> remote <span class="token function">add</span> origin https://github.com/usuario/repositorio.git
+<span class="token function">git</span> push -u origin main</code></pre>
+<h3 id="para-repositorios-existentes">Para repositorios existentes</h3>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token function">git</span> branch -M main
+<span class="token function">git</span> remote <span class="token function">add</span> origin https://github.com/usuario/repositorio.git
+<span class="token function">git</span> push -u origin main</code></pre>
+<h3 id="para-reemplazar-la-rama-master-por-main-en-github">Para reemplazar la rama <em>master</em> por <em>main</em> en <em>GitHub</em></h3>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># Paso 1</span>
+<span class="token comment"># Crea la rama local main y pásale el historial de la rama master</span>
+<span class="token function">git</span> branch -m master main
+
+
+<span class="token comment"># Paso 2</span>
+<span class="token comment"># Haz un push de la nueva rama local main en el repositorio remoto de GitHub</span>
+<span class="token function">git</span> push -u origin main
+
+
+<span class="token comment"># Paso 3</span>
+<span class="token comment"># Cambia el HEAD actual a la rama main</span>
+<span class="token function">git</span> symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main</code></pre>
+<h4 id="paso-4">Paso 4</h4>
+<p>Cambia la rama <em>default</em> de <em>master</em> a <em>main</em> en tu repositorio de <em>GitHub</em> .</p>
+<p>Para hacerlo, sigue las instrucciones de este <a href="https://docs.github.com/en/github/administering-a-repository/setting-the-default-branch" target="_blank" rel="noopener">enlace</a>.</p>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># Paso 5</span>
+<span class="token comment"># Elimina la rama master del repositorio remoto</span>
+<span class="token function">git</span> push origin --delete master</code></pre>
+<h3 id="para-reemplazar-la-rama-master-por-main-en-git">Para reemplazar la rama <em>master</em> por <em>main</em> en <em>Git</em></h3>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token function">git</span> config --global init.defaultBranch main</code></pre>
+<p><a href="https://jonmircha.com/git#">🔼 Regresar</a></p>
+<hr>
+<h2 id="ayuda">Ayuda</h2>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># ayuda en la terminal</span>
+<span class="token function">git</span> comando -h
+<span class="token comment"># ayuda en el navegador</span>
+<span class="token function">git</span> <span class="token builtin class-name">help</span> comando</code></pre>
+<p><a href="https://jonmircha.com/git#">🔼 Regresar</a></p>
+<hr>
+<h2 id="ignorar-archivos">Ignorar archivos</h2>
+<p>En el archivo <strong><em><code>.gitignore</code></em></strong> incluimos todo lo que <strong>NO</strong> queramos incluir en nuestro repositorio. Lo podemos crear manualmente o con <a href="https://www.gitignore.io/" target="_blank" rel="noopener"><em>gitignore.io</em></a>.</p>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># esto es un comentario</span>
+archivo.ext
+carpeta
+/archivo_desde_raiz.ext
+<span class="token comment"># ignorar todos los archivos que terminen en .log</span>
+*.log
+<span class="token comment"># excepto production.log</span>
+<span class="token operator">!</span>production.log
+<span class="token comment"># ignorar los archivos terminados en .txt dentro de la carpeta doc,</span>
+<span class="token comment"># pero no en sus subcarpetas</span>
+doc/*.txt
+<span class="token comment"># ignorar todos los archivos terminados en .txt dentro de la carpeta doc</span>
+<span class="token comment"># y también en sus subcarpetas</span>
+doc/**/*.txt</code></pre>
+<p><a href="https://jonmircha.com/git#">🔼 Regresar</a></p>
+<hr>
+<h2 id="clonar-repositorios">Clonar repositorios</h2>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token function">git</span> clone https://github.com/usuario/repositorio.git</code></pre>
+<p><a href="https://jonmircha.com/git#">🔼 Regresar</a></p>
+<hr>
+<h2 id="ramas">Ramas</h2>
+<p>Una rama nos permite aislar una nueva funcionalidad en nuestro código que después podremos añadir a la versión principal.</p>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># crear rama</span>
+<span class="token function">git</span> branch nombre-rama
+
+<span class="token comment"># cambiar de rama</span>
+<span class="token function">git</span> checkout nombre-rama
+
+<span class="token comment"># crear una rama y cambiarte a ella</span>
+<span class="token function">git</span> checkout -b rama
+
+<span class="token comment"># eliminar rama</span>
+<span class="token function">git</span> branch -d nombre-rama
+
+<span class="token comment"># eliminar ramas remotas</span>
+<span class="token function">git</span> push origin --delete nombre-rama
+
+<span class="token comment">#eliminar rama (forzado)</span>
+<span class="token function">git</span> branch -D nombre-rama
+
+<span class="token comment"># listar todas las ramas del repositorio</span>
+<span class="token function">git</span> branch
+
+<span class="token comment"># lista ramas no fusionadas a la rama actual</span>
+<span class="token function">git</span> branch --no-merged
+
+<span class="token comment"># lista ramas fusionadas a la rama actual</span>
+<span class="token function">git</span> branch --merged
+
+<span class="token comment"># rebasar ramas</span>
+<span class="token function">git</span> checkout rama-secundaria
+<span class="token function">git</span> rebase rama-principal</code></pre>
+<p><a href="https://jonmircha.com/git#">🔼 Regresar</a></p>
+<hr>
+<h2 id="fusiones">Fusiones</h2>
+<p>Une dos ramas. Para hacer una fusión necesitamos:</p>
+<ol>
+<li>Situarnos en la rama que se quedará con el contenido fusionado.</li>
+<li>Fusionar.</li>
+</ol>
+<p>Cuando se fusionan ramas se pueden dar 2 resultados diferentes:</p>
+<ul>
+<li><strong><em>Fast-Forward</em></strong>: La fusión se hace automática, no hay conflictos por resolver.</li>
+<li><strong><em>Manual Merge</em></strong>: La fusión hay que hacerla manual, para resolver conflictos de duplicación de contenido.</li>
+</ul>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># nos cambiamos a la rama principal que quedará de la fusión</span>
+<span class="token function">git</span> checkout rama-principal
+
+<span class="token comment"># ejecutamos el comando merge con la rama secundaria a fusionar</span>
+<span class="token function">git</span> merge rama-secundaria</code></pre>
+<p><a href="https://jonmircha.com/git#">🔼 Regresar</a></p>
+<hr>
+<h2 id="cambios">Cambios</h2>
+<p>Puedes agregar modificaciones al último cambio</p>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># sin editar el mensaje del último commit</span>
+<span class="token function">git</span> commit --amend --no-edit
+
+<span class="token comment"># editando el mensaje del último commit</span>
+<span class="token function">git</span> commit --amend -m <span class="token string">"nuevo mensaje para el último commit"</span>
+
+<span class="token comment"># eliminar el último commit</span>
+<span class="token function">git</span> reset --hard HEAD~1</code></pre>
+<p>Podemos desplazarnos en el historial del repositorio hacia atrás o adelante en cambios o ramas , sin afectar el repositorio como tal.</p>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># cambiar a una rama</span>
+<span class="token function">git</span> checkout nombre-rama
+
+<span class="token comment"># cambiar a un commit en particular</span>
+<span class="token function">git</span> checkout id-commit</code></pre>
+<p><a href="https://jonmircha.com/git#">🔼 Regresar</a></p>
+<hr>
+<h2 id="registro-del-historial">Registro del historial</h2>
+<p><strong><code>git log</code></strong> nos permite conocer todo el historial de un proyecto, con la información de la fecha, el autor y id de cada cambio.</p>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token function">git</span> log
+
+<span class="token comment"># muestra en una sola línea por cambio</span>
+<span class="token function">git</span> log --oneline
+
+<span class="token comment"># guarda el log en la ruta y archivo que especifiquemos</span>
+<span class="token function">git</span> log <span class="token operator">&gt;</span> commits.txt
+
+<span class="token comment"># muestra el historial con el formato que indicamos</span>
+<span class="token function">git</span> log --pretty<span class="token operator">=</span>format:<span class="token string">"%h - %an, %ar : %s"</span>
+
+<span class="token comment"># cambiamos la n por cualquier número entero y mostrará los n cambios recientes</span>
+<span class="token function">git</span> log -n
+
+<span class="token comment"># muestra los cambios realizados después de la fecha especificada</span>
+<span class="token function">git</span> log --after<span class="token operator">=</span><span class="token string">"2019-07-07 00:00:00"</span>
+
+<span class="token comment"># muestra los cambios realizados antes de la fecha especificada</span>
+<span class="token function">git</span> log --before<span class="token operator">=</span><span class="token string">"2019-07-08 00:00:00"</span>
+
+<span class="token comment"># muestra los cambios realizados en el rango de fecha especificado</span>
+<span class="token function">git</span> log --after<span class="token operator">=</span><span class="token string">"2019-07-07 00:00:00"</span> --before<span class="token operator">=</span><span class="token string">"2019-07-08 00:00:00"</span>
+
+<span class="token comment"># muestra una gráfica del historial de cambios, rama y fusiones</span>
+<span class="token function">git</span> log --oneline --graph --all
+
+<span class="token comment"># muestra todo el registro de acciones del log</span>
+<span class="token comment"># incluyendo inserciones, cambios, eliminaciones, fusiones, etc.</span>
+<span class="token function">git</span> reflog
+
+<span class="token comment"># diferencias entre el Working Directory y el Staging Area</span>
+<span class="token function">git</span> <span class="token function">diff</span></code></pre>
+<p><a href="https://jonmircha.com/git#">🔼 Regresar</a></p>
+<hr>
+<h2 id="reseteo-del-historial">Reseteo del historial</h2>
+<p>Podemos eliminar el historial de cambios del proyecto hacia adelante con respecto de un punto de referencia.</p>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment">#nos muestra el listado de archivos nuevos (untracked), borrados o editados</span>
+<span class="token function">git</span> status
+
+<span class="token comment"># borra HEAD</span>
+<span class="token function">git</span> reset --soft
+
+<span class="token comment"># borra HEAD y Staging</span>
+<span class="token function">git</span> reset --mixed
+
+<span class="token comment"># borra todo: HEAD, Staging y Working Directory</span>
+<span class="token function">git</span> reset --hard
+
+<span class="token comment"># deshace todos los cambios después del commit indicado, preservando los cambios localmente</span>
+<span class="token function">git</span> reset id-commit
+
+<span class="token comment"># desecha todo el historial y regresa al commit especificado</span>
+<span class="token function">git</span> reset --hard id-commit</code></pre>
+<p><a href="https://jonmircha.com/git#">🔼 Regresar</a></p>
+<hr>
+<h2 id="resetear-un-repositorio">Resetear un repositorio</h2>
+<p>Si en algún momento tienes la necesidad de resetear el historial de cambios de un repositorio para que quede como si lo acabarás de crear ejecuta esta serie de comandos:</p>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token builtin class-name">cd</span> carpeta-repositorio
+<span class="token function">mv</span> .git/config ~/saved_git_config
+<span class="token function">rm</span> -rf .git
+<span class="token function">git</span> init
+<span class="token function">git</span> branch -M main
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+<span class="token function">git</span> commit -m <span class="token string">"Commit inicial"</span>
+<span class="token function">mv</span> ~/saved_git_config .git/config
+<span class="token function">git</span> push --force origin main</code></pre>
+<p><a href="https://jonmircha.com/git#">🔼 Regresar</a></p>
+<hr>
+<h2 id="remotos">Remotos</h2>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># muestra los orígenes remotos del repositorio</span>
+<span class="token function">git</span> remote
+
+<span class="token comment"># muestra los orígenes remotos con detalle</span>
+<span class="token function">git</span> remote -v
+
+<span class="token comment"># agregar un orígen remoto</span>
+<span class="token function">git</span> remote <span class="token function">add</span> nombre-orígen https://github.com/usuario/repositorio.git
+
+<span class="token comment"># renombrar un orígen remoto</span>
+<span class="token function">git</span> remote <span class="token function">rename</span> nombre-viejo nombre-nuevo
+
+<span class="token comment"># eliminar un orígen remoto</span>
+<span class="token function">git</span> remote remove nombre-orígen
+
+<span class="token comment"># descargar una rama remota a local diferente a la principal</span>
+<span class="token function">git</span> checkout --track -b rama-remota origin/rama-remota</code></pre>
+<p><a href="https://jonmircha.com/git#">🔼 Regresar</a></p>
+<hr>
+<h2 id="etiquetas">Etiquetas</h2>
+<p>Con esta opción <em>git</em> nos permite versionar nuestro código, librería o proyecto.</p>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># listar etiquetas</span>
+<span class="token function">git</span> tag
+
+<span class="token comment"># crea una etiqueta</span>
+<span class="token function">git</span> tag numero-versión
+
+<span class="token comment"># eliminar una etiqueta</span>
+<span class="token function">git</span> tag -d numero-versión
+
+<span class="token comment"># mostrar información de una etiqueta</span>
+<span class="token function">git</span> show numero-versión
+
+<span class="token comment"># sincronizando la etiqueta del repositorio local al remoto</span>
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+<span class="token function">git</span>  tag v1.0.0
+<span class="token function">git</span> commit -m <span class="token string">"v1.0.0"</span>
+<span class="token function">git</span> push origin numero-versión
+
+<span class="token comment"># generando una etiqueta anotada (con mensaje de commit)</span>
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+<span class="token function">git</span> tag -a <span class="token string">"v1.0.0"</span> -m <span class="token string">"Mensaje de la etiqueta"</span>
+<span class="token function">git</span> push --tags</code></pre>
+<p><a href="https://jonmircha.com/git#">🔼 Regresar</a></p>
+<hr>
+<h2 id="github-pages"><em>GitHub Pages</em></h2>
+<p><a href="https://pages.github.com/" target="_blank" rel="noopener"><strong><code>gh-pages</code></strong></a> es una rama especial para crear un sitio <em>web</em> a tu proyecto alojado directamente en tu repositorio de <em>GitHub</em>.</p>
+<ul>
+<li><em>URL</em> del repositorio: <strong><a href="https://github.com/usuario/repositorio" target="_blank" rel="noopener">https://github.com/usuario/repositorio</a></strong></li>
+<li><em>URL</em> del sitio: <strong><a href="https://usuario.github.io/repositorio" target="_blank" rel="noopener">https://usuario.github.io/repositorio</a></strong></li>
+</ul>
+<p>Para crear esta rama especial en <em>GitHub</em> ejecutamos los siguientes comandos:</p>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token function">git</span> branch gh-pages
+<span class="token function">git</span> checkout gh-pages
+
+<span class="token function">git</span> remote <span class="token function">add</span> origin https://github.com/usuario/repositorio.git
+<span class="token function">git</span> push origin gh-pages
+
+<span class="token comment"># para descargar los cambios del repositorio remoto al local</span>
+<span class="token function">git</span> pull origin gh-pages</code></pre>
+<p><a href="https://jonmircha.com/git#">🔼 Regresar</a></p>
+<hr>
+<h2 id="colaboración-en-github">Colaboración en <em>GitHub</em></h2>
+<p>Para poder colaborar en proyectos alojados en <em>GitHub</em> necesitamos hacer uso de los <em>forks</em> y <em>pull requests</em>, herramientas que nos ofrece la plataforma para dicho objetivo.</p>
+<p>A continuación describo el proceso de colaboración en <em>GitHub</em>.</p>
+<ol>
+<li><em>Forkea</em> el repositorio en el que quieras colaborar, para hacerlo, sigue las instrucciones de este <a href="https://docs.github.com/en/get-started/quickstart/fork-a-repo" target="_blank" rel="noopener">enlace</a>.</li>
+<li>Una vez <em>forkeado</em> el repositorio en tu cuenta de <em>GitHub</em>, clónalo en tu equipo de cómputo.</li>
+<li>En el repositorio local hay que configurar los orígenes remotos de tu nueva copía para tener ambos remotos, los originales (<em>origin</em>) y los de tu copia, para hacerlo, sigue las instrucciones de este <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/configuring-a-remote-for-a-fork" target="_blank" rel="noopener">enlace</a>.</li>
+<li>Crea una rama nueva en tu <em>fork</em> local para hacer tu colaboración, y sincrónizala con tu repositorio remoto, para hacerlo, sigue las instrucciones de este <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork" target="_blank" rel="noopener">enlace</a>.</li>
+<li>Configura tu repositorio para que acepté cambios (<em>pull requests</em>), para hacerlo, sigue las instrucciones de este <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork" target="_blank" rel="noopener">enlace</a>.</li>
+<li>Crea una <em>pull request</em>, para hacerlo, sigue las instrucciones de este <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request" target="_blank" rel="noopener">enlace</a>.</li>
+<li>Espera a que el dueño del repositorio original, acepte tus cambios.</li>
+<li>Una vez que acepten tu <em>pull request</em>, es recomendable que borres la rama en la que trabajaste el cambio y actualices tu repositorio <em>forkeado</em>, con los cambios del repositorio original.</li>
+</ol>
+<p>Anexo un resumen de los comandos a ejecutar para colaborar en un repositorio de <em>GitHub</em>:</p>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># forkear repositorio</span>
+<span class="token function">git</span> clone https://github.com/usuario/repositorio.git
+<span class="token function">git</span> remote -v
+<span class="token function">git</span> remote <span class="token function">rename</span> origin fork
+<span class="token function">git</span> remote <span class="token function">add</span> origin https://github.com/usuario/repositorio.git
+<span class="token function">git</span> checkout -b rama-nueva
+<span class="token function">git</span> push fork rama-nueva
+<span class="token comment"># solicitar el pull request</span>
+<span class="token comment"># aceptar el pull request</span>
+<span class="token function">git</span> checkout main
+<span class="token function">git</span> pull origin main
+<span class="token function">git</span> push fork main
+<span class="token function">git</span> branch -d rama-nueva
+<span class="token function">git</span> push fork --delete rama-nueva</code></pre>
+<p><a href="https://jonmircha.com/git#">🔼 Regresar</a></p>
+<hr>
+<h2 id="aprende-más">Aprende más</h2>
+<p>A continuación te dejo algunos enlaces donde puedes profundizar tus conocimientos sobre <em>Git</em> y <em>GitHub</em>:</p>
+<ul>
+<li><a href="http://rogerdudler.github.io/git-guide/index.es.html" target="_blank" rel="noopener"><em>Git</em> - la guía sencilla</a>.</li>
+<li><a href="https://git-scm.com/book/es" target="_blank" rel="noopener">Libro <em>Pro Git</em></a>.</li>
+<li><a href="https://docs.github.com/es" target="_blank" rel="noopener">Guías oficiales de <em>GitHub</em></a>.</li>
+</ul>
+<p>Y también puedes ver mi curso de <em>Git</em> en <em>YouTube</em>:</p>
+<p><a href="https://www.youtube.com/watch?v=suzMNqDQiyU" target="_blank" rel="noopener">Ver Curso</a></p>
+<p><a href="https://jonmircha.com/git#">🔼 Regresar</a></p>
+<hr>
+  </article>
+</section>
+<aside class="section-bottom">
+  <small class="garden  no-print">🌱 estás en mi jardín digital 🌱</small>
+</aside>
+<footer class="footer">
+  <div class="footer-container">
+    <nav class="footer-menu">
+      <a href="https://jonmircha.com/cursos">Cursos</a>
+      <a href="https://jonmircha.com/blog">Blog</a>
+      <a href="https://jonmircha.com/" title="inicio">
+        <img src="./Git 🦊 jonmircha_files/kEnAi.svg" alt="kEnAi">
+      </a>
+      <a href="https://jonmircha.com/mentoria">Mentoría</a>
+      <a href="https://jonmircha.com/hola">Hola</a>
+    </nav>
+  </div>
+</footer>
+<article class="support no-print">
+  <div class="section">
+    <aside class="container-sm text-center full-screen-center">
+      <article>
+        <h3>Si te gusta y te sirve mi contenido</h3>
+        <h2><i>¡Apóyame!</i></h2>
+        <p>
+          Paso la mayor parte de mi tiempo haciendo cursos y tutoriales
+          <b>gratuitos</b> sobre diseño y desarrollo <i>web</i>.
+        </p>
+        <p>
+          Puedes invitarme un taco 🌮 por <a href="https://www.paypal.com/paypalme/jonmircha" target="_blank" rel="noopener"><i>Paypal</i></a>.
+        </p>
+        <p>
+          También puedes hacerme una cripto donación en <i>ethereum</i> 🤑 a mi
+          <i>wallet</i> de <i>metamask</i> 🦊:
+          <br>
+          <small>
+            <b>0x61f6745B4E772A6E4526C549C466576B380D7A73</b>
+          </small>
+        </p>
+        <h3>¡Muchas Gracias!</h3>
+      </article>
+    </aside>
+  </div>
+</article>
+<script>
+  (function (d, w) {
+    if (d.getElementById("temas")) {
+      const mq = window.matchMedia('(min-width: 62em)');
+      mq.addEventListener('change', mqHandler);
+
+      function mqHandler(e) {
+        if (e.matches) {
+          d.querySelectorAll('a[href="#temas"').forEach((el) => {
+            el.setAttribute("href", "#");
+          });
+        } else {
+          d.querySelectorAll('a[href="#"').forEach((el) => {
+            el.setAttribute("href", "#temas");
+          });
+        }
+      }
+
+      mqHandler(mq);
+    }
+  })(document, window);
+</script>
+  <script src="./Git 🦊 jonmircha_files/prism.js.descarga"></script>
+  <script src="./Git 🦊 jonmircha_files/index.js.descarga"></script>
+
+
+</body></html>

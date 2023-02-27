@@ -1,16 +1,22 @@
 /*
-Los bloques se suelen denominar con una sola palabra o con dos palabras separadas con un guion si puede existir conflicto de estilos.
+Complemento: https://www.youtube.com/watch?v=6LUz0MnNCiA&t=306s&ab_channel=DorianDesings
+BEM: Bloque Elemento Modificador
+
+1)Los bloques se suelen denominar con una sola palabra o con dos palabras separadas con un guion si puede existir conflicto de estilos.
+  Los bloques son elementos que pueden ser reutilizados en cualquier parte de la pagina ejemplo: un logo
+  Graficamente yo puede tener un bloque dentro de otro pero no estar ligados en el codigo, ejemplo: mira el link de arriva en el minuto 5:40
 
 .menu / .main-menu
 .gallery / .main-gallery
 
-Los elementos se nombran con el nombre del bloque al que pertenecen y su nombre con dos guiones bajos __
+2)Los elementos se nombran con el nombre del bloque al que pertenecen y su nombre con dos guiones bajos __
+  Los elementos son las piezas que conforman el bloque
 
 .menu__item / .main-menu__link
 .gallery__img  / .main-gallery__item
 
-Los modificadores se nombran con el nombre del bloque al que pertenecen y su modificador con dos guiones medios --
-
+3)Los modificadores se nombran con el nombre del bloque al que pertenecen y su modificador con dos guiones medios --
+  Los modificadores se pueden aplicar a bloques y elementos, ejemplo: dos tarjetas iguales pero modifico su color de fondo
 .menu__item--active
 .gallery__item--special
 

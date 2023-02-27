@@ -1,0 +1,66 @@
+html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+*,
+*:before, /*Para que todos los elementos antes y despues hereden de html el propiedades de tamaño de caja y empiecen desde el borde*/
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+img { 
+    max-width: 100%;
+    height: auto;
+}
+
+main { 
+    flex-grow: 1; /*Para que todo el espacio sobrante lo use main y a footer lo empuje hacia abajo*/
+}
+
+.container { /*para centrar contenido cuando el mayor a 992 px*/
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 992px;
+}
+
+.header {
+    padding: .5rem;
+    background-color: antiquewhite;
+}
+
+.header-content { /*para tener de un lado el logo y del otro el menu de navegacion en vez de uno abajo del otro*/
+    display: flex; /*La disposision por defecto es en fila por lo cual el logo y el menu se ponen en fila en vez de en columna*/
+    justify-content: space-between; /*Espacio sobrante se lo reparten entre el logo y el menu*/
+    align-items: center; /*los centro*/
+}
+
+.logo img { /*para achicar el logo*/
+    width: 3rem;
+    height: auto;
+}
+
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    font-size: 115%;
+}
+
+.menu__item {
+    color: chocolate; /*Cambio color de los elementos del menu*/
+    padding: 0 1vw; /*Separacion entre los elementos del menu*/
+    transition: all .3s ease-in-out; /*Efectos de transicion en el estado hover*/
+}
+
+.menu__item:hover {
+    opacity: .50; /*opacidad del efecto en estado hover*/
+}

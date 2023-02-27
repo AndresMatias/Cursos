@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" data-dark> <!-- data-dark es un dataatributte para identificar facilmente para el cambio de modo oscuro y no tener q cambiar manualmente todo-->
+  <head>
+    <meta charset="UTF-8">
+    <title>Mi Primera Web</title>
+    <link href="dist/hamburgers.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+  </head>
+  <body data-dark>
+      <!-- Secciones -->
+      <main>
+        <section id="seccion14" class="seccion" data-scroll-spy>
+          <form class="contact-form">
+            <legend>Envíanos tus comentarios</legend>
+            <input type="text" name="name" placeholder="Escribe tu nombre"
+              title="Nombre sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required> <!-- name:nombre de la clase creo; title:mensaje que aparece en caso de que no se cumpla con la validacion; pattern: validaciones de caracteres; requiered: para activar esas validaciones-->
+            <input type="email" name="email" placeholder="Escribe tu email" title="Email incorrecto"     
+              pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required> 
+            <input type="text" name="subject" placeholder="Asunto a tratar" title="El Asunto es requerido" required>
+            <textarea name="comments" rows="5" placeholder="Escribe tus comentarios"
+              title="Tu comentario no debe exceder los 255 caracteres" data-pattern="^.{1,255}$" required></textarea>
+            <input type="submit" value="Enviar">
+            <div class="contact-form-loader none">
+              <img src="assets/loader.svg" alt="Cargando">
+            </div>
+            <div class="contact-form-response none">
+              <p>Los datos han sido enviados</p>
+            </div>
+          </form>
+        </section>
+      </main>
+      <!-- Importo Modulos Propios  -->
+      <script src="Archivos_JS/scrips.js" type="module"></script> <!-- Atributo type="module" para que reconosca que es un modulo  -->
+      <script src="Archivos_JS/no_modulos.js" nomodule></script> <!-- Atributo nomodule tipo bool: Los navegadores modernos entenderán el atributo "nomodule", por lo tanto no accederán a este script, porque sabrán que es un script pensado por y para los navegadores obsoletos.                                                                                            Los navegadores antiguos no entenderán el atributo "nomodule", pero tampoco le harán caso y cargarán este script alternativo.-->
+      
+  </body>
+</html>

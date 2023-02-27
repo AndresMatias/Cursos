@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+  <link rel="stylesheet" type="text/css" href="estilos.css">  
+  <title>124-125)Upload de archivos</title>
+</head>
+
+<body>  <!--Cuerpo-->
+  <main>
+    <input type="file" id="files" name="files" multiple>  <!--Modulo para carga de archivo-->
+  </main>
+  <!-- Importo Modulos Propios -->
+  <script src="Archivos_JS/upload.js" type="module"></script>
+   <!-- Importo Modulos Propios -->
+   <script src="Archivos_JS/no_modulos.js" nomodule></script> <!-- Atributo nomodule tipo bool: Los navegadores modernos entenderán el atributo "nomodule", por lo tanto no accederán a este script, porque sabrán que es un script pensado por y para los navegadores obsoletos.Los navegadores antiguos no entenderán el atributo "nomodule", pero tampoco le harán caso y cargarán este script alternativo.-->
+
+</body>
+
+</html>

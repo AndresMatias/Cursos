@@ -16,7 +16,12 @@ h1{
 }
 
 /*----------Selectores de id-----------*/
-/*No los puse porque no se recomiendan porque se utilizan para los ancla o acceder a nose que cosa*/
+/*No los puse porque no se recomiendan porque se utilizan para los ancla o acceder a nose que cosa
+Ejemlo:
+#miID{
+	configuraciones
+}
+*/
 
 /*----------Selectores universales-----------*/
 /*recomendados solo para resetear el navegador*/
