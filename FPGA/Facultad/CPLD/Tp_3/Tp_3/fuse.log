@@ -1,0 +1,36 @@
+Determining compilation order of HDL files
+Analyzing VHDL file TP3_Ejercicio_2142.vhd
+Restoring VHDL parse-tree ieee.std_logic_1164 from
+c:/xilinx/10.1/ise/vhdl/hdp/nt/ieee/std_logic_1164.vdb
+Restoring VHDL parse-tree std.standard from
+c:/xilinx/10.1/ise/vhdl/hdp/nt/std/standard.vdb
+Restoring VHDL parse-tree ieee.std_logic_arith from
+c:/xilinx/10.1/ise/vhdl/hdp/nt/ieee/std_logic_arith.vdb
+Restoring VHDL parse-tree ieee.std_logic_unsigned from
+c:/xilinx/10.1/ise/vhdl/hdp/nt/ieee/std_logic_unsigned.vdb
+Analyzing VHDL file TP3_Ejercicio_2_bench.vhw
+Restoring VHDL parse-tree ieee.std_logic_textio from
+c:/xilinx/10.1/ise/vhdl/hdp/nt/ieee/std_logic_textio.vdb
+Restoring VHDL parse-tree std.textio from
+c:/xilinx/10.1/ise/vhdl/hdp/nt/std/textio.vdb
+Saving VHDL parse-tree work.tp3_ejercicio_2142 into
+c:/users/lukin/documents/ise/tp3_ejercicio_2/isim/work/tp3_ejercicio_2142.vdb
+Saving VHDL parse-tree work.tp3_ejercicio_2_bench into
+c:/users/lukin/documents/ise/tp3_ejercicio_2/isim/work/tp3_ejercicio_2_bench.vdb
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 195200 Kb
+Fuse CPU Usage: 780 ms
+Using precompiled package standard from library std
+Using precompiled package std_logic_1164 from library ieee
+Using precompiled package std_logic_arith from library ieee
+Using precompiled package std_logic_unsigned from library ieee
+Using precompiled package textio from library std
+Using precompiled package std_logic_textio from library ieee
+Compiling architecture behavioral of entity tp3_ejercicio_2142
+[tp3_ejercicio_2142_default]
+Compiling architecture testbench_arch of entity tp3_ejercicio_2_bench
+FATAL_ERROR:Simulator:Fuse.cpp:164:$Id: Fuse.cpp,v 1.35 2007/11/07 21:25:47
+   sonals Exp $ - Failed to link the design   Process will terminate. For
+   technical support on this issue, please open a WebCase with this project
+   attached at http://www.xilinx.com/support.

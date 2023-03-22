@@ -1,0 +1,134 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+</td></tr><tr><td>
+$OpTx$FX_DC$6 <= ((NOT CONTADOR0(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CONTADOR0(1) AND NOT CONTADOR0(2)));
+</td></tr><tr><td>
+FTCPE_CONTADOR00: FTCPE port map (CONTADOR0(0),'1',CONTADOR0(2)/CONTADOR0(2)_CLKF,reset,'0');
+</td></tr><tr><td>
+FTCPE_CONTADOR01: FTCPE port map (CONTADOR0(1),CONTADOR0_T(1),CONTADOR0(2)/CONTADOR0(2)_CLKF,reset,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONTADOR0_T(1) <= ((NOT CONTADOR0(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CONTADOR0(1) AND NOT CONTADOR0(2) AND CONTADOR0(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+CONTADOR0(2)/CONTADOR0(2)_CLKF <= ((reloj AND llave)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT llave AND pulsador));
+</td></tr><tr><td>
+FTCPE_CONTADOR02: FTCPE port map (CONTADOR0(2),CONTADOR0_T(2),CONTADOR0(2)/CONTADOR0(2)_CLKF,reset,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONTADOR0_T(2) <= (CONTADOR0(1) AND CONTADOR0(0));
+</td></tr><tr><td>
+FTCPE_CONTADOR03: FTCPE port map (CONTADOR0(3),CONTADOR0_T(3),CONTADOR0(2)/CONTADOR0(2)_CLKF,reset,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONTADOR0_T(3) <= ((CONTADOR0(1) AND CONTADOR0(0) AND CONTADOR0(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CONTADOR0(1) AND CONTADOR0(0) AND NOT CONTADOR0(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	CONTADOR0(3)));
+</td></tr><tr><td>
+FDCPE_display0: FDCPE port map (display(0),'0','0',display_0/display_0_RSTF,NOT display_0/display_0_SETF__$INT);
+</td></tr><tr><td>
+FDCPE_display1: FDCPE port map (display(1),'0','0',display_1/display_1_RSTF,display_1/display_1_SETF);
+</td></tr><tr><td>
+FDCPE_display2: FDCPE port map (display(2),'0','0',display_CLR(2),display_PRE(2));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display_CLR(2) <= ($OpTx$FX_DC$6 AND NOT display_2/display_2_SETF);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display_PRE(2) <= (NOT CONTADOR0(0) AND NOT display_6/display_6_RSTF AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$FX_DC$6);
+</td></tr><tr><td>
+FDCPE_display3: FDCPE port map (display(3),'0','0',display_3/display_3_RSTF,display_PRE(3));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display_PRE(3) <= (NOT display_3/display_3_RSTF AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	display_6/display_6_SETF);
+</td></tr><tr><td>
+FDCPE_display4: FDCPE port map (display(4),'0','0',display_CLR(4),display_4/display_4_SETF);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display_CLR(4) <= (NOT CONTADOR0(0) AND NOT CONTADOR0(2) AND NOT CONTADOR0(3));
+</td></tr><tr><td>
+FDCPE_display5: FDCPE port map (display(5),'0','0',display_5/display_5_RSTF,NOT display_5/display_5_SETF__$INT);
+</td></tr><tr><td>
+FDCPE_display6: FDCPE port map (display(6),'0','0',display_6/display_6_RSTF,display_6/display_6_SETF);
+</td></tr><tr><td>
+</td></tr><tr><td>
+display_0/display_0_RSTF <= ((NOT CONTADOR0(1) AND NOT CONTADOR0(2) AND NOT CONTADOR0(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (CONTADOR0(1) AND CONTADOR0(0) AND CONTADOR0(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CONTADOR0(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+display_0/display_0_SETF__$INT <= ((CONTADOR0(1) AND CONTADOR0(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (CONTADOR0(2) AND CONTADOR0(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (CONTADOR0(1) AND CONTADOR0(0) AND CONTADOR0(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CONTADOR0(1) AND NOT CONTADOR0(2) AND NOT CONTADOR0(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+display_1/display_1_RSTF <= ((NOT CONTADOR0(2) AND NOT CONTADOR0(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (CONTADOR0(1) AND CONTADOR0(0) AND NOT CONTADOR0(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+display_1/display_1_SETF <= ((NOT CONTADOR0(1) AND CONTADOR0(2) AND NOT CONTADOR0(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CONTADOR0(1) AND NOT CONTADOR0(2) AND CONTADOR0(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CONTADOR0(0) AND CONTADOR0(2) AND NOT CONTADOR0(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+display_2/display_2_SETF <= ((CONTADOR0(1) AND NOT CONTADOR0(0) AND NOT CONTADOR0(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CONTADOR0(1) AND NOT CONTADOR0(0) AND NOT CONTADOR0(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	CONTADOR0(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+display_3/display_3_RSTF <= ((NOT CONTADOR0(1) AND NOT CONTADOR0(0) AND NOT CONTADOR0(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CONTADOR0(1) AND NOT CONTADOR0(2) AND NOT CONTADOR0(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (CONTADOR0(1) AND CONTADOR0(0) AND CONTADOR0(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CONTADOR0(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+display_4/display_4_SETF <= ((CONTADOR0(0) AND NOT CONTADOR0(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (CONTADOR0(2) AND NOT CONTADOR0(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CONTADOR0(1) AND NOT CONTADOR0(2) AND CONTADOR0(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+display_5/display_5_RSTF <= ((CONTADOR0(1) AND NOT CONTADOR0(0) AND CONTADOR0(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CONTADOR0(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CONTADOR0(1) AND CONTADOR0(0) AND CONTADOR0(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CONTADOR0(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CONTADOR0(1) AND NOT CONTADOR0(0) AND NOT CONTADOR0(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CONTADOR0(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+display_5/display_5_SETF__$INT <= ((CONTADOR0(1) AND CONTADOR0(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (CONTADOR0(2) AND CONTADOR0(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (CONTADOR0(1) AND NOT CONTADOR0(0) AND CONTADOR0(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CONTADOR0(1) AND CONTADOR0(0) AND CONTADOR0(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CONTADOR0(1) AND NOT CONTADOR0(0) AND NOT CONTADOR0(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT CONTADOR0(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+display_6/display_6_RSTF <= ((NOT CONTADOR0(1) AND NOT CONTADOR0(0) AND NOT CONTADOR0(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CONTADOR0(1) AND NOT CONTADOR0(2) AND NOT CONTADOR0(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+display_6/display_6_SETF <= ((CONTADOR0(1) AND NOT CONTADOR0(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT CONTADOR0(1) AND NOT CONTADOR0(2) AND CONTADOR0(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (CONTADOR0(0) AND CONTADOR0(2) AND NOT CONTADOR0(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+transistor1 <= '0';
+</td></tr><tr><td>
+</td></tr><tr><td>
+transistor2 <= '0';
+</td></tr><tr><td>
+</td></tr><tr><td>
+transistor3 <= '0';
+</td></tr><tr><td>
+</td></tr><tr><td>
+transistor4 <= '0';
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

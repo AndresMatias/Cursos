@@ -1,0 +1,6 @@
+CommandLine
+C:\Xilinx\10.1\ISE\bin\nt64\unwrapped\tsim.exe -ise F:/contador_0_9999/contador_0_9999.ise -intstyle ise contador contador.nga
+s
+FormatString
+tsim <design[.vm6]> [--intstyle ise|xflow|silent] [<outfile>] 
+s

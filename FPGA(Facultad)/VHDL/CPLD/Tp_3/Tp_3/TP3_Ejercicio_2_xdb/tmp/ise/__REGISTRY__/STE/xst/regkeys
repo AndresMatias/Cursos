@@ -1,6 +1,0 @@
-CommandLine
-C:\Xilinx\10.1\ISE\bin\nt\unwrapped\xst.exe -ise D:/andres/Tp_3/Tp_3/TP3_Ejercicio_2.ise -intstyle ise -ifn D:/andres/Tp_3/Tp_3/TP3_Ejercicio_2142.xst -ofn D:/andres/Tp_3/Tp_3/TP3_Ejercicio_2142.syr -finalclean 1
-s
-FormatString
-xst [-ifn <InputFile>] [-ofn <OutputFile>] [-ise <iseProjectFile>] [--quiet] [-intstyle <Style>] [--deb <DebugLevel>] [--finalclean <Clean>] [--PcubeFlow] [--globOptFlow] [--XstNtrc]
-s

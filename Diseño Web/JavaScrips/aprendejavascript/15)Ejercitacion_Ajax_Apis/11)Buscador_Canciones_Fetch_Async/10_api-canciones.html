@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador de Canciones</title>
+  <style>
+    html {
+      font-family: sans-serif;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .loader {
+      display: none;
+      margin: auto;
+    }
+
+    .song blockquote {
+      white-space: pre-wrap; /*Detecta salto de linea*/
+    }
+
+    @media screen and (min-width: 800px) {
+      main {
+        flex-direction: row;
+      }
+
+      main>* {
+        padding: 1rem;
+        flex-basis: 50%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Buscador de Canciones</h1>
+  <form id="song-search">
+    <input type="text" name="artist" placeholder="Nombre del Intérprete" required>
+    <br>
+    <input type="text" name="song" placeholder="Nombre de la Canción" required>
+    <br>
+    <input type="submit">
+  </form>
+  <img class="loader" src="./assets/loader.svg" alt="Cargando...">
+  <aside class="error"></aside>
+  <main>
+    <article class="artist"></article>
+    <article class="song"></article>
+  </main>
+  <script>
+    /* ********** Curso JavaScript: 137. Ejercicios AJAX - APIs: Buscador de Canciones con Fetch + Async - #jonmircha ********** */
+    /* https://www.youtube.com/watch?v=n2r422e87dY&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=140&ab_channel=jonmircha 1*/
+    const d=document,
+        $form=d.getElementById("song-search"),
+        $loader=d.querySelector(".loader"),
+        $error=d.querySelector(".error"),
+        $main=d.querySelector(".main"),
+        $song=d.querySelector(".song"),
+        $artist=d.querySelector(".artist");
+
+    $form.addEventListener("submit",async e=>{ //Funcion asincrona
+      e.preventDefault();
+      try{
+        $loader.style.display="block";
+        let artist=e.target.artist.value.toLowerCase(); //obtengo valor y lo fuerzo todo a minuscula
+              song=e.target.song.value.toLowerCase(), //obtengo valor y lo fuerzo todo a minuscula
+              $artistTemplate="",
+              $songTemplate="",
+              artistApi=`https://www.theaudiodb.com/api/v1/json/2/search.php?s=${artist}`,
+              songApi=`https://api.lyrics.ovh/v1/${artist}/${song}`,
+              artistFetch=fetch(artistApi), //no utilizo await porque uso reestructurazon en el promise de mas abajo
+              songFetch=fetch(songApi);
+              
+        [artistRest,songRest]=await Promise.all([artistFetch,songFetch]),
+                    artistData= await artistRest.json(),
+                      songData= await songRest.json();
+        console.log("hola");
+        if(artistData===null){
+          $artistTemplate=`<h2>No existe el interprete <mark>${artist}</mark></h>`;
+        }else{
+          let artist=artistData.artists[0];
+          $artistTemplate=`<h2>${artist.strArtist}<h2>
+            <img src="${artist.strArtistThumb}" alt="${artist.strArtist}">
+            <p>${artist.intBornYear} - ${artist.intDiedYear || "Presente"} </p>
+            <p>${artist.strCountry}</p>
+            <p>${artist.strGenre} - ${artist.strStyle}</p>
+            <a href=http://${artist.strWebsite}" target="_blank">Sitio Web</a>
+            <p>${artist.strBiographyEN}</p>
+           `
+           $loader.style.display="none";
+           $artist.innerHTML=$artistTemplate;
+        }
+
+        if(songData.error){
+          $songTemplate=`<h2>No existe la cancion <mark>${song}</mark></h>`;
+        }else{
+          $songTemplate=`<h2>${song}}<h2>
+            <blockquote>${songData.lyrics}</blockquote>
+           `
+           $song.innerHTML=$songTemplate;
+        }
+      }catch(err){
+        let message=err.statusText || "Ocurrio un error";
+        $error.innerHTML=`Error ${err.status}: ${message}`;
+        $loader.style.display="none";
+      }
+    })      
+  </script>
+</body>
+
+</html>

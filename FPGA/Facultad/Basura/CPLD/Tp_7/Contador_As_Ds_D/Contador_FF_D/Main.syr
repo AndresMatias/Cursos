@@ -1,0 +1,219 @@
+Release 10.1 - xst K.31 (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to D:/CPLD/Tp_7/Contador_As_Ds_D/Contador_FF_D/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to D:/CPLD/Tp_7/Contador_As_Ds_D/Contador_FF_D/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: Main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Main.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Main"
+Output Format                      : NGC
+Target Device                      : XC9500XL CPLDs
+
+---- Source Options
+Top Module Name                    : Main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+
+---- Target Options
+Add IO Buffers                     : YES
+MACRO Preserve                     : YES
+XOR Preserve                       : YES
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : Main.lso
+Keep Hierarchy                     : YES
+Netlist Hierarchy                  : as_optimized
+RTL Output                         : Yes
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Verilog 2001                       : YES
+
+---- Other Options
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+WARNING:HDLParsers:3607 - Unit work/Main is now defined in a different file.  It was defined in "C:/Xilinx/Tp/Contador_As_Ds_D/Contador_FF_D/Main.vhd", and is now defined in "D:/CPLD/Tp_7/Contador_As_Ds_D/Contador_FF_D/Main.vhd".
+WARNING:HDLParsers:3607 - Unit work/Main/Behavioral is now defined in a different file.  It was defined in "C:/Xilinx/Tp/Contador_As_Ds_D/Contador_FF_D/Main.vhd", and is now defined in "D:/CPLD/Tp_7/Contador_As_Ds_D/Contador_FF_D/Main.vhd".
+WARNING:HDLParsers:3607 - Unit work/Flip_Flop_D is now defined in a different file.  It was defined in "C:/Xilinx/Tp/Contador_As_Ds_D/Contador_FF_D/Flip_Flop_D.vhd", and is now defined in "D:/CPLD/Tp_7/Contador_As_Ds_D/Contador_FF_D/Flip_Flop_D.vhd".
+WARNING:HDLParsers:3607 - Unit work/Flip_Flop_D/Behavioral is now defined in a different file.  It was defined in "C:/Xilinx/Tp/Contador_As_Ds_D/Contador_FF_D/Flip_Flop_D.vhd", and is now defined in "D:/CPLD/Tp_7/Contador_As_Ds_D/Contador_FF_D/Flip_Flop_D.vhd".
+Compiling vhdl file "D:/CPLD/Tp_7/Contador_As_Ds_D/Contador_FF_D/Flip_Flop_D.vhd" in Library work.
+Architecture behavioral of Entity flip_flop_d is up to date.
+Compiling vhdl file "D:/CPLD/Tp_7/Contador_As_Ds_D/Contador_FF_D/Main.vhd" in Library work.
+Architecture behavioral of Entity main is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Main> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Flip_Flop_D> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Main> in library <work> (Architecture <behavioral>).
+Entity <Main> analyzed. Unit <Main> generated.
+
+Analyzing Entity <Flip_Flop_D> in library <work> (Architecture <behavioral>).
+Entity <Flip_Flop_D> analyzed. Unit <Flip_Flop_D> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Flip_Flop_D>.
+    Related source file is "D:/CPLD/Tp_7/Contador_As_Ds_D/Contador_FF_D/Flip_Flop_D.vhd".
+    Found 1-bit register for signal <Q_N>.
+    Found 1-bit register for signal <Q>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <Flip_Flop_D> synthesized.
+
+
+Synthesizing Unit <Main>.
+    Related source file is "D:/CPLD/Tp_7/Contador_As_Ds_D/Contador_FF_D/Main.vhd".
+WARNING:Xst:646 - Signal <Q_N_aux> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <Main> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 6
+ 1-bit register                                        : 6
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <Q_N> of sequential type is unconnected in block <FF_D_0>.
+WARNING:Xst:2677 - Node <Q_N> of sequential type is unconnected in block <FF_D_1>.
+WARNING:Xst:2677 - Node <Q_N> of sequential type is unconnected in block <FF_D_2>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 6
+ Flip-Flops                                            : 6
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Main> ...
+
+Optimizing unit <Flip_Flop_D> ...
+WARNING:Xst:2677 - Node <Q_N> of sequential type is unconnected in block <FF_D_2>.
+WARNING:Xst:2677 - Node <Q_N> of sequential type is unconnected in block <FF_D_1>.
+WARNING:Xst:2677 - Node <Q_N> of sequential type is unconnected in block <FF_D_0>.
+
+=========================================================================
+*                           Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Main.ngr
+Top Level Output File Name         : Main
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : YES
+Target Technology                  : XC9500XL CPLDs
+Macro Preserve                     : YES
+XOR Preserve                       : YES
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+Design Statistics
+# IOs                              : 5
+
+Cell Usage :
+# BELS                             : 28
+#      AND2                        : 6
+#      AND3                        : 1
+#      AND4                        : 1
+#      INV                         : 12
+#      OR2                         : 7
+#      OR3                         : 1
+# FlipFlops/Latches                : 3
+#      FD                          : 3
+# IO Buffers                       : 5
+#      IBUF                        : 2
+#      OBUF                        : 3
+=========================================================================
+
+
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 2.09 secs
+ 
+--> 
+
+Total memory usage is 126532 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   11 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

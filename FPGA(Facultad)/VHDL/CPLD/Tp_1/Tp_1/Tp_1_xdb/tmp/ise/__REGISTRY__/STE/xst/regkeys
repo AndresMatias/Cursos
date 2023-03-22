@@ -1,6 +1,0 @@
-CommandLine
-C:\Xilinx\10.1\ISE\bin\nt\unwrapped\xst.exe -ise D:/CPLD/Tp_1/Tp_1/Tp_1.ise -intstyle ise -ifn D:/CPLD/Tp_1/Tp_1/Tp_1.xst -ofn D:/CPLD/Tp_1/Tp_1/Tp_1.syr -finalclean 1
-s
-FormatString
-xst [-ifn <InputFile>] [-ofn <OutputFile>] [-ise <iseProjectFile>] [--quiet] [-intstyle <Style>] [--deb <DebugLevel>] [--finalclean <Clean>] [--PcubeFlow] [--globOptFlow] [--XstNtrc]
-s

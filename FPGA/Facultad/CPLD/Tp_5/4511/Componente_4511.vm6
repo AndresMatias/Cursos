@@ -1,0 +1,485 @@
+NDS Database:  version K.31
+
+NDS_INFO | xc9500xl | 9572XL44PC | XC9572XL-5-PC44
+
+DEVICE | 9572XL | 9572XL44PC | 
+
+NETWORK | Componente_4511 | 0 | 0 | 16391
+
+INPUT_INSTANCE | 0 | 0 | NULL | Binario_2_IBUF | Componente_4511_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | Binario<2> | 1047 | PI | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | Binario_2_IBUF | 1026 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_2_IBUF | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | Control_1_IBUF | Componente_4511_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | Control<1> | 1048 | PI | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | Control_1_IBUF | 1027 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_1_IBUF | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | Control_2_IBUF | Componente_4511_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | Control<2> | 1049 | PI | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | Control_2_IBUF | 1028 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_2_IBUF | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | Binario_3_IBUF | Componente_4511_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | Binario<3> | 1050 | PI | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | Binario_3_IBUF | 1029 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_3_IBUF | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | Binario_1_IBUF | Componente_4511_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | Binario<1> | 1051 | PI | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | Binario_1_IBUF | 1030 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_1_IBUF | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | Binario_0_IBUF | Componente_4511_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | Binario<0> | 1052 | PI | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | Binario_0_IBUF | 1031 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_0_IBUF | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | Control_0_IBUF | Componente_4511_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | Control<0> | 1053 | PI | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | Control_0_IBUF | 1032 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_0_IBUF | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | Inv+OptxMapped | Display_7_0_OBUF | Componente_4511_COPY_0_COPY_0 | 2155872512 | 7 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_1_IBUF | 1027 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_0_IBUF | 1032 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_2_IBUF | 1026 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_2_IBUF | 1028 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_3_IBUF | 1029 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_3_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_1_IBUF | 1030 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_0_IBUF | 1031 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_0_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | Display_7_0_OBUF | 1033 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | Display_7_0_OBUF.Q | Display_7_0_OBUF | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | Display_7_0_OBUF.SI | Display_7_0_OBUF | 0 | 7 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_1_IBUF | 1027 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_0_IBUF | 1032 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_2_IBUF | 1026 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_2_IBUF | 1028 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_3_IBUF | 1029 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_3_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_1_IBUF | 1030 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_0_IBUF | 1031 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_0_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Display_7_0_OBUF.D1 | 1055 | ? | 0 | 4096 | Display_7_0_OBUF | NULL | NULL | Display_7_0_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Display_7_0_OBUF.D2 | 1056 | ? | 0 | 4096 | Display_7_0_OBUF | NULL | NULL | Display_7_0_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_FALSE | Control_1_IBUF | IV_TRUE | Control_0_IBUF
+SPPTERM | 5 | IV_FALSE | Binario_2_IBUF | IV_FALSE | Control_2_IBUF | IV_FALSE | Binario_3_IBUF | IV_FALSE | Binario_1_IBUF | IV_TRUE | Control_0_IBUF
+SPPTERM | 6 | IV_TRUE | Binario_2_IBUF | IV_FALSE | Control_2_IBUF | IV_FALSE | Binario_3_IBUF | IV_TRUE | Binario_1_IBUF | IV_TRUE | Binario_0_IBUF | IV_TRUE | Control_0_IBUF
+
+SRFF_INSTANCE | Display_7_0_OBUF.REG | Display_7_0_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Display_7_0_OBUF.D | 1054 | ? | 0 | 0 | Display_7_0_OBUF | NULL | NULL | Display_7_0_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Display_7_0_OBUF.Q | 1057 | ? | 0 | 0 | Display_7_0_OBUF | NULL | NULL | Display_7_0_OBUF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Inv+OptxMapped | Display_7_1_OBUF | Componente_4511_COPY_0_COPY_0 | 2155872512 | 7 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_1_IBUF | 1027 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_0_IBUF | 1032 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_2_IBUF | 1026 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_2_IBUF | 1028 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_3_IBUF | 1029 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_3_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_1_IBUF | 1030 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_0_IBUF | 1031 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_0_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | Display_7_1_OBUF | 1034 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | Display_7_1_OBUF.Q | Display_7_1_OBUF | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | Display_7_1_OBUF.SI | Display_7_1_OBUF | 0 | 7 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_1_IBUF | 1027 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_0_IBUF | 1032 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_2_IBUF | 1026 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_2_IBUF | 1028 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_3_IBUF | 1029 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_3_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_1_IBUF | 1030 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_0_IBUF | 1031 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_0_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Display_7_1_OBUF.D1 | 1059 | ? | 0 | 4096 | Display_7_1_OBUF | NULL | NULL | Display_7_1_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Display_7_1_OBUF.D2 | 1060 | ? | 0 | 4096 | Display_7_1_OBUF | NULL | NULL | Display_7_1_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_FALSE | Control_1_IBUF | IV_TRUE | Control_0_IBUF
+SPPTERM | 5 | IV_FALSE | Binario_2_IBUF | IV_FALSE | Control_2_IBUF | IV_FALSE | Binario_3_IBUF | IV_TRUE | Binario_1_IBUF | IV_TRUE | Control_0_IBUF
+SPPTERM | 5 | IV_FALSE | Binario_2_IBUF | IV_FALSE | Control_2_IBUF | IV_FALSE | Binario_3_IBUF | IV_TRUE | Binario_0_IBUF | IV_TRUE | Control_0_IBUF
+SPPTERM | 5 | IV_FALSE | Control_2_IBUF | IV_FALSE | Binario_3_IBUF | IV_TRUE | Binario_1_IBUF | IV_TRUE | Binario_0_IBUF | IV_TRUE | Control_0_IBUF
+
+SRFF_INSTANCE | Display_7_1_OBUF.REG | Display_7_1_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Display_7_1_OBUF.D | 1058 | ? | 0 | 0 | Display_7_1_OBUF | NULL | NULL | Display_7_1_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Display_7_1_OBUF.Q | 1061 | ? | 0 | 0 | Display_7_1_OBUF | NULL | NULL | Display_7_1_OBUF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Inv+OptxMapped | Display_7_2_OBUF | Componente_4511_COPY_0_COPY_0 | 2155872512 | 7 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_1_IBUF | 1027 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_0_IBUF | 1032 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_2_IBUF | 1028 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_3_IBUF | 1029 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_3_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_0_IBUF | 1031 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_2_IBUF | 1026 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_1_IBUF | 1030 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_1_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | Display_7_2_OBUF | 1035 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | Display_7_2_OBUF.Q | Display_7_2_OBUF | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | Display_7_2_OBUF.SI | Display_7_2_OBUF | 0 | 7 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_1_IBUF | 1027 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_0_IBUF | 1032 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_2_IBUF | 1028 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_3_IBUF | 1029 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_3_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_0_IBUF | 1031 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_2_IBUF | 1026 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_1_IBUF | 1030 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_1_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Display_7_2_OBUF.D1 | 1063 | ? | 0 | 4096 | Display_7_2_OBUF | NULL | NULL | Display_7_2_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Display_7_2_OBUF.D2 | 1064 | ? | 0 | 4096 | Display_7_2_OBUF | NULL | NULL | Display_7_2_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_FALSE | Control_1_IBUF | IV_TRUE | Control_0_IBUF
+SPPTERM | 4 | IV_FALSE | Control_2_IBUF | IV_FALSE | Binario_3_IBUF | IV_TRUE | Binario_0_IBUF | IV_TRUE | Control_0_IBUF
+SPPTERM | 5 | IV_TRUE | Binario_2_IBUF | IV_FALSE | Control_2_IBUF | IV_FALSE | Binario_3_IBUF | IV_FALSE | Binario_1_IBUF | IV_TRUE | Control_0_IBUF
+SPPTERM | 5 | IV_FALSE | Binario_2_IBUF | IV_FALSE | Control_2_IBUF | IV_FALSE | Binario_1_IBUF | IV_TRUE | Binario_0_IBUF | IV_TRUE | Control_0_IBUF
+
+SRFF_INSTANCE | Display_7_2_OBUF.REG | Display_7_2_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Display_7_2_OBUF.D | 1062 | ? | 0 | 0 | Display_7_2_OBUF | NULL | NULL | Display_7_2_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Display_7_2_OBUF.Q | 1065 | ? | 0 | 0 | Display_7_2_OBUF | NULL | NULL | Display_7_2_OBUF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Inv+OptxMapped | Display_7_3_OBUF | Componente_4511_COPY_0_COPY_0 | 2155872512 | 7 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_1_IBUF | 1027 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_0_IBUF | 1032 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_2_IBUF | 1026 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_2_IBUF | 1028 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_1_IBUF | 1030 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_0_IBUF | 1031 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_3_IBUF | 1029 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_3_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | Display_7_3_OBUF | 1036 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | Display_7_3_OBUF.Q | Display_7_3_OBUF | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | Display_7_3_OBUF.SI | Display_7_3_OBUF | 0 | 7 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_1_IBUF | 1027 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_0_IBUF | 1032 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_2_IBUF | 1026 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_2_IBUF | 1028 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_1_IBUF | 1030 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_0_IBUF | 1031 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_3_IBUF | 1029 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_3_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Display_7_3_OBUF.D1 | 1067 | ? | 0 | 4096 | Display_7_3_OBUF | NULL | NULL | Display_7_3_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Display_7_3_OBUF.D2 | 1068 | ? | 0 | 4096 | Display_7_3_OBUF | NULL | NULL | Display_7_3_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_FALSE | Control_1_IBUF | IV_TRUE | Control_0_IBUF
+SPPTERM | 5 | IV_FALSE | Binario_2_IBUF | IV_FALSE | Control_2_IBUF | IV_FALSE | Binario_1_IBUF | IV_TRUE | Binario_0_IBUF | IV_TRUE | Control_0_IBUF
+SPPTERM | 6 | IV_TRUE | Binario_2_IBUF | IV_FALSE | Control_2_IBUF | IV_FALSE | Binario_3_IBUF | IV_TRUE | Binario_1_IBUF | IV_TRUE | Binario_0_IBUF | IV_TRUE | Control_0_IBUF
+SPPTERM | 6 | IV_TRUE | Binario_2_IBUF | IV_FALSE | Control_2_IBUF | IV_FALSE | Binario_3_IBUF | IV_FALSE | Binario_1_IBUF | IV_FALSE | Binario_0_IBUF | IV_TRUE | Control_0_IBUF
+
+SRFF_INSTANCE | Display_7_3_OBUF.REG | Display_7_3_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Display_7_3_OBUF.D | 1066 | ? | 0 | 0 | Display_7_3_OBUF | NULL | NULL | Display_7_3_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Display_7_3_OBUF.Q | 1069 | ? | 0 | 0 | Display_7_3_OBUF | NULL | NULL | Display_7_3_OBUF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | OptxMapped | Display_7_4_OBUF | Componente_4511_COPY_0_COPY_0 | 2155872256 | 7 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_0_IBUF | 1032 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_2_IBUF | 1026 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_1_IBUF | 1027 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_2_IBUF | 1028 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_3_IBUF | 1029 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_3_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_0_IBUF | 1031 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_1_IBUF | 1030 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_1_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | Display_7_4_OBUF | 1037 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | Display_7_4_OBUF.Q | Display_7_4_OBUF | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | Display_7_4_OBUF.SI | Display_7_4_OBUF | 0 | 7 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_0_IBUF | 1032 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_2_IBUF | 1026 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_1_IBUF | 1027 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_2_IBUF | 1028 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_3_IBUF | 1029 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_3_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_0_IBUF | 1031 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_1_IBUF | 1030 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_1_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Display_7_4_OBUF.D1 | 1071 | ? | 0 | 4096 | Display_7_4_OBUF | NULL | NULL | Display_7_4_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Display_7_4_OBUF.D2 | 1072 | ? | 0 | 4096 | Display_7_4_OBUF | NULL | NULL | Display_7_4_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_FALSE | Control_0_IBUF
+SPPTERM | 4 | IV_TRUE | Binario_2_IBUF | IV_TRUE | Control_1_IBUF | IV_FALSE | Control_2_IBUF | IV_FALSE | Binario_3_IBUF
+SPPTERM | 4 | IV_FALSE | Binario_2_IBUF | IV_TRUE | Control_1_IBUF | IV_FALSE | Control_2_IBUF | IV_FALSE | Binario_1_IBUF
+SPPTERM | 4 | IV_TRUE | Control_1_IBUF | IV_FALSE | Control_2_IBUF | IV_FALSE | Binario_3_IBUF | IV_TRUE | Binario_0_IBUF
+
+SRFF_INSTANCE | Display_7_4_OBUF.REG | Display_7_4_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Display_7_4_OBUF.D | 1070 | ? | 0 | 0 | Display_7_4_OBUF | NULL | NULL | Display_7_4_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Display_7_4_OBUF.Q | 1073 | ? | 0 | 0 | Display_7_4_OBUF | NULL | NULL | Display_7_4_OBUF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | OptxMapped | Display_7_5_OBUF | Componente_4511_COPY_0_COPY_0 | 2155872256 | 7 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_0_IBUF | 1032 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_2_IBUF | 1026 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_1_IBUF | 1027 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_2_IBUF | 1028 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_1_IBUF | 1030 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_3_IBUF | 1029 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_3_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_0_IBUF | 1031 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_0_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | Display_7_5_OBUF | 1038 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | Display_7_5_OBUF.Q | Display_7_5_OBUF | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | Display_7_5_OBUF.SI | Display_7_5_OBUF | 0 | 7 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_0_IBUF | 1032 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_2_IBUF | 1026 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_1_IBUF | 1027 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_2_IBUF | 1028 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_1_IBUF | 1030 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_3_IBUF | 1029 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_3_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_0_IBUF | 1031 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_0_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Display_7_5_OBUF.D1 | 1075 | ? | 0 | 4096 | Display_7_5_OBUF | NULL | NULL | Display_7_5_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Display_7_5_OBUF.D2 | 1076 | ? | 0 | 4096 | Display_7_5_OBUF | NULL | NULL | Display_7_5_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_FALSE | Control_0_IBUF
+SPPTERM | 4 | IV_FALSE | Binario_2_IBUF | IV_TRUE | Control_1_IBUF | IV_FALSE | Control_2_IBUF | IV_FALSE | Binario_3_IBUF
+SPPTERM | 4 | IV_FALSE | Binario_2_IBUF | IV_TRUE | Control_1_IBUF | IV_FALSE | Control_2_IBUF | IV_FALSE | Binario_1_IBUF
+SPPTERM | 5 | IV_TRUE | Control_1_IBUF | IV_FALSE | Control_2_IBUF | IV_FALSE | Binario_3_IBUF | IV_TRUE | Binario_1_IBUF | IV_TRUE | Binario_0_IBUF
+SPPTERM | 5 | IV_TRUE | Control_1_IBUF | IV_FALSE | Control_2_IBUF | IV_FALSE | Binario_3_IBUF | IV_FALSE | Binario_1_IBUF | IV_FALSE | Binario_0_IBUF
+
+SRFF_INSTANCE | Display_7_5_OBUF.REG | Display_7_5_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Display_7_5_OBUF.D | 1074 | ? | 0 | 0 | Display_7_5_OBUF | NULL | NULL | Display_7_5_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Display_7_5_OBUF.Q | 1077 | ? | 0 | 0 | Display_7_5_OBUF | NULL | NULL | Display_7_5_OBUF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | Inv+OptxMapped | Display_7_6_OBUF | Componente_4511_COPY_0_COPY_0 | 2155872512 | 7 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_1_IBUF | 1027 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_0_IBUF | 1032 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_2_IBUF | 1026 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_2_IBUF | 1028 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_3_IBUF | 1029 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_3_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_1_IBUF | 1030 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_0_IBUF | 1031 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_0_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | Display_7_6_OBUF | 1039 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | Display_7_6_OBUF.Q | Display_7_6_OBUF | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | Display_7_6_OBUF.SI | Display_7_6_OBUF | 0 | 7 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_1_IBUF | 1027 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_0_IBUF | 1032 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_0_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_2_IBUF | 1026 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Control_2_IBUF | 1028 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Control_2_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_3_IBUF | 1029 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_3_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_1_IBUF | 1030 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_1_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Binario_0_IBUF | 1031 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Binario_0_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Display_7_6_OBUF.D1 | 1079 | ? | 0 | 4096 | Display_7_6_OBUF | NULL | NULL | Display_7_6_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Display_7_6_OBUF.D2 | 1080 | ? | 0 | 4096 | Display_7_6_OBUF | NULL | NULL | Display_7_6_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_FALSE | Control_1_IBUF | IV_TRUE | Control_0_IBUF
+SPPTERM | 6 | IV_TRUE | Binario_2_IBUF | IV_FALSE | Control_2_IBUF | IV_FALSE | Binario_3_IBUF | IV_FALSE | Binario_1_IBUF | IV_FALSE | Binario_0_IBUF | IV_TRUE | Control_0_IBUF
+SPPTERM | 6 | IV_FALSE | Binario_2_IBUF | IV_FALSE | Control_2_IBUF | IV_FALSE | Binario_3_IBUF | IV_FALSE | Binario_1_IBUF | IV_TRUE | Binario_0_IBUF | IV_TRUE | Control_0_IBUF
+
+SRFF_INSTANCE | Display_7_6_OBUF.REG | Display_7_6_OBUF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Display_7_6_OBUF.D | 1078 | ? | 0 | 0 | Display_7_6_OBUF | NULL | NULL | Display_7_6_OBUF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Display_7_6_OBUF.Q | 1081 | ? | 0 | 0 | Display_7_6_OBUF | NULL | NULL | Display_7_6_OBUF.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | Display_7<0> | Componente_4511_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | Display_7_0_OBUF | 1033 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | Display_7_0_OBUF.Q | Display_7_0_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | Display_7<0> | 1040 | PO | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Display_7<0> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | Display_7<1> | Componente_4511_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | Display_7_1_OBUF | 1034 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | Display_7_1_OBUF.Q | Display_7_1_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | Display_7<1> | 1041 | PO | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Display_7<1> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | Display_7<2> | Componente_4511_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | Display_7_2_OBUF | 1035 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | Display_7_2_OBUF.Q | Display_7_2_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | Display_7<2> | 1042 | PO | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Display_7<2> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | Display_7<3> | Componente_4511_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | Display_7_3_OBUF | 1036 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | Display_7_3_OBUF.Q | Display_7_3_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | Display_7<3> | 1043 | PO | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Display_7<3> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | Display_7<4> | Componente_4511_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | Display_7_4_OBUF | 1037 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | Display_7_4_OBUF.Q | Display_7_4_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | Display_7<4> | 1044 | PO | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Display_7<4> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | Display_7<5> | Componente_4511_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | Display_7_5_OBUF | 1038 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | Display_7_5_OBUF.Q | Display_7_5_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | Display_7<5> | 1045 | PO | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Display_7<5> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | Display_7<6> | Componente_4511_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | Display_7_6_OBUF | 1039 | ? | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | Display_7_6_OBUF.Q | Display_7_6_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | Display_7<6> | 1046 | PO | 0 | 0 | Componente_4511_COPY_0_COPY_0 | NULL | NULL | Display_7<6> | 0 | 6 | OI_OUT
+
+FB_INSTANCE | FOOBAR1_ | Componente_4511_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 2 | Display_7_0_OBUF | 1 | NULL | 0 | Display_7<0> | 1 | 1 | 49152
+FBPIN | 8 | Display_7_6_OBUF | 1 | NULL | 0 | Display_7<6> | 1 | 4 | 49152
+
+FB_INSTANCE | FOOBAR2_ | Componente_4511_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 2 | Display_7_4_OBUF | 1 | NULL | 0 | Display_7<4> | 1 | 35 | 49152
+FBPIN | 5 | NULL | 0 | Control_1_IBUF | 1 | NULL | 0 | 36 | 49152
+FBPIN | 6 | Display_7_5_OBUF | 1 | NULL | 0 | Display_7<5> | 1 | 37 | 49152
+FBPIN | 9 | NULL | 0 | Binario_1_IBUF | 1 | NULL | 0 | 39 | 51200
+FBPIN | 11 | NULL | 0 | Binario_3_IBUF | 1 | NULL | 0 | 40 | 53248
+FBPIN | 14 | NULL | 0 | Control_2_IBUF | 1 | NULL | 0 | 42 | 53248
+
+FB_INSTANCE | FOOBAR3_ | Componente_4511_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 2 | Display_7_1_OBUF | 1 | NULL | 0 | Display_7<1> | 1 | 11 | 49152
+FBPIN | 14 | Display_7_3_OBUF | 1 | NULL | 0 | Display_7<3> | 1 | 19 | 49152
+
+FB_INSTANCE | FOOBAR4_ | Componente_4511_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 2 | Display_7_2_OBUF | 1 | NULL | 0 | Display_7<2> | 1 | 25 | 49152
+FBPIN | 11 | NULL | 0 | Control_0_IBUF | 1 | NULL | 0 | 28 | 49152
+FBPIN | 14 | NULL | 0 | Binario_2_IBUF | 1 | NULL | 0 | 29 | 49152
+FBPIN | 17 | NULL | 0 | Binario_0_IBUF | 1 | NULL | 0 | 34 | 49152
+
+FB_INSTANCE | INPUTPINS_FOOBAR5_ | Componente_4511_COPY_0_COPY_0 | 0 | 0 | 0
+
+BUSINFO | BINARIO<3:0> | 4 | 0 | 0 | Binario<0> | 3 | Binario<1> | 2 | Binario<2> | 1 | Binario<3> | 0
+BUSINFO | CONTROL<2:0> | 3 | 0 | 0 | Control<0> | 2 | Control<1> | 1 | Control<2> | 0
+BUSINFO | DISPLAY_7<6:0> | 7 | 0 | 1 | Display_7<0> | 6 | Display_7<1> | 5 | Display_7<2> | 4 | Display_7<3> | 3 | Display_7<4> | 2 | Display_7<5> | 1 | Display_7<6> | 0
+
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 1 | Binario<0> | 34 | 8 | Control<2> | 42 | 17 | Binario<2> | 29 | 23 | Control<1> | 36 | 38 | Control<0> | 28
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 40 | Binario<1> | 39 | 49 | Binario<3> | 40
+
+FB_IMUX_INDEX | FOOBAR1_ | -1 | 73 | -1 | -1 | -1 | -1 | -1 | -1 | 98 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 89 | -1 | -1 | -1 | -1 | -1 | 80 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 95 | -1 | 86 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 92 | -1 | -1 | -1 | -1
+
+
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 1 | Binario<0> | 34 | 8 | Control<2> | 42 | 17 | Binario<2> | 29 | 23 | Control<1> | 36 | 38 | Control<0> | 28
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 40 | Binario<1> | 39 | 49 | Binario<3> | 40
+
+FB_IMUX_INDEX | FOOBAR2_ | -1 | 73 | -1 | -1 | -1 | -1 | -1 | -1 | 98 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 89 | -1 | -1 | -1 | -1 | -1 | 80 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 95 | -1 | 86 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 92 | -1 | -1 | -1 | -1
+
+
+FB_ORDER_OF_INPUTS | FOOBAR3_ | 1 | Binario<0> | 34 | 8 | Control<2> | 42 | 17 | Binario<2> | 29 | 23 | Control<1> | 36 | 38 | Control<0> | 28
+FB_ORDER_OF_INPUTS | FOOBAR3_ | 40 | Binario<1> | 39 | 49 | Binario<3> | 40
+
+FB_IMUX_INDEX | FOOBAR3_ | -1 | 73 | -1 | -1 | -1 | -1 | -1 | -1 | 98 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 89 | -1 | -1 | -1 | -1 | -1 | 80 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 95 | -1 | 86 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 92 | -1 | -1 | -1 | -1
+
+
+FB_ORDER_OF_INPUTS | FOOBAR4_ | 1 | Binario<0> | 34 | 8 | Control<2> | 42 | 17 | Binario<2> | 29 | 23 | Control<1> | 36 | 38 | Control<0> | 28
+FB_ORDER_OF_INPUTS | FOOBAR4_ | 40 | Binario<1> | 39 | 49 | Binario<3> | 40
+
+FB_IMUX_INDEX | FOOBAR4_ | -1 | 73 | -1 | -1 | -1 | -1 | -1 | -1 | 98 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 89 | -1 | -1 | -1 | -1 | -1 | 80 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 95 | -1 | 86 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 92 | -1 | -1 | -1 | -1
+

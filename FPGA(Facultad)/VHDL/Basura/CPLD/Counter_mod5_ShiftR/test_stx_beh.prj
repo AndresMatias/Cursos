@@ -1,4 +1,0 @@
-vhdl isim_temp "FFD.vhd"
-vhdl isim_temp "../Cont-0-9999/clk_1Hz.vhd"
-vhdl isim_temp "Mod5_LR_Up_Down.vhd"
-vhdl isim_temp "test.vhd"

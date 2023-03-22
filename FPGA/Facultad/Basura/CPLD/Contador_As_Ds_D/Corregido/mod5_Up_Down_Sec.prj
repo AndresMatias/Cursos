@@ -1,0 +1,3 @@
+vhdl work "FFD.vhd"
+vhdl work "clk_1Hz.vhd"
+vhdl work "mod5_Up_Down_Sec.vhd"

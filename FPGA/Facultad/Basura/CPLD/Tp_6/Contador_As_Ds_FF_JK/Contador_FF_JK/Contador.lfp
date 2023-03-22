@@ -1,0 +1,5 @@
+# begin LFP file D:\CPLD\Tp_6\Contador_As_Ds_FF_JK\Contador_FF_JK\Contador.lfp
+designfile Contador.vhd
+parttype xc9572xl-pc44-5
+bus_delimiter 0;
+set_busdelim_onsave 1;

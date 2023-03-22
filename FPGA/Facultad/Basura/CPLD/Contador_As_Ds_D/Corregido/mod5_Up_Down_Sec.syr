@@ -1,0 +1,240 @@
+Release 10.1 - xst K.31 (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: mod5_Up_Down_Sec.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mod5_Up_Down_Sec.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "mod5_Up_Down_Sec"
+Output Format                      : NGC
+Target Device                      : XC9500XL CPLDs
+
+---- Source Options
+Top Module Name                    : mod5_Up_Down_Sec
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+
+---- Target Options
+Add IO Buffers                     : YES
+MACRO Preserve                     : YES
+XOR Preserve                       : YES
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : mod5_Up_Down_Sec.lso
+Keep Hierarchy                     : YES
+Netlist Hierarchy                  : as_optimized
+RTL Output                         : Yes
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Verilog 2001                       : YES
+
+---- Other Options
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/clk_1Hz.vhd" in Library work.
+Entity <clk_1Hz> compiled.
+Entity <clk_1Hz> (Architecture <arch>) compiled.
+Compiling vhdl file "C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/FFD.vhd" in Library work.
+Entity <FFD> compiled.
+Entity <FFD> (Architecture <arch>) compiled.
+Compiling vhdl file "C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/mod5_Up_Down_Sec.vhd" in Library work.
+Entity <mod5_Up_Down_Sec> compiled.
+Entity <mod5_Up_Down_Sec> (Architecture <arch>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <mod5_Up_Down_Sec> in library <work> (architecture <arch>).
+
+Analyzing hierarchy for entity <clk_1Hz> in library <work> (architecture <arch>).
+
+Analyzing hierarchy for entity <FFD> in library <work> (architecture <arch>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <mod5_Up_Down_Sec> in library <work> (Architecture <arch>).
+Entity <mod5_Up_Down_Sec> analyzed. Unit <mod5_Up_Down_Sec> generated.
+
+Analyzing Entity <clk_1Hz> in library <work> (Architecture <arch>).
+Entity <clk_1Hz> analyzed. Unit <clk_1Hz> generated.
+
+Analyzing Entity <FFD> in library <work> (Architecture <arch>).
+Entity <FFD> analyzed. Unit <FFD> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <clk_1Hz>.
+    Related source file is "C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/clk_1Hz.vhd".
+WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 26-bit up counter for signal <s_reg>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <clk_1Hz> synthesized.
+
+
+Synthesizing Unit <FFD>.
+    Related source file is "C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/FFD.vhd".
+    Found 1-bit register for signal <q>.
+    Found 1-bit register for signal <not_q>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <FFD> synthesized.
+
+
+Synthesizing Unit <mod5_Up_Down_Sec>.
+    Related source file is "C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/mod5_Up_Down_Sec.vhd".
+Unit <mod5_Up_Down_Sec> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 26-bit up counter                                     : 1
+# Registers                                            : 6
+ 1-bit register                                        : 6
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 26-bit up counter                                     : 1
+# Registers                                            : 6
+ Flip-Flops                                            : 6
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <mod5_Up_Down_Sec> ...
+
+Optimizing unit <FFD> ...
+
+Optimizing unit <clk_1Hz> ...
+
+=========================================================================
+*                           Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : mod5_Up_Down_Sec.ngr
+Top Level Output File Name         : mod5_Up_Down_Sec
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : YES
+Target Technology                  : XC9500XL CPLDs
+Macro Preserve                     : YES
+XOR Preserve                       : YES
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+Design Statistics
+# IOs                              : 17
+
+Cell Usage :
+# BELS                             : 165
+#      AND2                        : 64
+#      AND3                        : 4
+#      AND4                        : 3
+#      AND8                        : 3
+#      GND                         : 2
+#      INV                         : 57
+#      OR2                         : 4
+#      OR3                         : 1
+#      OR4                         : 1
+#      VCC                         : 1
+#      XOR2                        : 25
+# FlipFlops/Latches                : 32
+#      FDC                         : 3
+#      FDCE                        : 26
+#      FDP                         : 3
+# IO Buffers                       : 17
+#      IBUF                        : 3
+#      OBUF                        : 14
+=========================================================================
+
+
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 2.14 secs
+ 
+--> 
+
+Total memory usage is 210052 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

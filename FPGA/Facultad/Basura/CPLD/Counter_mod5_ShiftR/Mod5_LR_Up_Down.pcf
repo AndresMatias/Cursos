@@ -1,0 +1,25 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Nov 23 01:01:54 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "an<0>" LOCATE = SITE "P33" LEVEL 1;
+COMP "an<1>" LOCATE = SITE "P32" LEVEL 1;
+COMP "an<2>" LOCATE = SITE "P26" LEVEL 1;
+COMP "an<3>" LOCATE = SITE "P34" LEVEL 1;
+COMP "x" LOCATE = SITE "P38" LEVEL 1;
+COMP "clk50Mhz" LOCATE = SITE "P54" LEVEL 1;
+COMP "sseg<0>" LOCATE = SITE "P83" LEVEL 1;
+COMP "sseg<1>" LOCATE = SITE "P17" LEVEL 1;
+COMP "sseg<2>" LOCATE = SITE "P20" LEVEL 1;
+COMP "sseg<3>" LOCATE = SITE "P21" LEVEL 1;
+COMP "sseg<4>" LOCATE = SITE "P23" LEVEL 1;
+COMP "sseg<5>" LOCATE = SITE "P16" LEVEL 1;
+COMP "sseg<6>" LOCATE = SITE "P25" LEVEL 1;
+COMP "clk_enable" LOCATE = SITE "P6" LEVEL 1;
+COMP "bcd<0>" LOCATE = SITE "P15" LEVEL 1;
+COMP "bcd<1>" LOCATE = SITE "P14" LEVEL 1;
+COMP "bcd<2>" LOCATE = SITE "P8" LEVEL 1;
+NET "clk50Mhz_BUFGP/IBUFG" BEL "clk50Mhz_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

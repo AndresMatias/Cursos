@@ -1,6 +1,0 @@
-CommandLine
-C:\Xilinx\10.1\ISE\bin\nt\unwrapped\tsim.exe -ise C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/Corregido.ise -intstyle ise mod5_Up_Down_Sec mod5_Up_Down_Sec.nga
-s
-FormatString
-tsim <design[.vm6]> [--intstyle ise|xflow|silent] [<outfile>] 
-s

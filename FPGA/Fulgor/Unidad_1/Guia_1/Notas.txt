@@ -1,0 +1,6 @@
+Pag 51 Digital Desing ejemplo filtro iir
+Pag 79 Digital Desing ejecicio 4 sugerido ecuacion diferencial
+Pag 188 Digital Desing ejemplo filtro fir
+Pag 287 Digital Desing ejemplo ecuacion diferencial
+
+Ejercicio 4 Es un filtro iir

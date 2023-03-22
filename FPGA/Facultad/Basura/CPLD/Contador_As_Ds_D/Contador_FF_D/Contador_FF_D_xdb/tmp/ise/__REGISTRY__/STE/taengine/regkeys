@@ -1,0 +1,6 @@
+CommandLine
+taengine -ise C:/Xilinx/Tp/Contador_As_Ds_D/Contador_FF_D/Contador_FF_D.ise
+s
+FormatString
+taengine 
+s

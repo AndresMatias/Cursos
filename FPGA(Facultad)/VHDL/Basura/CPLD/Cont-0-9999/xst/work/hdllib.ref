@@ -1,8 +1,0 @@
-AR counter_top arch "C:/Users/facun/Desktop/Lab 5/Cont-0-9999/Counter_Top.vhd" sub00/vhpl07 1480022429
-AR sseg_mux arch "C:/Users/facun/Desktop/Lab 5/Cont-0-9999/sseg_mux.vhd" sub00/vhpl05 1480022427
-EN clk_1hz NULL "C:/Users/facun/Desktop/Lab 5/Cont-0-9999/clk_1Hz.vhd" sub00/vhpl00 1480022422
-EN counter NULL "C:/Users/facun/Desktop/Lab 5/Cont-0-9999/Counter.vhd" sub00/vhpl02 1480022424
-AR counter arch "C:/Users/facun/Desktop/Lab 5/Cont-0-9999/Counter.vhd" sub00/vhpl03 1480022425
-EN sseg_mux NULL "C:/Users/facun/Desktop/Lab 5/Cont-0-9999/sseg_mux.vhd" sub00/vhpl04 1480022426
-EN counter_top NULL "C:/Users/facun/Desktop/Lab 5/Cont-0-9999/Counter_Top.vhd" sub00/vhpl06 1480022428
-AR clk_1hz arch "C:/Users/facun/Desktop/Lab 5/Cont-0-9999/clk_1Hz.vhd" sub00/vhpl01 1480022423

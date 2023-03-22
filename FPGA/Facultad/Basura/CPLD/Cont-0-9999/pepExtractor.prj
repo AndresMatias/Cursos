@@ -1,0 +1,4 @@
+work	"Counter.vhd"
+work	"Counter_Top.vhd"
+work	"clk_1Hz.vhd"
+work	"sseg_mux.vhd"

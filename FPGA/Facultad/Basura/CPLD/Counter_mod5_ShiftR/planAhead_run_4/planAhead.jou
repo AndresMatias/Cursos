@@ -1,0 +1,35 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Wed Nov 23 00:54:26 2016
+# Process ID: 17112
+# Log file: C:/Users/facun/Desktop/Lab 5/Counter_mod5_ShiftR/planAhead_run_4/planAhead.log
+# Journal file: C:/Users/facun/Desktop/Lab 5/Counter_mod5_ShiftR/planAhead_run_4/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source {C:/Users/facun/Desktop/Lab 5/Counter_mod5_ShiftR/pa.fromNetlist.tcl}
+startgroup
+set_property package_pin P34 [get_ports {an[3]}]
+endgroup
+startgroup
+set_property package_pin P26 [get_ports {an[2]}]
+endgroup
+startgroup
+set_property package_pin P32 [get_ports {an[1]}]
+endgroup
+startgroup
+set_property package_pin P33 [get_ports {an[0]}]
+endgroup
+startgroup
+set_property package_pin P54 [get_ports clk50Mhz]
+endgroup
+startgroup
+set_property package_pin P38 [get_ports clk_enable]
+endgroup
+startgroup
+set_property package_pin P6 [get_ports clk_enable]
+endgroup
+startgroup
+set_property package_pin P38 [get_ports x]
+endgroup
+save_constraints

@@ -1,0 +1,4 @@
+AR flip_flop_jk behavioral D:/CPLD/Tp_6/Contador_As_Ds_FF_JK/Contador_FF_JK/Flip_Flop_JK.vhd sub00/vhpl01 1509476475
+EN flip_flop_jk NULL D:/CPLD/Tp_6/Contador_As_Ds_FF_JK/Contador_FF_JK/Flip_Flop_JK.vhd sub00/vhpl00 1509476474
+EN contador NULL D:/CPLD/Tp_6/Contador_As_Ds_FF_JK/Contador_FF_JK/Contador.vhd sub00/vhpl02 1509476476
+AR contador behavioral D:/CPLD/Tp_6/Contador_As_Ds_FF_JK/Contador_FF_JK/Contador.vhd sub00/vhpl03 1509476477

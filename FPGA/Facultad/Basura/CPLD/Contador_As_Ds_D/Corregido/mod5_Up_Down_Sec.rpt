@@ -1,0 +1,859 @@
+ 
+cpldfit:  version K.31                              Xilinx Inc.
+                                  Fitter Report
+Design Name: mod5_Up_Down_Sec                    Date: 11- 9-2017,  1:04PM
+Device Used: XC9572XL-5-PC44
+Fitting Status: Successful
+
+*************************  Mapped Resource Summary  **************************
+
+Macrocells     Product Terms    Function Block   Registers      Pins           
+Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
+43 /72  ( 60%) 93  /360  ( 26%) 120/216 ( 56%)   32 /72  ( 44%) 17 /34  ( 50%)
+
+** Function Block Resources **
+
+Function    Mcells      FB Inps     Pterms      IO          
+Block       Used/Tot    Used/Tot    Used/Tot    Used/Tot    
+FB1          16/18       24/54       29/90       2/ 9
+FB2          18/18*      30/54       40/90       6/ 9
+FB3           7/18       33/54       17/90       4/ 9
+FB4           2/18       33/54        7/90       2/ 7
+             -----       -----       -----      -----    
+             43/72      120/216      93/360     14/34 
+
+* - Resource is exhausted
+
+** Global Control Resources **
+
+Signal 'clk50Mhz' mapped onto global clock net GCK1.
+Global output enable net(s) unused.
+Global set/reset net(s) unused.
+
+** Pin Resources **
+
+Signal Type    Required     Mapped  |  Pin Type            Used    Total 
+------------------------------------|------------------------------------
+Input         :    2           2    |  I/O              :    16      28
+Output        :   14          14    |  GCK/IO           :     1       3
+Bidirectional :    0           0    |  GTS/IO           :     0       2
+GCK           :    1           1    |  GSR/IO           :     0       1
+GTS           :    0           0    |
+GSR           :    0           0    |
+                 ----        ----
+        Total     17          17
+
+** Power Data **
+
+There are 43 macrocells in high performance mode (MCHP).
+There are 0 macrocells in low power mode (MCLP).
+End of Mapped Resource Summary
+*************************  Summary of Mapped Logic  ************************
+
+** 14 Outputs **
+
+Signal                  Total Total Loc     Pin  Pin     Pin     Pwr  Slew Reg Init
+Name                    Pts   Inps          No.  Type    Use     Mode Rate State
+sseg<5>                 0     0     FB1_2   1    I/O     O       STD  FAST 
+sseg<2>                 1     2     FB1_8   4    I/O     O       STD  FAST 
+sseg<1>                 2     3     FB2_2   35   I/O     O       STD  FAST 
+sseg<6>                 2     3     FB2_5   36   I/O     O       STD  FAST 
+sseg<3>                 2     3     FB2_6   37   I/O     O       STD  FAST 
+an<0>                   0     0     FB2_8   38   I/O     O       STD  FAST 
+sseg<0>                 1     2     FB2_15  43   I/O     O       STD  FAST 
+sseg<4>                 1     3     FB2_17  44   I/O     O       STD  FAST 
+bcd<1>                  5     33    FB3_2   11   I/O     O       STD  FAST RESET
+an<3>                   0     0     FB3_8   13   I/O     O       STD  FAST 
+an<2>                   0     0     FB3_11  18   I/O     O       STD  FAST 
+an<1>                   0     0     FB3_15  20   I/O     O       STD  FAST 
+bcd<0>                  4     32    FB4_2   25   I/O     O       STD  FAST RESET
+bcd<2>                  3     32    FB4_14  29   I/O     O       STD  FAST RESET
+
+** 29 Buried Nodes **
+
+Signal                  Total Total Loc     Pwr  Reg Init
+Name                    Pts   Inps          Mode State
+clk_1Hz_unit/s_reg<7>   2     8     FB1_4   STD  RESET
+clk_1Hz_unit/s_reg<5>   2     6     FB1_5   STD  RESET
+clk_1Hz_unit/s_reg<4>   2     5     FB1_6   STD  RESET
+clk_1Hz_unit/s_reg<3>   2     4     FB1_7   STD  RESET
+clk_1Hz_unit/s_reg<2>   2     3     FB1_9   STD  RESET
+clk_1Hz_unit/s_reg<21>  2     22    FB1_10  STD  RESET
+clk_1Hz_unit/s_reg<20>  2     21    FB1_11  STD  RESET
+clk_1Hz_unit/s_reg<1>   2     2     FB1_12  STD  RESET
+clk_1Hz_unit/s_reg<17>  2     18    FB1_13  STD  RESET
+clk_1Hz_unit/s_reg<16>  2     17    FB1_14  STD  RESET
+clk_1Hz_unit/s_reg<15>  2     16    FB1_15  STD  RESET
+clk_1Hz_unit/s_reg<13>  2     14    FB1_16  STD  RESET
+clk_1Hz_unit/s_reg<12>  2     13    FB1_17  STD  RESET
+clk_1Hz_unit/s_reg<10>  2     11    FB1_18  STD  RESET
+clk_1Hz_unit/s_reg<25>  2     26    FB2_1   STD  RESET
+clk_1Hz_unit/s_reg<24>  2     25    FB2_3   STD  RESET
+clk_1Hz_unit/s_reg<23>  2     24    FB2_4   STD  RESET
+clk_1Hz_unit/s_reg<0>   2     27    FB2_7   STD  RESET
+clk_1Hz_unit/s_reg<9>   3     27    FB2_9   STD  RESET
+clk_1Hz_unit/s_reg<8>   3     27    FB2_10  STD  RESET
+clk_1Hz_unit/s_reg<6>   3     27    FB2_11  STD  RESET
+clk_1Hz_unit/s_reg<22>  3     27    FB2_12  STD  RESET
+clk_1Hz_unit/s_reg<19>  3     27    FB2_13  STD  RESET
+clk_1Hz_unit/s_reg<18>  3     27    FB2_14  STD  RESET
+clk_1Hz_unit/s_reg<14>  3     27    FB2_16  STD  RESET
+clk_1Hz_unit/s_reg<11>  3     27    FB2_18  STD  RESET
+not_q2                  3     32    FB3_16  STD  RESET
+not_q0                  4     32    FB3_17  STD  RESET
+not_q1                  5     33    FB3_18  STD  RESET
+
+** 3 Inputs **
+
+Signal                  Loc     Pin  Pin     Pin     
+Name                            No.  Type    Use     
+clk50Mhz                FB1_9   5~   GCK/I/O GCK
+clk_enable              FB4_11  28   I/O     I
+x                       FB4_15  33   I/O     I
+
+Legend:
+Pin No. - ~ - User Assigned
+**************************  Function Block Details  ************************
+Legend:
+Total Pt     - Total product terms used by the macrocell signal
+Imp Pt       - Product terms imported from other macrocells
+Exp Pt       - Product terms exported to other macrocells
+               in direction shown
+Unused Pt    - Unused local product terms remaining in macrocell
+Loc          - Location where logic was mapped in device
+Pin Type/Use - I  - Input             GCK - Global Clock
+               O  - Output            GTS - Global Output Enable
+              (b) - Buried macrocell  GSR - Global Set/Reset
+X            - Signal used as input to the macrocell logic.
+Pin No.      - ~  - User Assigned
+*********************************** FB1  ***********************************
+Number of function block inputs used/remaining:               24/30
+Number of signals used by logic mapping into function block:  24
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0     0   5     FB1_1         (b)     
+sseg<5>               0       0     0   5     FB1_2   1     I/O     O
+(unused)              0       0     0   5     FB1_3         (b)     
+clk_1Hz_unit/s_reg<7>
+                      2       0     0   3     FB1_4         (b)     (b)
+clk_1Hz_unit/s_reg<5>
+                      2       0     0   3     FB1_5   2     I/O     (b)
+clk_1Hz_unit/s_reg<4>
+                      2       0     0   3     FB1_6   3     I/O     (b)
+clk_1Hz_unit/s_reg<3>
+                      2       0     0   3     FB1_7         (b)     (b)
+sseg<2>               1       0     0   4     FB1_8   4     I/O     O
+clk_1Hz_unit/s_reg<2>
+                      2       0     0   3     FB1_9   5     GCK/I/O GCK
+clk_1Hz_unit/s_reg<21>
+                      2       0     0   3     FB1_10        (b)     (b)
+clk_1Hz_unit/s_reg<20>
+                      2       0     0   3     FB1_11  6     GCK/I/O (b)
+clk_1Hz_unit/s_reg<1>
+                      2       0     0   3     FB1_12        (b)     (b)
+clk_1Hz_unit/s_reg<17>
+                      2       0     0   3     FB1_13        (b)     (b)
+clk_1Hz_unit/s_reg<16>
+                      2       0     0   3     FB1_14  7     GCK/I/O (b)
+clk_1Hz_unit/s_reg<15>
+                      2       0     0   3     FB1_15  8     I/O     (b)
+clk_1Hz_unit/s_reg<13>
+                      2       0     0   3     FB1_16        (b)     (b)
+clk_1Hz_unit/s_reg<12>
+                      2       0     0   3     FB1_17  9     I/O     (b)
+clk_1Hz_unit/s_reg<10>
+                      2       0     0   3     FB1_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: bcd<0>                   9: clk_1Hz_unit/s_reg<15>  17: clk_1Hz_unit/s_reg<3> 
+  2: bcd<2>                  10: clk_1Hz_unit/s_reg<16>  18: clk_1Hz_unit/s_reg<4> 
+  3: clk_1Hz_unit/s_reg<0>   11: clk_1Hz_unit/s_reg<17>  19: clk_1Hz_unit/s_reg<5> 
+  4: clk_1Hz_unit/s_reg<10>  12: clk_1Hz_unit/s_reg<18>  20: clk_1Hz_unit/s_reg<6> 
+  5: clk_1Hz_unit/s_reg<11>  13: clk_1Hz_unit/s_reg<19>  21: clk_1Hz_unit/s_reg<7> 
+  6: clk_1Hz_unit/s_reg<12>  14: clk_1Hz_unit/s_reg<1>   22: clk_1Hz_unit/s_reg<8> 
+  7: clk_1Hz_unit/s_reg<13>  15: clk_1Hz_unit/s_reg<20>  23: clk_1Hz_unit/s_reg<9> 
+  8: clk_1Hz_unit/s_reg<14>  16: clk_1Hz_unit/s_reg<2>   24: clk_enable 
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+sseg<5>              ........................................ 0
+clk_1Hz_unit/s_reg<7> 
+                     ..X..........X.XXXXX...X................ 8
+clk_1Hz_unit/s_reg<5> 
+                     ..X..........X.XXX.....X................ 6
+clk_1Hz_unit/s_reg<4> 
+                     ..X..........X.XX......X................ 5
+clk_1Hz_unit/s_reg<3> 
+                     ..X..........X.X.......X................ 4
+sseg<2>              XX...................................... 2
+clk_1Hz_unit/s_reg<2> 
+                     ..X..........X.........X................ 3
+clk_1Hz_unit/s_reg<21> 
+                     ..XXXXXXXXXXXXXXXXXXXXXX................ 22
+clk_1Hz_unit/s_reg<20> 
+                     ..XXXXXXXXXXXX.XXXXXXXXX................ 21
+clk_1Hz_unit/s_reg<1> 
+                     ..X....................X................ 2
+clk_1Hz_unit/s_reg<17> 
+                     ..XXXXXXXX...X.XXXXXXXXX................ 18
+clk_1Hz_unit/s_reg<16> 
+                     ..XXXXXXX....X.XXXXXXXXX................ 17
+clk_1Hz_unit/s_reg<15> 
+                     ..XXXXXX.....X.XXXXXXXXX................ 16
+clk_1Hz_unit/s_reg<13> 
+                     ..XXXX.......X.XXXXXXXXX................ 14
+clk_1Hz_unit/s_reg<12> 
+                     ..XXX........X.XXXXXXXXX................ 13
+clk_1Hz_unit/s_reg<10> 
+                     ..X..........X.XXXXXXXXX................ 11
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB2  ***********************************
+Number of function block inputs used/remaining:               30/24
+Number of signals used by logic mapping into function block:  30
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+clk_1Hz_unit/s_reg<25>
+                      2       0     0   3     FB2_1         (b)     (b)
+sseg<1>               2       0     0   3     FB2_2   35    I/O     O
+clk_1Hz_unit/s_reg<24>
+                      2       0     0   3     FB2_3         (b)     (b)
+clk_1Hz_unit/s_reg<23>
+                      2       0     0   3     FB2_4         (b)     (b)
+sseg<6>               2       0     0   3     FB2_5   36    I/O     O
+sseg<3>               2       0     0   3     FB2_6   37    I/O     O
+clk_1Hz_unit/s_reg<0>
+                      2       0     0   3     FB2_7         (b)     (b)
+an<0>                 0       0     0   5     FB2_8   38    I/O     O
+clk_1Hz_unit/s_reg<9>
+                      3       0     0   2     FB2_9   39    GSR/I/O (b)
+clk_1Hz_unit/s_reg<8>
+                      3       0     0   2     FB2_10        (b)     (b)
+clk_1Hz_unit/s_reg<6>
+                      3       0     0   2     FB2_11  40    GTS/I/O (b)
+clk_1Hz_unit/s_reg<22>
+                      3       0     0   2     FB2_12        (b)     (b)
+clk_1Hz_unit/s_reg<19>
+                      3       0     0   2     FB2_13        (b)     (b)
+clk_1Hz_unit/s_reg<18>
+                      3       0     0   2     FB2_14  42    GTS/I/O (b)
+sseg<0>               1       0     0   4     FB2_15  43    I/O     O
+clk_1Hz_unit/s_reg<14>
+                      3       0     0   2     FB2_16        (b)     (b)
+sseg<4>               1       0     0   4     FB2_17  44    I/O     O
+clk_1Hz_unit/s_reg<11>
+                      3       0     0   2     FB2_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: bcd<0>                  11: clk_1Hz_unit/s_reg<16>  21: clk_1Hz_unit/s_reg<25> 
+  2: bcd<1>                  12: clk_1Hz_unit/s_reg<17>  22: clk_1Hz_unit/s_reg<2> 
+  3: bcd<2>                  13: clk_1Hz_unit/s_reg<18>  23: clk_1Hz_unit/s_reg<3> 
+  4: clk_1Hz_unit/s_reg<0>   14: clk_1Hz_unit/s_reg<19>  24: clk_1Hz_unit/s_reg<4> 
+  5: clk_1Hz_unit/s_reg<10>  15: clk_1Hz_unit/s_reg<1>   25: clk_1Hz_unit/s_reg<5> 
+  6: clk_1Hz_unit/s_reg<11>  16: clk_1Hz_unit/s_reg<20>  26: clk_1Hz_unit/s_reg<6> 
+  7: clk_1Hz_unit/s_reg<12>  17: clk_1Hz_unit/s_reg<21>  27: clk_1Hz_unit/s_reg<7> 
+  8: clk_1Hz_unit/s_reg<13>  18: clk_1Hz_unit/s_reg<22>  28: clk_1Hz_unit/s_reg<8> 
+  9: clk_1Hz_unit/s_reg<14>  19: clk_1Hz_unit/s_reg<23>  29: clk_1Hz_unit/s_reg<9> 
+ 10: clk_1Hz_unit/s_reg<15>  20: clk_1Hz_unit/s_reg<24>  30: clk_enable 
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+clk_1Hz_unit/s_reg<25> 
+                     ...XXXXXXXXXXXXXXXXX.XXXXXXXXX.......... 26
+sseg<1>              XXX..................................... 3
+clk_1Hz_unit/s_reg<24> 
+                     ...XXXXXXXXXXXXXXXX..XXXXXXXXX.......... 25
+clk_1Hz_unit/s_reg<23> 
+                     ...XXXXXXXXXXXXXXX...XXXXXXXXX.......... 24
+sseg<6>              XXX..................................... 3
+sseg<3>              XXX..................................... 3
+clk_1Hz_unit/s_reg<0> 
+                     ...XXXXXXXXXXXXXXXXXXXXXXXXXXX.......... 27
+an<0>                ........................................ 0
+clk_1Hz_unit/s_reg<9> 
+                     ...XXXXXXXXXXXXXXXXXXXXXXXXXXX.......... 27
+clk_1Hz_unit/s_reg<8> 
+                     ...XXXXXXXXXXXXXXXXXXXXXXXXXXX.......... 27
+clk_1Hz_unit/s_reg<6> 
+                     ...XXXXXXXXXXXXXXXXXXXXXXXXXXX.......... 27
+clk_1Hz_unit/s_reg<22> 
+                     ...XXXXXXXXXXXXXXXXXXXXXXXXXXX.......... 27
+clk_1Hz_unit/s_reg<19> 
+                     ...XXXXXXXXXXXXXXXXXXXXXXXXXXX.......... 27
+clk_1Hz_unit/s_reg<18> 
+                     ...XXXXXXXXXXXXXXXXXXXXXXXXXXX.......... 27
+sseg<0>              .XX..................................... 2
+clk_1Hz_unit/s_reg<14> 
+                     ...XXXXXXXXXXXXXXXXXXXXXXXXXXX.......... 27
+sseg<4>              XXX..................................... 3
+clk_1Hz_unit/s_reg<11> 
+                     ...XXXXXXXXXXXXXXXXXXXXXXXXXXX.......... 27
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB3  ***********************************
+Number of function block inputs used/remaining:               33/21
+Number of signals used by logic mapping into function block:  33
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0     0   5     FB3_1         (b)     
+bcd<1>                5       0     0   0     FB3_2   11    I/O     O
+(unused)              0       0     0   5     FB3_3         (b)     
+(unused)              0       0     0   5     FB3_4         (b)     
+(unused)              0       0     0   5     FB3_5   12    I/O     
+(unused)              0       0     0   5     FB3_6         (b)     
+(unused)              0       0     0   5     FB3_7         (b)     
+an<3>                 0       0     0   5     FB3_8   13    I/O     O
+(unused)              0       0     0   5     FB3_9   14    I/O     
+(unused)              0       0     0   5     FB3_10        (b)     
+an<2>                 0       0     0   5     FB3_11  18    I/O     O
+(unused)              0       0     0   5     FB3_12        (b)     
+(unused)              0       0     0   5     FB3_13        (b)     
+(unused)              0       0     0   5     FB3_14  19    I/O     
+an<1>                 0       0     0   5     FB3_15  20    I/O     O
+not_q2                3       0     0   2     FB3_16  24    I/O     (b)
+not_q0                4       0     0   1     FB3_17  22    I/O     (b)
+not_q1                5       0     0   0     FB3_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: bcd<0>                  12: clk_1Hz_unit/s_reg<17>  23: clk_1Hz_unit/s_reg<3> 
+  2: bcd<1>                  13: clk_1Hz_unit/s_reg<18>  24: clk_1Hz_unit/s_reg<4> 
+  3: bcd<2>                  14: clk_1Hz_unit/s_reg<19>  25: clk_1Hz_unit/s_reg<5> 
+  4: clk_1Hz_unit/s_reg<0>   15: clk_1Hz_unit/s_reg<1>   26: clk_1Hz_unit/s_reg<6> 
+  5: clk_1Hz_unit/s_reg<10>  16: clk_1Hz_unit/s_reg<20>  27: clk_1Hz_unit/s_reg<7> 
+  6: clk_1Hz_unit/s_reg<11>  17: clk_1Hz_unit/s_reg<21>  28: clk_1Hz_unit/s_reg<8> 
+  7: clk_1Hz_unit/s_reg<12>  18: clk_1Hz_unit/s_reg<22>  29: clk_1Hz_unit/s_reg<9> 
+  8: clk_1Hz_unit/s_reg<13>  19: clk_1Hz_unit/s_reg<23>  30: not_q0 
+  9: clk_1Hz_unit/s_reg<14>  20: clk_1Hz_unit/s_reg<24>  31: not_q1 
+ 10: clk_1Hz_unit/s_reg<15>  21: clk_1Hz_unit/s_reg<25>  32: not_q2 
+ 11: clk_1Hz_unit/s_reg<16>  22: clk_1Hz_unit/s_reg<2>   33: x 
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+bcd<1>               XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX....... 33
+an<3>                ........................................ 0
+an<2>                ........................................ 0
+an<1>                ........................................ 0
+not_q2               XX.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX....... 32
+not_q0               .XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX....... 32
+not_q1               XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX....... 33
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB4  ***********************************
+Number of function block inputs used/remaining:               33/21
+Number of signals used by logic mapping into function block:  33
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0     0   5     FB4_1         (b)     
+bcd<0>                4       0     0   1     FB4_2   25    I/O     O
+(unused)              0       0     0   5     FB4_3         (b)     
+(unused)              0       0     0   5     FB4_4         (b)     
+(unused)              0       0     0   5     FB4_5   26    I/O     
+(unused)              0       0     0   5     FB4_6         (b)     
+(unused)              0       0     0   5     FB4_7         (b)     
+(unused)              0       0     0   5     FB4_8   27    I/O     
+(unused)              0       0     0   5     FB4_9         (b)     
+(unused)              0       0     0   5     FB4_10        (b)     
+(unused)              0       0     0   5     FB4_11  28    I/O     I
+(unused)              0       0     0   5     FB4_12        (b)     
+(unused)              0       0     0   5     FB4_13        (b)     
+bcd<2>                3       0     0   2     FB4_14  29    I/O     O
+(unused)              0       0     0   5     FB4_15  33    I/O     I
+(unused)              0       0     0   5     FB4_16        (b)     
+(unused)              0       0     0   5     FB4_17  34    I/O     
+(unused)              0       0     0   5     FB4_18        (b)     
+
+Signals Used by Logic in Function Block
+  1: bcd<0>                  12: clk_1Hz_unit/s_reg<17>  23: clk_1Hz_unit/s_reg<3> 
+  2: bcd<1>                  13: clk_1Hz_unit/s_reg<18>  24: clk_1Hz_unit/s_reg<4> 
+  3: bcd<2>                  14: clk_1Hz_unit/s_reg<19>  25: clk_1Hz_unit/s_reg<5> 
+  4: clk_1Hz_unit/s_reg<0>   15: clk_1Hz_unit/s_reg<1>   26: clk_1Hz_unit/s_reg<6> 
+  5: clk_1Hz_unit/s_reg<10>  16: clk_1Hz_unit/s_reg<20>  27: clk_1Hz_unit/s_reg<7> 
+  6: clk_1Hz_unit/s_reg<11>  17: clk_1Hz_unit/s_reg<21>  28: clk_1Hz_unit/s_reg<8> 
+  7: clk_1Hz_unit/s_reg<12>  18: clk_1Hz_unit/s_reg<22>  29: clk_1Hz_unit/s_reg<9> 
+  8: clk_1Hz_unit/s_reg<13>  19: clk_1Hz_unit/s_reg<23>  30: not_q0 
+  9: clk_1Hz_unit/s_reg<14>  20: clk_1Hz_unit/s_reg<24>  31: not_q1 
+ 10: clk_1Hz_unit/s_reg<15>  21: clk_1Hz_unit/s_reg<25>  32: not_q2 
+ 11: clk_1Hz_unit/s_reg<16>  22: clk_1Hz_unit/s_reg<2>   33: x 
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+bcd<0>               .XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX....... 32
+bcd<2>               XX.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX....... 32
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*******************************  Equations  ********************************
+
+********** Mapped Logic **********
+
+
+an(0) <= '0';
+
+
+an(1) <= '1';
+
+
+an(2) <= '1';
+
+
+an(3) <= '1';
+
+FDCPE_bcd0: FDCPE port map (bcd(0),bcd_D(0),bcd_C(0),'0','0');
+bcd_D(0) <= ((x AND not_q2 AND not_q0)
+	OR (bcd(1) AND not_q2 AND not_q0)
+	OR (NOT x AND bcd(2) AND not_q0 AND not_q1));
+bcd_C(0) <= (NOT clk_1Hz_unit/s_reg(0) AND NOT clk_1Hz_unit/s_reg(10) AND 
+	clk_1Hz_unit/s_reg(11) AND NOT clk_1Hz_unit/s_reg(12) AND NOT clk_1Hz_unit/s_reg(13) AND 
+	clk_1Hz_unit/s_reg(14) AND NOT clk_1Hz_unit/s_reg(15) AND NOT clk_1Hz_unit/s_reg(16) AND 
+	NOT clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND clk_1Hz_unit/s_reg(19) AND 
+	NOT clk_1Hz_unit/s_reg(1) AND NOT clk_1Hz_unit/s_reg(20) AND NOT clk_1Hz_unit/s_reg(21) AND 
+	clk_1Hz_unit/s_reg(22) AND NOT clk_1Hz_unit/s_reg(23) AND NOT clk_1Hz_unit/s_reg(24) AND 
+	NOT clk_1Hz_unit/s_reg(2) AND NOT clk_1Hz_unit/s_reg(3) AND NOT clk_1Hz_unit/s_reg(4) AND 
+	NOT clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND NOT clk_1Hz_unit/s_reg(7) AND 
+	clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9) AND NOT clk_1Hz_unit/s_reg(25));
+
+FDCPE_bcd1: FDCPE port map (bcd(1),bcd_D(1),bcd_C(1),'0','0');
+bcd_D(1) <= ((x AND bcd(1) AND not_q2 AND not_q0)
+	OR (x AND bcd(0) AND not_q2 AND not_q1)
+	OR (NOT x AND bcd(1) AND bcd(0) AND not_q2)
+	OR (NOT x AND bcd(2) AND not_q0 AND not_q1));
+bcd_C(1) <= (NOT clk_1Hz_unit/s_reg(0) AND NOT clk_1Hz_unit/s_reg(10) AND 
+	clk_1Hz_unit/s_reg(11) AND NOT clk_1Hz_unit/s_reg(12) AND NOT clk_1Hz_unit/s_reg(13) AND 
+	clk_1Hz_unit/s_reg(14) AND NOT clk_1Hz_unit/s_reg(15) AND NOT clk_1Hz_unit/s_reg(16) AND 
+	NOT clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND clk_1Hz_unit/s_reg(19) AND 
+	NOT clk_1Hz_unit/s_reg(1) AND NOT clk_1Hz_unit/s_reg(20) AND NOT clk_1Hz_unit/s_reg(21) AND 
+	clk_1Hz_unit/s_reg(22) AND NOT clk_1Hz_unit/s_reg(23) AND NOT clk_1Hz_unit/s_reg(24) AND 
+	NOT clk_1Hz_unit/s_reg(2) AND NOT clk_1Hz_unit/s_reg(3) AND NOT clk_1Hz_unit/s_reg(4) AND 
+	NOT clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND NOT clk_1Hz_unit/s_reg(7) AND 
+	clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9) AND NOT clk_1Hz_unit/s_reg(25));
+
+FDCPE_bcd2: FDCPE port map (bcd(2),bcd_D(2),bcd_C(2),'0','0');
+bcd_D(2) <= ((x AND bcd(1) AND bcd(0) AND not_q2)
+	OR (NOT x AND not_q2 AND not_q0 AND not_q1));
+bcd_C(2) <= (NOT clk_1Hz_unit/s_reg(0) AND NOT clk_1Hz_unit/s_reg(10) AND 
+	clk_1Hz_unit/s_reg(11) AND NOT clk_1Hz_unit/s_reg(12) AND NOT clk_1Hz_unit/s_reg(13) AND 
+	clk_1Hz_unit/s_reg(14) AND NOT clk_1Hz_unit/s_reg(15) AND NOT clk_1Hz_unit/s_reg(16) AND 
+	NOT clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND clk_1Hz_unit/s_reg(19) AND 
+	NOT clk_1Hz_unit/s_reg(1) AND NOT clk_1Hz_unit/s_reg(20) AND NOT clk_1Hz_unit/s_reg(21) AND 
+	clk_1Hz_unit/s_reg(22) AND NOT clk_1Hz_unit/s_reg(23) AND NOT clk_1Hz_unit/s_reg(24) AND 
+	NOT clk_1Hz_unit/s_reg(2) AND NOT clk_1Hz_unit/s_reg(3) AND NOT clk_1Hz_unit/s_reg(4) AND 
+	NOT clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND NOT clk_1Hz_unit/s_reg(7) AND 
+	clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9) AND NOT clk_1Hz_unit/s_reg(25));
+
+FTCPE_clk_1Hz_unit/s_reg0: FTCPE port map (clk_1Hz_unit/s_reg(0),clk_1Hz_unit/s_reg_T(0),clk50Mhz,'0','0',clk_enable);
+clk_1Hz_unit/s_reg_T(0) <= (clk_enable AND NOT clk_1Hz_unit/s_reg(0) AND 
+	NOT clk_1Hz_unit/s_reg(10) AND clk_1Hz_unit/s_reg(11) AND NOT clk_1Hz_unit/s_reg(12) AND 
+	NOT clk_1Hz_unit/s_reg(13) AND clk_1Hz_unit/s_reg(14) AND NOT clk_1Hz_unit/s_reg(15) AND 
+	NOT clk_1Hz_unit/s_reg(16) AND NOT clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND 
+	clk_1Hz_unit/s_reg(19) AND NOT clk_1Hz_unit/s_reg(1) AND NOT clk_1Hz_unit/s_reg(20) AND 
+	NOT clk_1Hz_unit/s_reg(21) AND clk_1Hz_unit/s_reg(22) AND NOT clk_1Hz_unit/s_reg(23) AND 
+	NOT clk_1Hz_unit/s_reg(24) AND NOT clk_1Hz_unit/s_reg(2) AND NOT clk_1Hz_unit/s_reg(3) AND 
+	NOT clk_1Hz_unit/s_reg(4) AND NOT clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND 
+	NOT clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9) AND 
+	NOT clk_1Hz_unit/s_reg(25));
+
+FTCPE_clk_1Hz_unit/s_reg1: FTCPE port map (clk_1Hz_unit/s_reg(1),clk_1Hz_unit/s_reg(0),clk50Mhz,'0','0',clk_enable);
+
+FTCPE_clk_1Hz_unit/s_reg2: FTCPE port map (clk_1Hz_unit/s_reg(2),clk_1Hz_unit/s_reg_T(2),clk50Mhz,'0','0',clk_enable);
+clk_1Hz_unit/s_reg_T(2) <= (clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(1));
+
+FTCPE_clk_1Hz_unit/s_reg3: FTCPE port map (clk_1Hz_unit/s_reg(3),clk_1Hz_unit/s_reg_T(3),clk50Mhz,'0','0',clk_enable);
+clk_1Hz_unit/s_reg_T(3) <= (clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(1) AND 
+	clk_1Hz_unit/s_reg(2));
+
+FTCPE_clk_1Hz_unit/s_reg4: FTCPE port map (clk_1Hz_unit/s_reg(4),clk_1Hz_unit/s_reg_T(4),clk50Mhz,'0','0',clk_enable);
+clk_1Hz_unit/s_reg_T(4) <= (clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(1) AND 
+	clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3));
+
+FTCPE_clk_1Hz_unit/s_reg5: FTCPE port map (clk_1Hz_unit/s_reg(5),clk_1Hz_unit/s_reg_T(5),clk50Mhz,'0','0',clk_enable);
+clk_1Hz_unit/s_reg_T(5) <= (clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(1) AND 
+	clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3) AND clk_1Hz_unit/s_reg(4));
+
+FTCPE_clk_1Hz_unit/s_reg6: FTCPE port map (clk_1Hz_unit/s_reg(6),clk_1Hz_unit/s_reg_T(6),clk50Mhz,'0','0',clk_enable);
+clk_1Hz_unit/s_reg_T(6) <= ((clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(1) AND 
+	clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3) AND clk_1Hz_unit/s_reg(4) AND 
+	clk_1Hz_unit/s_reg(5))
+	OR (clk_enable AND NOT clk_1Hz_unit/s_reg(0) AND 
+	NOT clk_1Hz_unit/s_reg(10) AND clk_1Hz_unit/s_reg(11) AND NOT clk_1Hz_unit/s_reg(12) AND 
+	NOT clk_1Hz_unit/s_reg(13) AND clk_1Hz_unit/s_reg(14) AND NOT clk_1Hz_unit/s_reg(15) AND 
+	NOT clk_1Hz_unit/s_reg(16) AND NOT clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND 
+	clk_1Hz_unit/s_reg(19) AND NOT clk_1Hz_unit/s_reg(1) AND NOT clk_1Hz_unit/s_reg(20) AND 
+	NOT clk_1Hz_unit/s_reg(21) AND clk_1Hz_unit/s_reg(22) AND NOT clk_1Hz_unit/s_reg(23) AND 
+	NOT clk_1Hz_unit/s_reg(24) AND NOT clk_1Hz_unit/s_reg(2) AND NOT clk_1Hz_unit/s_reg(3) AND 
+	NOT clk_1Hz_unit/s_reg(4) AND NOT clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND 
+	NOT clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9) AND 
+	NOT clk_1Hz_unit/s_reg(25)));
+
+FTCPE_clk_1Hz_unit/s_reg7: FTCPE port map (clk_1Hz_unit/s_reg(7),clk_1Hz_unit/s_reg_T(7),clk50Mhz,'0','0',clk_enable);
+clk_1Hz_unit/s_reg_T(7) <= (clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(1) AND 
+	clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3) AND clk_1Hz_unit/s_reg(4) AND 
+	clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6));
+
+FTCPE_clk_1Hz_unit/s_reg8: FTCPE port map (clk_1Hz_unit/s_reg(8),clk_1Hz_unit/s_reg_T(8),clk50Mhz,'0','0',clk_enable);
+clk_1Hz_unit/s_reg_T(8) <= ((clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(1) AND 
+	clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3) AND clk_1Hz_unit/s_reg(4) AND 
+	clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND clk_1Hz_unit/s_reg(7))
+	OR (clk_enable AND NOT clk_1Hz_unit/s_reg(0) AND 
+	NOT clk_1Hz_unit/s_reg(10) AND clk_1Hz_unit/s_reg(11) AND NOT clk_1Hz_unit/s_reg(12) AND 
+	NOT clk_1Hz_unit/s_reg(13) AND clk_1Hz_unit/s_reg(14) AND NOT clk_1Hz_unit/s_reg(15) AND 
+	NOT clk_1Hz_unit/s_reg(16) AND NOT clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND 
+	clk_1Hz_unit/s_reg(19) AND NOT clk_1Hz_unit/s_reg(1) AND NOT clk_1Hz_unit/s_reg(20) AND 
+	NOT clk_1Hz_unit/s_reg(21) AND clk_1Hz_unit/s_reg(22) AND NOT clk_1Hz_unit/s_reg(23) AND 
+	NOT clk_1Hz_unit/s_reg(24) AND NOT clk_1Hz_unit/s_reg(2) AND NOT clk_1Hz_unit/s_reg(3) AND 
+	NOT clk_1Hz_unit/s_reg(4) AND NOT clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND 
+	NOT clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9) AND 
+	NOT clk_1Hz_unit/s_reg(25)));
+
+FTCPE_clk_1Hz_unit/s_reg9: FTCPE port map (clk_1Hz_unit/s_reg(9),clk_1Hz_unit/s_reg_T(9),clk50Mhz,'0','0',clk_enable);
+clk_1Hz_unit/s_reg_T(9) <= ((clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(1) AND 
+	clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3) AND clk_1Hz_unit/s_reg(4) AND 
+	clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND clk_1Hz_unit/s_reg(7) AND 
+	clk_1Hz_unit/s_reg(8))
+	OR (clk_enable AND NOT clk_1Hz_unit/s_reg(0) AND 
+	NOT clk_1Hz_unit/s_reg(10) AND clk_1Hz_unit/s_reg(11) AND NOT clk_1Hz_unit/s_reg(12) AND 
+	NOT clk_1Hz_unit/s_reg(13) AND clk_1Hz_unit/s_reg(14) AND NOT clk_1Hz_unit/s_reg(15) AND 
+	NOT clk_1Hz_unit/s_reg(16) AND NOT clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND 
+	clk_1Hz_unit/s_reg(19) AND NOT clk_1Hz_unit/s_reg(1) AND NOT clk_1Hz_unit/s_reg(20) AND 
+	NOT clk_1Hz_unit/s_reg(21) AND clk_1Hz_unit/s_reg(22) AND NOT clk_1Hz_unit/s_reg(23) AND 
+	NOT clk_1Hz_unit/s_reg(24) AND NOT clk_1Hz_unit/s_reg(2) AND NOT clk_1Hz_unit/s_reg(3) AND 
+	NOT clk_1Hz_unit/s_reg(4) AND NOT clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND 
+	NOT clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9) AND 
+	NOT clk_1Hz_unit/s_reg(25)));
+
+FTCPE_clk_1Hz_unit/s_reg10: FTCPE port map (clk_1Hz_unit/s_reg(10),clk_1Hz_unit/s_reg_T(10),clk50Mhz,'0','0',clk_enable);
+clk_1Hz_unit/s_reg_T(10) <= (clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(1) AND 
+	clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3) AND clk_1Hz_unit/s_reg(4) AND 
+	clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND clk_1Hz_unit/s_reg(7) AND 
+	clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9));
+
+FTCPE_clk_1Hz_unit/s_reg11: FTCPE port map (clk_1Hz_unit/s_reg(11),clk_1Hz_unit/s_reg_T(11),clk50Mhz,'0','0',clk_enable);
+clk_1Hz_unit/s_reg_T(11) <= ((clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(10) AND 
+	clk_1Hz_unit/s_reg(1) AND clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3) AND 
+	clk_1Hz_unit/s_reg(4) AND clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND 
+	clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9))
+	OR (clk_enable AND NOT clk_1Hz_unit/s_reg(0) AND 
+	NOT clk_1Hz_unit/s_reg(10) AND clk_1Hz_unit/s_reg(11) AND NOT clk_1Hz_unit/s_reg(12) AND 
+	NOT clk_1Hz_unit/s_reg(13) AND clk_1Hz_unit/s_reg(14) AND NOT clk_1Hz_unit/s_reg(15) AND 
+	NOT clk_1Hz_unit/s_reg(16) AND NOT clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND 
+	clk_1Hz_unit/s_reg(19) AND NOT clk_1Hz_unit/s_reg(1) AND NOT clk_1Hz_unit/s_reg(20) AND 
+	NOT clk_1Hz_unit/s_reg(21) AND clk_1Hz_unit/s_reg(22) AND NOT clk_1Hz_unit/s_reg(23) AND 
+	NOT clk_1Hz_unit/s_reg(24) AND NOT clk_1Hz_unit/s_reg(2) AND NOT clk_1Hz_unit/s_reg(3) AND 
+	NOT clk_1Hz_unit/s_reg(4) AND NOT clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND 
+	NOT clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9) AND 
+	NOT clk_1Hz_unit/s_reg(25)));
+
+FTCPE_clk_1Hz_unit/s_reg12: FTCPE port map (clk_1Hz_unit/s_reg(12),clk_1Hz_unit/s_reg_T(12),clk50Mhz,'0','0',clk_enable);
+clk_1Hz_unit/s_reg_T(12) <= (clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(10) AND 
+	clk_1Hz_unit/s_reg(11) AND clk_1Hz_unit/s_reg(1) AND clk_1Hz_unit/s_reg(2) AND 
+	clk_1Hz_unit/s_reg(3) AND clk_1Hz_unit/s_reg(4) AND clk_1Hz_unit/s_reg(5) AND 
+	clk_1Hz_unit/s_reg(6) AND clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND 
+	clk_1Hz_unit/s_reg(9));
+
+FTCPE_clk_1Hz_unit/s_reg13: FTCPE port map (clk_1Hz_unit/s_reg(13),clk_1Hz_unit/s_reg_T(13),clk50Mhz,'0','0',clk_enable);
+clk_1Hz_unit/s_reg_T(13) <= (clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(10) AND 
+	clk_1Hz_unit/s_reg(11) AND clk_1Hz_unit/s_reg(12) AND clk_1Hz_unit/s_reg(1) AND 
+	clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3) AND clk_1Hz_unit/s_reg(4) AND 
+	clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND clk_1Hz_unit/s_reg(7) AND 
+	clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9));
+
+FTCPE_clk_1Hz_unit/s_reg14: FTCPE port map (clk_1Hz_unit/s_reg(14),clk_1Hz_unit/s_reg_T(14),clk50Mhz,'0','0',clk_enable);
+clk_1Hz_unit/s_reg_T(14) <= ((clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(10) AND 
+	clk_1Hz_unit/s_reg(11) AND clk_1Hz_unit/s_reg(12) AND clk_1Hz_unit/s_reg(13) AND 
+	clk_1Hz_unit/s_reg(1) AND clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3) AND 
+	clk_1Hz_unit/s_reg(4) AND clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND 
+	clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9))
+	OR (clk_enable AND NOT clk_1Hz_unit/s_reg(0) AND 
+	NOT clk_1Hz_unit/s_reg(10) AND clk_1Hz_unit/s_reg(11) AND NOT clk_1Hz_unit/s_reg(12) AND 
+	NOT clk_1Hz_unit/s_reg(13) AND clk_1Hz_unit/s_reg(14) AND NOT clk_1Hz_unit/s_reg(15) AND 
+	NOT clk_1Hz_unit/s_reg(16) AND NOT clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND 
+	clk_1Hz_unit/s_reg(19) AND NOT clk_1Hz_unit/s_reg(1) AND NOT clk_1Hz_unit/s_reg(20) AND 
+	NOT clk_1Hz_unit/s_reg(21) AND clk_1Hz_unit/s_reg(22) AND NOT clk_1Hz_unit/s_reg(23) AND 
+	NOT clk_1Hz_unit/s_reg(24) AND NOT clk_1Hz_unit/s_reg(2) AND NOT clk_1Hz_unit/s_reg(3) AND 
+	NOT clk_1Hz_unit/s_reg(4) AND NOT clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND 
+	NOT clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9) AND 
+	NOT clk_1Hz_unit/s_reg(25)));
+
+FTCPE_clk_1Hz_unit/s_reg15: FTCPE port map (clk_1Hz_unit/s_reg(15),clk_1Hz_unit/s_reg_T(15),clk50Mhz,'0','0',clk_enable);
+clk_1Hz_unit/s_reg_T(15) <= (clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(10) AND 
+	clk_1Hz_unit/s_reg(11) AND clk_1Hz_unit/s_reg(12) AND clk_1Hz_unit/s_reg(13) AND 
+	clk_1Hz_unit/s_reg(14) AND clk_1Hz_unit/s_reg(1) AND clk_1Hz_unit/s_reg(2) AND 
+	clk_1Hz_unit/s_reg(3) AND clk_1Hz_unit/s_reg(4) AND clk_1Hz_unit/s_reg(5) AND 
+	clk_1Hz_unit/s_reg(6) AND clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND 
+	clk_1Hz_unit/s_reg(9));
+
+FTCPE_clk_1Hz_unit/s_reg16: FTCPE port map (clk_1Hz_unit/s_reg(16),clk_1Hz_unit/s_reg_T(16),clk50Mhz,'0','0',clk_enable);
+clk_1Hz_unit/s_reg_T(16) <= (clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(10) AND 
+	clk_1Hz_unit/s_reg(11) AND clk_1Hz_unit/s_reg(12) AND clk_1Hz_unit/s_reg(13) AND 
+	clk_1Hz_unit/s_reg(14) AND clk_1Hz_unit/s_reg(15) AND clk_1Hz_unit/s_reg(1) AND 
+	clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3) AND clk_1Hz_unit/s_reg(4) AND 
+	clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND clk_1Hz_unit/s_reg(7) AND 
+	clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9));
+
+FTCPE_clk_1Hz_unit/s_reg17: FTCPE port map (clk_1Hz_unit/s_reg(17),clk_1Hz_unit/s_reg_T(17),clk50Mhz,'0','0',clk_enable);
+clk_1Hz_unit/s_reg_T(17) <= (clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(10) AND 
+	clk_1Hz_unit/s_reg(11) AND clk_1Hz_unit/s_reg(12) AND clk_1Hz_unit/s_reg(13) AND 
+	clk_1Hz_unit/s_reg(14) AND clk_1Hz_unit/s_reg(15) AND clk_1Hz_unit/s_reg(16) AND 
+	clk_1Hz_unit/s_reg(1) AND clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3) AND 
+	clk_1Hz_unit/s_reg(4) AND clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND 
+	clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9));
+
+FTCPE_clk_1Hz_unit/s_reg18: FTCPE port map (clk_1Hz_unit/s_reg(18),clk_1Hz_unit/s_reg_T(18),clk50Mhz,'0','0',clk_enable);
+clk_1Hz_unit/s_reg_T(18) <= ((clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(10) AND 
+	clk_1Hz_unit/s_reg(11) AND clk_1Hz_unit/s_reg(12) AND clk_1Hz_unit/s_reg(13) AND 
+	clk_1Hz_unit/s_reg(14) AND clk_1Hz_unit/s_reg(15) AND clk_1Hz_unit/s_reg(16) AND 
+	clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(1) AND clk_1Hz_unit/s_reg(2) AND 
+	clk_1Hz_unit/s_reg(3) AND clk_1Hz_unit/s_reg(4) AND clk_1Hz_unit/s_reg(5) AND 
+	clk_1Hz_unit/s_reg(6) AND clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND 
+	clk_1Hz_unit/s_reg(9))
+	OR (clk_enable AND NOT clk_1Hz_unit/s_reg(0) AND 
+	NOT clk_1Hz_unit/s_reg(10) AND clk_1Hz_unit/s_reg(11) AND NOT clk_1Hz_unit/s_reg(12) AND 
+	NOT clk_1Hz_unit/s_reg(13) AND clk_1Hz_unit/s_reg(14) AND NOT clk_1Hz_unit/s_reg(15) AND 
+	NOT clk_1Hz_unit/s_reg(16) AND NOT clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND 
+	clk_1Hz_unit/s_reg(19) AND NOT clk_1Hz_unit/s_reg(1) AND NOT clk_1Hz_unit/s_reg(20) AND 
+	NOT clk_1Hz_unit/s_reg(21) AND clk_1Hz_unit/s_reg(22) AND NOT clk_1Hz_unit/s_reg(23) AND 
+	NOT clk_1Hz_unit/s_reg(24) AND NOT clk_1Hz_unit/s_reg(2) AND NOT clk_1Hz_unit/s_reg(3) AND 
+	NOT clk_1Hz_unit/s_reg(4) AND NOT clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND 
+	NOT clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9) AND 
+	NOT clk_1Hz_unit/s_reg(25)));
+
+FTCPE_clk_1Hz_unit/s_reg19: FTCPE port map (clk_1Hz_unit/s_reg(19),clk_1Hz_unit/s_reg_T(19),clk50Mhz,'0','0',clk_enable);
+clk_1Hz_unit/s_reg_T(19) <= ((clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(10) AND 
+	clk_1Hz_unit/s_reg(11) AND clk_1Hz_unit/s_reg(12) AND clk_1Hz_unit/s_reg(13) AND 
+	clk_1Hz_unit/s_reg(14) AND clk_1Hz_unit/s_reg(15) AND clk_1Hz_unit/s_reg(16) AND 
+	clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND clk_1Hz_unit/s_reg(1) AND 
+	clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3) AND clk_1Hz_unit/s_reg(4) AND 
+	clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND clk_1Hz_unit/s_reg(7) AND 
+	clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9))
+	OR (clk_enable AND NOT clk_1Hz_unit/s_reg(0) AND 
+	NOT clk_1Hz_unit/s_reg(10) AND clk_1Hz_unit/s_reg(11) AND NOT clk_1Hz_unit/s_reg(12) AND 
+	NOT clk_1Hz_unit/s_reg(13) AND clk_1Hz_unit/s_reg(14) AND NOT clk_1Hz_unit/s_reg(15) AND 
+	NOT clk_1Hz_unit/s_reg(16) AND NOT clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND 
+	clk_1Hz_unit/s_reg(19) AND NOT clk_1Hz_unit/s_reg(1) AND NOT clk_1Hz_unit/s_reg(20) AND 
+	NOT clk_1Hz_unit/s_reg(21) AND clk_1Hz_unit/s_reg(22) AND NOT clk_1Hz_unit/s_reg(23) AND 
+	NOT clk_1Hz_unit/s_reg(24) AND NOT clk_1Hz_unit/s_reg(2) AND NOT clk_1Hz_unit/s_reg(3) AND 
+	NOT clk_1Hz_unit/s_reg(4) AND NOT clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND 
+	NOT clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9) AND 
+	NOT clk_1Hz_unit/s_reg(25)));
+
+FTCPE_clk_1Hz_unit/s_reg20: FTCPE port map (clk_1Hz_unit/s_reg(20),clk_1Hz_unit/s_reg_T(20),clk50Mhz,'0','0',clk_enable);
+clk_1Hz_unit/s_reg_T(20) <= (clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(10) AND 
+	clk_1Hz_unit/s_reg(11) AND clk_1Hz_unit/s_reg(12) AND clk_1Hz_unit/s_reg(13) AND 
+	clk_1Hz_unit/s_reg(14) AND clk_1Hz_unit/s_reg(15) AND clk_1Hz_unit/s_reg(16) AND 
+	clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND clk_1Hz_unit/s_reg(19) AND 
+	clk_1Hz_unit/s_reg(1) AND clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3) AND 
+	clk_1Hz_unit/s_reg(4) AND clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND 
+	clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9));
+
+FTCPE_clk_1Hz_unit/s_reg21: FTCPE port map (clk_1Hz_unit/s_reg(21),clk_1Hz_unit/s_reg_T(21),clk50Mhz,'0','0',clk_enable);
+clk_1Hz_unit/s_reg_T(21) <= (clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(10) AND 
+	clk_1Hz_unit/s_reg(11) AND clk_1Hz_unit/s_reg(12) AND clk_1Hz_unit/s_reg(13) AND 
+	clk_1Hz_unit/s_reg(14) AND clk_1Hz_unit/s_reg(15) AND clk_1Hz_unit/s_reg(16) AND 
+	clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND clk_1Hz_unit/s_reg(19) AND 
+	clk_1Hz_unit/s_reg(1) AND clk_1Hz_unit/s_reg(20) AND clk_1Hz_unit/s_reg(2) AND 
+	clk_1Hz_unit/s_reg(3) AND clk_1Hz_unit/s_reg(4) AND clk_1Hz_unit/s_reg(5) AND 
+	clk_1Hz_unit/s_reg(6) AND clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND 
+	clk_1Hz_unit/s_reg(9));
+
+FTCPE_clk_1Hz_unit/s_reg22: FTCPE port map (clk_1Hz_unit/s_reg(22),clk_1Hz_unit/s_reg_T(22),clk50Mhz,'0','0',clk_enable);
+clk_1Hz_unit/s_reg_T(22) <= ((clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(10) AND 
+	clk_1Hz_unit/s_reg(11) AND clk_1Hz_unit/s_reg(12) AND clk_1Hz_unit/s_reg(13) AND 
+	clk_1Hz_unit/s_reg(14) AND clk_1Hz_unit/s_reg(15) AND clk_1Hz_unit/s_reg(16) AND 
+	clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND clk_1Hz_unit/s_reg(19) AND 
+	clk_1Hz_unit/s_reg(1) AND clk_1Hz_unit/s_reg(20) AND clk_1Hz_unit/s_reg(21) AND 
+	clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3) AND clk_1Hz_unit/s_reg(4) AND 
+	clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND clk_1Hz_unit/s_reg(7) AND 
+	clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9))
+	OR (clk_enable AND NOT clk_1Hz_unit/s_reg(0) AND 
+	NOT clk_1Hz_unit/s_reg(10) AND clk_1Hz_unit/s_reg(11) AND NOT clk_1Hz_unit/s_reg(12) AND 
+	NOT clk_1Hz_unit/s_reg(13) AND clk_1Hz_unit/s_reg(14) AND NOT clk_1Hz_unit/s_reg(15) AND 
+	NOT clk_1Hz_unit/s_reg(16) AND NOT clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND 
+	clk_1Hz_unit/s_reg(19) AND NOT clk_1Hz_unit/s_reg(1) AND NOT clk_1Hz_unit/s_reg(20) AND 
+	NOT clk_1Hz_unit/s_reg(21) AND clk_1Hz_unit/s_reg(22) AND NOT clk_1Hz_unit/s_reg(23) AND 
+	NOT clk_1Hz_unit/s_reg(24) AND NOT clk_1Hz_unit/s_reg(2) AND NOT clk_1Hz_unit/s_reg(3) AND 
+	NOT clk_1Hz_unit/s_reg(4) AND NOT clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND 
+	NOT clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9) AND 
+	NOT clk_1Hz_unit/s_reg(25)));
+
+FTCPE_clk_1Hz_unit/s_reg23: FTCPE port map (clk_1Hz_unit/s_reg(23),clk_1Hz_unit/s_reg_T(23),clk50Mhz,'0','0',clk_enable);
+clk_1Hz_unit/s_reg_T(23) <= (clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(10) AND 
+	clk_1Hz_unit/s_reg(11) AND clk_1Hz_unit/s_reg(12) AND clk_1Hz_unit/s_reg(13) AND 
+	clk_1Hz_unit/s_reg(14) AND clk_1Hz_unit/s_reg(15) AND clk_1Hz_unit/s_reg(16) AND 
+	clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND clk_1Hz_unit/s_reg(19) AND 
+	clk_1Hz_unit/s_reg(1) AND clk_1Hz_unit/s_reg(20) AND clk_1Hz_unit/s_reg(21) AND 
+	clk_1Hz_unit/s_reg(22) AND clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3) AND 
+	clk_1Hz_unit/s_reg(4) AND clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND 
+	clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9));
+
+FTCPE_clk_1Hz_unit/s_reg24: FTCPE port map (clk_1Hz_unit/s_reg(24),clk_1Hz_unit/s_reg_T(24),clk50Mhz,'0','0',clk_enable);
+clk_1Hz_unit/s_reg_T(24) <= (clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(10) AND 
+	clk_1Hz_unit/s_reg(11) AND clk_1Hz_unit/s_reg(12) AND clk_1Hz_unit/s_reg(13) AND 
+	clk_1Hz_unit/s_reg(14) AND clk_1Hz_unit/s_reg(15) AND clk_1Hz_unit/s_reg(16) AND 
+	clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND clk_1Hz_unit/s_reg(19) AND 
+	clk_1Hz_unit/s_reg(1) AND clk_1Hz_unit/s_reg(20) AND clk_1Hz_unit/s_reg(21) AND 
+	clk_1Hz_unit/s_reg(22) AND clk_1Hz_unit/s_reg(23) AND clk_1Hz_unit/s_reg(2) AND 
+	clk_1Hz_unit/s_reg(3) AND clk_1Hz_unit/s_reg(4) AND clk_1Hz_unit/s_reg(5) AND 
+	clk_1Hz_unit/s_reg(6) AND clk_1Hz_unit/s_reg(7) AND clk_1Hz_unit/s_reg(8) AND 
+	clk_1Hz_unit/s_reg(9));
+
+FTCPE_clk_1Hz_unit/s_reg25: FTCPE port map (clk_1Hz_unit/s_reg(25),clk_1Hz_unit/s_reg_T(25),clk50Mhz,'0','0',clk_enable);
+clk_1Hz_unit/s_reg_T(25) <= (clk_1Hz_unit/s_reg(0) AND clk_1Hz_unit/s_reg(10) AND 
+	clk_1Hz_unit/s_reg(11) AND clk_1Hz_unit/s_reg(12) AND clk_1Hz_unit/s_reg(13) AND 
+	clk_1Hz_unit/s_reg(14) AND clk_1Hz_unit/s_reg(15) AND clk_1Hz_unit/s_reg(16) AND 
+	clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND clk_1Hz_unit/s_reg(19) AND 
+	clk_1Hz_unit/s_reg(1) AND clk_1Hz_unit/s_reg(20) AND clk_1Hz_unit/s_reg(21) AND 
+	clk_1Hz_unit/s_reg(22) AND clk_1Hz_unit/s_reg(23) AND clk_1Hz_unit/s_reg(24) AND 
+	clk_1Hz_unit/s_reg(2) AND clk_1Hz_unit/s_reg(3) AND clk_1Hz_unit/s_reg(4) AND 
+	clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND clk_1Hz_unit/s_reg(7) AND 
+	clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9));
+
+FDCPE_not_q0: FDCPE port map (not_q0,not_q0_D,not_q0_C,'0','0');
+not_q0_D <= ((x AND not_q2 AND not_q0)
+	OR (bcd(1) AND not_q2 AND not_q0)
+	OR (NOT x AND bcd(2) AND not_q0 AND not_q1));
+not_q0_C <= (NOT clk_1Hz_unit/s_reg(0) AND NOT clk_1Hz_unit/s_reg(10) AND 
+	clk_1Hz_unit/s_reg(11) AND NOT clk_1Hz_unit/s_reg(12) AND NOT clk_1Hz_unit/s_reg(13) AND 
+	clk_1Hz_unit/s_reg(14) AND NOT clk_1Hz_unit/s_reg(15) AND NOT clk_1Hz_unit/s_reg(16) AND 
+	NOT clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND clk_1Hz_unit/s_reg(19) AND 
+	NOT clk_1Hz_unit/s_reg(1) AND NOT clk_1Hz_unit/s_reg(20) AND NOT clk_1Hz_unit/s_reg(21) AND 
+	clk_1Hz_unit/s_reg(22) AND NOT clk_1Hz_unit/s_reg(23) AND NOT clk_1Hz_unit/s_reg(24) AND 
+	NOT clk_1Hz_unit/s_reg(2) AND NOT clk_1Hz_unit/s_reg(3) AND NOT clk_1Hz_unit/s_reg(4) AND 
+	NOT clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND NOT clk_1Hz_unit/s_reg(7) AND 
+	clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9) AND NOT clk_1Hz_unit/s_reg(25));
+
+FDCPE_not_q1: FDCPE port map (not_q1,not_q1_D,not_q1_C,'0','0');
+not_q1_D <= ((x AND bcd(1) AND not_q2 AND not_q0)
+	OR (x AND bcd(0) AND not_q2 AND not_q1)
+	OR (NOT x AND bcd(1) AND bcd(0) AND not_q2)
+	OR (NOT x AND bcd(2) AND not_q0 AND not_q1));
+not_q1_C <= (NOT clk_1Hz_unit/s_reg(0) AND NOT clk_1Hz_unit/s_reg(10) AND 
+	clk_1Hz_unit/s_reg(11) AND NOT clk_1Hz_unit/s_reg(12) AND NOT clk_1Hz_unit/s_reg(13) AND 
+	clk_1Hz_unit/s_reg(14) AND NOT clk_1Hz_unit/s_reg(15) AND NOT clk_1Hz_unit/s_reg(16) AND 
+	NOT clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND clk_1Hz_unit/s_reg(19) AND 
+	NOT clk_1Hz_unit/s_reg(1) AND NOT clk_1Hz_unit/s_reg(20) AND NOT clk_1Hz_unit/s_reg(21) AND 
+	clk_1Hz_unit/s_reg(22) AND NOT clk_1Hz_unit/s_reg(23) AND NOT clk_1Hz_unit/s_reg(24) AND 
+	NOT clk_1Hz_unit/s_reg(2) AND NOT clk_1Hz_unit/s_reg(3) AND NOT clk_1Hz_unit/s_reg(4) AND 
+	NOT clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND NOT clk_1Hz_unit/s_reg(7) AND 
+	clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9) AND NOT clk_1Hz_unit/s_reg(25));
+
+FDCPE_not_q2: FDCPE port map (not_q2,not_q2_D,not_q2_C,'0','0');
+not_q2_D <= ((x AND bcd(1) AND bcd(0) AND not_q2)
+	OR (NOT x AND not_q2 AND not_q0 AND not_q1));
+not_q2_C <= (NOT clk_1Hz_unit/s_reg(0) AND NOT clk_1Hz_unit/s_reg(10) AND 
+	clk_1Hz_unit/s_reg(11) AND NOT clk_1Hz_unit/s_reg(12) AND NOT clk_1Hz_unit/s_reg(13) AND 
+	clk_1Hz_unit/s_reg(14) AND NOT clk_1Hz_unit/s_reg(15) AND NOT clk_1Hz_unit/s_reg(16) AND 
+	NOT clk_1Hz_unit/s_reg(17) AND clk_1Hz_unit/s_reg(18) AND clk_1Hz_unit/s_reg(19) AND 
+	NOT clk_1Hz_unit/s_reg(1) AND NOT clk_1Hz_unit/s_reg(20) AND NOT clk_1Hz_unit/s_reg(21) AND 
+	clk_1Hz_unit/s_reg(22) AND NOT clk_1Hz_unit/s_reg(23) AND NOT clk_1Hz_unit/s_reg(24) AND 
+	NOT clk_1Hz_unit/s_reg(2) AND NOT clk_1Hz_unit/s_reg(3) AND NOT clk_1Hz_unit/s_reg(4) AND 
+	NOT clk_1Hz_unit/s_reg(5) AND clk_1Hz_unit/s_reg(6) AND NOT clk_1Hz_unit/s_reg(7) AND 
+	clk_1Hz_unit/s_reg(8) AND clk_1Hz_unit/s_reg(9) AND NOT clk_1Hz_unit/s_reg(25));
+
+
+sseg(0) <= (NOT bcd(1) AND NOT bcd(2));
+
+
+sseg(1) <= ((bcd(1) AND NOT bcd(2))
+	OR (bcd(0) AND NOT bcd(2)));
+
+
+sseg(2) <= NOT ((NOT bcd(0) AND NOT bcd(2)));
+
+
+sseg(3) <= ((bcd(2))
+	OR (NOT bcd(1) AND bcd(0)));
+
+
+sseg(4) <= (bcd(1) AND NOT bcd(0) AND NOT bcd(2));
+
+
+sseg(5) <= '0';
+
+
+sseg(6) <= ((bcd(2))
+	OR (NOT bcd(1) AND bcd(0)));
+
+Register Legend:
+ FDCPE (Q,D,C,CLR,PRE,CE); 
+ FTCPE (Q,D,C,CLR,PRE,CE); 
+ LDCP  (Q,D,G,CLR,PRE); 
+
+******************************  Device Pin Out *****************************
+
+Device : XC9572XL-5-PC44
+
+
+   --------------------------------  
+  /6  5  4  3  2  1  44 43 42 41 40 \
+ | 7                             39 | 
+ | 8                             38 | 
+ | 9                             37 | 
+ | 10                            36 | 
+ | 11        XC9572XL-5-PC44     35 | 
+ | 12                            34 | 
+ | 13                            33 | 
+ | 14                            32 | 
+ | 15                            31 | 
+ | 16                            30 | 
+ | 17                            29 | 
+ \ 18 19 20 21 22 23 24 25 26 27 28 /
+   --------------------------------  
+
+
+Pin Signal                         Pin Signal                        
+No. Name                           No. Name                          
+  1 sseg<5>                          23 GND                           
+  2 KPR                              24 KPR                           
+  3 KPR                              25 bcd<0>                        
+  4 sseg<2>                          26 KPR                           
+  5 clk50Mhz                         27 KPR                           
+  6 KPR                              28 clk_enable                    
+  7 KPR                              29 bcd<2>                        
+  8 KPR                              30 TDO                           
+  9 KPR                              31 GND                           
+ 10 GND                              32 VCC                           
+ 11 bcd<1>                           33 x                             
+ 12 KPR                              34 KPR                           
+ 13 an<3>                            35 sseg<1>                       
+ 14 KPR                              36 sseg<6>                       
+ 15 TDI                              37 sseg<3>                       
+ 16 TMS                              38 an<0>                         
+ 17 TCK                              39 KPR                           
+ 18 an<2>                            40 KPR                           
+ 19 KPR                              41 VCC                           
+ 20 an<1>                            42 KPR                           
+ 21 VCC                              43 sseg<0>                       
+ 22 KPR                              44 sseg<4>                       
+
+
+Legend :  NC  = Not Connected, unbonded pin
+         PGND = Unused I/O configured as additional Ground pin
+         TIE  = Unused I/O floating -- must tie to VCC, GND or other signal
+         KPR  = Unused I/O with weak keeper (leave unconnected)
+         VCC  = Dedicated Power Pin
+         GND  = Dedicated Ground Pin
+         TDI  = Test Data In, JTAG pin
+         TDO  = Test Data Out, JTAG pin
+         TCK  = Test Clock, JTAG pin
+         TMS  = Test Mode Select, JTAG pin
+  PROHIBITED  = User reserved pin
+****************************  Compiler Options  ****************************
+
+Following is a list of all global compiler options used by the fitter run.
+
+Device(s) Specified                         : xc9572xl-5-PC44
+Optimization Method                         : SPEED
+Multi-Level Logic Optimization              : ON
+Ignore Timing Specifications                : OFF
+Default Register Power Up Value             : LOW
+Keep User Location Constraints              : ON
+What-You-See-Is-What-You-Get                : OFF
+Exhaustive Fitting                          : OFF
+Keep Unused Inputs                          : OFF
+Slew Rate                                   : FAST
+Power Mode                                  : STD
+Ground on Unused IOs                        : OFF
+Set I/O Pin Termination                     : KEEPER
+Global Clock Optimization                   : ON
+Global Set/Reset Optimization               : ON
+Global Ouput Enable Optimization            : ON
+Input Limit                                 : 54
+Pterm Limit                                 : 25

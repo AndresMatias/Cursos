@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador Shows de TV</title>
+  <style>
+    .grid-fluid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .loader {
+      display: block;
+      margin: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Buscador Shows de TV</h1>
+  <input type="search" id="search" placeholder="Buscar shows de tv..." autocomplete="off">
+  <section id="shows-query" class="grid-fluid"></section>
+  <template id="show-template">
+    <article class="show">
+      <h3></h3>
+      <div></div>
+      <img>
+      <a></a>
+    </article>
+  </template>
+  <script>
+    /* ********** Curso JavaScript: 136. Ejercicios AJAX - APIs: Buscador de Shows con Fetch y TVMAZE API - #jonmircha ********** */
+    /* ttps://www.youtube.com/watch?v=bf6lpMAMiVc&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=142&ab_channel=jonmircha */
+
+    const d=document,
+         $shows = d.getElementById("shows-query"),
+         $template=d.getElementById("show-template").content, //uso para content obtener su contenido
+         $fragment=d.createDocumentFragment();
+    
+    d.addEventListener("keypress",async e=> {
+      if(e.target.matches("#search") ){ //Si la tecla presionada coincide con el id search de mi input(linea 23)
+        if(e.key==="Enter"){
+          try{
+            $shows.innerHTML=`<img class="loader" src="./assets/loader.svg" alt="Cargando...">`; //NO ES LO MAS OPTIMO usar innerHTML pero por cuestion de practicidad lo hace asi, es mejor usar templates creo
+            let query=e.target.value.toLowerCase(), //Fuerzo a minuscula todo el contenido del input(linea 23)
+                  api=`https://api.tvmaze.com/search/shows?q=${query}` //para consultar el contenido en fetch
+                  res= await fetch(api), //como la funcion es asincrona utilizo await para que espere hasta treminar la consulta
+                 json= await res.json(); 
+
+            if(!res.ok) throw{status: res.status,statusText: res.statusText} //Si sucedio un error va al catch
+            if(json.length===0){
+              $shows.innerHTML=`<h2>No existe resultados para este show:<mark>${query}</mark></h2>`;
+            }else{
+              console.log(json)
+              json.forEach(el => {
+                //--Armo como va a configurarse graficamente el contenido de la busqueda--
+                //Configuro nombre
+                $template.querySelector("h3").textContent = el.show.name;
+                //Configuro div que contiene descripcion
+                $template.querySelector("div").innerHTML = el.show.summary ? el.show.summary: "Sin Descripcion"; //De este modo porque summary viene en formato html por lo cual uso innerHTML, ademas uso operador ternario para indicar que si no hay summary muestre el valor "Sin descripcion"
+                //Configuro Imagen
+                $template.querySelector("img").src=el.show.image ? el.show.image.medium : "Sin Imagen"; //Si no exite image carga el texto "Sin imagen"
+                $template.querySelector("img").alt=el.show.name;
+                $template.querySelector("img").style.maxWidth="100%"; //Las imagenes cargan sin rebasar el tamaño de su contenedor, creo que esta no es la forma mas elegante de cargar estas propiedades
+                //Configuro enlace de ver mas
+                $template.querySelector("a").href=el.show.url ? el.show.url : "#";
+                $template.querySelector("a").target=el.show.url ? "_blank": "_self"; //ver bien esto pero basicamente si se cumple el url se abre en una pestaña nueva sino hace referencia a la misma pagina para no crear una nueva pagina en blanco
+                $template.querySelector("a").textContent=el.show.url ? "ver mas": ""; // Enlace al contenido
+                
+                //Clono template con su contenido y lo agrego al fragmento para luego agregarlo a la pagina web
+                let $clone=d.importNode($template,true); //tomo el nodo de template y el true es para que copie toda la estructura interna
+                $fragment.appendChild($clone);
+                
+              });
+              
+              $shows.innerHTML=``; //Para quitar loader
+              $shows.appendChild($fragment); //Pego todo el contenido de la busqueda en el html
+            }
+          }catch(err){
+            let message=err.statusText || "Ocurrio un error";
+            $shows.innerHTML=`Error ${err.status}: ${message}`;
+          }
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

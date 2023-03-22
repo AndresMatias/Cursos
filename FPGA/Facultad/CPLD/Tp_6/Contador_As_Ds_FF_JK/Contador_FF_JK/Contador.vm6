@@ -1,0 +1,386 @@
+NDS Database:  version K.31
+
+NDS_INFO | xc9500xl | 9572XL44PC | XC9572XL-5-PC44
+
+DEVICE | 9572XL | 9572XL44PC | 
+
+NETWORK | Contador | 0 | 0 | 16391
+
+INPUT_INSTANCE | 0 | 0 | NULL | Clock_IBUF | Contador_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | Clock | 576 | PI | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | Clock_IBUF | 560 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | NULL | Clock_IBUF | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | A_D_IBUF | Contador_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | A_D | 577 | PI | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | A_D_IBUF | 570 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | NULL | A_D_IBUF | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | Salida_2_OBUF | Contador_COPY_0_COPY_0 | 2155873280 | 5 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Salida_1_OBUF | 564 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_1_OBUF.Q | Salida_1_OBUF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | JK_2/Q_aux | 569 | ? | 0 | 16 | Contador_COPY_0_COPY_0 | NULL | JK_2/Q_aux.Q | JK_2/Q_aux | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Salida_0_OBUF | 566 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_0_OBUF.Q | Salida_0_OBUF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | A_D_IBUF | 570 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | NULL | A_D_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Clock_IBUF | 560 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | NULL | Clock_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | Salida_2_OBUF$Q | 561 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_2_OBUF.Q | Salida_2_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Salida_2_OBUF | 562 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_2_OBUF.Q | Salida_2_OBUF | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | Salida_2_OBUF.SI | Salida_2_OBUF | 0 | 5 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Salida_1_OBUF | 564 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_1_OBUF.Q | Salida_1_OBUF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | JK_2/Q_aux | 569 | ? | 0 | 16 | Contador_COPY_0_COPY_0 | NULL | JK_2/Q_aux.Q | JK_2/Q_aux | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Salida_0_OBUF | 566 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_0_OBUF.Q | Salida_0_OBUF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | A_D_IBUF | 570 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | NULL | A_D_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Clock_IBUF | 560 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | NULL | Clock_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Salida_2_OBUF.D1 | 579 | ? | 0 | 4096 | Salida_2_OBUF | NULL | NULL | Salida_2_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Salida_2_OBUF.D2 | 580 | ? | 0 | 4096 | Salida_2_OBUF | NULL | NULL | Salida_2_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | Salida_1_OBUF | IV_FALSE | JK_2/Q_aux
+SPPTERM | 3 | IV_TRUE | Salida_0_OBUF | IV_FALSE | JK_2/Q_aux | IV_TRUE | A_D_IBUF
+SPPTERM | 3 | IV_FALSE | Salida_0_OBUF | IV_FALSE | JK_2/Q_aux | IV_FALSE | A_D_IBUF
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | Salida_2_OBUF.CLKF | 581 | ? | 0 | 4096 | Salida_2_OBUF | NULL | NULL | Salida_2_OBUF.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_TRUE | Clock_IBUF
+
+SRFF_INSTANCE | Salida_2_OBUF.REG | Salida_2_OBUF | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Salida_2_OBUF.D | 578 | ? | 0 | 0 | Salida_2_OBUF | NULL | NULL | Salida_2_OBUF.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | Salida_2_OBUF.CLKF | 581 | ? | 0 | 4096 | Salida_2_OBUF | NULL | NULL | Salida_2_OBUF.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_TRUE | Clock_IBUF
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Salida_2_OBUF.Q | 582 | ? | 0 | 0 | Salida_2_OBUF | NULL | NULL | Salida_2_OBUF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | Salida_1_OBUF | Contador_COPY_0_COPY_0 | 2155873280 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | JK_1/Q_aux | 567 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | JK_1/Q_aux.Q | JK_1/Q_aux | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Clock_IBUF | 560 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | NULL | Clock_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | Salida_1_OBUF$Q | 563 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_1_OBUF.Q | Salida_1_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Salida_1_OBUF | 564 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_1_OBUF.Q | Salida_1_OBUF | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | Salida_1_OBUF.SI | Salida_1_OBUF | 0 | 2 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | JK_1/Q_aux | 567 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | JK_1/Q_aux.Q | JK_1/Q_aux | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Clock_IBUF | 560 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | NULL | Clock_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Salida_1_OBUF.D1 | 584 | ? | 0 | 4096 | Salida_1_OBUF | NULL | NULL | Salida_1_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Salida_1_OBUF.D2 | 585 | ? | 0 | 4096 | Salida_1_OBUF | NULL | NULL | Salida_1_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | JK_1/Q_aux
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | Salida_1_OBUF.CLKF | 586 | ? | 0 | 4096 | Salida_1_OBUF | NULL | NULL | Salida_1_OBUF.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_TRUE | Clock_IBUF
+
+SRFF_INSTANCE | Salida_1_OBUF.REG | Salida_1_OBUF | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Salida_1_OBUF.D | 583 | ? | 0 | 0 | Salida_1_OBUF | NULL | NULL | Salida_1_OBUF.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | Salida_1_OBUF.CLKF | 586 | ? | 0 | 4096 | Salida_1_OBUF | NULL | NULL | Salida_1_OBUF.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_TRUE | Clock_IBUF
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Salida_1_OBUF.Q | 587 | ? | 0 | 0 | Salida_1_OBUF | NULL | NULL | Salida_1_OBUF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | Salida_0_OBUF | Contador_COPY_0_COPY_0 | 2155873280 | 5 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Salida_2_OBUF | 562 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_2_OBUF.Q | Salida_2_OBUF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Salida_1_OBUF | 564 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_1_OBUF.Q | Salida_1_OBUF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | JK_0/Q_aux | 568 | ? | 0 | 16 | Contador_COPY_0_COPY_0 | NULL | JK_0/Q_aux.Q | JK_0/Q_aux | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | A_D_IBUF | 570 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | NULL | A_D_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Clock_IBUF | 560 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | NULL | Clock_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | Salida_0_OBUF$Q | 565 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_0_OBUF.Q | Salida_0_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | Salida_0_OBUF | 566 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_0_OBUF.Q | Salida_0_OBUF | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | Salida_0_OBUF.SI | Salida_0_OBUF | 0 | 5 | 3
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Salida_2_OBUF | 562 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_2_OBUF.Q | Salida_2_OBUF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Salida_1_OBUF | 564 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_1_OBUF.Q | Salida_1_OBUF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | JK_0/Q_aux | 568 | ? | 0 | 16 | Contador_COPY_0_COPY_0 | NULL | JK_0/Q_aux.Q | JK_0/Q_aux | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | A_D_IBUF | 570 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | NULL | A_D_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Clock_IBUF | 560 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | NULL | Clock_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | Salida_0_OBUF.D1 | 589 | ? | 0 | 4096 | Salida_0_OBUF | NULL | NULL | Salida_0_OBUF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | Salida_0_OBUF.D2 | 590 | ? | 0 | 4096 | Salida_0_OBUF | NULL | NULL | Salida_0_OBUF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 4 | IV_TRUE | Salida_2_OBUF | IV_TRUE | Salida_1_OBUF | IV_FALSE | JK_0/Q_aux | IV_FALSE | A_D_IBUF
+SPPTERM | 4 | IV_FALSE | Salida_2_OBUF | IV_FALSE | Salida_1_OBUF | IV_FALSE | JK_0/Q_aux | IV_TRUE | A_D_IBUF
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | Salida_0_OBUF.CLKF | 591 | ? | 0 | 4096 | Salida_0_OBUF | NULL | NULL | Salida_0_OBUF.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_TRUE | Clock_IBUF
+
+SRFF_INSTANCE | Salida_0_OBUF.REG | Salida_0_OBUF | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | Salida_0_OBUF.D | 588 | ? | 0 | 0 | Salida_0_OBUF | NULL | NULL | Salida_0_OBUF.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | Salida_0_OBUF.CLKF | 591 | ? | 0 | 4096 | Salida_0_OBUF | NULL | NULL | Salida_0_OBUF.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 1 | IV_TRUE | Clock_IBUF
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | Salida_0_OBUF.Q | 592 | ? | 0 | 0 | Salida_0_OBUF | NULL | NULL | Salida_0_OBUF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+OptxMapped | JK_1/Q_aux | Contador_COPY_0_COPY_0 | 2155873280 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | JK_1/Q_aux/JK_1/Q_aux_SETF.UIM | 574 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | JK_1/Q_aux/JK_1/Q_aux_SETF.Q | JK_1/Q_aux/JK_1/Q_aux_SETF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | JK_1/Q_aux/JK_1/Q_aux_RSTF.UIM | 575 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | JK_1/Q_aux/JK_1/Q_aux_RSTF.Q | JK_1/Q_aux/JK_1/Q_aux_RSTF | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | JK_1/Q_aux | 567 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | JK_1/Q_aux.Q | JK_1/Q_aux | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | JK_1/Q_aux.SI | JK_1/Q_aux | 0 | 2 | 5
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | JK_1/Q_aux/JK_1/Q_aux_SETF.UIM | 574 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | JK_1/Q_aux/JK_1/Q_aux_SETF.Q | JK_1/Q_aux/JK_1/Q_aux_SETF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | JK_1/Q_aux/JK_1/Q_aux_RSTF.UIM | 575 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | JK_1/Q_aux/JK_1/Q_aux_RSTF.Q | JK_1/Q_aux/JK_1/Q_aux_RSTF | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | JK_1/Q_aux.D1 | 594 | ? | 0 | 4096 | JK_1/Q_aux | NULL | NULL | JK_1/Q_aux.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | JK_1/Q_aux.D2 | 595 | ? | 0 | 6144 | JK_1/Q_aux | NULL | NULL | JK_1/Q_aux.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 3 | 9 | MC_SI_CLKF
+SIGNAL | NODE | JK_1/Q_aux.CLKF | 596 | ? | 0 | 6144 | JK_1/Q_aux | NULL | NULL | JK_1/Q_aux.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 5 | 9 | MC_SI_SETF
+SIGNAL | NODE | JK_1/Q_aux.SETF | 597 | ? | 0 | 4096 | JK_1/Q_aux | NULL | NULL | JK_1/Q_aux.SI | 5 | 9 | MC_SI_SETF
+SPPTERM | 1 | IV_TRUE | JK_1/Q_aux/JK_1/Q_aux_SETF.UIM
+OUTPUT_NODE_TYPE | 6 | 9 | MC_SI_RSTF
+SIGNAL | NODE | JK_1/Q_aux.RSTF | 598 | ? | 0 | 4096 | JK_1/Q_aux | NULL | NULL | JK_1/Q_aux.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_TRUE | JK_1/Q_aux/JK_1/Q_aux_RSTF.UIM
+
+SRFF_INSTANCE | JK_1/Q_aux.REG | JK_1/Q_aux | 0 | 4 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | JK_1/Q_aux.D | 593 | ? | 0 | 0 | JK_1/Q_aux | NULL | NULL | JK_1/Q_aux.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | JK_1/Q_aux.CLKF | 596 | ? | 0 | 6144 | JK_1/Q_aux | NULL | NULL | JK_1/Q_aux.SI | 3 | 9 | MC_SI_CLKF
+SPPTERM | 0 | IV_ZERO
+INPUT_NODE_TYPE | 2 | 8 | SRFF_S
+SIGNAL | NODE | JK_1/Q_aux.SETF | 597 | ? | 0 | 4096 | JK_1/Q_aux | NULL | NULL | JK_1/Q_aux.SI | 5 | 9 | MC_SI_SETF
+SPPTERM | 1 | IV_TRUE | JK_1/Q_aux/JK_1/Q_aux_SETF.UIM
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+SIGNAL | NODE | JK_1/Q_aux.RSTF | 598 | ? | 0 | 4096 | JK_1/Q_aux | NULL | NULL | JK_1/Q_aux.SI | 6 | 9 | MC_SI_RSTF
+SPPTERM | 1 | IV_TRUE | JK_1/Q_aux/JK_1/Q_aux_RSTF.UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | JK_1/Q_aux.Q | 599 | ? | 0 | 0 | JK_1/Q_aux | NULL | NULL | JK_1/Q_aux.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | OptxMapped | JK_0/Q_aux | Contador_COPY_0_COPY_0 | 2155872256 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Salida_2_OBUF | 562 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_2_OBUF.Q | Salida_2_OBUF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Salida_1_OBUF | 564 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_1_OBUF.Q | Salida_1_OBUF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | JK_0/Q_aux | 568 | ? | 0 | 16 | Contador_COPY_0_COPY_0 | NULL | JK_0/Q_aux.Q | JK_0/Q_aux | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | A_D_IBUF | 570 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | NULL | A_D_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | JK_0/Q_aux | 568 | ? | 0 | 16 | Contador_COPY_0_COPY_0 | NULL | JK_0/Q_aux.Q | JK_0/Q_aux | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | JK_0/Q_aux.SI | JK_0/Q_aux | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Salida_2_OBUF | 562 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_2_OBUF.Q | Salida_2_OBUF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Salida_1_OBUF | 564 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_1_OBUF.Q | Salida_1_OBUF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | JK_0/Q_aux | 568 | ? | 0 | 16 | Contador_COPY_0_COPY_0 | NULL | JK_0/Q_aux.Q | JK_0/Q_aux | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | A_D_IBUF | 570 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | NULL | A_D_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | JK_0/Q_aux.D1 | 601 | ? | 0 | 4096 | JK_0/Q_aux | NULL | NULL | JK_0/Q_aux.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | JK_0/Q_aux.D2 | 602 | ? | 0 | 4096 | JK_0/Q_aux | NULL | NULL | JK_0/Q_aux.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 4 | IV_TRUE | Salida_2_OBUF | IV_TRUE | Salida_1_OBUF | IV_FALSE | JK_0/Q_aux | IV_FALSE | A_D_IBUF
+SPPTERM | 4 | IV_FALSE | Salida_2_OBUF | IV_FALSE | Salida_1_OBUF | IV_FALSE | JK_0/Q_aux | IV_TRUE | A_D_IBUF
+
+SRFF_INSTANCE | JK_0/Q_aux.REG | JK_0/Q_aux | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | JK_0/Q_aux.D | 600 | ? | 0 | 0 | JK_0/Q_aux | NULL | NULL | JK_0/Q_aux.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | JK_0/Q_aux.Q | 603 | ? | 0 | 0 | JK_0/Q_aux | NULL | NULL | JK_0/Q_aux.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | OptxMapped | JK_2/Q_aux | Contador_COPY_0_COPY_0 | 2155872256 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Salida_1_OBUF | 564 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_1_OBUF.Q | Salida_1_OBUF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | JK_2/Q_aux | 569 | ? | 0 | 16 | Contador_COPY_0_COPY_0 | NULL | JK_2/Q_aux.Q | JK_2/Q_aux | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Salida_0_OBUF | 566 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_0_OBUF.Q | Salida_0_OBUF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | A_D_IBUF | 570 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | NULL | A_D_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | JK_2/Q_aux | 569 | ? | 0 | 16 | Contador_COPY_0_COPY_0 | NULL | JK_2/Q_aux.Q | JK_2/Q_aux | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | JK_2/Q_aux.SI | JK_2/Q_aux | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Salida_1_OBUF | 564 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_1_OBUF.Q | Salida_1_OBUF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | JK_2/Q_aux | 569 | ? | 0 | 16 | Contador_COPY_0_COPY_0 | NULL | JK_2/Q_aux.Q | JK_2/Q_aux | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Salida_0_OBUF | 566 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_0_OBUF.Q | Salida_0_OBUF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | A_D_IBUF | 570 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | NULL | A_D_IBUF | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | JK_2/Q_aux.D1 | 605 | ? | 0 | 4096 | JK_2/Q_aux | NULL | NULL | JK_2/Q_aux.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | JK_2/Q_aux.D2 | 606 | ? | 0 | 4096 | JK_2/Q_aux | NULL | NULL | JK_2/Q_aux.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | Salida_1_OBUF | IV_FALSE | JK_2/Q_aux
+SPPTERM | 3 | IV_TRUE | Salida_0_OBUF | IV_FALSE | JK_2/Q_aux | IV_TRUE | A_D_IBUF
+SPPTERM | 3 | IV_FALSE | Salida_0_OBUF | IV_FALSE | JK_2/Q_aux | IV_FALSE | A_D_IBUF
+
+SRFF_INSTANCE | JK_2/Q_aux.REG | JK_2/Q_aux | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | JK_2/Q_aux.D | 604 | ? | 0 | 0 | JK_2/Q_aux | NULL | NULL | JK_2/Q_aux.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | JK_2/Q_aux.Q | 607 | ? | 0 | 0 | JK_2/Q_aux | NULL | NULL | JK_2/Q_aux.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | Salida<2> | Contador_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | Salida_2_OBUF$Q | 561 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_2_OBUF.Q | Salida_2_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | Salida<2> | 571 | PO | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | NULL | Salida<2> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | Salida<1> | Contador_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | Salida_1_OBUF$Q | 563 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_1_OBUF.Q | Salida_1_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | Salida<1> | 572 | PO | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | NULL | Salida<1> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | Salida<0> | Contador_COPY_0_COPY_0 | 7 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | Salida_0_OBUF$Q | 565 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_0_OBUF.Q | Salida_0_OBUF | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | Salida<0> | 573 | PO | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | NULL | Salida<0> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | SoftPfbk | JK_1/Q_aux/JK_1/Q_aux_SETF | Contador_COPY_0_COPY_0 | 2181038080 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Salida_2_OBUF | 562 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_2_OBUF.Q | Salida_2_OBUF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | JK_1/Q_aux | 567 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | JK_1/Q_aux.Q | JK_1/Q_aux | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | A_D_IBUF | 570 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | NULL | A_D_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Salida_0_OBUF | 566 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_0_OBUF.Q | Salida_0_OBUF | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | JK_1/Q_aux/JK_1/Q_aux_SETF.UIM | 574 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | JK_1/Q_aux/JK_1/Q_aux_SETF.Q | JK_1/Q_aux/JK_1/Q_aux_SETF | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | JK_1/Q_aux/JK_1/Q_aux_SETF.SI | JK_1/Q_aux/JK_1/Q_aux_SETF | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Salida_2_OBUF | 562 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_2_OBUF.Q | Salida_2_OBUF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | JK_1/Q_aux | 567 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | JK_1/Q_aux.Q | JK_1/Q_aux | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | A_D_IBUF | 570 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | NULL | A_D_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Salida_0_OBUF | 566 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_0_OBUF.Q | Salida_0_OBUF | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | JK_1/Q_aux/JK_1/Q_aux_SETF.D1 | 609 | ? | 0 | 4096 | JK_1/Q_aux/JK_1/Q_aux_SETF | NULL | NULL | JK_1/Q_aux/JK_1/Q_aux_SETF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | JK_1/Q_aux/JK_1/Q_aux_SETF.D2 | 610 | ? | 0 | 4096 | JK_1/Q_aux/JK_1/Q_aux_SETF | NULL | NULL | JK_1/Q_aux/JK_1/Q_aux_SETF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_TRUE | Salida_2_OBUF | IV_TRUE | Salida_0_OBUF | IV_TRUE | A_D_IBUF
+SPPTERM | 3 | IV_TRUE | Salida_2_OBUF | IV_FALSE | JK_1/Q_aux | IV_FALSE | A_D_IBUF
+SPPTERM | 3 | IV_TRUE | Salida_0_OBUF | IV_FALSE | JK_1/Q_aux | IV_TRUE | A_D_IBUF
+
+SRFF_INSTANCE | JK_1/Q_aux/JK_1/Q_aux_SETF.REG | JK_1/Q_aux/JK_1/Q_aux_SETF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | JK_1/Q_aux/JK_1/Q_aux_SETF.D | 608 | ? | 0 | 0 | JK_1/Q_aux/JK_1/Q_aux_SETF | NULL | NULL | JK_1/Q_aux/JK_1/Q_aux_SETF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | JK_1/Q_aux/JK_1/Q_aux_SETF.Q | 611 | ? | 0 | 0 | JK_1/Q_aux/JK_1/Q_aux_SETF | NULL | NULL | JK_1/Q_aux/JK_1/Q_aux_SETF.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | SoftPfbk | JK_1/Q_aux/JK_1/Q_aux_RSTF | Contador_COPY_0_COPY_0 | 2181038080 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Salida_2_OBUF | 562 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_2_OBUF.Q | Salida_2_OBUF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | JK_1/Q_aux | 567 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | JK_1/Q_aux.Q | JK_1/Q_aux | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | A_D_IBUF | 570 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | NULL | A_D_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Salida_0_OBUF | 566 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_0_OBUF.Q | Salida_0_OBUF | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | JK_1/Q_aux/JK_1/Q_aux_RSTF.UIM | 575 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | JK_1/Q_aux/JK_1/Q_aux_RSTF.Q | JK_1/Q_aux/JK_1/Q_aux_RSTF | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | JK_1/Q_aux/JK_1/Q_aux_RSTF.SI | JK_1/Q_aux/JK_1/Q_aux_RSTF | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Salida_2_OBUF | 562 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_2_OBUF.Q | Salida_2_OBUF | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | JK_1/Q_aux | 567 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | JK_1/Q_aux.Q | JK_1/Q_aux | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | A_D_IBUF | 570 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | NULL | A_D_IBUF | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | Salida_0_OBUF | 566 | ? | 0 | 0 | Contador_COPY_0_COPY_0 | NULL | Salida_0_OBUF.Q | Salida_0_OBUF | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | JK_1/Q_aux/JK_1/Q_aux_RSTF.D1 | 613 | ? | 0 | 4096 | JK_1/Q_aux/JK_1/Q_aux_RSTF | NULL | NULL | JK_1/Q_aux/JK_1/Q_aux_RSTF.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | JK_1/Q_aux/JK_1/Q_aux_RSTF.D2 | 614 | ? | 0 | 4096 | JK_1/Q_aux/JK_1/Q_aux_RSTF | NULL | NULL | JK_1/Q_aux/JK_1/Q_aux_RSTF.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_TRUE | Salida_2_OBUF | IV_TRUE | JK_1/Q_aux | IV_FALSE | A_D_IBUF
+SPPTERM | 3 | IV_FALSE | Salida_2_OBUF | IV_FALSE | Salida_0_OBUF | IV_TRUE | A_D_IBUF
+SPPTERM | 3 | IV_FALSE | Salida_2_OBUF | IV_TRUE | JK_1/Q_aux | IV_TRUE | A_D_IBUF
+
+SRFF_INSTANCE | JK_1/Q_aux/JK_1/Q_aux_RSTF.REG | JK_1/Q_aux/JK_1/Q_aux_RSTF | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | JK_1/Q_aux/JK_1/Q_aux_RSTF.D | 612 | ? | 0 | 0 | JK_1/Q_aux/JK_1/Q_aux_RSTF | NULL | NULL | JK_1/Q_aux/JK_1/Q_aux_RSTF.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | JK_1/Q_aux/JK_1/Q_aux_RSTF.Q | 615 | ? | 0 | 0 | JK_1/Q_aux/JK_1/Q_aux_RSTF | NULL | NULL | JK_1/Q_aux/JK_1/Q_aux_RSTF.REG | 0 | 8 | SRFF_Q
+
+FB_INSTANCE | FOOBAR1_ | Contador_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 2 | Salida_0_OBUF | 1 | NULL | 0 | Salida<0> | 1 | 1 | 49152
+FBPIN | 5 | Salida_1_OBUF | 1 | NULL | 0 | Salida<1> | 1 | 2 | 49152
+FBPIN | 6 | Salida_2_OBUF | 1 | NULL | 0 | Salida<2> | 1 | 3 | 49152
+FBPIN | 15 | JK_0/Q_aux | 1 | NULL | 0 | NULL | 0 | 8 | 49152
+FBPIN | 16 | JK_2/Q_aux | 1 | NULL | 0 | NULL | 0
+FBPIN | 17 | JK_1/Q_aux/JK_1/Q_aux_SETF | 1 | NULL | 0 | NULL | 0 | 9 | 49152
+FBPIN | 18 | JK_1/Q_aux/JK_1/Q_aux_RSTF | 1 | NULL | 0 | NULL | 0
+
+FB_INSTANCE | FOOBAR2_ | Contador_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 2 | NULL | 0 | Clock_IBUF | 1 | NULL | 0 | 35 | 49152
+FBPIN | 18 | JK_1/Q_aux | 1 | NULL | 0 | NULL | 0
+
+FB_INSTANCE | FOOBAR3_ | Contador_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR4_ | Contador_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 17 | NULL | 0 | A_D_IBUF | 1 | NULL | 0 | 34 | 49152
+
+FB_INSTANCE | INPUTPINS_FOOBAR5_ | Contador_COPY_0_COPY_0 | 0 | 0 | 0
+
+BUSINFO | SALIDA<2:0> | 3 | 0 | 1 | Salida<0> | 2 | Salida<1> | 1 | Salida<2> | 0
+
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 1 | Salida_0_OBUF | NULL | 4 | Salida_1_OBUF | NULL | 19 | JK_0/Q_aux | NULL | 21 | Salida_2_OBUF | NULL | 29 | A_D | 34
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 33 | Clock | 35 | 49 | JK_1/Q_aux | NULL | 52 | JK_2/Q_aux | NULL
+
+FB_IMUX_INDEX | FOOBAR1_ | -1 | 1 | -1 | -1 | 4 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 14 | -1 | 5 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 73 | -1 | -1 | -1 | 78 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 35 | -1 | -1 | 15 | -1
+
+
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 16 | JK_1/Q_aux/JK_1/Q_aux_SETF.UIM | NULL | 17 | JK_1/Q_aux/JK_1/Q_aux_RSTF.UIM | NULL
+
+FB_IMUX_INDEX | FOOBAR2_ | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 16 | 17 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+

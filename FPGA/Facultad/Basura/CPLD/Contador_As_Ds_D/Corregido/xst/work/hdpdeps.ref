@@ -1,0 +1,19 @@
+V3 9
+FL C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/clk_1Hz.vhd 2017/11/08.15:28:24 K.31
+EN work/clk_1Hz 1510243432 FL C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/clk_1Hz.vhd \
+      PB ieee/std_logic_1164 1200023565 PH ieee/NUMERIC_STD 1200023568
+AR work/clk_1Hz/arch 1510243433 \
+      FL C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/clk_1Hz.vhd EN work/clk_1Hz 1510243432
+FL C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/FFD.vhd 2016/11/23.00:06:09 K.31
+EN work/FFD 1510243434 FL C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/FFD.vhd \
+      PB ieee/std_logic_1164 1200023565
+AR work/FFD/arch 1510243435 \
+      FL C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/FFD.vhd EN work/FFD 1510243434
+FL C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/mod5_Up_Down_Sec.vhd 2016/11/23.01:15:54 K.31
+EN work/mod5_Up_Down_Sec 1510243436 \
+      FL C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/mod5_Up_Down_Sec.vhd \
+      PB ieee/std_logic_1164 1200023565
+AR work/mod5_Up_Down_Sec/arch 1510243437 \
+      FL C:/Xilinx/Tp/Contador_As_Ds_D/Corregido/mod5_Up_Down_Sec.vhd \
+      EN work/mod5_Up_Down_Sec 1510243436 AR work/clk_1Hz/arch 1510243433 \
+      AR work/FFD/arch 1510243435

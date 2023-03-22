@@ -4,7 +4,7 @@ http://www.etnassoft.com/2011/03/14/funciones-autoejecutables-en-javascript/
 */
 'use strict'
 
-var Clock = (function (){
+var Clock = (function (){ //Funcion Anonima: Se ejecuta en el momento de cargarla..algo asi XD buscar que era
 	var EventEmitter = require('events').EventEmitter,
 		inherits = require('util').inherits
 

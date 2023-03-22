@@ -1,0 +1,38 @@
+Command line:
+   ./simulacion_isim_fit.exe
+     -sdfmax  /UUT/=netgen/fit/Tp_2_timesim.sdf
+     -sdfroot  /UUT
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  1320
+
+Thu Jun 08 17:14:28 2017
+
+Total Line Count : 1180
+
+ Elaboration Time: 0.015625 sec
+
+ Current Memory Usage: 248.685 Meg
+
+ Total Signals          : 581
+ Total Nets             : 305
+ Total Signal Drivers   : 283
+ Total Blocks           : 233
+ Total Primitive Blocks : 116
+ Total Processes        : 283
+ Total Traceable Variables  : 816
+ Total Scalar Nets and Variables : 7133
+INFO:Simulator:839 - SDF backannotation was successful with SDF file
+   netgen/fit/Tp_2_timesim.sdf, for root module /UUT/.
+ntrace select -o on -m / -l this 
+ntrace start 
+isimrun 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+
+ Total Simulation Time: 0.125 sec
+
+ Current Memory Usage: 259.17 Meg
+
+Thu Jun 08 17:25:26 2017
+

@@ -1,6 +1,0 @@
-CommandLine
-C:\Xilinx\10.1\ISE\bin\nt\unwrapped\XSLTProcess.exe -ise D:/andres/Tp_3/Tp_3/TP3_Ejercicio_2.ise TP3_Ejercicio_2142_build.xml
-s
-FormatString
-xsltprocess [--intstyle ise|xflow|silent] <xmlfile> [-a] [-w] [--libxslt <limit:-1,10>] 
-s

@@ -1,0 +1,6 @@
+EN mod5_lr_up_down NULL "C:/Users/facun/Desktop/Lab 5/Counter_mod5_ShiftR/Mod5_LR_Up_Down.vhd" sub00/vhpl04 1479873706
+EN clk_1hz NULL "C:/Users/facun/Desktop/Lab 5/Cont-0-9999/clk_1Hz.vhd" sub00/vhpl02 1479873702
+EN ffd NULL "C:/Users/facun/Desktop/Lab 5/Counter_mod5_ShiftR/FFD.vhd" sub00/vhpl00 1479873704
+AR ffd arch "C:/Users/facun/Desktop/Lab 5/Counter_mod5_ShiftR/FFD.vhd" sub00/vhpl01 1479873705
+AR mod5_lr_up_down arch "C:/Users/facun/Desktop/Lab 5/Counter_mod5_ShiftR/Mod5_LR_Up_Down.vhd" sub00/vhpl05 1479873707
+AR clk_1hz arch "C:/Users/facun/Desktop/Lab 5/Cont-0-9999/clk_1Hz.vhd" sub00/vhpl03 1479873703
