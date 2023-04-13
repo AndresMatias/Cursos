@@ -4,7 +4,7 @@ básicos. En la siguiente sección encontrar un indice que lo redirigirá a cada
 ## Indice
 
  * [Java](java.md) 
- * [Diseño Web(en construccion)](web.md)
+ * [Diseño Web(en construccion)](Diseño Web/web.md)
  * [Python](python.md)
  * [Node Red](nodered.md)
  * [C](c.md)
