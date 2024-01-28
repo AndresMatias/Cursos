@@ -1,0 +1,54 @@
+html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+*,
+*:before, /*Para que todos los elementos antes y despues hereden de html el propiedades de tamaño de caja y empiecen desde el borde*/
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+a{
+    color: #01579b;
+    transition: color 0.3s ease;
+    -webkit-transition: color 0.3s ease; /*segun el navegador es la configuracion por eso hay 4 lineas de la 21 a la 24*/
+    -moz-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+}
+
+a:hover{
+    color: #00b0ff;
+}
+
+
+h1{
+    text-align: center;
+}
+
+img{ /*imagenes responsivas(ver bien)*/
+    max-width: 100%;
+    height: auto;
+}
+
+.error{/*En caso de error en la carga se estiliza de esta manera*/
+    padding: 1rem;
+    font-size: 150%;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: #dc3545;
+}
+.loader{
+    margin: 1rem auto; /* se centra */
+    display: block;
+    width: 4rem;
+    height: 4rem;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manipulación Manual del DOM</title>
+</head>
+
+<body>
+  <h1>Manipulación Manual del DOM</h1>
+  <form id="todo-form"> <!-- Formulario -->
+    <input type="text" id="todo-item" placeholder="Tarea por hacer"> <!-- Entrada de tipo texto -->
+    <input type="submit" value="Agregar"> <!-- Entrada de tipo submit-->
+  </form>
+  <h2>Lista de Tareas</h2>
+  <ul id="todo-list"></ul>
+  <script>
+	/*
+	  Manipulacion Manual del Dom sin usar reactividad	
+	*/
+	//--Variables--
+    const d = document,
+      $item = d.getElementById("todo-item")
+      $list = d.getElementById("todo-list");
+
+    d.addEventListener("submit", e => { //Evento submit
+      if (!e.target.matches("#todo-form")) return false; //Si el evento no lo genero el objeto todo-form, es decir si no coinciden sus selectores se sale
+
+      e.preventDefault();
+
+      //Agregar item a la lista
+      let $li = d.createElement("li");
+      $li.textContent = $item.value;
+      $list.appendChild($li); //Agrego como nodo
+
+      //Limpiar el input
+      $item.value = "";
+      $item.focus();
+    });
+  </script>
+</body>
+
+</html>

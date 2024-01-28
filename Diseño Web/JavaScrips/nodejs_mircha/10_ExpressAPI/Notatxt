@@ -1,0 +1,3 @@
+Dado que esto esta en formato api y que esta programacion esta orientado como si estuviera en el servidor
+no usamos la parte grafica proque esa parte seria el cliente, es decir
+El programador hace la parte grafica y consulta los datos con la API al servidor(donde estaria nuestra programacion)

@@ -1,0 +1,5 @@
+esta estructura no es necesariamente asi pero se recomiendo creo que es como si fuera otro paradigma de programacion
+
+helpers: carpeta donde van codigos que ayudan pero no son componentes visuales ej: funcion que convierte la fecha a un tipo de formato
+assets: recursos como loader.svg etc
+components: componentes visuales

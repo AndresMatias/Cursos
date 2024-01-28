@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  main.container
+    h1.text-center= title
+    div.text-right
+      a.add-button(href="/add") Agregar Tarea
+    ul.task-list
+      if tasks.length === 0 //Si la pila de tareas esta vacia
+        li
+          b.text-center No tienes tareas por hacer 😃👌🏻
+      else //Si no esta vacia 
+        each task in tasks //Renderizado dinamico en la linea de abajo
+          li(class=task.completed ? "completed": "")
+            a(href=`/edit/${task.id}`) #{task.title}
+            if task.completed
+              a.uncomplete-button(href=`/uncomplete/${task.id}`) Desmarcar
+            else
+              a.complete-button(href=`/complete/${task.id}`) Completar
+            a.delete-button(href=`/delete/${task.id}`) Eliminar
+            

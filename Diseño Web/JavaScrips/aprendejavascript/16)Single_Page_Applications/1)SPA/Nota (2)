@@ -1,0 +1,21 @@
+Una SPA por naturaleza es asincrona
+
+Modificar ajax.js en mi pc y cambiar root por posts en getElementById ver minuto 8:50(mas o menos) de:
+	Curso JavaScript: 151. SPA: Enrutamiento (Router) 
+	https://www.youtube.com/watch?v=nC9WK4jFXls&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=154
+
+Cambiar lo que dice en el minuto 6:40(mas o menos) y  en 14:50(mas o menos )de:
+	Curso JavaScript: 152. SPA: Refactorización de la App. Enrutamiento Asíncrono
+	https://www.youtube.com/watch?v=keGWjiUJ3V4&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=153
+
+Modificar wp_api.js
+	Curso JavaScript: 156. SPA: Infinite Scroll & High Order Components 
+	https://www.youtube.com/watch?v=XEf5jW9Y9oE&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=158
+
+Falta Inclutir contacForm del ejercico del del video 127 que pide el video 157
+	Curso JavaScript: 157. SPA: Styled Components & Single File Components
+	https://www.youtube.com/watch?v=MWrqhpGF6tU&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=158
+	
+	*Min 11 estilos dinamicos
+
+	*Min 17:41 programacion formulario del video 127 ademas problemade asincronia
