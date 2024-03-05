@@ -73,7 +73,7 @@ const deleteTask = (req, res) => {
   if (taskIndex === -1) {
     res.status(404).json({ err: true, message: "Tarea no encontrada" });
   } else {
-    tasks.splice(taskIndex, 1);
+    tasks.splice(taskIndex, 1); //Elimina el elemento, no usa fiter porque eso era cuando habia una vista y ahi era mas comodo usarlo. Como solo trabajo el arreglo y no la interfaz grafica es mejor usar slice
     res.json({ err: false, message: "Tarea eliminada" });
   }
 };

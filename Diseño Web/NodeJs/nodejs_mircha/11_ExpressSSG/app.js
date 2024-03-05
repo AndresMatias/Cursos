@@ -7,7 +7,7 @@ import cookieParser from "cookie-parser";
 import morgan from "morgan";
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000; //Si existe un puerto asignarlo caso contrario asignar el puerto 3000(ver como funciona el || aca)
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
 app.use(morgan("dev"));
@@ -26,19 +26,19 @@ const files = await fs.readdir(pagesDir);
 
 // Aquí lógica para archivos html y md
 for (let file of files) {
-  const filePath = path.join(pagesDir, file);
-  let extname = path.extname(file);
+  const filePath = path.join(pagesDir, file); //Extraigo path
+  let extname = path.extname(file); //Extraigo extension del archivo
 
   console.log(file, filePath, extname);
 
-  if (extname === ".md" || extname === ".pug" || extname === ".html") {
-    let fileName = path.basename(file, extname);
+  if (extname === ".md" || extname === ".pug" || extname === ".html") { //Si la extension es md o pug o html
+    let fileName = path.basename(file, extname); 
     console.log(fileName);
 
     app.get(`/${fileName}`, async (req, res) => {
       try {
-        if (extname === ".pug") {
-          res.render(fileName);
+        if (extname === ".pug") {  
+          res.render( );
         }
 
         if (extname === ".html") {
@@ -46,15 +46,15 @@ for (let file of files) {
         }
 
         if (extname === ".md") {
-          let fileContent = await fs.readFile(filePath, "utf-8");
-          let { attributes: frontMatterAttributes, body } = fm(fileContent);
+          let fileContent = await fs.readFile(filePath, "utf-8"); //Esepero y Leo el archivo md
+          let { attributes: frontMatterAttributes, body } = fm(fileContent); //frontMatterAttributes: Contenido que extrae lo que hay entre guiones de separacion, body:Cuerpo del markdown
 
           let attributes = frontMatterAttributes;
           let contentHTML = markdownIt().render(body);
           res.render("layout-markdown", { ...attributes, contentHTML });
         }
       } catch (err) {
-        res.status(404).render("error-404");
+        res.status(404).render("error-404"); //El .pug es implicito
       }
     });
   }
@@ -67,7 +67,7 @@ app.get("/", (req, res) => {
 
 //Ruta del error 404
 app.use((req, res) => {
-  res.status(404).render("error-404");
+  res.status(404).render("error-404"); //El .pug es implicito
 });
 
 app.listen(port, () =>
